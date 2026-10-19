@@ -80,6 +80,56 @@ footer{max-width:1280px;margin:0 auto;padding:10px 16px 40px;color:var(--dim);fo
 .modelabel{font-weight:700;font-size:14px;color:var(--brand-ink);background:var(--brand-soft);border-radius:4px;padding:6px 12px}
 .back{font-size:13.5px;font-weight:600;color:var(--brand-ink);text-decoration:none;white-space:nowrap}
 body.one .tabs{display:none}
+
+/* lời thoại & vị trí đáp án */
+.script{display:none;margin:16px 0 0;border:1px solid var(--line);border-radius:6px;background:var(--panel2)}
+.revealed .script{display:block}
+.script summary{cursor:pointer;font-weight:700;color:var(--brand-ink);padding:10px 14px}
+.script-body{padding:0 16px 12px;font-size:15px;max-height:60vh;overflow:auto}
+.script-body p{margin:8px 0}
+.script-body b{color:var(--brand-ink)}
+.evhl{background:#fff1b8;border-radius:3px;box-shadow:0 0 0 2px #f1d36b;position:relative}
+.evhl::before{content:"Câu " attr(data-q);font-size:11px;font-weight:700;color:#fff;background:var(--brand);border-radius:3px;padding:0 4px;margin-right:4px}
+mark.ev{background:#fff1b8;box-shadow:0 0 0 2px #f1d36b;border-radius:3px;color:inherit}
+.evtag{font-size:11px;font-weight:700;color:#fff;background:var(--brand);border-radius:3px;padding:0 4px;margin-right:3px}
+.flash{animation:flash 1.4s ease-out}
+@keyframes flash{0%{box-shadow:0 0 0 6px #f1d36b}100%{box-shadow:0 0 0 2px #f1d36b}}
+.loc{display:none;font:inherit;font-size:12.5px;font-weight:700;color:var(--brand-ink);background:#fff7e0;border:1px solid #f1d36b;border-radius:5px;padding:0 6px;margin-left:5px;cursor:pointer;vertical-align:middle}
+.revealed .loc{display:inline-block}
+.done-lock .loc{pointer-events:auto}
+.score .after{display:block;font-weight:500;font-size:13px;color:var(--dim);margin-top:2px}
+/* thi thử */
+.exam .audio{display:none}
+.exambar{position:sticky;top:64px;z-index:15;background:#fff7e0;border:1.5px solid #f1d36b;border-radius:6px;padding:10px 14px;margin:0 0 14px;font-size:15px}
+.exambar.over{position:static;background:var(--ok-soft);border-color:var(--ok)}
+.exambar .cd{font-family:'Fraunces',Georgia,serif;font-size:20px}
+.exambar .cd.low{color:var(--bad)}
+.eprog{height:6px;background:var(--line);border-radius:4px;overflow:hidden;margin-top:8px}
+.eprog i{display:block;height:100%;background:var(--brand)}
+.overlay{position:fixed;inset:0;z-index:60;background:rgba(30,35,43,.55);display:flex;align-items:center;justify-content:center;padding:16px}
+.overlay[hidden]{display:none}
+.ocard{background:var(--card);border-radius:8px;max-width:480px;width:100%;padding:22px 22px 18px;box-shadow:0 20px 50px rgba(0,0,0,.25)}
+.ocard h2{font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:24px;margin:0 0 8px}
+.ocard ul{padding-left:20px;font-size:15px}
+.ocard label{display:block;font-weight:600;font-size:14px;margin:10px 0 4px}
+.ocard input{width:100%;font:inherit;padding:9px 11px;border:1px solid var(--line);border-radius:4px;background:var(--panel2)}
+.ocard .err{color:var(--bad);font-size:14px;min-height:20px;margin:6px 0 0}
+.ocard .row{justify-content:flex-end}
+/* tô sáng */
+.ptools{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:-4px 0 10px;font-size:13px;color:var(--dim)}
+.mini{font:inherit;font-size:13px;font-weight:600;border:1px solid var(--line);background:var(--panel2);color:var(--brand-ink);border-radius:5px;padding:3px 9px;cursor:pointer}
+.mini.vocab{border-color:var(--brand);background:var(--brand-soft)}
+mark.hl{background:#ffe58a;color:inherit;border-radius:2px;cursor:pointer}
+mark.hl.has-note{border-bottom:2px dotted var(--brand)}
+mark.hl.has-note::after{content:"📝";font-size:11px;margin-left:1px}
+.hltool{position:absolute;z-index:70;display:flex;gap:4px;background:var(--ink);border-radius:6px;padding:4px;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+.hltool[hidden],.notebox[hidden]{display:none}
+.hltool button{font:inherit;font-size:13px;font-weight:600;color:#fff;background:none;border:0;border-radius:4px;padding:5px 9px;cursor:pointer}
+.hltool button:hover{background:rgba(255,255,255,.15)}
+.notebox{position:absolute;z-index:70;width:270px;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:10px;box-shadow:0 10px 26px rgba(0,0,0,.2)}
+.notebox textarea{width:100%;font:inherit;font-size:14px;border:1px solid var(--line);border-radius:4px;padding:6px;margin-bottom:6px;resize:vertical}
+.notebox .btn{padding:5px 12px;font-size:13px}
+.exam .ptools span{display:none}
 </style>
 </head>
 <body>
@@ -152,7 +202,7 @@ bargaintickets.com</p></li>
 </thead>
 <tbody>
 </tbody>
-</table></section><section class="part" id="part2"><h3 class="part-title" id="part-2-questions-1120">PART 2 <em>Questions 11–20</em></h3><div class="audio"><span>🎧 Part 2</span><audio controls preload="none" src="audio/t4-part2.mp3"></audio></div><p><strong>Questions 11 and 12</strong></p><p><em>Choose <strong>TWO</strong> letters,
+</table><details class="script"><summary>📜 Lời thoại Part 1</summary><div class="script-body"><p><b>Speaker 1 (Man):</b> <span id="trL1-0-0">Sandra, I seem to remember you had some family visitors staying with you recently.</span></p><p><b>Speaker 2 (Sandra):</b> <span id="trL1-1-0">Yeah, that&#x27;s right.</span> <span id="trL1-1-1">My brother and his family were here a couple of months ago.</span></p><p><b>Speaker 1 (Man):</b> <span id="trL1-2-0">Okay, good.</span> <span id="trL1-2-1">Well, I wanted to ask your advice.</span> <span id="trL1-2-2">I&#x27;ve got my cousin and her family visiting next month. month.</span> <span id="trL1-2-3">And as I don&#x27;t have kids, I&#x27;d have no idea where to take them.</span></p><p><b>Speaker 2 (Sandra):</b> <span id="trL1-3-0">Right.</span> <span id="trL1-3-1">What about accommodation?</span> <span id="trL1-3-2">Are they going to stay with you in your flat?</span></p><p><b>Speaker 1 (Man):</b> <span id="trL1-4-0">No.</span> <span id="trL1-4-1">Thankfully, there wouldn&#x27;t be room.</span> <span id="trL1-4-2">My cousin wants me to recommend a hotel.</span> <span id="trL1-4-3">Do you know anywhere?</span></p><p><b>Speaker 2 (Sandra):</b> <span id="trL1-5-0">Yes, I do.</span> <span id="trL1-5-1">Actually, I always recommend people stay at the King&#x27;s Hotel.</span></p><p><b>Speaker 1 (Man):</b> <span id="trL1-6-0">Where&#x27;s that near?</span></p><p><b>Speaker 2 (Sandra):</b> <span id="trL1-7-0">It&#x27;s about 5 minutes walk from Murray Station, so nice and central.</span> <span id="trL1-7-1">It&#x27;s actually on George Street.</span></p><p><b>Speaker 1 (Man):</b> <span id="trL1-8-0">Oh.</span> <span id="trL1-8-1">Oh, yes, I know.</span> <span id="trL1-8-2">I think they&#x27;re on quite a tight budget.</span> <span id="trL1-8-3">So, how much roughly is it to stay there?</span></p><p><b>Speaker 2 (Sandra):</b> <span id="trL1-9-0">If you book a family room, it&#x27;s about £125 per night.</span> <span id="trL1-9-1">My brother paid for two double rooms in the end, and I think that was around £95 for each room.</span></p><p><b>Speaker 1 (Man):</b> <span id="trL1-10-0">Oh, that&#x27;s not too bad.</span></p><p><b>Speaker 2 (Sandra):</b> <span id="trL1-11-0">So, how old are your cousin&#x27;s kids?</span></p><p><b>Speaker 1 (Man):</b> <span id="trL1-12-0">12 and nine.</span> <span id="trL1-12-1">So, I want to organize some trips while they&#x27;re here.</span> <span id="trL1-12-2">I was thinking of doing a bus tour of the city center as none of them have been here before.</span></p><p><b>Speaker 2 (Sandra):</b> <span id="trL1-13-0">Those bus tours are quite expensive.</span> <span id="trL1-13-1">I think it&#x27;s better to do a walking tour.</span> <span id="trL1-13-2">It gives you a much better feel for the city.</span> <span id="trL1-13-3">There&#x27;s one that starts from Colton Square.</span> <span id="trL1-13-4">It takes a couple of hours and doesn&#x27;t cost that much.</span></p><p><b>Speaker 1 (Man):</b> <span id="trL1-14-0">Sounds good.</span> <span id="trL1-14-1">I&#x27;ll look that up.</span> <span id="trL1-14-2">Thanks. = 173</span></p><p><b>Speaker 2 (Sandra):</b> <span id="trL1-15-0">If the weather&#x27;s nice, one thing you could do is visit the old fort, but you could get there by boat.</span> <span id="trL1-15-1">The whole trip takes half a day.</span></p><p><b>Speaker 1 (Man):</b> <span id="trL1-16-0">That&#x27;s a really really good idea.</span> <span id="trL1-16-1">I&#x27;d like to do that myself.</span> <span id="trL1-16-2">And if the weather&#x27;s bad, I was thinking they could go to the science museum, but maybe they could do that when I&#x27;m at work.</span></p><p><b>Speaker 2 (Sandra):</b> <span id="trL1-17-0">Yeah, don&#x27;t forget it&#x27;s closed on Mondays.</span></p><p><b>Speaker 1 (Man):</b> <span id="trL1-18-0">They&#x27;re here from Saturday for four nights, so Tuesday would be best, I think.</span></p><p><b>Speaker 2 (Sandra):</b> <span id="trL1-19-0">And it won&#x27;t be so crowded then.</span> <span id="trL1-19-1">Saturdays are terrible.</span> <span id="trL1-19-2">I took my kids to the exhibition on old computers there, and it was far too crowded.</span> <span id="trL1-19-3">I wanted to go back, but it&#x27;s finished now.</span></p><p><b>Speaker 1 (Man):</b> <span id="trL1-20-0">That&#x27;s a shame.</span> <span id="trL1-20-1">My cousin&#x27;s kids would have enjoyed that.</span></p><p><b>Speaker 2 (Sandra):</b> <span id="trL1-21-0">There&#x27;s another one starting soon on space, which looks really good, too.</span></p><p><b>Speaker 1 (Man):</b> <span id="trL1-22-0">Okay.</span> <span id="trL1-22-1">Well, I&#x27;ll mention that to my cousin.</span> <span id="trL1-22-2">Narrator/Instructor: Before you hear the rest of the conversation, you have some time to look at questions 7 to 10. now listen and answer questions 7 to 10.</span></p><p><b>Speaker 2 (Sandra):</b> <span id="trL1-23-0">Have you thought about where to take them to eat?</span></p><p><b>Speaker 1 (Man):</b> <span id="trL1-24-0">Well, I really like all the food stalls at Clton Market.</span> <span id="trL1-24-1">My cousin&#x27;s vegetarian.</span> <span id="trL1-24-2">I know it&#x27;s one of the best places. for that kind of food.</span></p><p><b>Speaker 2 (Sandra):</b> <span id="trL1-25-0">Definitely.</span> <span id="trL1-25-1">And there&#x27;ll be loads of choice for the kids, too.</span> <span id="trL1-25-2">You need to get there quite early, though.</span> <span id="trL1-25-3">At the weekend, most of the stores stop serving lunch at 2:30.</span></p><p><b>Speaker 1 (Man):</b> <span id="trL1-26-0">Good point.</span> <span id="trL1-26-1">It&#x27;s all going to need careful planning.</span> <span id="trL1-26-2">My cousin said she&#x27;d love to take the kids to a show at the theater, but tickets are so expensive.</span></p><p><b>Speaker 2 (Sandra):</b> <span id="trL1-27-0">I know, but you can get some good deals if you book online with bargainant tickets.com for the following day.</span> <span id="trL1-27-1">On some seats, there&#x27;s a 75% discount.</span></p><p><b>Speaker 1 (Man):</b> <span id="trL1-28-0">Really?</span> <span id="trL1-28-1">I must try and get some.</span></p><p><b>Speaker 2 (Sandra):</b> <span id="trL1-29-0">Yeah, there are lots of things you can do for free as well.</span> <span id="trL1-29-1">No need to spend a fortune. _ .</span> <span id="trL1-29-2">W4</span></p><p><b>Speaker 1 (Man):</b> <span id="trL1-30-0">Like what?</span></p><p><b>Speaker 2 (Sandra):</b> <span id="trL1-31-0">They&#x27;re coming next month, right?</span> <span id="trL1-31-1">Well, check and see if it&#x27;s the same weekend as the Roots Music Festival in Blakewell Gardens.</span></p><p><b>Speaker 1 (Man):</b> <span id="trL1-32-0">Rouble Ots.</span></p><p><b>Speaker 2 (Sandra):</b> <span id="trL1-33-0">Yeah, check it out online.</span> <span id="trL1-33-1">It&#x27;s always a family-friendly event and there&#x27;s no entry charge.</span></p><p><b>Speaker 1 (Man):</b> <span id="trL1-34-0">That sounds perfect.</span></p><p><b>Speaker 2 (Sandra):</b> <span id="trL1-35-0">And if you&#x27;re In Blakewell Gardens, climb Telegraph Hill.</span> <span id="trL1-35-1">You&#x27;ll be able to look right down on the port.</span> <span id="trL1-35-2">Everyone&#x27;s always really impressed because it&#x27;s so huge.</span></p><p><b>Speaker 1 (Man):</b> <span id="trL1-36-0">Oh, yeah.</span> <span id="trL1-36-1">I&#x27;ve been meaning to do that for ages.</span> <span id="trL1-36-2">I&#x27;ve heard the views are amazing.</span></p><p><b>Speaker 2 (Sandra):</b> <span id="trL1-37-0">Yeah, it&#x27;s really worth the effort.</span></p><p><b>Speaker 1 (Man):</b> <span id="trL1-38-0">Well, that&#x27;s given me loads of ideas.</span> <span id="trL1-38-1">Thanks so much for.</span></p></div></details></section><section class="part" id="part2"><h3 class="part-title" id="part-2-questions-1120">PART 2 <em>Questions 11–20</em></h3><div class="audio"><span>🎧 Part 2</span><audio controls preload="none" src="audio/t4-part2.mp3"></audio></div><p><strong>Questions 11 and 12</strong></p><p><em>Choose <strong>TWO</strong> letters,
 <strong>A–E</strong>.</em></p><p class="qline" id="Lq11"><strong class="qn">11–12</strong> Which <strong>TWO</strong> things does the
 speaker say about visiting the football stadium with children?</p><blockquote class="opts" data-q="L11" data-q2="L12">
 <label class="opt"><input class="ans-opt" data-pick="2" data-q="L11" name="Lq11" type="checkbox" value="A"/><b>A</b><span> Children can get their photo taken with a football
@@ -192,7 +242,7 @@ correct letter, <strong>A–H</strong>, next to Questions 15–20.</em></p><tabl
 </thead>
 <tbody>
 </tbody>
-</table><p class="qline" id="Lq15"><strong class="qn">15</strong> 1870 <select aria-label="Câu 15" class="ans sel" data-q="L15"><option value="">15 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option><option value="H">H</option></select></p><p class="qline" id="Lq16"><strong class="qn">16</strong> 1874 <select aria-label="Câu 16" class="ans sel" data-q="L16"><option value="">16 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option><option value="H">H</option></select></p><p class="qline" id="Lq17"><strong class="qn">17</strong> 1875 <select aria-label="Câu 17" class="ans sel" data-q="L17"><option value="">17 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option><option value="H">H</option></select></p><p class="qline" id="Lq18"><strong class="qn">18</strong> 1877 <select aria-label="Câu 18" class="ans sel" data-q="L18"><option value="">18 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option><option value="H">H</option></select></p><p class="qline" id="Lq19"><strong class="qn">19</strong> 1878 <select aria-label="Câu 19" class="ans sel" data-q="L19"><option value="">19 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option><option value="H">H</option></select></p><p class="qline" id="Lq20"><strong class="qn">20</strong> 1880 <select aria-label="Câu 20" class="ans sel" data-q="L20"><option value="">20 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option><option value="H">H</option></select></p></section><section class="part" id="part3"><h3 class="part-title" id="part-3-questions-2130">PART 3 <em>Questions 21–30</em></h3><div class="audio"><span>🎧 Part 3</span><audio controls preload="none" src="audio/t4-part3.mp3"></audio></div><p><strong>Questions 21 and 22</strong></p><p><em>Choose <strong>TWO</strong> letters,
+</table><p class="qline" id="Lq15"><strong class="qn">15</strong> 1870 <select aria-label="Câu 15" class="ans sel" data-q="L15"><option value="">15 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option><option value="H">H</option></select></p><p class="qline" id="Lq16"><strong class="qn">16</strong> 1874 <select aria-label="Câu 16" class="ans sel" data-q="L16"><option value="">16 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option><option value="H">H</option></select></p><p class="qline" id="Lq17"><strong class="qn">17</strong> 1875 <select aria-label="Câu 17" class="ans sel" data-q="L17"><option value="">17 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option><option value="H">H</option></select></p><p class="qline" id="Lq18"><strong class="qn">18</strong> 1877 <select aria-label="Câu 18" class="ans sel" data-q="L18"><option value="">18 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option><option value="H">H</option></select></p><p class="qline" id="Lq19"><strong class="qn">19</strong> 1878 <select aria-label="Câu 19" class="ans sel" data-q="L19"><option value="">19 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option><option value="H">H</option></select></p><p class="qline" id="Lq20"><strong class="qn">20</strong> 1880 <select aria-label="Câu 20" class="ans sel" data-q="L20"><option value="">20 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option><option value="H">H</option></select></p><details class="script"><summary>📜 Lời thoại Part 2</summary><div class="script-body"><p><b>Speaker (Guide):</b> <span id="trL2-0-0">I&#x27;d like to give you some useful information about your visit to the stadium today and then we&#x27;ll start the tour of the areas of the stadium that are open to visitors.</span> <span id="trL2-0-1">I can see lots of children here today.</span> <span id="trL2-0-2">So, just to let moms and dads know a few things before we start, the stadium has lots of stairs and the players tunnel is very dark.</span> <span id="trL2-0-3">Please don&#x27;t let your children wander off on their own, even for a minute.</span> <span id="trL2-0-4">We don&#x27;t want any accidents or anyone getting frightened.</span> <span id="trL2-0-5">Cameras are permitted everywhere and you can take pictures of your child shooting a penalty.</span> <span id="trL2-0-6">Assistants are helping to organize this and hopefully the queue won&#x27;t be too long.</span> <span id="trL2-0-7">It&#x27;s very hot and sunny out on the pitch today.</span> <span id="trL2-0-8">You can get food and drink at the cafe and I really recommend the healthy lunch boxes for children.</span> <span id="trL2-0-9">Also in the cafe, children are invited to do a football themed drawing.</span> <span id="trL2-0-10">We&#x27;ll pick the best one at the end of the afternoon.</span> <span id="trL2-0-11">So don&#x27;t forget to put your name and contact details on the back.</span> <span id="trL2-0-12">That way, if you&#x27;ve left the stadium before, then we&#x27;ll send your prize.</span> <span id="trL2-0-13">But sadly, we can&#x27;t return drawings.</span> <span id="trL2-0-14">I&#x27;d like to mention some features of the tour.</span> <span id="trL2-0-15">We&#x27;ll start with the 360 cinema experience, which has been very popular over the years, and then I&#x27;ll take you to the players dressing rooms.</span> <span id="trL2-0-16">Before going outside to the seating area and the pitch, I should say, if you&#x27;d prefer your visit to be self-guided, please collect headphones from the reception, and then you can listen to the pre-recorded information at your own speed.</span> <span id="trL2-0-17">We&#x27;ve only just introduced this feature and would appreciate your feedback.</span> <span id="trL2-0-18">We&#x27;re thinking of offering tours in other languages in future.</span> <span id="trL2-0-19">So, if you have any thoughts on that, we&#x27;d welcome those, too.</span> <span id="trL2-0-20">If you plan to return another time, you might like to book one of our VIP tours.</span> <span id="trL2-0-21">We&#x27;ve only just started offering these and they can be booked online.</span></p><p><b>Speaker (Guide):</b> <span id="trL2-1-0">Now the stadium you see today was built in 1989 as part of a three-year redevelopment project.</span> <span id="trL2-1-1">While that project was going on, the team had to play its matches at the ground of another club.</span> <span id="trL2-1-2">Apart from that, the club has been here on this site since 1870.</span> <span id="trL2-1-3">As some of you may know, that was the start of a really important decade in the history of football in this country.</span> <span id="trL2-1-4">For example, 1870 was also the year that football teams started to include a player whose role it was to guard the goal.</span> <span id="trL2-1-5">It&#x27;s hard to imagine what the game must have been like without someone in that position, isn&#x27;t it?</span> <span id="trL2-1-6">In 1872 and 73, many other clubs were established both here and abroad.</span> <span id="trL2-1-7">And the following year, in 1874, referees were allowed to send players off if they committed certain offenses.</span> <span id="trL2-1-8">And also in that year, teams started having to swap ends at Halime.</span> <span id="trL2-1-9">One fact I was interested to discover was that in early football games, the aim was for the scorer to get the ball between two flag posts and later between sticks joined at the top with a piece of tape.</span> <span id="trL2-1-10">In 1875, that tape was replaced with the solid crossbar that be familiar with today. 1877 saw the founding of further new clubs and the history books tell us that in the same year all the clubs decided to set a limit of 90 minutes for each match.</span> <span id="trL2-1-11">Before that it was a more casual arrangement and this sometimes caused huge arguments and sometimes fights during matches when one team called the end of the game and the other team wanted to play on to try and score a winning goal.</span> <span id="trL2-1-12">By 1878, the number of teams in the football league increased again.</span> <span id="trL2-1-13">In addition, referees started using whistles and electric lamps were installed on certain pitches.</span> <span id="trL2-1-14">This was a significant change as games could then be played in the evenings all year round.</span> <span id="trL2-1-15">In 1880, clubs began to charge fans for admission to games, even though players were still amateurs and had other proper jobs.</span> <span id="trL2-1-16">That&#x27;s hard to imagine in the modern professional game where top players earned significant sums of money from both playing and commercial activities. [ eg</span></p></div></details></section><section class="part" id="part3"><h3 class="part-title" id="part-3-questions-2130">PART 3 <em>Questions 21–30</em></h3><div class="audio"><span>🎧 Part 3</span><audio controls preload="none" src="audio/t4-part3.mp3"></audio></div><p><strong>Questions 21 and 22</strong></p><p><em>Choose <strong>TWO</strong> letters,
 <strong>A–E</strong>.</em></p><p class="qline" id="Lq21"><strong class="qn">21–22</strong> Which <strong>TWO</strong> benefits for
 children of learning to write did both students find surprising?</p><blockquote class="opts" data-q="L21" data-q2="L22">
 <label class="opt"><input class="ans-opt" data-pick="2" data-q="L21" name="Lq21" type="checkbox" value="A"/><b>A</b><span> improved fine motor skills</span></label>
@@ -251,7 +301,7 @@ handwriting?</p><blockquote class="opts" data-q="L30">
 <label class="opt"><input class="ans-opt" data-q="L30" name="Lq30" type="radio" value="A"/><b>A</b><span> concerned they are unable to write quickly</span></label>
 <label class="opt"><input class="ans-opt" data-q="L30" name="Lq30" type="radio" value="B"/><b>B</b><span> embarrassed by comments made about it</span></label>
 <label class="opt"><input class="ans-opt" data-q="L30" name="Lq30" type="radio" value="C"/><b>C</b><span> regretful that they have lost the habit</span></label>
-</blockquote></section><section class="part" id="part4"><h3 class="part-title" id="part-4-questions-3140">PART 4 <em>Questions 31–40</em></h3><div class="audio"><span>🎧 Part 4</span><audio controls preload="none" src="audio/t4-part4.mp3"></audio></div><p><em>Complete the notes below.</em></p><p><em>Write <strong>ONE WORD ONLY</strong> for each answer.</em></p><table>
+</blockquote><details class="script"><summary>📜 Lời thoại Part 3</summary><div class="script-body"><p><span id="trL3-0-0">Narrator/Instructor: Part three, you will hear two education students discussing an assignment on teaching handwriting to children.</span> <span id="trL3-0-1">First, you have some time to look at questions 21 to 24.</span> <span id="trL3-0-2">Now listen carefully and answer questions 21 to 24.</span> <span id="trL3-0-3">Here is the transcript of the conversation between two education students, presented in a conversation format, based on the provided sources:</span></p><p><b>Student 1:</b> <span id="trL3-1-0">How are you getting on with the assignment on handwriting?</span></p><p><b>Student 2:</b> <span id="trL3-2-0">Not too bad.</span> <span id="trL3-2-1">You know, I hadn&#x27;t realized that children benefit in so many ways from learning to write.</span> <span id="trL3-2-2">It&#x27;s such an important skill and yet most people think handwriting is less important than in the past because people hardly ever write by hand these days.</span></p><p><b>Student 1:</b> <span id="trL3-3-0">Yes.</span> <span id="trL3-3-1">And all the evidence suggests children should learn to write by hand before they learn to type.</span> <span id="trL3-3-2">Not least because it helps their memory.</span></p><p><b>Student 2:</b> <span id="trL3-4-0">That&#x27;s right.</span> <span id="trL3-4-1">The physical act of writing helps children to remember letters.</span> <span id="trL3-4-2">That seems pretty obvious when you think about it.</span> <span id="trL3-4-3">What&#x27;s less obvious is how it helps develop their concentration.</span> <span id="trL3-4-4">They have to sit still and focus on one thing.</span></p><p><b>Student 1:</b> <span id="trL3-5-0">Yeah, that aspect of handwriting had never occurred to me before.</span></p><p><b>Student 2:</b> <span id="trL3-6-0">Same here.</span> <span id="trL3-6-1">I&#x27;m not sure I understand how it improves children&#x27;s imagination though.</span></p><p><b>Student 1:</b> <span id="trL3-7-0">Well, there was that study which showed that primary age children generated more ideas when they were writing by hand than using a keyboard.</span> <span id="trL3-7-1">I would have guessed that would be the case.</span> <span id="trL3-7-2">Yeah, I&#x27;d never associated spatial awareness with handwriting either.</span> <span id="trL3-7-3">I thought spatial awareness was more to do with knowing where you are in relation to objects or other people.</span></p><p><b>Student 2:</b> <span id="trL3-8-0">I thought that too.</span> <span id="trL3-8-1">But good spatial awareness is essential for writing because you have to space words correctly.</span> <span id="trL3-8-2">It&#x27;s not just fine motor skills that improve through writing as I&#x27;d always assumed.</span></p><p><b>Student 1:</b> <span id="trL3-9-0">Handwriting is so much harder for children with dyspraxia who have problems coordinating movement.</span> <span id="trL3-9-1">It&#x27;s good there are lots of things you can do in the classroom to help them.</span> <span id="trL3-9-2">They need so much more support with letter formation.</span> <span id="trL3-9-3">You need to play lots of games to help them distinguish letter shapes. lt takes a lot of patience.</span></p><p><b>Student 2:</b> <span id="trL3-10-0">Yeah, I like the idea of using one of those pens that lights up if you press too hard.</span> <span id="trL3-10-1">That seems like a really simple solution.</span></p><p><b>Student 1:</b> <span id="trL3-11-0">Yes, absolutely.</span> <span id="trL3-11-1">I&#x27;m not sure there&#x27;s much you can do about children with dyspraxia writing very slowly; it&#x27;s more important to focus on accuracy and as they get more confident I think they eventually speed up.</span></p><p><b>Student 2:</b> <span id="trL3-12-0">One quite simple thing you can do is to use grid paper so they write each letter in a box and that trains them to space the letters correctly.</span></p><p><b>Student 1:</b> <span id="trL3-13-0">Indeed, that&#x27;s more important for legibility than trying to get them to write in a straight line.</span> <span id="trL3-13-1">For some children, it might be better to teach them to write on a laptop rather than by hand, like children with dyslexia.</span> <span id="trL3-13-2">They often really struggle with handwriting, and some just give up.</span></p><p><b>Student 2:</b> <span id="trL3-14-0">Yeah, it&#x27;s not as frustrating for them if they get things wrong.</span> <span id="trL3-14-1">On a keyboard, they can be more willing to have a go.</span> <span id="trL3-14-2">But I read that developing fluency isn&#x27;t any faster.</span></p><p><b>Student 1:</b> <span id="trL3-15-0">That&#x27;s right.</span> <span id="trL3-15-1">Did you read that article on the benefits of teaching print rather than cursive handwriting where the letters are joined up?</span></p><p><b>Student 2:</b> <span id="trL3-16-0">Yes.</span> <span id="trL3-16-1">Well, in the past, cursive writing was certainly considered more stylish and educated, but not anymore.</span> <span id="trL3-16-2">Teachers&#x27; attitudes have changed because it&#x27;s been proved that cursive is more difficult to learn, especially for children with learning difficulties who find joining up letters is really challenging.</span></p><p><b>Student 1:</b> <span id="trL3-17-0">I agree.</span> <span id="trL3-17-1">I was always worried that my poor handwriting affected my exam results, And now research shows that I was right to worry.</span> <span id="trL3-17-2">I&#x27;m sure a lot of students think it&#x27;s unfair that they&#x27;re being judged on their handwriting, not just their knowledge.</span></p><p><b>Student 2:</b> <span id="trL3-18-0">Marks are definitely affected if examiners can&#x27;t read the script.</span> <span id="trL3-18-1">That&#x27;s why it&#x27;s always been so important to teach children to write legibly.</span> <span id="trL3-18-2">Do you think the role of handwriting will change in the future?</span></p><p><b>Student 1:</b> <span id="trL3-19-0">I can&#x27;t see that changing much.</span> <span id="trL3-19-1">Touch typing still isn&#x27;t taught in most schools, which is a shame, but maybe that won&#x27;t be necessary in the future because people will also be able to write by hand on digital devices.</span> <span id="trL3-19-2">Anyway, teachers understand the value of handwriting.</span> <span id="trL3-19-3">It&#x27;s a basic life skill.</span></p><p><b>Student 2:</b> <span id="trL3-20-0">True.</span> <span id="trL3-20-1">However, the fact is that people are writing by hand less and less and relying on digital devices.</span> <span id="trL3-20-2">That does cause some problems.</span></p><p><b>Student 1:</b> <span id="trL3-21-0">You mean like note-taking?</span> <span id="trL3-21-1">There are lots of apps for that. ; 8 179</span></p><p><b>Student 2:</b> <span id="trL3-22-0">And for reading historical documents, apparently, but my mom is shocked by my awful spelling and the fact that my punctuation is really inconsistent.</span> <span id="trL3-22-1">I think you can put that down to lack of practice.</span></p><p><b>Student 1:</b> <span id="trL3-23-0">I expect so.</span> <span id="trL3-23-1">Personally, I miss writing by hand.</span> <span id="trL3-23-2">I hardly ever write anything now.</span> <span id="trL3-23-3">I remember my grandparents had such beautiful handwriting and it was so individual.</span> <span id="trL3-23-4">Nobody I know would be able to identify my handwriting now.</span> <span id="trL3-23-5">It&#x27;s a shame.</span></p><p><b>Student 2:</b> <span id="trL3-24-0">I know.</span> <span id="trL3-24-1">I feel the same way.</span> <span id="trL3-24-2">I used to write a diary by hand and now I do that digitally.</span> <span id="trL3-24-3">It just seems less effort to do it that way.</span> <span id="trL3-24-4">So, it&#x27;s not just a problem.</span></p></div></details></section><section class="part" id="part4"><h3 class="part-title" id="part-4-questions-3140">PART 4 <em>Questions 31–40</em></h3><div class="audio"><span>🎧 Part 4</span><audio controls preload="none" src="audio/t4-part4.mp3"></audio></div><p><em>Complete the notes below.</em></p><p><em>Write <strong>ONE WORD ONLY</strong> for each answer.</em></p><table>
 <colgroup>
 <col style="width: 100%"/>
 </colgroup>
@@ -300,7 +350,7 @@ effective.</p></li>
 </thead>
 <tbody>
 </tbody>
-</table></section>
+</table><details class="script"><summary>📜 Lời thoại Part 4</summary><div class="script-body"><p><b>Lecturer:</b> <span id="trL4-0-0">looking at different types of conflicts that may arise between wildlife and humans at the boundaries of protected areas such as national parks and animal sanctuaries.</span> <span id="trL4-0-1">I&#x27;d like to illustrate this by telling you about some research that I&#x27;ve been involved in recently in the central African country of Zambia in the area around the ChBE bird sanctuary which contains over 300 of the listed birds of Zambia.</span> <span id="trL4-0-2">These include a number of birds of prey such as eagles, hawks, and owls that live by hunting and killing other birds and animals.</span> <span id="trL4-0-3">Now, most of the people living in the local communities near to the bird sanctuary are small-scale farmers, and these birds of prey provide important social and ecological benefits to them.</span> <span id="trL4-0-4">For example, a lot of damage can be caused to farmers crops by rodents such as rats, which would consume the crops as they grow in in the fields as well as after harvesting if they weren&#x27;t hunted and killed by the birds.</span> <span id="trL4-0-5">And the predatory habits of these birds also protect farmers in other ways, For example, a major danger to rural workers is snakes whose bite may be dangerous or even fatal.</span> <span id="trL4-0-6">And birds of prey have a major role in keeping their populations under control.</span> <span id="trL4-0-7">Local people have always been aware of these benefits and for years Even before the sanctuary was opened in 1973, the birds played a key role in the culture of the region.</span> <span id="trL4-0-8">However, more recently, the sanctuary and its birds have also become increasingly important to the community in economic terms because at present, after a relatively slow start, tourism has become an important source of revenue for them.</span> <span id="trL4-0-9">However, although these birds of prey are protected by the government.</span> <span id="trL4-0-10">Their numbers are falling.</span> <span id="trL4-0-11">Some of these deaths are accidental.</span> <span id="trL4-0-12">Fatalities occur when birds are light on roads to catch and eat their prey and are hit by fast-moving traffic.</span> <span id="trL4-0-13">Drivers in Zambia have to take special care at night as birds may regard the quieter roads as safe places to sleep.</span> <span id="trL4-0-14">Accidental deaths may also occur if these birds fly close to high voltage power lines. as they may be electrocuted.</span> <span id="trL4-0-15">This is a particular danger in the heavy rain which can occur in the region in the months from December to April.</span> <span id="trL4-0-16">And local farmers also pose a threat to these birds.</span> <span id="trL4-0-17">As well as growing crops, small-scale farmers in the area also rear chickens.</span> <span id="trL4-0-18">These provide food for the farmers families as well as being an important source of income.</span> <span id="trL4-0-19">But they&#x27;re also an easy target for birds of prey.</span> <span id="trL4-0-20">And so farmers may shoot these birds, which is illegal but understandable.</span> <span id="trL4-0-21">Or they may poison the birds, which again is illegal and can have negative effects on the ecosystem.</span> <span id="trL4-0-22">So how else can farmers protect their chickens from birds of prey?</span> <span id="trL4-0-23">Some people believe that to prevent the predators from settling near the area where the chickens kept.</span> <span id="trL4-0-24">It&#x27;s best to keep this area free from vegetation.</span> <span id="trL4-0-25">But in fact, this is counterproductive as it means the chickens have no cover to hide in and they&#x27;ll be easier for the birds to see.</span> <span id="trL4-0-26">Another possibility would be to prevent the chickens from going outside at all and to keep them safe from predators inside a building, but this would cost far too much to be a practical solution.</span> <span id="trL4-0-27">Nearly all the far Farmers reported that they spent a lot of time and effort trying to frighten off the birds of prey without actually harming them.</span> <span id="trL4-0-28">Most of the farmers had at least one dog and said this was a big help at scaring away the predators, Some of the farmers also reported that during the breeding season when the chickens were particularly vulnerable, they encouraged their children to watch over the chickens and to hit pans with a metal spoon so that the resulting noise would succeed in driving away birds that were trying to seize the young chicks.</span> <span id="trL4-0-29">None of these methods was 100% effective.</span> <span id="trL4-0-30">So, as a result, the village people told us that rather than just using one method, they were forced to use a combination for them to have any effect.</span> <span id="trL4-0-31">And even so, these birds of prey remain a major threat to the chicken&#x27;s survival and cause considerable economic loss to far So, we looked at the possibility of a longer-term solution to.</span></p></div></details></section>
   </div>
   <div class="sect" id="sectR">
     <div class="panel" data-s="R">
@@ -686,32 +736,64 @@ nests. These might otherwise be threatened by predators such as
 </table></div></div></section>
   </div>
 </main>
+<div class="overlay" id="namebox" hidden><form class="ocard" id="nmForm">
+  <h2>Gửi kết quả cho thầy</h2>
+  <p style="color:var(--dim);margin:0 0 6px">Nhập tên một lần, lần sau máy sẽ tự nhớ.</p>
+  <label for="nmName">Họ và tên</label><input id="nmName" autocomplete="name">
+  <label for="nmLop">Lớp / nhóm (nếu có)</label><input id="nmLop">
+  <p class="err" id="nmErr"></p>
+  <div class="row"><button type="button" class="btn alt" id="nmSkip">Bỏ qua</button><button type="submit" class="btn">Nộp bài</button></div>
+</form></div>
+<div class="overlay" id="examstart" hidden><form class="ocard" id="exForm">
+  <h2 id="exTitle">Thi thử</h2>
+  <ul id="exRules"></ul>
+  <label for="exName">Họ và tên</label><input id="exName" autocomplete="name">
+  <label for="exLop">Lớp / nhóm (nếu có)</label><input id="exLop">
+  <p class="err" id="exErr"></p>
+  <div class="row"><a class="btn alt" href="index.html" style="text-decoration:none">Quay lại</a><button type="submit" class="btn">Bắt đầu làm bài</button></div>
+</form></div>
 <footer><a href="index.html">← Danh sách 4 test</a> · Cambridge IELTS 20 · Test 4 — trang luyện tập cho học viên. Band chỉ là ước tính theo thang điểm thường dùng.</footer>
+<script src="config.js"></script>
+<script src="fc.js"></script>
+<script src="vocab.js"></script>
 <script>
 (function(){
 'use strict';
-var KEY={"L1": "Kings / King's", "L2": "125 / one hundred and twenty-five / one hundred twenty-five", "L3": "walking", "L4": "boat", "L5": "Tuesday", "L6": "space", "L7": "vegetarian", "L8": "2.30 / 2:30 / two thirty", "L9": "75 / seventy-five", "L10": "port", "L11": "B", "L12": "C", "L13": "C", "L14": "A", "L15": "D", "L16": "F", "L17": "B", "L18": "H", "L19": "C", "L20": "G", "L21": "C", "L22": "E", "L23": "A", "L24": "C", "L25": "C", "L26": "A", "L27": "A", "L28": "B", "L29": "B", "L30": "C", "L31": "rats", "L32": "snakes", "L33": "tourism", "L34": "traffic", "L35": "rain", "L36": "poison", "L37": "building", "L38": "dog", "L39": "noise", "L40": "combination", "R1": "teacher", "R2": "charcoal", "R3": "skyscrapers", "R4": "flowers", "R5": "bones", "R6": "landscape", "R7": "rivers", "R8": "FALSE", "R9": "TRUE", "R10": "FALSE", "R11": "TRUE", "R12": "NOT GIVEN", "R13": "NOT GIVEN", "R14": "D", "R15": "A", "R16": "D", "R17": "F", "R18": "pumps", "R19": "dams", "R20": "float", "R21": "crops", "R22": "trees", "R23": "B", "R24": "E", "R25": "A", "R26": "C", "R27": "D", "R28": "G", "R29": "B", "R30": "C", "R31": "B", "R32": "D", "R33": "E", "R34": "B", "R35": "C", "R36": "A", "R37": "jackals", "R38": "diseases", "R39": "food", "R40": "foxes"}, QT={"L1": "text", "L2": "text", "L3": "text", "L4": "text", "L5": "text", "L6": "text", "L7": "text", "L8": "text", "L9": "text", "L10": "text", "L11": "multi", "L12": "multi", "L13": "multi", "L14": "multi", "L15": "select", "L16": "select", "L17": "select", "L18": "select", "L19": "select", "L20": "select", "L21": "multi", "L22": "multi", "L23": "multi", "L24": "multi", "L25": "mcq", "L26": "mcq", "L27": "mcq", "L28": "mcq", "L29": "mcq", "L30": "mcq", "L31": "text", "L32": "text", "L33": "text", "L34": "text", "L35": "text", "L36": "text", "L37": "text", "L38": "text", "L39": "text", "L40": "text", "R1": "text", "R2": "text", "R3": "text", "R4": "text", "R5": "text", "R6": "text", "R7": "text", "R8": "select", "R9": "select", "R10": "select", "R11": "select", "R12": "select", "R13": "select", "R14": "select", "R15": "select", "R16": "select", "R17": "select", "R18": "text", "R19": "text", "R20": "text", "R21": "text", "R22": "text", "R23": "select", "R24": "select", "R25": "select", "R26": "select", "R27": "select", "R28": "select", "R29": "select", "R30": "select", "R31": "select", "R32": "select", "R33": "select", "R34": "select", "R35": "select", "R36": "select", "R37": "text", "R38": "text", "R39": "text", "R40": "text"}, N='4';
+var KEY={"L1": "Kings / King's", "L2": "125 / one hundred and twenty-five / one hundred twenty-five", "L3": "walking", "L4": "boat", "L5": "Tuesday", "L6": "space", "L7": "vegetarian", "L8": "2.30 / 2:30 / two thirty", "L9": "75 / seventy-five", "L10": "port", "L11": "B", "L12": "C", "L13": "C", "L14": "A", "L15": "D", "L16": "F", "L17": "B", "L18": "H", "L19": "C", "L20": "G", "L21": "C", "L22": "E", "L23": "A", "L24": "C", "L25": "C", "L26": "A", "L27": "A", "L28": "B", "L29": "B", "L30": "C", "L31": "rats", "L32": "snakes", "L33": "tourism", "L34": "traffic", "L35": "rain", "L36": "poison", "L37": "building", "L38": "dog", "L39": "noise", "L40": "combination", "R1": "teacher", "R2": "charcoal", "R3": "skyscrapers", "R4": "flowers", "R5": "bones", "R6": "landscape", "R7": "rivers", "R8": "FALSE", "R9": "TRUE", "R10": "FALSE", "R11": "TRUE", "R12": "NOT GIVEN", "R13": "NOT GIVEN", "R14": "D", "R15": "A", "R16": "D", "R17": "F", "R18": "pumps", "R19": "dams", "R20": "float", "R21": "crops", "R22": "trees", "R23": "B", "R24": "E", "R25": "A", "R26": "C", "R27": "D", "R28": "G", "R29": "B", "R30": "C", "R31": "B", "R32": "D", "R33": "E", "R34": "B", "R35": "C", "R36": "A", "R37": "jackals", "R38": "diseases", "R39": "food", "R40": "foxes"}, QT={"L1": "text", "L2": "text", "L3": "text", "L4": "text", "L5": "text", "L6": "text", "L7": "text", "L8": "text", "L9": "text", "L10": "text", "L11": "multi", "L12": "multi", "L13": "multi", "L14": "multi", "L15": "select", "L16": "select", "L17": "select", "L18": "select", "L19": "select", "L20": "select", "L21": "multi", "L22": "multi", "L23": "multi", "L24": "multi", "L25": "mcq", "L26": "mcq", "L27": "mcq", "L28": "mcq", "L29": "mcq", "L30": "mcq", "L31": "text", "L32": "text", "L33": "text", "L34": "text", "L35": "text", "L36": "text", "L37": "text", "L38": "text", "L39": "text", "L40": "text", "R1": "text", "R2": "text", "R3": "text", "R4": "text", "R5": "text", "R6": "text", "R7": "text", "R8": "select", "R9": "select", "R10": "select", "R11": "select", "R12": "select", "R13": "select", "R14": "select", "R15": "select", "R16": "select", "R17": "select", "R18": "text", "R19": "text", "R20": "text", "R21": "text", "R22": "text", "R23": "select", "R24": "select", "R25": "select", "R26": "select", "R27": "select", "R28": "select", "R29": "select", "R30": "select", "R31": "select", "R32": "select", "R33": "select", "R34": "select", "R35": "select", "R36": "select", "R37": "text", "R38": "text", "R39": "text", "R40": "text"}, EV={"L1": "trL1-5-1", "L2": "trL1-9-1", "L3": "trL1-12-2", "L4": "trL1-15-0", "L5": "trL1-16-2", "L6": "trL1-21-0", "L7": "trL1-24-2", "L8": "trL1-25-3", "L9": "trL1-27-0", "L10": "trL1-35-1", "L11": "trL2-0-0", "L12": "trL2-0-0", "L13": "trL2-0-16", "L14": "trL2-0-16", "L15": "trL2-1-4", "L16": "trL2-1-7", "L17": "trL2-1-10", "L18": "trL2-1-10", "L19": "trL2-1-14", "L20": "trL2-1-15", "L21": "trL3-7-0", "L22": "trL3-7-0", "L23": "trL3-12-0", "L24": "trL3-12-0", "L25": "trL3-13-1", "L26": "trL3-16-2", "L27": "trL3-17-1", "L28": "trL3-19-1", "L29": "trL3-22-0", "L30": "trL3-24-2", "L31": "trL4-0-4", "L32": "trL4-0-5", "L33": "trL4-0-8", "L34": "trL4-0-13", "L35": "trL4-0-15", "L36": "trL4-0-21", "L37": "trL4-0-26", "L38": "trL4-0-28", "L39": "trL4-0-28", "L40": "trL4-0-30", "R1": "After attending university and then training college, she became an art teacher and taught in elementary schools, high schools, and colleges in Virginia, Texas, and South Carolina from 1911 to 1918.", "R2": "During this period, O’Keeffe began to experiment with creating abstract compositions in charcoal, and produced a series of innovative drawings that led her art in a new direction.", "R3": "By the mid-1920s, O’Keeffe was recognized as one of America’s most important and successful artists, widely known for the architectural pictures that dramatically depict the soaring skyscrapers of New York.", "R4": "In her magnified images depicting flowers, begun in 1924, O’Keeffe brings the viewer right into the picture.", "R5": "There, O’Keeffe found new inspiration: at first, it was the numerous sun-bleached bones she came across in the state’s rugged terrain that sparked her imagination.", "R6": "However, it was the region’s spectacular landscape, with its unusual geological formations, vivid colours, clarity of light, and exotic vegetation, that held the artist’s imagination for more than four decades.", "R7": "Flying in planes inspired her last two major series – aerial views of rivers and expansive paintings of the sky viewed from just above clouds.", "R14": "There have been many attempts to restore the island’s coastal mangroves: ecosystems of trees and shrubs that help defend coastal areas by trapping sediment in their net-like root systems, elevating the sea bed and dampening the energy of waves and tidal currents.", "R15": "Even if we stopped all CO2 emissions tomorrow, we would continue to see the impact of the CO2 already released since industrial times, with scientists forecasting that global warming would continue for around 40 years.", "R16": "The modifications were made by the Buoyant Foundation Project, a not-for-profit organisation that has been researching and retrofitting amphibious houses since 2006. ‘When I started this,’ explains founder Elizabeth English, ‘climate change was not on the tip of everybody’s tongue, but this technology is becoming necessary in places that didn’t previously need it.’ It’s much cheaper than permanently elevating houses, English explains - about a third of what it would cost to completely replace a building’s foundations.", "R17": "B In Miami Beach, Florida, USA, seawater isn’t just breaching the island city’s walls, it’s seeping up through the ground, so the only way to save the city is to lift it up above sea level.", "R18": "In addition to the road adaptations, the city has set up new pumps that can remove up to 75,000 litres of water per minute.", "R19": "But Susanna Tol of the not-for-profit organisation Wetlands International says that, while hugely popular, the majority of mangrove-planting projects fail.", "R20": "Homes in this part of Vietnam are traditionally built on stilts but these ones had been built to float.", "R21": "ICCO Cooperation has been working with 10,000 farmers in Bangladesh to start cultivating naturally salt-tolerant crops in the region.", "R22": "He leads the Cool Streets LA programme, a series of pilot projects, which include the planting of trees and the installation or a ‘cool pavement’ system, designed to help reach the city’s goal of bringing down its average temperature by 1.5°C. ‘Urban cooling is literally a matter of life and death for our future in LA,’ says Spotts.", "R23": "The programme has seen moderate success, mainly in areas with less subsidence. ‘Unfortunately, traditional infrastructure is often single-solution focused,’ says Tol. ‘For long-term success, it’s critical that we transition towards multifunctional approaches that embed natural processes and that engage and benefit communities and local decision-makers.’", "R24": "He leads the Cool Streets LA programme, a series of pilot projects, which include the planting of trees and the installation or a ‘cool pavement’ system, designed to help reach the city’s goal of bringing down its average temperature by 1.5°C. ‘Urban cooling is literally a matter of life and death for our future in LA,’ says Spotts.", "R25": "She knows that they’re essential and that the job is far from over. ‘We know that in 20, 30, 40 years, we’ll need to go back in there and adjust to the changing environment,’ she says.", "R26": "The modifications were made by the Buoyant Foundation Project, a not-for-profit organisation that has been researching and retrofitting amphibious houses since 2006. ‘When I started this,’ explains founder Elizabeth English, ‘climate change was not on the tip of everybody’s tongue, but this technology is becoming necessary in places that didn’t previously need it.’ It’s much cheaper than permanently elevating houses, English explains - about a third of what it would cost to completely replace a building’s foundations.", "R27": "As a result, the cheetahs are often held responsible for animal losses, and large numbers have been killed by farmers.", "R28": "When guard dogs were introduced, more than 90 per cent of farmers reported a dramatic reduction in livestock losses, and said that as a result they were less likely to kill predators.", "R29": "If necessary, they will chase away predators, but often their mere presence is sufficient. ‘Their initial training is to make them understand that livestock is going to be their life,’ says Dan Macon, a shepherd with three guard dogs. ‘A fluffy white puppy is fun to be around, but too much human affection makes it a great dog for guarding the front porch, rather than a great livestock guard dog.’", "R30": "In a study carried out in Australia by Linda van Bommel and Chris Johnson at the University of Tasmania, more than 65 per cent of herders reported that predation stopped completely after they got the dogs, and almost all the rest saw a decrease in attacks. ‘If they are managed and used properly, livestock guard dogs are the most efficient control method that we have in terms of the amount of livestock that they save from predation,’ says van Bommel.", "R31": "These dogs are raised from an early age with the animals they will be watching and eventually these animals become the dog’s family.", "R32": "Julie Young, at Utah State University in the US, believes this result applies widely. ‘There is common ground from the livestock perspective and from the conservation perspective,’ she says. ‘If ranchers don’t have a dead cow, they will not make a call to apply for a permit to kill a wolf.’", "R33": "E Looking at all the published evidence, Bethany Smith at Nottingham Trent University in the UK found that up to 88 per cent of farmers said they no longer killed predators after using dogs - but warned that such self-reported results must be taken with a pinch of salt.", "R34": "What’s more, it is possible that livestock guard dogs merely displace predators to unprotected neighbouring properties, where their fate isn’t recorded. ‘In some regions, we work with almost every farmer, but in others only one or two have dogs,’ says Ribeiro. ‘If we are not working with everybody, we are transferring the wolf pressure to the neighbour’s herd and he can use poison and kill an entire pack of wolves.’", "R35": "In a study carried out in Australia by Linda van Bommel and Chris Johnson at the University of Tasmania, more than 65 per cent of herders reported that predation stopped completely after they got the dogs, and almost all the rest saw a decrease in attacks. ‘If they are managed and used properly, livestock guard dogs are the most efficient control method that we have in terms of the amount of livestock that they save from predation,’ says van Bommel.", "R36": "If necessary, they will chase away predators, but often their mere presence is sufficient. ‘Their initial training is to make them understand that livestock is going to be their life,’ says Dan Macon, a shepherd with three guard dogs. ‘A fluffy white puppy is fun to be around, but too much human affection makes it a great dog for guarding the front porch, rather than a great livestock guard dog.’", "R37": "In 2015, researchers reported that in spite of the impact farmers obtaining guard dogs had on cheetahs, the number of jackals killed by dogs and people actually increased.", "R38": "They have been found to spread diseases to wild animals, including endangered Ethiopian wolves.", "R39": "They may also compete with other carnivores for food.", "R40": "For example, their presence has been found to protect birds which build their nests on the ground in fields, where foxes would normally raid them.", "R8": "Remarkably, she remained independent from shifting art trends and her work stayed true to her own vision, which was based on finding the essential, abstract forms in nature.", "R9": "By the time she graduated from high school in 1905, she had determined to make her way as an artist.", "R10": "She sent some of these drawings to a friend in New York, who showed them to art collector and photographer Alfred Stieglitz in January 1916.", "R11": "The ups and downs of their personal and professional relationship were recorded in Stieglitz’s celebrated black-and-white portraits of O’Keeffe, taken over the course of twenty years (1917-37).", "R12": "While both locales provided a wealth of imagery for her paintings, one feature of the Abiquiú house - the large walled patio with its black door - was particularly inspirational.", "R13": "From the 1950s into the 1970s, O’Keeffe travelled widely, making trips to Asia, the Middle East, and Europe."}, N='4';
+var CFG=window.C20CFG||{};
 var QS=new URLSearchParams(location.search), MODE=(QS.get('part')||'').toUpperCase();
 if(!/^(L[1-4]|R[1-3]|L|R)$/.test(MODE)) MODE='';
-var SK='cam20.t'+N+(MODE?'.'+MODE:'');
-(function(){ // chế độ làm riêng một phần
+var EXAM=QS.get('thi')==='1' && (MODE==='L'||MODE==='R');
+var SK='cam20.t'+N+(MODE?'.'+MODE:'')+(EXAM?'.thi':'');
+function $(s,r){return (r||document).querySelector(s);} function $$(s,r){return [].slice.call((r||document).querySelectorAll(s));}
+function lsGet(k){ try{ return localStorage.getItem(k); }catch(e){ return null; } }
+function lsSet(k,v){ try{ localStorage.setItem(k,v); }catch(e){} }
+function esc(t){ return String(t).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
+
+// ================= chế độ làm riêng một phần / thi thử =================
+(function(){
   if(!MODE) return;
   var s=MODE[0], n=MODE.slice(1);
   document.body.classList.add('one');
-  document.getElementById(s==='L'?'sectR':'sectL').remove();
-  if(n){ [].slice.call(document.querySelectorAll(s==='L'?'.part':'.passage')).forEach(function(x){ if(x.id!==(s==='L'?'part':'passage')+n) x.remove(); }); }
+  var other=document.getElementById(s==='L'?'sectR':'sectL'); if(other) other.remove();
+  if(n){ $$(s==='L'?'.part':'.passage').forEach(function(x){ if(x.id!==(s==='L'?'part':'passage')+n) x.remove(); }); }
   var lab=document.getElementById('modelabel'); lab.hidden=false;
-  lab.textContent=(s==='L'?'Listening':'Reading')+(n?(s==='L'?' · Part ':' · Passage ')+n:' · cả phần');
+  lab.textContent=(EXAM?'Thi thử · ':'')+(s==='L'?'Listening':'Reading')+(n?(s==='L'?' · Part ':' · Passage ')+n:(EXAM?'':' · cả phần'));
   document.title=document.title+' · '+lab.textContent;
-  if(n) [].slice.call(document.querySelectorAll('.hint')).forEach(function(h){ h.textContent='Bấm số câu để nhảy tới câu đó. Bài làm được tự lưu trên máy này.'+(s==='R'?' Gợi ý: khoảng 20 phút cho một passage.':''); });
+  if(n) $$('.hint').forEach(function(h){ h.textContent='Bấm số câu để nhảy tới câu đó. Bài làm được tự lưu trên máy này.'+(s==='R'?' Gợi ý: khoảng 20 phút cho một passage.':''); });
+  if(EXAM){ document.body.classList.add('exam');
+    $$('.hint').forEach(function(h){ h.textContent=s==='L'?'Thi thử: audio phát liền 4 part, mỗi part chỉ nghe một lần, không tạm dừng. Nghe xong có 2 phút kiểm tra rồi bài tự nộp.':'Thi thử: 60 phút cho 3 passage. Hết giờ bài tự nộp.'; });
+    $$('[data-act=reset]').forEach(function(b){ b.textContent='Thi lại'; });
+  }
 })();
+
 var state={};
-try{state=JSON.parse(localStorage.getItem(SK))||{};}catch(e){state={};}
+try{state=JSON.parse(lsGet(SK))||{};}catch(e){state={};}
 state.ans=state.ans||{}; state.done=state.done||{}; state.time=state.time||{L:0,R:0};
-function save(){try{localStorage.setItem(SK,JSON.stringify(state));}catch(e){}}
-function $(s,r){return (r||document).querySelector(s);} function $$(s,r){return [].slice.call((r||document).querySelectorAll(s));}
+function save(){ lsSet(SK,JSON.stringify(state)); }
 var cur=MODE?MODE[0]:'L';
-// ---- restore answers ----
+
+// ================= lưu & khôi phục bài làm =================
 $$('.ans').forEach(function(el){var q=el.dataset.q; if(state.ans[q]!=null) el.value=state.ans[q];
   el.addEventListener('input',function(){state.ans[q]=el.value; save(); grid();}); el.addEventListener('change',function(){state.ans[q]=el.value; save(); grid();});});
 $$('.opts').forEach(function(bq){
@@ -722,21 +804,19 @@ $$('.opts').forEach(function(bq){
     state.ans[q]=boxes.filter(function(x){return x.checked;}).map(function(x){return x.value;}).join(','); save(); grid();
   }); });
 });
-// ---- question list per section ----
+
+// ================= danh sách câu =================
 var PRESENT={};
 $$('.ans').forEach(function(el){PRESENT[el.dataset.q]=1;});
 $$('.opts').forEach(function(b){ var s=b.dataset.q[0],a=+b.dataset.q.slice(1),z=b.dataset.q2?+b.dataset.q2.slice(1):a; for(var n=a;n<=z;n++) PRESENT[s+n]=1; });
 function qnums(s){ return Object.keys(QT).filter(function(k){return k[0]===s&&PRESENT[k];}).map(function(k){return +k.slice(1);}).sort(function(a,b){return a-b;}); }
+function pairOf(s,n){ return $$('.opts[data-q2]').filter(function(b){var a=+b.dataset.q.slice(1),z=+b.dataset.q2.slice(1);return b.dataset.q[0]===s&&n>=a&&n<=z;})[0]; }
 function answered(s,n){
-  var k=s+n, t=QT[k];
-  if(t==='multi'){ // find pair start
-    var bq=$$('.opts[data-q2]').filter(function(b){var a=+b.dataset.q.slice(1),z=+b.dataset.q2.slice(1);return b.dataset.q[0]===s&&n>=a&&n<=z;})[0];
-    if(!bq) return false; var v=(state.ans[bq.dataset.q]||'').split(',').filter(Boolean); return v.length>n-(+bq.dataset.q.slice(1));
-  }
+  var k=s+n;
+  if(QT[k]==='multi'){ var bq=pairOf(s,n); if(!bq) return false; var v=(state.ans[bq.dataset.q]||'').split(',').filter(Boolean); return v.length>n-(+bq.dataset.q.slice(1)); }
   return !!(state.ans[k]&&String(state.ans[k]).trim());
 }
-function target(s,n){ return document.getElementById(s+'q'+n) || $('[data-q="'+s+n+'"]') ||
-  $$('.opts[data-q2]').map(function(b){return b;}).filter(function(b){var a=+b.dataset.q.slice(1),z=+b.dataset.q2.slice(1);return b.dataset.q[0]===s&&n>=a&&n<=z;}).map(function(b){return b.previousElementSibling;})[0]; }
+function target(s,n){ var bq; return document.getElementById(s+'q'+n) || $('[data-q="'+s+n+'"]') || ((bq=pairOf(s,n))&&bq.previousElementSibling); }
 function grid(){
   ['L','R'].forEach(function(s){
     var g=$('.panel[data-s="'+s+'"] .grid'); if(!g) return; if(!g.children.length){
@@ -747,9 +827,10 @@ function grid(){
     $$('a',g).forEach(function(a){ if(!state.done[s]) a.className=answered(s,+a.dataset.n)?'done':''; });
   });
 }
-// ---- grading ----
+
+// ================= chấm điểm =================
 function norm(x){ return String(x||'').toLowerCase().replace(/[’']/g,"'").replace(/[£$€]/g,'').replace(/[.,;:!?]+$/,'').replace(/\s+/g,' ').trim(); }
-function variants(key){ // "(the) station / train station" -> list
+function variants(key){
   var out=[]; String(key).split(/\s*\/\s*|\s+OR\s+/).forEach(function(alt){
     var opts=[''], parts=alt.split(/(\([^)]*\))/);
     parts.forEach(function(p){ if(/^\(.*\)$/.test(p)){ var inner=p.slice(1,-1); opts=opts.concat(opts.map(function(o){return o+inner;})); } else opts=opts.map(function(o){return o+p;}); });
@@ -761,9 +842,9 @@ function isRight(k,val){ var key=KEY[k]; if(key==null) return null; var v=norm(v
 var BAND={L:[[39,9],[37,8.5],[35,8],[32,7.5],[30,7],[26,6.5],[23,6],[18,5.5],[16,5],[13,4.5],[10,4],[8,3.5],[6,3],[4,2.5]],
           R:[[39,9],[37,8.5],[35,8],[33,7.5],[30,7],[27,6.5],[23,6],[19,5.5],[15,5],[13,4.5],[10,4],[8,3.5],[6,3],[4,2.5]]};
 function band(s,sc){ for(var i=0;i<BAND[s].length;i++) if(sc>=BAND[s][i][0]) return BAND[s][i][1]; return 'dưới 2.5'; }
+var lastRes={};
 function grade(s){
   var sect=$('#sect'+s), total=0, got=0, res={};
-  if(!Object.keys(KEY).some(function(k){return k[0]===s;})){ alert('Chưa có đáp án cho phần này.'); return; }
   $$('.fix',sect).forEach(function(f){f.remove();});
   $$('.ans',sect).forEach(function(el){ var k=el.dataset.q, r=isRight(k,el.value); if(r===null) return; total++;
     el.classList.remove('ok-mark','bad-mark'); el.classList.add(r?'ok-mark':'bad-mark'); res[+k.slice(1)]=r; if(r) got++;
@@ -777,41 +858,231 @@ function grade(s){
     var hits=picked.filter(function(p){return keys.indexOf(p)>=0;});
     for(var m=q;m<=q2;m++){ total++; var ok=(m-q)<hits.length; res[m]=ok; if(ok) got++; }
   });
-  state.done[s]={got:got,total:total}; save();
+  state.done[s]={got:got,total:total}; save(); lastRes[s]=res;
   var g=$('.panel[data-s="'+s+'"] .grid'); $$('a',g).forEach(function(a){ var r=res[+a.dataset.n]; a.className=r===true?'g-ok':r===false?'g-bad':''; });
-  showScore(s); sect.classList.add('done-lock');
+  showScore(s); sect.classList.add('done-lock','revealed'); addLocs(s);
+  return res;
 }
 function showScore(s){ var d=state.done[s], el=$('.panel[data-s="'+s+'"] .score'); if(!el) return; if(!d){el.innerHTML='';return;}
-  el.innerHTML='Đúng '+d.got+'/'+d.total+(d.total===40?' <span class="band">Band ≈ '+band(s,d.got)+'</span>':''); }
+  el.innerHTML='Đúng '+d.got+'/'+d.total+(d.total===40?' <span class="band">Band ≈ '+band(s,d.got)+'</span>':'')+
+    '<span class="after">Bấm 📍 cạnh mỗi câu để xem chỗ có đáp án'+(s==='L'?' trong lời thoại':' trong bài đọc')+'.</span>'; }
+
+// ================= 1. lời thoại & vị trí đáp án =================
+function addLocs(s){
+  var sect=$('#sect'+s); $$('.loc',sect).forEach(function(b){b.remove();});
+  qnums(s).forEach(function(n){
+    var k=s+n; if(!EV[k]) return;
+    if(QT[k]==='multi'){ var bq=pairOf(s,n); if(bq && +bq.dataset.q.slice(1)!==n) return; }
+    var b=document.createElement('button'); b.type='button'; b.className='loc'; b.title='Xem chỗ có đáp án câu '+n; b.textContent='📍 '+n;
+    b.onclick=function(){ showEv(s,n); };
+    var w=$('[data-q="'+k+'"]',sect);
+    if(w && w.classList.contains('ans')){ var after=w.nextElementSibling&&w.nextElementSibling.classList.contains('fix')?w.nextElementSibling:w; after.insertAdjacentElement('afterend',b); }
+    else { var t=target(s,n); if(t) t.appendChild(b); }
+  });
+}
+function flash(el){ el.classList.remove('flash'); void el.offsetWidth; el.classList.add('flash'); }
+function showEv(s,n){
+  var k=s+n, v=EV[k];
+  if(s==='L'){
+    var sp=document.getElementById(v); if(!sp) return;
+    var d=sp.closest('details'); if(d) d.open=true;
+    $$('.evhl').forEach(function(x){x.classList.remove('evhl');});
+    sp.classList.add('evhl'); sp.setAttribute('data-q',n);
+    sp.scrollIntoView({behavior:'smooth',block:'center'}); flash(sp);
+  } else {
+    var pi=n<=13?1:n<=26?2:3, box=$('#passage'+pi+' .ptext'); if(!box) return;
+    var m=markSentence(box,v,n); if(m){ m.scrollIntoView({behavior:'smooth',block:'center'}); flash(m); }
+  }
+}
+function markSentence(root,sentence,n){
+  var old=root.querySelector('mark.ev[data-q="'+n+'"]'); if(old) return old;
+  var tgt=sentence.replace(/\s+/g,''), head=tgt.slice(0,40);
+  var ps=$$('p',root);
+  for(var i=0;i<ps.length;i++){
+    var walker=document.createTreeWalker(ps[i],NodeFilter.SHOW_TEXT,null), map=[], str='', node;
+    while((node=walker.nextNode())){ var t=node.nodeValue; for(var j=0;j<t.length;j++){ if(!/\s/.test(t[j])){ map.push([node,j]); str+=t[j]; } } }
+    var at=str.indexOf(head); if(at<0) continue;
+    var end=Math.min(str.length,at+tgt.length)-1, first=null;
+    // gom theo từng text node rồi bọc <mark>
+    var segs=[], k=at;
+    while(k<=end){ var nd=map[k][0], st=map[k][1], en=st; while(k+1<=end && map[k+1][0]===nd){ k++; en=map[k][1]; } segs.push([nd,st,en+1]); k++; }
+    segs.reverse().forEach(function(sg){ var r=document.createRange(); r.setStart(sg[0],sg[1]); r.setEnd(sg[0],sg[2]);
+      var mk=document.createElement('mark'); mk.className='ev'; mk.setAttribute('data-q',n); try{ r.surroundContents(mk); first=mk; }catch(e){} });
+    if(first){ var tag=document.createElement('sup'); tag.className='evtag'; tag.textContent=n; first.insertBefore(tag,first.firstChild); }
+    return first;
+  }
+  return null;
+}
+
+// ================= 3. gửi kết quả về Google Sheet + lưu lịch sử =================
+function who(){ return {name:lsGet('cam20.name')||'', lop:lsGet('cam20.lop')||''}; }
+function logResult(s,res,auto){
+  var d=state.done[s]; if(!d) return;
+  var wrong=Object.keys(res).filter(function(n){return res[n]===false;}).map(Number).sort(function(a,b){return a-b;});
+  var byPart={}; Object.keys(res).forEach(function(n){ n=+n; var pk=s==='L'?'L'+Math.ceil(n/10):'R'+(n<=13?1:n<=26?2:3); var b=byPart[pk]||(byPart[pk]=[0,0]); b[1]++; if(res[n]) b[0]++; });
+  var rec={t:Date.now(), test:+N, sec:s, part:MODE.length===2?MODE:(s), exam:EXAM, got:d.got, total:d.total, byPart:byPart,
+    band:d.total===40?band(s,d.got):'', secs:state.time[s]||0, wrong:wrong};
+  var h=[]; try{ h=JSON.parse(lsGet('cam20.hist'))||[]; }catch(e){}
+  h.push(rec); if(h.length>300) h=h.slice(-300); lsSet('cam20.hist',JSON.stringify(h));
+  var url=CFG.SCRIPT_URL; if(!url) return;
+  var w=who(), body={kind:'cam20', name:w.name, lop:w.lop, test:'Cam 20 · Test '+N,
+    part:(s==='L'?'Listening':'Reading')+(MODE.length===2?(s==='L'?' Part ':' Passage ')+MODE.slice(1):''),
+    mode:EXAM?'Thi thử':'Luyện tập', got:d.got, total:d.total, band:rec.band, minutes:Math.round((state.time[s]||0)/6)/10,
+    wrong:wrong.join(', '), auto:!!auto, submittedAt:new Date().toISOString(), userAgent:navigator.userAgent};
+  try{ fetch(url,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(body)}); }catch(e){}
+}
+function askName(cb){
+  var w=who(); if(w.name){ cb(); return; }
+  var m=$('#namebox'); m.hidden=false; $('#nmName').value=w.name; $('#nmLop').value=w.lop; setTimeout(function(){$('#nmName').focus();},50);
+  $('#nmForm').onsubmit=function(e){ e.preventDefault(); var nm=$('#nmName').value.trim(); if(!nm){ $('#nmErr').textContent='Nhập họ tên để thầy nhận được kết quả nhé.'; return; }
+    lsSet('cam20.name',nm); lsSet('cam20.lop',$('#nmLop').value.trim()); m.hidden=true; cb(); };
+  $('#nmSkip').onclick=function(){ m.hidden=true; cb(); };
+}
+function submit(s,auto){
+  var p=$('.panel[data-s="'+s+'"]'); if(!p||state.done[s]) return;
+  var go=function(){ var res=grade(s); logResult(s,res,auto); stopExam(); p.scrollIntoView({behavior:'smooth'}); };
+  if(auto){ go(); return; }
+  var miss=qnums(s).filter(function(n){return !answered(s,n);}).length;
+  if(miss && !confirm('Còn '+miss+' câu chưa làm. Vẫn nộp bài?')) return;
+  askName(go);
+}
 $$('.panel').forEach(function(p){ var s=p.dataset.s;
-  $('[data-act=submit]',p).onclick=function(){
-    var miss=qnums(s).filter(function(n){return !answered(s,n);}).length;
-    if(miss && !confirm('Còn '+miss+' câu chưa làm. Vẫn nộp bài?')) return;
-    grade(s); p.scrollIntoView({behavior:'smooth'}); };
+  $('[data-act=submit]',p).onclick=function(){ submit(s,false); };
   $('[data-act=reset]',p).onclick=function(){
-    if(!confirm('Xoá hết bài làm phần này và làm lại?')) return;
+    if(!confirm(EXAM?'Thi lại từ đầu? Bài làm lần này sẽ bị xoá.':'Xoá hết bài làm phần này và làm lại?')) return;
     var sect=$('#sect'+s); Object.keys(state.ans).forEach(function(k){ if(k[0]===s) delete state.ans[k]; });
-    delete state.done[s]; state.time[s]=0; save();
+    delete state.done[s]; state.time[s]=0; delete state.started; delete state.apart; delete state.apos; delete state.audioEnd; save();
+    if(EXAM){ location.reload(); return; }
     $$('.ans',sect).forEach(function(el){el.value=''; el.classList.remove('ok-mark','bad-mark');});
     $$('.ans-opt',sect).forEach(function(b){b.checked=false;}); $$('.opt',sect).forEach(function(o){o.classList.remove('right','wrong');});
-    $$('.fix',sect).forEach(function(f){f.remove();}); sect.classList.remove('done-lock');
+    $$('.fix,.loc,.evtag',sect).forEach(function(f){f.remove();});
+    $$('mark.ev',sect).forEach(function(mk){ var t=document.createTextNode(mk.textContent); mk.replaceWith(t); });
+    $$('.evhl',sect).forEach(function(x){x.classList.remove('evhl');}); $$('details.script',sect).forEach(function(d){d.open=false;});
+    sect.classList.remove('done-lock','revealed');
     $$('audio',sect).forEach(function(a){a.pause(); a.currentTime=0;});
     showScore(s); grid(); window.scrollTo(0,0); };
 });
-// ---- tabs & timer ----
+
+// ================= 2. chế độ thi thử =================
+var examTimer=null;
+function stopExam(){ if(examTimer){ clearInterval(examTimer); examTimer=null; } $$('#sectL audio').forEach(function(a){a.pause();}); var eb=$('#exambar'); if(eb&&EXAM&&state.done[MODE[0]]){ eb.classList.add('over'); eb.innerHTML='<b>Đã nộp bài thi thử.</b> Xem điểm, đáp án và '+(MODE[0]==='L'?'lời thoại':'vị trí đáp án trong bài')+' ở dưới, hoặc bấm “Thi lại” để làm lại.'; } }
+function fmt(t){t=Math.max(0,Math.round(t));var m=Math.floor(t/60),x=t%60;return (m<10?'0':'')+m+':'+(x<10?'0':'')+x;}
+function setupExam(){
+  if(!EXAM) return;
+  var s=MODE[0], sect=$('#sect'+s), bar=document.createElement('div'); bar.id='exambar'; bar.className='exambar';
+  sect.insertBefore(bar, sect.firstChild);
+  if(state.done[s]){ bar.innerHTML='<b>Đã nộp bài thi thử.</b> Xem điểm và lời thoại ở dưới, hoặc bấm “Thi lại” để làm lại.'; bar.classList.add('over'); return; }
+  var w=who();
+  var rules=s==='L'?['Audio phát liền Part 1 → Part 4, mỗi part chỉ nghe một lần, không tạm dừng hay tua.','Vừa nghe vừa điền đáp án. Nghe xong có 2 phút kiểm tra, sau đó bài tự nộp.','Đeo tai nghe và kiểm tra âm lượng trước khi bắt đầu.']
+                   :['Có 60 phút cho 3 passage (40 câu). Đồng hồ đếm ngược ở góc trên.','Hết giờ bài tự nộp, nên nhớ để ý thời gian.'];
+  var ov=$('#examstart'); ov.hidden=state.started?true:false;
+  $('#exTitle').textContent='Thi thử '+(s==='L'?'Listening':'Reading')+' · Test '+N;
+  $('#exRules').innerHTML=rules.map(function(r){return '<li>'+esc(r)+'</li>';}).join('');
+  $('#exName').value=w.name; $('#exLop').value=w.lop;
+  $('#exForm').onsubmit=function(e){ e.preventDefault(); var nm=$('#exName').value.trim(); if(!nm){ $('#exErr').textContent='Nhập họ tên trước khi bắt đầu nhé.'; return; }
+    lsSet('cam20.name',nm); lsSet('cam20.lop',$('#exLop').value.trim()); ov.hidden=true; state.started=Date.now(); save(); run(true); };
+  if(state.started) run(false);
+  function run(fresh){
+    if(s==='R'){
+      var LIM=60*60;
+      var tickR=function(){ var left=LIM-(Date.now()-state.started)/1000; state.time.R=Math.min(LIM,Math.round((Date.now()-state.started)/1000));
+        bar.innerHTML='⏳ Còn lại <b class="cd'+(left<300?' low':'')+'">'+fmt(left)+'</b> · hết giờ bài tự nộp'; $('#timer').textContent=fmt(left);
+        if(left<=0){ stopExam(); submit('R',true); } };
+      tickR(); examTimer=setInterval(tickR,1000);
+    } else {
+      var auds=$$('#sectL .audio audio'); var idx=state.apart||0;
+      var showBar=function(txt,pct){ bar.innerHTML=txt+(pct!=null?'<div class="eprog"><i style="width:'+pct+'%"></i></div>':''); };
+      var endPhase=function(){ if(!state.audioEnd){ state.audioEnd=Date.now(); save(); }
+        var tickE=function(){ var left=120-(Date.now()-state.audioEnd)/1000; showBar('✅ Đã nghe xong. Còn <b class="cd low">'+fmt(left)+'</b> để kiểm tra lại đáp án, sau đó bài tự nộp.',null); $('#timer').textContent=fmt(left);
+          if(left<=0){ stopExam(); submit('L',true); } };
+        tickE(); examTimer=setInterval(tickE,1000); };
+      if(state.audioEnd||idx>=auds.length){ endPhase(); return; }
+      var play=function(){
+        var a=auds[idx]; if(!a){ endPhase(); return; }
+        if(state.apos && state.apart===idx){ try{ a.currentTime=state.apos; }catch(e){} }
+        a.onended=function(){ idx++; state.apart=idx; state.apos=0; save(); play(); };
+        a.ontimeupdate=function(){ if(!a.duration) return; var pct=a.currentTime/a.duration*100;
+          showBar('🎧 Đang phát <b>Part '+(idx+1)+'</b> / 4 · '+fmt(a.currentTime)+' / '+fmt(a.duration),pct);
+          if(Math.floor(a.currentTime)%3===0){ state.apart=idx; state.apos=a.currentTime; save(); } };
+        var pr=a.play(); if(pr&&pr.catch) pr.catch(function(){ showBar('<button type="button" class="btn" id="exResume">▶ Bấm để tiếp tục nghe Part '+(idx+1)+'</button>',null); $('#exResume').onclick=function(){ play(); }; });
+        var pc=document.getElementById('part'+(idx+1)); if(pc && fresh!==false) pc.scrollIntoView({behavior:'smooth'});
+      };
+      if(fresh) play();
+      else showBar('<button type="button" class="btn" id="exResume">▶ Tiếp tục nghe Part '+(idx+1)+'</button> <span class="hint">Trang vừa tải lại, bấm để nghe tiếp từ chỗ dừng.</span>',null), $('#exResume').onclick=function(){ play(); };
+      examTimer=setInterval(function(){ state.time.L=Math.round((Date.now()-state.started)/1000); $('#timer').textContent=fmt(state.time.L); },1000);
+    }
+  }
+}
+
+// ================= 4. tô sáng & ghi chú trong bài đọc =================
+var HK='cam20.hl.t'+N;
+function hlLoad(){ var o={}; try{o=JSON.parse(lsGet(HK))||{};}catch(e){} return o; }
+function hlSave(){ var o={}; $$('.passage').forEach(function(ps){ $$('.ptext p',ps).forEach(function(p,i){ if(p.querySelector('mark.hl')){ var c=p.cloneNode(true); $$('mark.ev,.evtag,.loc',c).forEach(function(x){ if(x.tagName==='MARK') x.replaceWith(document.createTextNode(x.textContent)); else x.remove(); }); o[ps.id+':'+i]=c.innerHTML; } }); }); lsSet(HK,JSON.stringify(o)); }
+function hlRestore(){ var o=hlLoad(); Object.keys(o).forEach(function(k){ var a=k.split(':'), ps=document.getElementById(a[0]); if(!ps) return; var p=$$('.ptext p',ps)[+a[1]]; if(p) p.innerHTML=o[k]; }); }
+function setupHighlight(){
+  if(!$('.ptext')) return;
+  hlRestore();
+  var tb=document.createElement('div'); tb.className='hltool'; tb.hidden=true;
+  tb.innerHTML='<button type="button" data-h="y">🖍 Tô vàng</button><button type="button" data-h="n">📝 Ghi chú</button>';
+  document.body.appendChild(tb);
+  var nb=document.createElement('div'); nb.className='notebox'; nb.hidden=true;
+  nb.innerHTML='<textarea rows="3" placeholder="Ghi chú của bạn…"></textarea><div><button type="button" data-n="save" class="btn">Lưu</button> <button type="button" data-n="del" class="btn alt">Bỏ tô</button></div>';
+  document.body.appendChild(nb);
+  var range=null, curMark=null;
+  function place(el,x,y){ el.style.left=Math.max(8,Math.min(window.innerWidth-el.offsetWidth-8,x))+'px'; el.style.top=(y+window.scrollY)+'px'; }
+  function onSel(){
+    var sel=window.getSelection(); if(!sel.rangeCount||sel.isCollapsed){ tb.hidden=true; return; }
+    var r=sel.getRangeAt(0), p1=r.startContainer.parentElement&&r.startContainer.parentElement.closest('.ptext p'), p2=r.endContainer.parentElement&&r.endContainer.parentElement.closest('.ptext p');
+    if(!p1||p1!==p2||!r.toString().trim()){ tb.hidden=true; return; }
+    range=r.cloneRange(); tb.hidden=false; var rc=r.getBoundingClientRect(); place(tb,rc.left+rc.width/2-tb.offsetWidth/2,rc.top-44);
+  }
+  document.addEventListener('mouseup',function(e){ if(tb.contains(e.target)||nb.contains(e.target)) return; setTimeout(onSel,10); });
+  document.addEventListener('touchend',function(e){ if(tb.contains(e.target)||nb.contains(e.target)) return; setTimeout(onSel,250); });
+  document.addEventListener('mousedown',function(e){ if(!nb.contains(e.target)&&!(e.target.closest&&e.target.closest('mark.hl'))) nb.hidden=true; });
+  function wrap(){ if(!range) return null; var mk=document.createElement('mark'); mk.className='hl';
+    try{ mk.appendChild(range.extractContents()); range.insertNode(mk); }catch(e){ return null; } window.getSelection().removeAllRanges(); tb.hidden=true; range=null; hlSave(); return mk; }
+  tb.addEventListener('click',function(e){ var b=e.target.closest('button'); if(!b) return; var mk=wrap(); if(mk&&b.dataset.h==='n') openNote(mk); });
+  function openNote(mk){ curMark=mk; nb.hidden=false; $('textarea',nb).value=mk.getAttribute('data-note')||''; var rc=mk.getBoundingClientRect(); place(nb,rc.left,rc.bottom+6); $('textarea',nb).focus(); }
+  document.addEventListener('click',function(e){ var mk=e.target.closest&&e.target.closest('mark.hl'); if(mk && !window.getSelection().toString()) openNote(mk); });
+  nb.addEventListener('click',function(e){ var b=e.target.closest('button'); if(!b||!curMark) return;
+    if(b.dataset.n==='save'){ var v=$('textarea',nb).value.trim(); if(v){ curMark.setAttribute('data-note',v); curMark.title=v; curMark.classList.add('has-note'); } else { curMark.removeAttribute('data-note'); curMark.removeAttribute('title'); curMark.classList.remove('has-note'); } }
+    else { var t=document.createDocumentFragment(); while(curMark.firstChild) t.appendChild(curMark.firstChild); curMark.replaceWith(t); }
+    nb.hidden=true; curMark=null; hlSave(); });
+  $$('.passage').forEach(function(ps){
+    var h=document.createElement('div'); h.className='ptools';
+    h.innerHTML='<span>Bôi đen chữ trong bài để tô vàng hoặc ghi chú.</span><button type="button" class="mini" data-clear>Xoá tô sáng</button>';
+    var head=$('.part-title',ps); head.insertAdjacentElement('afterend',h);
+    $('[data-clear]',h).onclick=function(){ if(!confirm('Xoá hết tô sáng và ghi chú của passage này?')) return; $$('.ptext mark.hl',ps).forEach(function(mk){ var t=document.createDocumentFragment(); while(mk.firstChild) t.appendChild(mk.firstChild); mk.replaceWith(t); }); hlSave(); };
+  });
+}
+
+// ================= 6. flashcard từ vựng từng passage =================
+function setupVocab(){
+  var V=(window.C20VOCAB||{})[N]; if(!V||!window.C20FC) return;
+  $$('.passage').forEach(function(ps){ var i=+ps.id.replace('passage',''), cards=V['R'+i]; if(!cards) return;
+    var bar=$('.ptools',ps); if(!bar){ bar=document.createElement('div'); bar.className='ptools'; $('.part-title',ps).insertAdjacentElement('afterend',bar); }
+    var b=document.createElement('button'); b.type='button'; b.className='mini vocab'; b.textContent='🃏 Từ vựng ('+cards.length+')';
+    b.onclick=function(){ window.C20FC.open(cards,'Từ vựng · Test '+N+' · Passage '+i,'cam20.fc.t'+N+'.R'+i); };
+    bar.appendChild(b);
+  });
+}
+
+// ================= tab & đồng hồ =================
 function tab(s){ cur=s; $$('.tabs button').forEach(function(b){b.setAttribute('aria-selected',b.dataset.s===s);});
   $$('.sect').forEach(function(x){x.classList.toggle('on',x.id==='sect'+s);});
   if(!$('#sect'+s)) return;
   if(s==='R') $$('#sectL audio').forEach(function(a){a.pause();});
   if(!MODE){ try{history.replaceState(null,'',s==='R'?'#reading':'#listening');}catch(e){} } tick(); }
 $$('.tabs button').forEach(function(b){b.onclick=function(){tab(b.dataset.s); window.scrollTo(0,0);};});
-function fmt(t){var m=Math.floor(t/60),x=t%60;return (m<10?'0':'')+m+':'+(x<10?'0':'')+x;}
-function tick(){ $('#timer').textContent=fmt(state.time[cur]||0); }
-setInterval(function(){ if(document.hidden||state.done[cur]) return; state.time[cur]=(state.time[cur]||0)+1; tick(); if(state.time[cur]%10===0) save(); },1000);
-// restore graded state
+function tick(){ if(!EXAM) $('#timer').textContent=fmt(state.time[cur]||0); }
+if(!EXAM) setInterval(function(){ if(document.hidden||state.done[cur]) return; state.time[cur]=(state.time[cur]||0)+1; tick(); if(state.time[cur]%10===0) save(); },1000);
+
+setupHighlight(); setupVocab();
 ['L','R'].forEach(function(s){ if(state.done[s]&&$('#sect'+s)) grade(s); });
 grid(); tab(MODE?MODE[0]:(location.hash==='#reading'?'R':'L'));
+setupExam();
 })();
+
 </script>
 </body>
 </html>

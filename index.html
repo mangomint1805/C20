@@ -52,6 +52,12 @@ header p{margin:0;color:var(--dim);font-size:16px;max-width:54ch;}
 .chip .res,.go .res{font-style:normal;display:inline-block;margin-top:3px;font-size:12px;font-weight:700;color:var(--teal);}
 .chips.read .chip{flex:1 1 180px;}
 
+.me{display:flex;flex-wrap:wrap;gap:8px 10px;align-items:flex-end;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:0 0 10px}
+.me label{display:flex;flex-direction:column;font-size:13px;font-weight:600;color:var(--dim);flex:1 1 160px}
+.me input{font:inherit;font-size:15px;padding:8px 10px;border:1px solid var(--line);border-radius:4px;background:var(--panel2);color:var(--ink);margin-top:3px}
+.me .ok{font-size:13px;color:var(--teal);font-weight:600;min-width:70px}
+.me a{font-weight:700;color:var(--amber-ink);text-decoration:none;white-space:nowrap;padding:8px 0}
+.go.exam{border-style:dashed}
 .tips{margin:40px 0 0;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px 20px;}
 .tips h2{font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:21px;margin:0 0 8px;}
 .tips ul{margin:0;padding-left:20px;}
@@ -82,6 +88,13 @@ footer{padding:30px 0 50px;color:var(--dim);font-size:13px;}
     <p>Chọn một test để làm cả bài, hoặc làm riêng từng Part Listening / từng Passage Reading. Nộp bài là có điểm và đáp án ngay.</p>
   </header>
 
+  <div class="me" id="me">
+    <label>Họ và tên<input id="meName" autocomplete="name" placeholder="Để thầy nhận được kết quả"></label>
+    <label>Lớp / nhóm<input id="meLop" placeholder="(nếu có)"></label>
+    <span class="ok" id="meOk"></span>
+    <a href="tien-do.html">📈 Xem tiến độ →</a>
+  </div>
+
   <ol class="path" id="path"></ol>
 
   <section class="tips">
@@ -91,7 +104,10 @@ footer{padding:30px 0 50px;color:var(--dim);font-size:13px;}
       <li><b>Listening</b>: bấm ▶ ở đầu mỗi Part rồi vừa nghe vừa điền. Thi thật chỉ được nghe một lần, cố gắng đừng tua lại.</li>
       <li><b>Reading</b>: thi thật có 60 phút cho 3 passage, tức khoảng 20 phút mỗi passage.</li>
       <li>Bấm <b>Nộp bài &amp; chấm điểm</b>: câu đúng tô xanh, câu sai tô đỏ kèm đáp án. Làm cả phần 40 câu sẽ có thêm band ước tính.</li>
-      <li>Bài làm tự lưu trên máy này. Điểm các lần làm hiện ngay trên trang chủ.</li>
+      <li><b>Thi thử</b>: Listening phát liền 4 part, mỗi part nghe một lần; Reading đếm ngược 60 phút. Hết giờ bài tự nộp.</li>
+      <li>Nộp bài xong, bấm <b>📍</b> cạnh mỗi câu để xem lời thoại hoặc câu trong bài đọc có chứa đáp án.</li>
+      <li>Trong bài đọc, bôi đen chữ để <b>tô vàng / ghi chú</b>; bấm <b>🃏 Từ vựng</b> để học flashcard của passage đó.</li>
+      <li>Nhập tên ở đầu trang để kết quả được gửi cho thầy. Bài làm tự lưu trên máy, điểm hiện ngay trên trang chủ và trang <a href="tien-do.html">Tiến độ</a>.</li>
     </ul>
   </section>
 
@@ -120,6 +136,10 @@ footer{padding:30px 0 50px;color:var(--dim);font-size:13px;}
         '<a class="go" href="'+url+'?part=L"><span>🎧 Cả Listening</span><i>4 part · khoảng 30 phút'+(res('cam20.t'+t.n+'.L','L')?'<br>'+res('cam20.t'+t.n+'.L','L'):'')+'</i></a>'+
         '<a class="go" href="'+url+'?part=R"><span>📖 Cả Reading</span><i>3 passage · 60 phút'+(res('cam20.t'+t.n+'.R','R')?'<br>'+res('cam20.t'+t.n+'.R','R'):'')+'</i></a>'+
       '</div>'+
+      '<div class="go2">'+
+        '<a class="go exam" href="'+url+'?part=L&thi=1"><span>⏱ Thi thử Listening</span><i>nghe 1 lần · tự nộp'+(res('cam20.t'+t.n+'.L.thi','L')?'<br>'+res('cam20.t'+t.n+'.L.thi','L'):'')+'</i></a>'+
+        '<a class="go exam" href="'+url+'?part=R&thi=1"><span>⏱ Thi thử Reading</span><i>đếm ngược 60 phút'+(res('cam20.t'+t.n+'.R.thi','R')?'<br>'+res('cam20.t'+t.n+'.R.thi','R'):'')+'</i></a>'+
+      '</div>'+
       '<p class="sub">Làm riêng từng Part Listening</p><div class="chips">'+
         LQ.map(function(q,i){ return '<a class="chip" href="'+url+'?part=L'+(i+1)+'"><b>Part '+(i+1)+'</b><small>Câu '+q+'</small>'+res('cam20.t'+t.n+'.L'+(i+1),'L')+'</a>'; }).join('')+
       '</div>'+
@@ -129,6 +149,10 @@ footer{padding:30px 0 50px;color:var(--dim);font-size:13px;}
     '</div></li>';
   });
   document.getElementById('path').innerHTML=html;
+  var nm=document.getElementById('meName'), lp=document.getElementById('meLop'), ok=document.getElementById('meOk'), t0;
+  try{ nm.value=localStorage.getItem('cam20.name')||''; lp.value=localStorage.getItem('cam20.lop')||''; }catch(e){}
+  function keep(){ try{ localStorage.setItem('cam20.name',nm.value.trim()); localStorage.setItem('cam20.lop',lp.value.trim()); }catch(e){} ok.textContent='Đã lưu ✓'; clearTimeout(t0); t0=setTimeout(function(){ok.textContent='';},1500); }
+  nm.addEventListener('change',keep); lp.addEventListener('change',keep);
 })();
 </script>
 </body>
