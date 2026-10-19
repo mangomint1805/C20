@@ -7,7 +7,6 @@ Trang luyện tập cho học viên: 4 test mỗi bộ Cambridge IELTS 20, 18 v�
 - Cambridge 18: https://mangomint1805.github.io/cam/c18/  
 - Cambridge 17: https://mangomint1805.github.io/cam/c17/
 
-> Cambridge 17 · Test 4: hiện mới có audio Part 1.
 
 ## Học viên dùng được gì
 
