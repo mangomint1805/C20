@@ -10,6 +10,14 @@ Trang luyện tập cho học viên: 4 test mỗi bộ Cambridge IELTS 17, 18, 1
 - Cambridge 17: https://mangomint1805.github.io/cam/c17/
 
 
+## Tính năng mới
+- **Tra từ trong bài:** bấm vào bất kỳ từ nào trong bài đọc, câu hỏi, lời thoại để xem nghĩa tiếng Việt, phiên âm và nghe phát âm (tắt khi thi thử). Từ điển rút gọn ~7.400 từ: [en_vn_dic](https://github.com/mduccc/en_vn_dic) (MIT) + bổ sung từ học thuật trong đề.
+- **📊 Phân tích điểm yếu:** gom kết quả cả 5 bộ theo 14 dạng câu hỏi, kèm mẹo và bài luyện đúng dạng.
+- **✍️ Chép chính tả:** ~600 câu cắt từ audio của đề, gõ lại và chấm từng từ.
+- **Lời thoại chạy chữ:** câu đang phát được tô vàng; nút ▶ đầu mỗi lượt nói. **📍 ở Listening** phát lại đúng đoạn có đáp án.
+- **❓ Hướng dẫn nhanh** có ảnh minh hoạ cho học viên mới.
+- Audio dùng **bản gốc**, không nén lại.
+
 ## Học viên dùng được gì
 
 - **Chọn bài**: làm cả test, cả Listening / cả Reading, hoặc riêng từng Part / Passage.
