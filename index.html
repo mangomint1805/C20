@@ -42,6 +42,14 @@ header p{margin:0;color:var(--dim);font-size:16px;max-width:56ch}
 .go{flex:none;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--amber-ink);transition:background .2s,border-color .2s}
 .book:hover .go{background:var(--amber-soft);border-color:var(--amber)}
 
+.tools{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0 0}
+.tool{display:flex;gap:12px;align-items:center;background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;text-decoration:none;color:var(--ink);transition:border-color .2s}
+.tool:hover{border-color:var(--amber)}
+.tool:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.tool .ic{font-size:26px;line-height:1}
+.tool b{display:block;font-size:15.5px}
+.tool span span{display:block;font-size:13px;color:var(--dim)}
+@media (max-width:520px){.tools{grid-template-columns:1fr}}
 .tips{margin:36px 0 0;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px 20px}
 .tips h2{font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:21px;margin:0 0 8px}
 .tips ul{margin:0;padding-left:20px}
@@ -75,13 +83,19 @@ footer{padding:30px 0 50px;color:var(--dim);font-size:13px}
 
   <ul class="books" id="books"></ul>
 
+  <div class="tools">
+    <a class="tool" href="phan-tich.html"><span class="ic" aria-hidden="true">📊</span><span><b>Phân tích điểm yếu</b><span>Xem mình hay sai dạng câu hỏi nào, kèm bài luyện thêm</span></span></a>
+    <a class="tool" href="chinh-ta.html"><span class="ic" aria-hidden="true">✍️</span><span><b>Chép chính tả</b><span>Nghe từng câu trong đề, gõ lại, web chấm từng từ</span></span></a>
+  </div>
+
   <section class="tips">
     <h2>Dùng thế nào?</h2>
     <ul>
       <li>Nhập tên một lần ở trên là dùng được cho mọi bộ đề, kết quả sẽ được gửi cho thầy.</li>
       <li>Chọn một bộ, rồi bấm vào từng test để làm cả bài, từng phần, hoặc thi thử có giờ.</li>
       <li>Nộp bài xong, bấm <b>📍</b> để xem chỗ có đáp án và <b>💡</b> để đọc giải thích tiếng Việt.</li>
-      <li>Bài làm tự lưu trên máy này. Mỗi bộ có trang <b>📈 Tiến độ</b> riêng.</li>
+      <li>Trong bài đọc, bấm vào <b>từ gạch chân</b> để xem nghĩa và nghe phát âm.</li>
+      <li>Bài làm tự lưu trên máy này. Mỗi bộ có trang <b>📈 Tiến độ</b> riêng, còn <b>📊 Phân tích điểm yếu</b> gom kết quả cả 5 bộ.</li>
     </ul>
   </section>
 
