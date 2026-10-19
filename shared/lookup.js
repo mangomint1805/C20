@@ -2,6 +2,19 @@
    Không sửa HTML bài đọc (để không đụng phần tô sáng/ghi chú); gạch chân bằng CSS Custom Highlight nếu trình duyệt hỗ trợ. */
 (function () {
   'use strict';
+  // lời nhắc hướng dẫn cho người mới (hiện một lần trên mỗi máy)
+  (function () {
+    var seen = false; try { seen = !!localStorage.getItem('cam.guide.seen'); } catch (e) {}
+    if (seen) return;
+    var t = document.createElement('div');
+    t.setAttribute('role', 'note');
+    t.style.cssText = 'position:fixed;left:12px;bottom:12px;z-index:65;max-width:330px;background:#1e232b;color:#fff;border-radius:12px;padding:11px 40px 11px 14px;font:14px/1.45 "IBM Plex Sans",system-ui,sans-serif;box-shadow:0 8px 26px rgba(0,0,0,.25)';
+    t.innerHTML = 'Lần đầu dùng trang này? <a href="../huong-dan.html" style="color:#f2c879;font-weight:700">Xem hướng dẫn 2 phút →</a><button type="button" aria-label="Đóng" style="position:absolute;top:6px;right:8px;border:0;background:none;color:#fff;font-size:16px;cursor:pointer">✕</button>';
+    function done() { try { localStorage.setItem('cam.guide.seen', '1'); } catch (e) {} t.remove(); }
+    t.querySelector('button').onclick = done; t.querySelector('a').onclick = function () { try { localStorage.setItem('cam.guide.seen', '1'); } catch (e) {} };
+    var go = function () { document.body.appendChild(t); setTimeout(function () { if (t.isConnected) done(); }, 15000); };
+    if (document.body) go(); else document.addEventListener('DOMContentLoaded', go);
+  })();
   if (/[?&]thi=1/.test(location.search)) return;   // thi thử: không tra từ
   var m = document.title.match(/Test\s+(\d)/);
   var V = (window.C20VOCAB && m && window.C20VOCAB[m[1]]) || {};
