@@ -58,6 +58,11 @@ header p{margin:0;color:var(--dim);font-size:16px;max-width:54ch;}
 .me .ok{font-size:13px;color:var(--teal);font-weight:600;min-width:70px}
 .me a{font-weight:700;color:var(--amber-ink);text-decoration:none;white-space:nowrap;padding:8px 0}
 .go.exam{border-style:dashed}
+.books{display:flex;gap:6px;margin:0 0 14px;flex-wrap:wrap}
+.books a{text-decoration:none;font-size:14px;font-weight:700;padding:7px 14px;border-radius:999px;border:1.5px solid var(--amber);color:var(--amber-ink);background:var(--card)}
+.books a[aria-current]{background:var(--amber);color:#fff}
+.books a:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+.noaudio-note{font-size:13px;color:var(--dim)}
 .head{all:unset;box-sizing:border-box;display:flex;align-items:center;gap:12px;width:100%;cursor:pointer;border-radius:10px;padding:2px 0}
 .head:focus-visible{outline:3px solid var(--amber);outline-offset:4px}
 .head .ht{flex:1;min-width:0}
@@ -99,6 +104,7 @@ footer{padding:30px 0 50px;color:var(--dim);font-size:13px;}
 <body>
 <div class="wrap">
   <header>
+    <nav class="books" aria-label="Chọn bộ sách"><a href="./" aria-current="page">Cambridge 20</a><a href="c17/">Cambridge 17</a></nav>
     <p class="kicker">IELTS Academic · Luyện tập tự chấm</p>
     <h1>Cambridge IELTS 20</h1>
     <p>Chọn một test để làm cả bài, hoặc làm riêng từng Part Listening / từng Passage Reading. Nộp bài là có điểm và đáp án ngay.</p>
