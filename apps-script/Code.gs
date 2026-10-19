@@ -34,7 +34,11 @@ function doPost(e) {
 
 function doGet() { return out_({ ok: true, info: 'Cam 20 results endpoint' }); }
 
-function setup() { sheet_(); }
+function setup() {
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  sheet_();
+  ['Trang tính1', 'Sheet1'].forEach(n => { const d = ss.getSheetByName(n); if (d && ss.getSheets().length > 1) ss.deleteSheet(d); });
+}
 
 function sheet_() {
   const ss = SpreadsheetApp.getActiveSpreadsheet();
