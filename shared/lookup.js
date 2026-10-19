@@ -2,9 +2,9 @@
    Không sửa HTML bài đọc (để không đụng phần tô sáng/ghi chú); gạch chân bằng CSS Custom Highlight nếu trình duyệt hỗ trợ. */
 (function () {
   'use strict';
+  if (/[?&]thi=1/.test(location.search)) return;   // thi thử: không tra từ
   var m = document.title.match(/Test\s+(\d)/);
-  var V = window.C20VOCAB && m && window.C20VOCAB[m[1]];
-  if (!V) return;
+  var V = (window.C20VOCAB && m && window.C20VOCAB[m[1]]) || {};
 
   function clean(t) { return t.replace(/\([^)]*\)/g, '').replace(/\//g, ', ').replace(/\s+/g, ' ').trim(); }
   function slug(t) { return clean(t).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-+|-+$)/g, ''); }
@@ -40,7 +40,10 @@
     '.vpop .v{margin-top:4px}' +
     '.vpop button{font:inherit;font-size:13px;border:1px solid #ddd7c9;background:#faf8f4;border-radius:7px;padding:2px 9px;cursor:pointer;margin-left:6px;vertical-align:2px}' +
     '.vpop .x{position:absolute;top:4px;right:6px;border:0;background:none;font-size:15px;color:#666e7a;padding:2px 4px}' +
-    '.vhint{font-size:12.5px;color:#6b4410}';
+    '.vhint{font-size:12.5px;color:#6b4410}' +
+    '::highlight(cam-pick){background-color:rgba(168,105,26,.28)}' +
+    '.vpop .d{margin-top:4px;font-size:13.5px} .vpop .d b{color:#666e7a;font-weight:600;font-size:12px;text-transform:lowercase;margin-right:4px}' +
+    '.vpop .src{margin-top:6px;font-size:11px;color:#9aa0a8}';
   document.head.appendChild(css);
 
   var HL = (window.CSS && CSS.highlights && window.Highlight) ? new Highlight() : null;
@@ -70,6 +73,27 @@
     }
   }
 
+  var W = null, wLoading = false, wQueue = [];
+  function loadWords(cb) {
+    if (W) return cb();
+    wQueue.push(cb); if (wLoading) return; wLoading = true;
+    var sc = document.createElement('script'); sc.src = '../shared/dict.js?v=1';
+    sc.onload = function () { W = window.CAMWORDS || { e: {}, f: {} }; wQueue.splice(0).forEach(function (f) { f(); }); };
+    sc.onerror = function () { W = { e: {}, f: {} }; wQueue.splice(0).forEach(function (f) { f(); }); };
+    document.head.appendChild(sc);
+  }
+  function dictFind(w) {
+    w = w.toLowerCase().replace(/[’‘]/g, "'").replace(/^['-]+|['-]+$/g, '');
+    if (!w) return null;
+    var tries = [w, w.replace(/'s$/, ''), w.replace(/s'$/, 's')];
+    for (var i = 0; i < tries.length; i++) {
+      var t = tries[i]; if (W.e[t]) return { w: t, e: W.e[t] };
+      if (W.f[t] && W.e[W.f[t]]) return { w: W.f[t], e: W.e[W.f[t]] };
+    }
+    return null;
+  }
+  var PICK = (window.CSS && CSS.highlights && window.Highlight) ? new Highlight() : null;
+  if (PICK) CSS.highlights.set('cam-pick', PICK);
   var pop = document.createElement('div'); pop.className = 'vpop'; pop.hidden = true; document.body.appendChild(pop);
   var au = new Audio();
   function voice() { try { var v = (JSON.parse(localStorage.getItem('summaryNew.fc.voice')) || {}).v || ''; return v.indexOf('f:') === 0 ? v.slice(2) : 'us-f'; } catch (e) { return 'us-f'; } }
@@ -90,6 +114,34 @@
     if (rc.bottom + pop.offsetHeight + 16 > window.innerHeight) top = rc.top - pop.offsetHeight - 8 + window.scrollY;
     pop.style.left = left + 'px'; pop.style.top = top + 'px';
   }
+  function sayNative(t) { try { speechSynthesis.cancel(); var u = new SpeechSynthesisUtterance(t); u.lang = 'en-GB'; u.rate = 0.9; speechSynthesis.speak(u); } catch (e) {} }
+  function showDict(word, r) {
+    var f = dictFind(word);
+    var POS = { noun: 'n', verb: 'v', adjective: 'adj', adverb: 'adv', preposition: 'prep', conjunction: 'conj', pronoun: 'pron', phrase: 'phr' };
+    var body = f ? f.e[1].map(function (d) { return '<div class="d"><b>' + esc(POS[d[0]] || d[0] || '') + '</b>' + esc(d[1].join('; ')) + '</div>'; }).join('')
+                 : '<div class="d">Chưa có trong từ điển của web. Thử bấm vào từ gốc, hoặc hỏi thầy nhé.</div>';
+    pop.innerHTML = '<button type="button" class="x" aria-label="Đóng">✕</button><span class="w">' + esc(f ? f.w : word) + '</span>' +
+      '<div class="i">' + esc(f ? f.e[0] || '' : '') + ' <button type="button" class="s">🔊 Nghe</button></div>' + body + (f ? '<div class="src">Từ điển Anh–Việt rút gọn</div>' : '');
+    pop.hidden = false;
+    pop.querySelector('.x').onclick = function () { pop.hidden = true; if (PICK) PICK.clear(); };
+    pop.querySelector('.s').onclick = function () { sayNative(f ? f.w : word); };
+    var rc = r.getBoundingClientRect();
+    var left = Math.max(8, Math.min(window.innerWidth - pop.offsetWidth - 8, rc.left));
+    var top = rc.bottom + 8 + window.scrollY;
+    if (rc.bottom + pop.offsetHeight + 16 > window.innerHeight) top = rc.top - pop.offsetHeight - 8 + window.scrollY;
+    pop.style.left = left + 'px'; pop.style.top = top + 'px';
+  }
+  function wordAt(n, o) {
+    if (!n || n.nodeType !== 3) return null;
+    var t = n.nodeValue, a = o, b = o, re = /[A-Za-z'’-]/;
+    while (a > 0 && re.test(t[a - 1])) a--;
+    while (b < t.length && re.test(t[b])) b++;
+    while (a < b && /['’-]/.test(t[a])) a++;
+    while (b > a && /['’-]/.test(t[b - 1])) b--;
+    if (b - a < 2) return null;
+    var r = document.createRange(); r.setStart(n, a); r.setEnd(n, b);
+    return { w: t.slice(a, b), r: r };
+  }
   function caret(x, y) {
     if (document.caretPositionFromPoint) { var p = document.caretPositionFromPoint(x, y); return p && { n: p.offsetNode, o: p.offset }; }
     if (document.caretRangeFromPoint) { var r = document.caretRangeFromPoint(x, y); return r && { n: r.startContainer, o: r.startOffset }; }
@@ -97,14 +149,18 @@
   }
   document.addEventListener('click', function (ev) {
     if (pop.contains(ev.target)) return;
-    var inText = ev.target.closest && ev.target.closest('.ptext');
-    if (!inText || (ev.target.closest('mark.hl,button,.loc')) || String(window.getSelection() || '').trim()) { pop.hidden = true; return; }
+    var zone = ev.target.closest && ev.target.closest('.ptext,.script-body,.pqs,.part');
+    var bad = ev.target.closest && ev.target.closest('mark.hl,button,.loc,label,input,select,textarea,a,.fix,audio,summary,.opts');
+    if (!zone || bad || String(window.getSelection() || '').trim()) { pop.hidden = true; if (PICK) PICK.clear(); return; }
     var c = caret(ev.clientX, ev.clientY); if (!c) { pop.hidden = true; return; }
     for (var k = 0; k < hits.length; k++) {
       var r = hits[k].r;
-      try { if (r.startContainer === c.n && c.o >= r.startOffset && c.o <= r.endOffset) { show(hits[k]); return; } } catch (e) {}
+      try { if (r.startContainer === c.n && c.o >= r.startOffset && c.o <= r.endOffset) { if (PICK) PICK.clear(); show(hits[k]); return; } } catch (e) {}
     }
-    pop.hidden = true;
+    var wd = wordAt(c.n, c.o);
+    if (!wd) { pop.hidden = true; if (PICK) PICK.clear(); return; }
+    if (PICK) { PICK.clear(); PICK.add(wd.r); }
+    loadWords(function () { showDict(wd.w, wd.r); });
   });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') pop.hidden = true; });
   window.addEventListener('resize', function () { pop.hidden = true; });
@@ -112,7 +168,7 @@
   function hint() {
     document.querySelectorAll('.passage .ptools').forEach(function (bar) {
       if (bar.querySelector('.vhint')) return;
-      var s = document.createElement('span'); s.className = 'vhint'; s.textContent = '· Bấm vào từ gạch chân để xem nghĩa';
+      var s = document.createElement('span'); s.className = 'vhint'; s.textContent = '· Bấm vào một từ bất kỳ để tra nghĩa';
       var first = bar.querySelector('span'); if (first) first.insertAdjacentElement('afterend', s); else bar.appendChild(s);
     });
   }
