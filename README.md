@@ -10,6 +10,7 @@ Trang luyện tập cho học viên: 4 test của Cambridge IELTS 20 (Academic),
 - **Thi thử**: Listening phát liền 4 part, mỗi part chỉ nghe một lần, nghe xong có 2 phút rồi tự nộp; Reading đếm ngược 60 phút, hết giờ tự nộp.
 - **Chấm điểm ngay**: câu đúng xanh, câu sai đỏ kèm đáp án, điểm từng phần và band ước tính (khi làm đủ 40 câu).
 - **📍 Vị trí đáp án**: nộp xong bấm 📍 cạnh mỗi câu để mở lời thoại (Listening) hoặc tô vàng câu chứa đáp án trong bài đọc (Reading).
+- **💡 Giải thích tiếng Việt**: nộp xong bấm 💡 cạnh mỗi câu để đọc vì sao đáp án đúng, các bẫy hay gặp, và bấm "Câu sau" để đọc lần lượt.
 - **Tô sáng & ghi chú** trong bài đọc (bôi đen chữ → Tô vàng / Ghi chú), lưu lại trên máy.
 - **🃏 Từ vựng**: flashcard ~10 từ cho mỗi passage, có phiên âm, nghĩa tiếng Việt và phát âm (3 giọng).
 - **📈 Tiến độ** (`tien-do.html`): biểu đồ band qua các lần làm, điểm cao nhất từng phần, lịch sử làm bài.
