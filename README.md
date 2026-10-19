@@ -2,10 +2,10 @@
 
 Trang luyện tập cho học viên: 4 test mỗi bộ Cambridge IELTS 20, 18 và 17 (Academic), mỗi test gồm Listening 40 câu (có audio từng Part) và Reading 40 câu.
 
-**Trang chủ (chọn bộ đề):** https://mangomint1805.github.io/C20/  
-- Cambridge 20: https://mangomint1805.github.io/C20/c20/  
-- Cambridge 18: https://mangomint1805.github.io/C20/c18/  
-- Cambridge 17: https://mangomint1805.github.io/C20/c17/
+**Trang chủ (chọn bộ đề):** https://mangomint1805.github.io/cam/  
+- Cambridge 20: https://mangomint1805.github.io/cam/c20/  
+- Cambridge 18: https://mangomint1805.github.io/cam/c18/  
+- Cambridge 17: https://mangomint1805.github.io/cam/c17/
 
 > Cambridge 17 · Test 4: hiện mới có audio Part 1.
 
