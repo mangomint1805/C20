@@ -1,0 +1,817 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light only">
+<title>Cambridge IELTS 20 · Test 4</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--paper:#faf8f4;--card:#fff;--line:#ddd7c9;--ink:#1e232b;--dim:#666e7a;--brand:#a8691a;--brand-soft:#f2e2c4;--brand-ink:#6b4410;
+--ok:#1f8f6c;--ok-soft:#e1f4ec;--bad:#c14636;--bad-soft:#fbe6e2;--warn:#1f8f6c;--panel2:#f2efe8;}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--paper);color:var(--ink);font-family:'IBM Plex Sans',system-ui,sans-serif;line-height:1.6;font-size:16px}
+a{color:var(--brand)}
+header.top{position:sticky;top:0;z-index:20;background:rgba(250,248,244,.97);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.bar{max-width:1280px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.bar h1{font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:21px;margin:0;flex:1;min-width:180px}
+.bar h1 small{display:block;font-family:'IBM Plex Sans',sans-serif;font-weight:500;font-size:12.5px;color:var(--dim)}
+.tabs{display:flex;background:var(--panel2);border-radius:10px;padding:3px}
+.tabs button{font:inherit;font-weight:600;font-size:14.5px;border:0;background:none;padding:7px 14px;border-radius:8px;cursor:pointer;color:var(--dim)}
+.tabs button[aria-selected=true]{background:var(--card);color:var(--brand-ink);box-shadow:0 1px 3px rgba(0,0,0,.1)}
+.timer{font-variant-numeric:tabular-nums;font-weight:600;color:var(--dim);font-size:14px;min-width:60px;text-align:right}
+main{max-width:1280px;margin:0 auto;padding:16px}
+.sect{display:none}.sect.on{display:block}
+.part,.passage{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:18px 20px;margin:0 0 18px}
+.part-title{font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:23px;margin:0 0 10px;color:var(--brand-ink)}
+.part-title em{font-style:normal;font-family:'IBM Plex Sans',sans-serif;font-size:15px;color:var(--dim);margin-left:6px}
+.audio{display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:var(--panel2);border:1px solid var(--line);border-radius:6px;padding:8px 12px;margin:0 0 12px}
+.audio span{font-weight:700;color:var(--brand-ink);font-size:14px}
+.audio audio{flex:1;min-width:220px;height:38px}
+p{margin:7px 0}
+em{color:#3b4350}
+table{border-collapse:collapse;width:100%;margin:10px 0;font-size:15px}
+th,td{border:1px solid var(--line);padding:8px 10px;vertical-align:top;text-align:left;font-weight:400}
+thead th{background:var(--panel2)}
+thead th strong{font-weight:700}
+ul{padding-left:22px;margin:6px 0}
+.figure{max-width:100%;height:auto;border:1px solid var(--line);border-radius:8px;display:block;margin:8px 0}
+/* widgets */
+.gap{font:inherit;font-size:15px;width:9.5em;max-width:100%;padding:3px 8px;border:1.5px solid #cfc6b2;border-radius:5px;background:var(--panel2);color:var(--ink);margin:0 2px}
+.gap:focus,.sel:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px var(--brand-soft)}
+.gap::placeholder{color:#b3a68c;font-weight:600}
+.sel{font:inherit;font-size:14.5px;padding:3px 6px;border:1.5px solid #cfc6b2;border-radius:5px;background:var(--panel2);color:var(--ink);margin:0 2px;max-width:100%}
+.qline{scroll-margin-top:80px}
+.qn{display:inline-block;min-width:30px;font-family:'Fraunces',Georgia,serif;font-size:19px;font-weight:600;color:var(--brand);margin-right:6px}
+blockquote.opts{margin:6px 0 12px 34px;padding:0;display:grid;gap:5px}
+.opt{display:flex;gap:8px;align-items:flex-start;padding:7px 12px;border:1px solid var(--line);border-radius:4px;cursor:pointer;background:var(--panel2)}
+.opt:hover{border-color:#cfc6b2}
+.opt input{margin-top:5px;accent-color:var(--brand);width:16px;height:16px;flex:none}
+.opt b{color:var(--brand-ink);flex:none}
+.opt:has(input:checked){border-color:var(--brand);background:var(--brand-soft)}
+/* grading marks */
+.ok-mark{border-color:var(--ok)!important;background:var(--ok-soft)!important}
+.bad-mark{border-color:var(--bad)!important;background:var(--bad-soft)!important}
+.fix{display:inline-block;font-size:13px;font-weight:700;color:var(--ok);background:var(--ok-soft);border-radius:6px;padding:0 6px;margin-left:4px}
+.opt.right{border-color:var(--ok);background:var(--ok-soft)}
+.opt.wrong{border-color:var(--bad);background:var(--bad-soft)}
+/* reading split */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
+.ptext{max-height:calc(100vh - 150px);overflow:auto;position:sticky;top:76px;padding-right:12px;border-right:1px solid var(--line)}
+.ptext p strong:first-child{color:var(--brand-ink)}
+@media (max-width:900px){.split{grid-template-columns:1fr}.ptext{max-height:none;position:static;border-right:0;padding-right:0;border-bottom:1px solid var(--line);padding-bottom:12px}}
+/* answer panel */
+.panel{background:var(--card);border:1.5px solid var(--brand);border-radius:6px;padding:14px 16px;margin:0 0 18px}
+.panel h2{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:18px;margin:0 0 8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(38px,1fr));gap:5px}
+.grid a{display:flex;align-items:center;justify-content:center;height:34px;border-radius:7px;border:1.5px solid var(--line);text-decoration:none;color:var(--dim);font-weight:600;font-size:14px;background:#fff}
+.grid a.done{border-color:var(--brand);color:var(--brand-ink);background:var(--brand-soft)}
+.grid a.g-ok{border-color:var(--ok);background:var(--ok);color:#fff}
+.grid a.g-bad{border-color:var(--bad);background:var(--bad);color:#fff}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:12px}
+.btn{font:inherit;font-weight:600;font-size:15px;border:1px solid var(--brand);border-radius:4px;padding:10px 16px;cursor:pointer;background:var(--brand);color:#fff}
+.btn.alt{background:#fff;color:var(--brand-ink);border:1.5px solid var(--brand)}
+.score{font-weight:700;font-size:16px}
+.score .band{display:inline-block;margin-left:6px;background:var(--ok);color:#fff;border-radius:7px;padding:1px 9px}
+.hint{color:var(--dim);font-size:13.5px;margin:6px 0 0}
+footer{max-width:1280px;margin:0 auto;padding:10px 16px 40px;color:var(--dim);font-size:13px}
+.done-lock .ans,.done-lock .ans-opt{pointer-events:none}
+.modelabel{font-weight:700;font-size:14px;color:var(--brand-ink);background:var(--brand-soft);border-radius:4px;padding:6px 12px}
+.back{font-size:13.5px;font-weight:600;color:var(--brand-ink);text-decoration:none;white-space:nowrap}
+body.one .tabs{display:none}
+</style>
+</head>
+<body>
+<header class="top"><div class="bar">
+  <h1><a href="index.html" style="color:inherit;text-decoration:none">Cambridge IELTS 20 · Test 4</a><small>Listening &amp; Reading · luyện tập tự chấm</small></h1>
+  <div class="tabs" role="tablist">
+    <button role="tab" aria-selected="true" data-s="L">🎧 Listening</button>
+    <button role="tab" aria-selected="false" data-s="R">📖 Reading</button>
+  </div>
+  <span class="modelabel" id="modelabel" hidden></span><span class="timer" id="timer" title="Thời gian làm phần này">00:00</span><a class="back" href="index.html">← Trang chủ</a>
+</div></header>
+<main>
+  <div class="sect on" id="sectL">
+    <div class="panel" data-s="L">
+      <h2>Phiếu trả lời Listening</h2>
+      <div class="grid"></div>
+      <div class="row"><button class="btn" data-act="submit">Nộp bài &amp; chấm điểm</button><button class="btn alt" data-act="reset">Làm lại</button><span class="score"></span></div>
+      <p class="hint">Bấm số câu để nhảy tới câu đó. Bài làm được tự lưu trên máy này. Thời gian thi thật: khoảng 30 phút.</p>
+    </div>
+    <section class="part" id="part1"><h3 class="part-title" id="part-1-questions-110">PART 1 <em>Questions 1–10</em></h3><div class="audio"><span>🎧 Part 1</span><audio controls preload="none" src="audio/t4-part1.mp3"></audio></div><p><em>Complete the notes below.</em></p><p><em>Write <strong>ONE WORD AND/OR A NUMBER</strong> for each
+answer.</em></p><table>
+<colgroup>
+<col style="width: 100%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><p><strong>Advice on family visit</strong></p>
+<p><strong>Accommodation</strong></p>
+<ul>
+<li><p><input aria-label="Câu 1" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L1" placeholder="1" spellcheck="false" type="text"/>  Hotel on George Street</p></li>
+<li><p>cost of a family room per night: £ <input aria-label="Câu 2" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L2" placeholder="2" spellcheck="false" type="text"/> 
+(approx.)</p></li>
+</ul>
+<p><strong>Recommended trips</strong></p>
+<ul>
+<li><p>a <input aria-label="Câu 3" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L3" placeholder="3" spellcheck="false" type="text"/>  tour of the city centre (starts in
+Carlton Square)</p></li>
+<li><p>a trip by <input aria-label="Câu 4" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L4" placeholder="4" spellcheck="false" type="text"/>  to the old fort</p></li>
+</ul>
+<p><strong>Science Museum</strong></p>
+<ul>
+<li><p>best day to visit: <input aria-label="Câu 5" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L5" placeholder="5" spellcheck="false" type="text"/> </p></li>
+<li><p>see the exhibition about <input aria-label="Câu 6" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L6" placeholder="6" spellcheck="false" type="text"/> , which opens
+soon</p></li>
+</ul>
+<p><strong>Food</strong></p>
+<ul>
+<li><p>Clacton Market:</p></li>
+</ul>
+<ul>
+<li><p>good for <input aria-label="Câu 7" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L7" placeholder="7" spellcheck="false" type="text"/> </p></li>
+<li><p>need to have lunch before <input aria-label="Câu 8" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L8" placeholder="8" spellcheck="false" type="text"/> 
+p.m.</p></li>
+</ul>
+<p><strong>Theatre tickets</strong></p>
+<ul>
+<li><p>save up to <input aria-label="Câu 9" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L9" placeholder="9" spellcheck="false" type="text"/> % on ticket prices at
+bargaintickets.com</p></li>
+</ul>
+<p><strong>Free activities</strong></p>
+<ul>
+<li><p>Blakewell Gardens:</p></li>
+</ul>
+<ul>
+<li><p>Roots Music Festival</p></li>
+<li><p>climb Telegraph Hill to see a view of the <input aria-label="Câu 10" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L10" placeholder="10" spellcheck="false" type="text"/>
+</p></li>
+</ul></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table></section><section class="part" id="part2"><h3 class="part-title" id="part-2-questions-1120">PART 2 <em>Questions 11–20</em></h3><div class="audio"><span>🎧 Part 2</span><audio controls preload="none" src="audio/t4-part2.mp3"></audio></div><p><strong>Questions 11 and 12</strong></p><p><em>Choose <strong>TWO</strong> letters,
+<strong>A–E</strong>.</em></p><p class="qline" id="Lq11"><strong class="qn">11–12</strong> Which <strong>TWO</strong> things does the
+speaker say about visiting the football stadium with children?</p><blockquote class="opts" data-q="L11" data-q2="L12">
+<label class="opt"><input class="ans-opt" data-pick="2" data-q="L11" name="Lq11" type="checkbox" value="A"/><b>A</b><span> Children can get their photo taken with a football
+player.</span></label>
+<label class="opt"><input class="ans-opt" data-pick="2" data-q="L11" name="Lq11" type="checkbox" value="B"/><b>B</b><span> There is a competition for children today.</span></label>
+<label class="opt"><input class="ans-opt" data-pick="2" data-q="L11" name="Lq11" type="checkbox" value="C"/><b>C</b><span> Parents must stay with their children at all
+times.</span></label>
+<label class="opt"><input class="ans-opt" data-pick="2" data-q="L11" name="Lq11" type="checkbox" value="D"/><b>D</b><span> Children will need sunhats and drinks.</span></label>
+<label class="opt"><input class="ans-opt" data-pick="2" data-q="L11" name="Lq11" type="checkbox" value="E"/><b>E</b><span> The café has a special offer on meals for
+children.</span></label>
+</blockquote><p><strong>Questions 13 and 14</strong></p><p><em>Choose <strong>TWO</strong> letters,
+<strong>A–E</strong>.</em></p><p class="qline" id="Lq13"><strong class="qn">13–14</strong> Which <strong>TWO</strong> features of the
+stadium tour are new this year?</p><blockquote class="opts" data-q="L13" data-q2="L14">
+<label class="opt"><input class="ans-opt" data-pick="2" data-q="L13" name="Lq13" type="checkbox" value="A"/><b>A</b><span> VIP tour</span></label>
+<label class="opt"><input class="ans-opt" data-pick="2" data-q="L13" name="Lq13" type="checkbox" value="B"/><b>B</b><span> 360 cinema experience</span></label>
+<label class="opt"><input class="ans-opt" data-pick="2" data-q="L13" name="Lq13" type="checkbox" value="C"/><b>C</b><span> audio guide</span></label>
+<label class="opt"><input class="ans-opt" data-pick="2" data-q="L13" name="Lq13" type="checkbox" value="D"/><b>D</b><span> dressing room tour</span></label>
+<label class="opt"><input class="ans-opt" data-pick="2" data-q="L13" name="Lq13" type="checkbox" value="E"/><b>E</b><span> tours in other languages</span></label>
+</blockquote><p><strong>Questions 15–20</strong></p><p><em>Which event in the history of football in the UK took place in
+each of the following years?</em></p><p><em>Choose <strong>SIX</strong> answers from the box and write the
+correct letter, <strong>A–H</strong>, next to Questions 15–20.</em></p><table>
+<colgroup>
+<col style="width: 100%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><p><strong>Events in the history of football</strong></p>
+<p><strong>A</strong> the introduction of pay for the players</p>
+<p><strong>B</strong> a change to the design of the goal</p>
+<p><strong>C</strong> the first use of lights for matches</p>
+<p><strong>D</strong> the introduction of goalkeepers</p>
+<p><strong>E</strong> the first international match</p>
+<p><strong>F</strong> two changes to the rules of the game</p>
+<p><strong>G</strong> the introduction of a fee for spectators</p>
+<p><strong>H</strong> an agreement on the length of a game</p></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table><p class="qline" id="Lq15"><strong class="qn">15</strong> 1870 <select aria-label="Câu 15" class="ans sel" data-q="L15"><option value="">15 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option><option value="H">H</option></select></p><p class="qline" id="Lq16"><strong class="qn">16</strong> 1874 <select aria-label="Câu 16" class="ans sel" data-q="L16"><option value="">16 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option><option value="H">H</option></select></p><p class="qline" id="Lq17"><strong class="qn">17</strong> 1875 <select aria-label="Câu 17" class="ans sel" data-q="L17"><option value="">17 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option><option value="H">H</option></select></p><p class="qline" id="Lq18"><strong class="qn">18</strong> 1877 <select aria-label="Câu 18" class="ans sel" data-q="L18"><option value="">18 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option><option value="H">H</option></select></p><p class="qline" id="Lq19"><strong class="qn">19</strong> 1878 <select aria-label="Câu 19" class="ans sel" data-q="L19"><option value="">19 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option><option value="H">H</option></select></p><p class="qline" id="Lq20"><strong class="qn">20</strong> 1880 <select aria-label="Câu 20" class="ans sel" data-q="L20"><option value="">20 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option><option value="H">H</option></select></p></section><section class="part" id="part3"><h3 class="part-title" id="part-3-questions-2130">PART 3 <em>Questions 21–30</em></h3><div class="audio"><span>🎧 Part 3</span><audio controls preload="none" src="audio/t4-part3.mp3"></audio></div><p><strong>Questions 21 and 22</strong></p><p><em>Choose <strong>TWO</strong> letters,
+<strong>A–E</strong>.</em></p><p class="qline" id="Lq21"><strong class="qn">21–22</strong> Which <strong>TWO</strong> benefits for
+children of learning to write did both students find surprising?</p><blockquote class="opts" data-q="L21" data-q2="L22">
+<label class="opt"><input class="ans-opt" data-pick="2" data-q="L21" name="Lq21" type="checkbox" value="A"/><b>A</b><span> improved fine motor skills</span></label>
+<label class="opt"><input class="ans-opt" data-pick="2" data-q="L21" name="Lq21" type="checkbox" value="B"/><b>B</b><span> improved memory</span></label>
+<label class="opt"><input class="ans-opt" data-pick="2" data-q="L21" name="Lq21" type="checkbox" value="C"/><b>C</b><span> improved concentration</span></label>
+<label class="opt"><input class="ans-opt" data-pick="2" data-q="L21" name="Lq21" type="checkbox" value="D"/><b>D</b><span> improved imagination</span></label>
+<label class="opt"><input class="ans-opt" data-pick="2" data-q="L21" name="Lq21" type="checkbox" value="E"/><b>E</b><span> improved spatial awareness</span></label>
+</blockquote><p><strong>Questions 23 and 24</strong></p><p><em>Choose <strong>TWO</strong> letters,
+<strong>A–E</strong>.</em></p><p class="qline" id="Lq23"><strong class="qn">23–24</strong> For children with dyspraxia, which
+<strong>TWO</strong> problems with handwriting do the students think are
+easiest to correct?</p><blockquote class="opts" data-q="L23" data-q2="L24">
+<label class="opt"><input class="ans-opt" data-pick="2" data-q="L23" name="Lq23" type="checkbox" value="A"/><b>A</b><span> not spacing letters correctly</span></label>
+<label class="opt"><input class="ans-opt" data-pick="2" data-q="L23" name="Lq23" type="checkbox" value="B"/><b>B</b><span> not writing in a straight line</span></label>
+<label class="opt"><input class="ans-opt" data-pick="2" data-q="L23" name="Lq23" type="checkbox" value="C"/><b>C</b><span> applying too much pressure when writing</span></label>
+<label class="opt"><input class="ans-opt" data-pick="2" data-q="L23" name="Lq23" type="checkbox" value="D"/><b>D</b><span> confusing letter shapes</span></label>
+<label class="opt"><input class="ans-opt" data-pick="2" data-q="L23" name="Lq23" type="checkbox" value="E"/><b>E</b><span> writing very slowly</span></label>
+</blockquote><p><strong>Questions 25–30</strong></p><p><em>Choose the correct letter, <strong>A</strong>, <strong>B</strong>
+or <strong>C</strong>.</em></p><p><strong>Teaching handwriting</strong></p><p class="qline" id="Lq25"><strong class="qn">25</strong> What does the woman say about using laptops to
+teach writing to children with dyslexia?</p><blockquote class="opts" data-q="L25">
+<label class="opt"><input class="ans-opt" data-q="L25" name="Lq25" type="radio" value="A"/><b>A</b><span> Children often lack motivation to learn that
+way.</span></label>
+<label class="opt"><input class="ans-opt" data-q="L25" name="Lq25" type="radio" value="B"/><b>B</b><span> Children become fluent relatively quickly.</span></label>
+<label class="opt"><input class="ans-opt" data-q="L25" name="Lq25" type="radio" value="C"/><b>C</b><span> Children react more positively if they make a
+mistake.</span></label>
+</blockquote><p class="qline" id="Lq26"><strong class="qn">26</strong> When discussing whether to teach cursive or print
+writing, the woman thinks that</p><blockquote class="opts" data-q="L26">
+<label class="opt"><input class="ans-opt" data-q="L26" name="Lq26" type="radio" value="A"/><b>A</b><span> Cursive writing disadvantages a certain group of
+children.</span></label>
+<label class="opt"><input class="ans-opt" data-q="L26" name="Lq26" type="radio" value="B"/><b>B</b><span> Print writing is associated with lower academic
+performance.</span></label>
+<label class="opt"><input class="ans-opt" data-q="L26" name="Lq26" type="radio" value="C"/><b>C</b><span> Most teachers in the UK prefer a traditional
+approach to handwriting.</span></label>
+</blockquote><p class="qline" id="Lq27"><strong class="qn">27</strong> According to the students, what impact does poor
+handwriting have on exam performance?</p><blockquote class="opts" data-q="L27">
+<label class="opt"><input class="ans-opt" data-q="L27" name="Lq27" type="radio" value="A"/><b>A</b><span> There is evidence to suggest grades are affected
+by poor handwriting.</span></label>
+<label class="opt"><input class="ans-opt" data-q="L27" name="Lq27" type="radio" value="B"/><b>B</b><span> Neat handwriting is less important now than it
+used to be.</span></label>
+<label class="opt"><input class="ans-opt" data-q="L27" name="Lq27" type="radio" value="C"/><b>C</b><span> Candidates write more slowly and produce shorter
+answers.</span></label>
+</blockquote><p class="qline" id="Lq28"><strong class="qn">28</strong> What prediction does the man make about the
+future of handwriting?</p><blockquote class="opts" data-q="L28">
+<label class="opt"><input class="ans-opt" data-q="L28" name="Lq28" type="radio" value="A"/><b>A</b><span> Touch typing will be taught before writing by
+hand.</span></label>
+<label class="opt"><input class="ans-opt" data-q="L28" name="Lq28" type="radio" value="B"/><b>B</b><span> Children will continue to learn to write by
+hand.</span></label>
+<label class="opt"><input class="ans-opt" data-q="L28" name="Lq28" type="radio" value="C"/><b>C</b><span> People will dislike handwriting on digital
+devices.</span></label>
+</blockquote><p class="qline" id="Lq29"><strong class="qn">29</strong> The woman is concerned that relying on digital
+devices has made it difficult for her to</p><blockquote class="opts" data-q="L29">
+<label class="opt"><input class="ans-opt" data-q="L29" name="Lq29" type="radio" value="A"/><b>A</b><span> take detailed notes.</span></label>
+<label class="opt"><input class="ans-opt" data-q="L29" name="Lq29" type="radio" value="B"/><b>B</b><span> spell and punctuate.</span></label>
+<label class="opt"><input class="ans-opt" data-q="L29" name="Lq29" type="radio" value="C"/><b>C</b><span> read old documents.</span></label>
+</blockquote><p class="qline" id="Lq30"><strong class="qn">30</strong> How do the students feel about their own
+handwriting?</p><blockquote class="opts" data-q="L30">
+<label class="opt"><input class="ans-opt" data-q="L30" name="Lq30" type="radio" value="A"/><b>A</b><span> concerned they are unable to write quickly</span></label>
+<label class="opt"><input class="ans-opt" data-q="L30" name="Lq30" type="radio" value="B"/><b>B</b><span> embarrassed by comments made about it</span></label>
+<label class="opt"><input class="ans-opt" data-q="L30" name="Lq30" type="radio" value="C"/><b>C</b><span> regretful that they have lost the habit</span></label>
+</blockquote></section><section class="part" id="part4"><h3 class="part-title" id="part-4-questions-3140">PART 4 <em>Questions 31–40</em></h3><div class="audio"><span>🎧 Part 4</span><audio controls preload="none" src="audio/t4-part4.mp3"></audio></div><p><em>Complete the notes below.</em></p><p><em>Write <strong>ONE WORD ONLY</strong> for each answer.</em></p><table>
+<colgroup>
+<col style="width: 100%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><p><strong>Research in the area around Chembe Bird
+Sanctuary</strong></p>
+<p><strong>The importance of birds of prey to the local
+communities</strong></p>
+<ul>
+<li><p>They destroy <input aria-label="Câu 31" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L31" placeholder="31" spellcheck="false" type="text"/>  and other
+rodents.</p></li>
+<li><p>They help to prevent farmers from being bitten by
+<input aria-label="Câu 32" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L32" placeholder="32" spellcheck="false" type="text"/> </p></li>
+<li><p>They have been an important part of the local culture for many
+years.</p></li>
+<li><p>They now support the economy by encouraging <input aria-label="Câu 33" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L33" placeholder="33" spellcheck="false" type="text"/>
+ in the area.</p></li>
+</ul>
+<p><strong>Falling numbers of birds of prey</strong></p>
+<ul>
+<li><p>The birds may be accidentally killed by <input aria-label="Câu 34" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L34" placeholder="34" spellcheck="false" type="text"/>
+ when they are hunting or sleeping</p></li>
+<li><p>by electrocution from contact with power lines, especially at
+times when there are a lot of <input aria-label="Câu 35" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L35" placeholder="35" spellcheck="false" type="text"/> </p></li>
+<li><p>Local farmers may illegally shoot them or <input aria-label="Câu 36" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L36" placeholder="36" spellcheck="false" type="text"/>
+ them.</p></li>
+</ul>
+<p><strong>Ways of protecting chickens from birds of prey</strong></p>
+<ul>
+<li><p>clearing away vegetation from the area (unhelpful)</p></li>
+<li><p>providing a <input aria-label="Câu 37" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L37" placeholder="37" spellcheck="false" type="text"/>  for chickens
+(expensive)</p></li>
+<li><p>frightening birds of prey by</p></li>
+</ul>
+<ul>
+<li><p>keeping a <input aria-label="Câu 38" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L38" placeholder="38" spellcheck="false" type="text"/> </p></li>
+<li><p>making a <input aria-label="Câu 39" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L39" placeholder="39" spellcheck="false" type="text"/>  – e.g. with metal
+objects</p></li>
+</ul>
+<ul>
+<li><p>A <input aria-label="Câu 40" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L40" placeholder="40" spellcheck="false" type="text"/>  of methods is usually most
+effective.</p></li>
+</ul></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table></section>
+  </div>
+  <div class="sect" id="sectR">
+    <div class="panel" data-s="R">
+      <h2>Phiếu trả lời Reading</h2>
+      <div class="grid"></div>
+      <div class="row"><button class="btn" data-act="submit">Nộp bài &amp; chấm điểm</button><button class="btn alt" data-act="reset">Làm lại</button><span class="score"></span></div>
+      <p class="hint">Bấm số câu để nhảy tới câu đó. Bài làm được tự lưu trên máy này. Thời gian thi thật: 60 phút.</p>
+    </div>
+    <section class="passage" id="passage1"><h3 class="part-title" id="reading-passage-1-questions-113">READING PASSAGE 1 <em>Questions
+1–13</em></h3><div class="split"><div class="ptext"><p><em>You should spend about 20 minutes on <strong>Questions
+1–13</strong>, which are based on Reading Passage 1 below.</em></p><p><strong>Georgia O’Keeffe</strong></p><p>For seven decades, Georgia O’Keeffe (1887-1986) was a major figure in
+American art. Remarkably, she remained independent from shifting art
+trends and her work stayed true to her own vision, which was based on
+finding the essential, abstract forms in nature. With exceptionally keen
+powers of observation and great finesse with a paintbrush, she recorded
+subtle nuances of colour, shape, and light that enlivened her paintings
+and attracted a wide audience.</p><p>Born in 1887 near Sun Prairie, Wisconsin to cattle breeders Francis
+and Ida O’Keeffe, Georgia was raised on their farm along with her six
+siblings. By the time she graduated from high school in 1905, she had
+determined to make her way as an artist. She studied the techniques of
+traditional painting at the Art Institute of Chicago school (1905) and
+the Art Students League of New York (1907-8). After attending university
+and then training college, she became an art teacher and taught in
+elementary schools, high schools, and colleges in Virginia, Texas, and
+South Carolina from 1911 to 1918.</p><p>During this period, O’Keeffe began to experiment with creating
+abstract compositions in charcoal, and produced a series of innovative
+drawings that led her art in a new direction. She sent some of these
+drawings to a friend in New York, who showed them to art collector and
+photographer Alfred Stieglitz in January 1916. Stieglitz was impressed,
+and exhibited the drawings later that year at his gallery on Fifth
+Avenue, New York City, where the works of many avant-garde artists and
+photographers were introduced to the American public.</p><p>With Stieglitz’s encouragement and promise of financial support,
+O’Keeffe arrived in New York in June 1918 to begin a career as an
+artist. For the next three decades, Stieglitz vigorously promoted her
+work in twenty-two solo exhibitions and numerous group installations.
+The two were married in 1924. The ups and downs of their personal and
+professional relationship were recorded in Stieglitz’s celebrated
+black-and-white portraits of O’Keeffe, taken over the course of twenty
+years (1917-37).</p><p>By the mid-1920s, O’Keeffe was recognized as one of America’s most
+important and successful artists, widely known for the architectural
+pictures that dramatically depict the soaring skyscrapers of New York.
+But most often, she painted botanical subjects, inspired by annual trips
+to the Stieglitz family summer home. In her magnified images depicting
+flowers, begun in 1924, O’Keeffe brings the viewer right into the
+picture.</p><p>Enlarging the tiniest details to fill an entire metre-wide canvas
+emphasized their shapes and lines and made them appear abstract. Such
+daring compositions helped establish O’Keeffe’s reputation as an
+innovative modernist.</p><p>In 1929, O’Keeffe made her first extended trip to the state of New
+Mexico. It was a visit that had a lasting impact on her life, and an
+immediate effect on her work. Over the next two decades she made almost
+annual trips to New Mexico, staying up to six months there, painting in
+relative solitude, then returning to New York each winter to exhibit the
+new work at Stieglitz’s gallery. This pattern continued until she moved
+permanently to New Mexico in 1949.</p><p>There, O’Keeffe found new inspiration: at first, it was the numerous
+sun-bleached bones she came across in the state’s rugged terrain that
+sparked her imagination. Two of her earliest and most celebrated
+Southwestern paintings exquisitely reproduce a cow skull’s weathered
+surfaces, jagged edges, and irregular openings. Later, she also explored
+another variation on this theme in her large series of Pelvis pictures,
+which focused on the contrasts between convex and concave surfaces, and
+solid and open spaces.</p><p>However, it was the region’s spectacular landscape, with its unusual
+geological formations, vivid colours, clarity of light, and exotic
+vegetation, that held the artist’s imagination for more than four
+decades. Often, she painted the rocks, cliffs, and mountains in striking
+close-up, just as she had done with her botanical subjects.</p><p>O’Keeffe eventually owned two homes in New Mexico - the first, her summer retreat at Ghost
+Ranch, was nestled beneath 200-metre cliffs, while the second, used as
+her winter residence, was in the small town of Abiquiú. While both
+locales provided a wealth of imagery for her paintings, one feature of
+the Abiquiú house - the large walled patio with its black door - was
+particularly inspirational. In more than thirty pictures between 1946
+and 1960, she reinvented the patio into an abstract arrangement of
+geometric shapes.</p><p>From the 1950s into the 1970s, O’Keeffe travelled widely, making
+trips to Asia, the Middle East, and Europe. Flying in planes inspired
+her last two major series – aerial views of rivers and expansive
+paintings of the sky viewed from just above clouds. In both series,
+O’Keeffe increased the size of her canvases, sometimes to mural
+proportions, reflecting perhaps her newly expanded view of the world.
+When in 1965 she successfully translated one of her cloud motifs to a
+monumental canvas measuring 6 metres in length (with the help of
+assistants), it was an enormous challenge and a special feat for an
+artist nearing eighty years of age.</p><p>The last two decades of the artist’s life were relatively
+unproductive as ill health and blindness hindered her ability to work.
+O’Keeffe died in 1986 at the age of ninety-eight, but her rich legacy of
+some 900 paintings has continued to attract subsequent generations of
+artists and art lovers who derive inspiration from these very American
+images.</p></div><div class="pqs"><p><strong>Questions 1–7</strong></p><p><em>Complete the notes below.</em></p><p><em>Choose <strong>ONE WORD ONLY</strong> from the passage for each
+answer.</em></p><table>
+<colgroup>
+<col style="width: 100%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><p><strong>The life and work of Georgia O’Keeffe</strong></p>
+<ul>
+<li><p>studied art, then worked as a <input aria-label="Câu 1" autocapitalize="off" autocomplete="off" class="ans gap" data-q="R1" placeholder="1" spellcheck="false" type="text"/>  in
+various places in the USA</p></li>
+<li><p>created drawings using <input aria-label="Câu 2" autocapitalize="off" autocomplete="off" class="ans gap" data-q="R2" placeholder="2" spellcheck="false" type="text"/>  which were
+exhibited in New York City</p></li>
+<li><p>moved to New York and became famous for her paintings of the
+city’s <input aria-label="Câu 3" autocapitalize="off" autocomplete="off" class="ans gap" data-q="R3" placeholder="3" spellcheck="false" type="text"/> </p></li>
+<li><p>produced a series of innovative close-up paintings of
+<input aria-label="Câu 4" autocapitalize="off" autocomplete="off" class="ans gap" data-q="R4" placeholder="4" spellcheck="false" type="text"/> </p></li>
+<li><p>went to New Mexico and was initially inspired to paint the many
+<input aria-label="Câu 5" autocapitalize="off" autocomplete="off" class="ans gap" data-q="R5" placeholder="5" spellcheck="false" type="text"/>  that could be found there</p></li>
+<li><p>continued to paint various features that together formed the
+dramatic <input aria-label="Câu 6" autocapitalize="off" autocomplete="off" class="ans gap" data-q="R6" placeholder="6" spellcheck="false" type="text"/>  of New Mexico for over forty
+years</p></li>
+<li><p>travelled widely by plane in later years, and painted pictures of
+clouds and <input aria-label="Câu 7" autocapitalize="off" autocomplete="off" class="ans gap" data-q="R7" placeholder="7" spellcheck="false" type="text"/>  seen from above</p></li>
+</ul></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table><p><strong>Questions 8–13</strong></p><p><em>Do the following statements agree with the information given in
+Reading Passage 1?</em></p><p><em>In boxes 8–13 on your answer sheet, write</em></p><blockquote>
+<p><strong>TRUE</strong> <em>if the statement agrees with the
+information</em></p>
+<p><strong>FALSE</strong> <em>if the statement contradicts the
+information</em></p>
+<p><strong>NOT GIVEN</strong> <em>if there is no information on
+this</em></p>
+</blockquote><p class="qline" id="Rq8"><strong class="qn">8</strong> Georgia O’Keeffe’s style was greatly influenced by
+the changing fashions in art over the seven decades of her career. <select aria-label="Câu 8" class="ans sel" data-q="R8"><option value="">8 ▾</option><option value="TRUE">TRUE</option><option value="FALSE">FALSE</option><option value="NOT GIVEN">NOT GIVEN</option></select></p><p class="qline" id="Rq9"><strong class="qn">9</strong> When O’Keeffe finished high school, she had
+already made her mind up about the career that she wanted. <select aria-label="Câu 9" class="ans sel" data-q="R9"><option value="">9 ▾</option><option value="TRUE">TRUE</option><option value="FALSE">FALSE</option><option value="NOT GIVEN">NOT GIVEN</option></select></p><p class="qline" id="Rq10"><strong class="qn">10</strong> Alfred Stieglitz first discovered O’Keeffe’s work
+when she sent some abstract drawings to his gallery in New York
+City. <select aria-label="Câu 10" class="ans sel" data-q="R10"><option value="">10 ▾</option><option value="TRUE">TRUE</option><option value="FALSE">FALSE</option><option value="NOT GIVEN">NOT GIVEN</option></select></p><p class="qline" id="Rq11"><strong class="qn">11</strong> O’Keeffe was the subject of Stieglitz’s
+photographic work for many years. <select aria-label="Câu 11" class="ans sel" data-q="R11"><option value="">11 ▾</option><option value="TRUE">TRUE</option><option value="FALSE">FALSE</option><option value="NOT GIVEN">NOT GIVEN</option></select></p><p class="qline" id="Rq12"><strong class="qn">12</strong> O’Keeffe’s paintings of the patio of her house in
+Abiquiú were among the artist’s favourite works. <select aria-label="Câu 12" class="ans sel" data-q="R12"><option value="">12 ▾</option><option value="TRUE">TRUE</option><option value="FALSE">FALSE</option><option value="NOT GIVEN">NOT GIVEN</option></select></p><p class="qline" id="Rq13"><strong class="qn">13</strong> O’Keeffe produced a greater quantity of work
+during the 1950s to 1970s than at any other time in her life. <select aria-label="Câu 13" class="ans sel" data-q="R13"><option value="">13 ▾</option><option value="TRUE">TRUE</option><option value="FALSE">FALSE</option><option value="NOT GIVEN">NOT GIVEN</option></select></p></div></div></section><section class="passage" id="passage2"><h3 class="part-title" id="reading-passage-2-questions-1426">READING PASSAGE 2
+<em>Questions 14–26</em></h3><div class="split"><div class="ptext"><p><em>You should spend about 20 minutes on <strong>Questions
+14–26</strong>, which are based on Reading Passage 2 below.</em></p><p><strong>Adapting to the effects of climate change</strong></p><p><strong>A</strong> All around the world, nations are already
+preparing for, and adapting to, climate change and its impacts. Even if
+we stopped all CO2 emissions tomorrow, we would continue to see the
+impact of the CO2 already released since industrial times, with
+scientists forecasting that global warming would continue for around 40
+years. In the meantime, ice caps would continue to melt and sea levels
+rise. Some countries and regions will suffer more extreme impacts from
+these changes than others. It’s in these places that innovation is
+thriving.</p><p><strong>B</strong> In Miami Beach, Florida, USA, seawater isn’t just
+breaching the island city’s walls, it’s seeping up through the ground,
+so the only way to save the city is to lift it up above sea level.
+Starting in the lowest and most vulnerable neighbourhoods, roads have
+been raised by as much as 61 centimetres. The elevation work was carried
+out as part of Miami Beach’s ambitious but much-needed
+stormwater-management programme. In addition to the road adaptations,
+the city has set up new pumps that can remove up to 75,000 litres of
+water per minute. In the face of floods, climate-mitigation strategies
+have often been overlooked, says Yanira Pineda, a senior sustainability
+coordinator. She knows that they’re essential and that the job is far
+from over. ‘We know that in 20, 30, 40 years, we’ll need to go back in
+there and adjust to the changing environment,’ she says.</p><p><strong>C</strong> Seawalls are a staple strategy for many coastal
+communities, but on the soft, muddy northern shores of Java, Indonesia,
+they frequently collapse, further exacerbating coastal erosion. There
+have been many attempts to restore the island’s coastal mangroves:
+ecosystems of trees and shrubs that help defend coastal areas by
+trapping sediment in their net-like root systems, elevating the sea bed
+and dampening the energy of waves and tidal currents. But Susanna Tol of
+the not-for-profit organisation Wetlands International says that, while
+hugely popular, the majority of mangrove-planting projects fail. So,
+Wetlands International started out with a different approach, building
+semi-permeable dams, made from bamboo poles and brushwood, to mimic the
+role of mangrove roots and create favourable conditions for mangroves to
+grow back naturally. The programme has seen moderate success, mainly in
+areas with less subsidence. ‘Unfortunately, traditional infrastructure
+is often single-solution focused,’ says Tol. ‘For long-term success,
+it’s critical that we transition towards multifunctional approaches that
+embed natural processes and that engage and benefit communities and local decision-makers.’</p><p><strong>D</strong> As the floodwaters rose in the rice fields of the
+Mekong Delta in September 2018, four small houses rose with them. Homes
+in this part of Vietnam are traditionally built on stilts but these ones
+had been built to float. The modifications were made by the Buoyant
+Foundation Project, a not-for-profit organisation that has been
+researching and retrofitting amphibious houses since 2006. ‘When I
+started this,’ explains founder Elizabeth English, ‘climate change was
+not on the tip of everybody’s tongue, but this technology is becoming
+necessary in places that didn’t previously need it.’ It’s much cheaper
+than permanently elevating houses, English explains - about a third of
+what it would cost to completely replace a building’s foundations. It
+also avoids the problem of taller houses being at greater risk from wind
+damage. Another plus comes from the fact that amphibious structures can
+be sensitively adapted to meet cultural needs and match the kind of
+houses that are already common in a community.</p><p><strong>E</strong> Bangladesh is especially vulnerable to climate
+change. Most of the country is less than a metre above sea level and 80
+per cent of its land lies on floodplains. ‘Almost 35 million people
+living on the coastal belt of Bangladesh are currently affected by soil
+and water salinity,’ says Raisa Chowdhury of the international
+development organisation ICCO Cooperation. Rather than fighting against
+it, one project is helping communities adapt to salt-affected soils.
+ICCO Cooperation has been working with 10,000 farmers in Bangladesh to
+start cultivating naturally salt-tolerant crops in the region. Certain
+varieties of carrot, potato, kohlrabi, cabbage and beetroot have been
+found to be better suited to salty soil than the rice and wheat that is
+typically grown there. Chowdhury says that the results are very visible,
+comparing a barren plot of land to the ‘beautiful, lush green vegetable
+garden’ sitting beside it, in which he and his team have been working
+with the farmers. Since the project began, farmers trained in saline
+agriculture have reported increases of two to three more harvests per
+year.</p><p><strong>F</strong> Greg Spotts from Los Angeles (LA) in the USA is
+chief sustainability officer of the city’s street services department.
+He leads the Cool Streets LA programme, a series of pilot projects,
+which include the planting of trees and the installation or a ‘cool
+pavement’ system, designed to help reach the city’s goal of bringing
+down its average temperature by 1.5°C. ‘Urban cooling is literally a
+matter of life and death for our future in LA,’ says Spotts. Using a
+Geographic Information System data mapping tool, the programme
+identified streets with low tree canopy cover in three of the city’s
+neighbourhoods and covered them with a light-grey, light-reflecting
+coating, which had already been shown to lower road surface temperature
+in Los Angeles by 6°C. Spotts says one of these streets, in the Winnetka
+neighbourhood of San Fernando Valley, can now be seen as a pale
+crescent, the only cool spot on an otherwise red thermal image, from the
+International Space Station.</p></div><div class="pqs"><p><strong>Questions 14–17</strong></p><p><em>Reading Passage 2 has six paragraphs,
+<strong>A–F</strong>.</em></p><p><em>Which paragraph contains the following information?</em></p><p class="qline" id="Rq14"><strong class="qn">14</strong> how a type of plant functions as a natural
+protection for coastlines <select aria-label="Câu 14" class="ans sel" data-q="R14"><option value="">14 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option></select></p><p class="qline" id="Rq15"><strong class="qn">15</strong> a prediction about how long it could take to stop
+noticing the effects of climate change <select aria-label="Câu 15" class="ans sel" data-q="R15"><option value="">15 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option></select></p><p class="qline" id="Rq16"><strong class="qn">16</strong> a reference to the fact that a solution is
+particularly cost-effective <select aria-label="Câu 16" class="ans sel" data-q="R16"><option value="">16 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option></select></p><p class="qline" id="Rq17"><strong class="qn">17</strong> a mention of a technology used to locate areas
+most in need of intervention <select aria-label="Câu 17" class="ans sel" data-q="R17"><option value="">17 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option></select></p><p><strong>Questions 18–22</strong></p><p><em>Complete the sentences below.</em></p><p><em>Choose <strong>ONE WORD ONLY</strong> from the passage for each
+answer.</em></p><blockquote>
+<p>The stormwater-management programme in Miami Beach has involved the
+installation of efficient <input aria-label="Câu 18" autocapitalize="off" autocomplete="off" class="ans gap" data-q="R18" placeholder="18" spellcheck="false" type="text"/> </p>
+<p>The construction of <input aria-label="Câu 19" autocapitalize="off" autocomplete="off" class="ans gap" data-q="R19" placeholder="19" spellcheck="false" type="text"/>  was the first stage
+of a project to ensure the success of mangroves in Indonesia.</p>
+<p>As a response to rising floodwaters in the Mekong Delta, a
+not-for-profit organisation has been building houses that can
+<input aria-label="Câu 20" autocapitalize="off" autocomplete="off" class="ans gap" data-q="R20" placeholder="20" spellcheck="false" type="text"/> </p>
+<p>Rising sea levels in Bangladesh have made it necessary to introduce
+various <input aria-label="Câu 21" autocapitalize="off" autocomplete="off" class="ans gap" data-q="R21" placeholder="21" spellcheck="false" type="text"/>  that are suitable for areas of high
+salt content.</p>
+<p>A project in LA has increased the number of <input aria-label="Câu 22" autocapitalize="off" autocomplete="off" class="ans gap" data-q="R22" placeholder="22" spellcheck="false" type="text"/>
+ on the city’s streets.</p>
+</blockquote><p><strong>Questions 23–26</strong></p><p><em>Look at the following statements (Questions 23–26) and the list
+of people below.</em></p><p><em>Match each statement with the correct person,
+<strong>A–E</strong>.</em></p><p class="qline" id="Rq23"><strong class="qn">23</strong> It is essential to adopt strategies which involve
+and help residents of the region. <select aria-label="Câu 23" class="ans sel" data-q="R23"><option value="">23 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option></select></p><p class="qline" id="Rq24"><strong class="qn">24</strong> Interventions which reduce heat are absolutely
+vital for our survival in this location. <select aria-label="Câu 24" class="ans sel" data-q="R24"><option value="">24 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option></select></p><p class="qline" id="Rq25"><strong class="qn">25</strong> More work will need to be done in future decades
+to deal with the impact of rising water levels. <select aria-label="Câu 25" class="ans sel" data-q="R25"><option value="">25 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option></select></p><p class="qline" id="Rq26"><strong class="qn">26</strong> The number of locations requiring action to adapt
+to flooding has grown in recent years. <select aria-label="Câu 26" class="ans sel" data-q="R26"><option value="">26 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option></select></p><table>
+<colgroup>
+<col style="width: 100%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><p><strong>List of people</strong></p>
+<p><strong>A</strong> Yanira Pineda</p>
+<p><strong>B</strong> Susanna Tol</p>
+<p><strong>C</strong> Elizabeth English</p>
+<p><strong>D</strong> Raisa Chowdhury</p>
+<p><strong>E</strong> Greg Spotts</p></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table></div></div></section><section class="passage" id="passage3"><h3 class="part-title" id="reading-passage-3-questions-2740">READING PASSAGE 3
+<em>Questions 27–40</em></h3><div class="split"><div class="ptext"><p><em>You should spend about 20 minutes on <strong>Questions
+27–40</strong>, which are based on Reading Passage 3 below.</em></p><p><strong>A new role for livestock guard dogs</strong></p><p><em>Livestock guard dogs, traditionally used to protect farm animals
+from predators, are now being used to protect the predators
+themselves</em></p><p><strong>A</strong> For thousands of years, livestock guard dogs
+worked alongside shepherds to protect their sheep, goats and cattle from
+predators such as wolves and bears. But in the 19th and 20th centuries,
+when such predators were largely exterminated, most guard dogs lost
+their jobs. In recent years, however, as increased efforts have been
+made to protect wild animals, predators have become more widespread
+again. As a result, farmers once more need to protect their livestock,
+and guard dogs are enjoying an unexpected revival.</p><p><strong>B</strong> Today there are around 50 breeds of guard dogs on
+duty in various parts of the
+world. These dogs are raised from an early age with the animals they
+will be watching and eventually these animals become the dog’s family.
+The dogs will place themselves between the livestock and any threat,
+barking loudly. If necessary, they will chase away predators, but often
+their mere presence is sufficient. ‘Their initial training is to make
+them understand that livestock is going to be their life,’ says Dan
+Macon, a shepherd with three guard dogs. ‘A fluffy white puppy is fun to
+be around, but too much human affection makes it a great dog for
+guarding the front porch, rather than a great livestock guard dog.’</p><p><strong>C</strong> The evidence indicates that guard dogs are highly
+effective. For example, in Portugal, biologist Silvia Ribeiro has found
+that more than 90 per cent of the farmers participating in a programme
+to train and use guard dogs to protect their herds against attack from
+wolves rate the performance of the dogs as very good or excellent. In a
+study carried out in Australia by Linda van Bommel and Chris Johnson at
+the University of Tasmania, more than 65 per cent of herders reported
+that predation stopped completely after they got the dogs, and almost
+all the rest saw a decrease in attacks. ‘If they are managed and used
+properly, livestock guard dogs are the most efficient control method
+that we have in terms of the amount of livestock that they save from
+predation,’ says van Bommel.</p><p><strong>D</strong> But today’s guard dogs also have a new role - to
+help preserve the predators. It is hoped that reductions in livestock
+losses can make farmers more tolerant of predators and less likely to
+kill them. In Namibia, more than 90 per cent of cheetahs live outside
+protected areas, close to humans raising livestock. As a result, the
+cheetahs are often held responsible for animal losses, and large numbers
+have been killed by farmers. When guard dogs were introduced, more than
+90 per cent of farmers reported a dramatic reduction in livestock
+losses, and said that as a result they were less likely to kill
+predators. Julie Young, at Utah State University in the US, believes
+this result applies widely. ‘There is common ground from the livestock
+perspective and from the conservation perspective,’ she says. ‘If
+ranchers don’t have a dead cow, they will not make a call to apply for a
+permit to kill a wolf.’</p><p><strong>E</strong> Looking at all the published evidence, Bethany
+Smith at Nottingham Trent University in the UK found that up to 88 per
+cent of farmers said they no longer killed predators after using dogs -
+but warned that such self-reported results must be taken with a pinch of
+salt. What’s more, it is possible that livestock guard dogs merely
+displace predators to unprotected neighbouring properties, where their
+fate isn’t recorded. ‘In some regions, we work with almost every farmer,
+but in others only one or two have dogs,’ says Ribeiro. ‘If we are not
+working with everybody, we are transferring the wolf pressure to the
+neighbour’s herd and he can use poison and kill an entire pack of
+wolves.’</p><p><strong>F</strong> Another concern is whether there may be unintended
+ecological effects of using guard dogs. Studies suggest that reducing
+deaths of one type of predator may have a negative impact on other
+species. The extent of this problem isn’t known, but the consequences
+are clear in Namibia. Cheetahs aren’t the only species that cause sheep
+and goat losses there: other predators also attack livestock. In 2015,
+researchers reported that in spite of the impact farmers obtaining guard
+dogs had on cheetahs, the number of jackals killed by dogs and people
+actually increased. Guard dogs have other ecological impacts too. They
+have been found to spread diseases to wild animals, including endangered
+Ethiopian wolves. They may also compete with other carnivores for food.
+And by creating a ‘landscape of fear’, their mere presence can influence
+the behaviour of prey animals.</p><p><strong>G</strong> The evidence so far, however, indicates that these
+consequences aren’t always negative. Guard dogs can deliver unexpected
+benefits by protecting vulnerable wildlife from predators. For example,
+their presence has been found to protect birds which build their nests
+on the ground in fields, where foxes would normally raid them. Indeed,
+Australian researchers are now using dogs to enhance biodiversity and
+create refuges for species threatened by predation. So if we can get
+this right, there may be a bright future for guard dogs in promoting
+harmonious coexistence between humans and wildlife.</p></div><div class="pqs"><p><strong>Questions 27–31</strong></p><p><em>Reading Passage 3 has seven paragraphs,
+<strong>A–G</strong>.</em></p><p><em>Which paragraph contains the following information?</em></p><p><em><strong>NB</strong> You may use any letter more than
+once.</em></p><p class="qline" id="Rq27"><strong class="qn">27</strong> an example of how one predator has been protected
+by the introduction of livestock guard dogs <select aria-label="Câu 27" class="ans sel" data-q="R27"><option value="">27 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option></select></p><p class="qline" id="Rq28"><strong class="qn">28</strong> an optimistic suggestion about the possible
+positive developments in the use of livestock guard dogs <select aria-label="Câu 28" class="ans sel" data-q="R28"><option value="">28 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option></select></p><p class="qline" id="Rq29"><strong class="qn">29</strong> a description of how the methods used by
+livestock guard dogs help to keep predators away <select aria-label="Câu 29" class="ans sel" data-q="R29"><option value="">29 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option></select></p><p class="qline" id="Rq30"><strong class="qn">30</strong> claims by different academics that the use of
+livestock guard dogs is a successful way of protecting farmers’ herds
+<select aria-label="Câu 30" class="ans sel" data-q="R30"><option value="">30 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option></select></p><p class="qline" id="Rq31"><strong class="qn">31</strong> a reference to how livestock guard dogs gain
+their skills <select aria-label="Câu 31" class="ans sel" data-q="R31"><option value="">31 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option></select></p><p><strong>Questions 32–36</strong></p><p><em>Look at the following statements (Questions 32–36) and the list
+of people below.</em></p><p><em>Match each statement with the correct person,
+<strong>A–E</strong>.</em></p><p class="qline" id="Rq32"><strong class="qn">32</strong> The use of guard dogs may save the lives of both
+livestock and wild animals. <select aria-label="Câu 32" class="ans sel" data-q="R32"><option value="">32 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option></select></p><p class="qline" id="Rq33"><strong class="qn">33</strong> Claims of a change in behaviour from those using
+livestock guard dogs may not be totally accurate. <select aria-label="Câu 33" class="ans sel" data-q="R33"><option value="">33 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option></select></p><p class="qline" id="Rq34"><strong class="qn">34</strong> There may be negative results if the use of
+livestock guard dogs is not sufficiently widespread. <select aria-label="Câu 34" class="ans sel" data-q="R34"><option value="">34 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option></select></p><p class="qline" id="Rq35"><strong class="qn">35</strong> Livestock guard dogs are the best way of
+protecting farm animals, as long as the dogs are appropriately handled.
+<select aria-label="Câu 35" class="ans sel" data-q="R35"><option value="">35 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option></select></p><p class="qline" id="Rq36"><strong class="qn">36</strong> Teaching a livestock guard dog how to do its work
+needs a different focus from teaching a house guard dog. <select aria-label="Câu 36" class="ans sel" data-q="R36"><option value="">36 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option></select></p><table>
+<colgroup>
+<col style="width: 100%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><p><strong>List of people</strong></p>
+<p><strong>A</strong> Dan Macon</p>
+<p><strong>B</strong> Silvia Ribeiro</p>
+<p><strong>C</strong> Linda van Bommel</p>
+<p><strong>D</strong> Julie Young</p>
+<p><strong>E</strong> Bethany Smith</p></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table><p><strong>Questions 37–40</strong></p><p><em>Complete the summary below.</em></p><p><em>Choose <strong>ONE WORD ONLY</strong> from the passage for each
+answer.</em></p><table>
+<colgroup>
+<col style="width: 100%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><p><strong>Unintended ecological effects of using guard
+dogs</strong></p>
+<p>In Namibia, livestock guard dogs have been used to protect domestic
+animals from attacks by cheetahs.</p>
+<p>This has led to a rise in the deaths of other predators, particularly
+<input aria-label="Câu 37" autocapitalize="off" autocomplete="off" class="ans gap" data-q="R37" placeholder="37" spellcheck="false" type="text"/>  In addition, it has been suggested that
+the dogs could have <input aria-label="Câu 38" autocapitalize="off" autocomplete="off" class="ans gap" data-q="R38" placeholder="38" spellcheck="false" type="text"/> , which may affect other
+species, and that they may reduce the amount of <input aria-label="Câu 39" autocapitalize="off" autocomplete="off" class="ans gap" data-q="R39" placeholder="39" spellcheck="false" type="text"/>
+ available to certain wild animals.</p>
+<p>On the other hand, these dogs may help birds by protecting their
+nests. These might otherwise be threatened by predators such as
+<input aria-label="Câu 40" autocapitalize="off" autocomplete="off" class="ans gap" data-q="R40" placeholder="40" spellcheck="false" type="text"/> </p></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table></div></div></section>
+  </div>
+</main>
+<footer><a href="index.html">← Danh sách 4 test</a> · Cambridge IELTS 20 · Test 4 — trang luyện tập cho học viên. Band chỉ là ước tính theo thang điểm thường dùng.</footer>
+<script>
+(function(){
+'use strict';
+var KEY={"L1": "Kings / King's", "L2": "125 / one hundred and twenty-five / one hundred twenty-five", "L3": "walking", "L4": "boat", "L5": "Tuesday", "L6": "space", "L7": "vegetarian", "L8": "2.30 / 2:30 / two thirty", "L9": "75 / seventy-five", "L10": "port", "L11": "B", "L12": "C", "L13": "C", "L14": "A", "L15": "D", "L16": "F", "L17": "B", "L18": "H", "L19": "C", "L20": "G", "L21": "C", "L22": "E", "L23": "A", "L24": "C", "L25": "C", "L26": "A", "L27": "A", "L28": "B", "L29": "B", "L30": "C", "L31": "rats", "L32": "snakes", "L33": "tourism", "L34": "traffic", "L35": "rain", "L36": "poison", "L37": "building", "L38": "dog", "L39": "noise", "L40": "combination", "R1": "teacher", "R2": "charcoal", "R3": "skyscrapers", "R4": "flowers", "R5": "bones", "R6": "landscape", "R7": "rivers", "R8": "FALSE", "R9": "TRUE", "R10": "FALSE", "R11": "TRUE", "R12": "NOT GIVEN", "R13": "NOT GIVEN", "R14": "D", "R15": "A", "R16": "D", "R17": "F", "R18": "pumps", "R19": "dams", "R20": "float", "R21": "crops", "R22": "trees", "R23": "B", "R24": "E", "R25": "A", "R26": "C", "R27": "D", "R28": "G", "R29": "B", "R30": "C", "R31": "B", "R32": "D", "R33": "E", "R34": "B", "R35": "C", "R36": "A", "R37": "jackals", "R38": "diseases", "R39": "food", "R40": "foxes"}, QT={"L1": "text", "L2": "text", "L3": "text", "L4": "text", "L5": "text", "L6": "text", "L7": "text", "L8": "text", "L9": "text", "L10": "text", "L11": "multi", "L12": "multi", "L13": "multi", "L14": "multi", "L15": "select", "L16": "select", "L17": "select", "L18": "select", "L19": "select", "L20": "select", "L21": "multi", "L22": "multi", "L23": "multi", "L24": "multi", "L25": "mcq", "L26": "mcq", "L27": "mcq", "L28": "mcq", "L29": "mcq", "L30": "mcq", "L31": "text", "L32": "text", "L33": "text", "L34": "text", "L35": "text", "L36": "text", "L37": "text", "L38": "text", "L39": "text", "L40": "text", "R1": "text", "R2": "text", "R3": "text", "R4": "text", "R5": "text", "R6": "text", "R7": "text", "R8": "select", "R9": "select", "R10": "select", "R11": "select", "R12": "select", "R13": "select", "R14": "select", "R15": "select", "R16": "select", "R17": "select", "R18": "text", "R19": "text", "R20": "text", "R21": "text", "R22": "text", "R23": "select", "R24": "select", "R25": "select", "R26": "select", "R27": "select", "R28": "select", "R29": "select", "R30": "select", "R31": "select", "R32": "select", "R33": "select", "R34": "select", "R35": "select", "R36": "select", "R37": "text", "R38": "text", "R39": "text", "R40": "text"}, N='4';
+var QS=new URLSearchParams(location.search), MODE=(QS.get('part')||'').toUpperCase();
+if(!/^(L[1-4]|R[1-3]|L|R)$/.test(MODE)) MODE='';
+var SK='cam20.t'+N+(MODE?'.'+MODE:'');
+(function(){ // chế độ làm riêng một phần
+  if(!MODE) return;
+  var s=MODE[0], n=MODE.slice(1);
+  document.body.classList.add('one');
+  document.getElementById(s==='L'?'sectR':'sectL').remove();
+  if(n){ [].slice.call(document.querySelectorAll(s==='L'?'.part':'.passage')).forEach(function(x){ if(x.id!==(s==='L'?'part':'passage')+n) x.remove(); }); }
+  var lab=document.getElementById('modelabel'); lab.hidden=false;
+  lab.textContent=(s==='L'?'Listening':'Reading')+(n?(s==='L'?' · Part ':' · Passage ')+n:' · cả phần');
+  document.title=document.title+' · '+lab.textContent;
+  if(n) [].slice.call(document.querySelectorAll('.hint')).forEach(function(h){ h.textContent='Bấm số câu để nhảy tới câu đó. Bài làm được tự lưu trên máy này.'+(s==='R'?' Gợi ý: khoảng 20 phút cho một passage.':''); });
+})();
+var state={};
+try{state=JSON.parse(localStorage.getItem(SK))||{};}catch(e){state={};}
+state.ans=state.ans||{}; state.done=state.done||{}; state.time=state.time||{L:0,R:0};
+function save(){try{localStorage.setItem(SK,JSON.stringify(state));}catch(e){}}
+function $(s,r){return (r||document).querySelector(s);} function $$(s,r){return [].slice.call((r||document).querySelectorAll(s));}
+var cur=MODE?MODE[0]:'L';
+// ---- restore answers ----
+$$('.ans').forEach(function(el){var q=el.dataset.q; if(state.ans[q]!=null) el.value=state.ans[q];
+  el.addEventListener('input',function(){state.ans[q]=el.value; save(); grid();}); el.addEventListener('change',function(){state.ans[q]=el.value; save(); grid();});});
+$$('.opts').forEach(function(bq){
+  var q=bq.dataset.q, q2=bq.dataset.q2, boxes=$$('.ans-opt',bq);
+  var saved=state.ans[q]; if(saved!=null){ boxes.forEach(function(b){ b.checked=String(saved).split(',').indexOf(b.value)>=0; }); }
+  boxes.forEach(function(b){ b.addEventListener('change',function(){
+    if(q2){ var pick=+b.dataset.pick, on=boxes.filter(function(x){return x.checked;}); if(on.length>pick){ b.checked=false; return; } }
+    state.ans[q]=boxes.filter(function(x){return x.checked;}).map(function(x){return x.value;}).join(','); save(); grid();
+  }); });
+});
+// ---- question list per section ----
+var PRESENT={};
+$$('.ans').forEach(function(el){PRESENT[el.dataset.q]=1;});
+$$('.opts').forEach(function(b){ var s=b.dataset.q[0],a=+b.dataset.q.slice(1),z=b.dataset.q2?+b.dataset.q2.slice(1):a; for(var n=a;n<=z;n++) PRESENT[s+n]=1; });
+function qnums(s){ return Object.keys(QT).filter(function(k){return k[0]===s&&PRESENT[k];}).map(function(k){return +k.slice(1);}).sort(function(a,b){return a-b;}); }
+function answered(s,n){
+  var k=s+n, t=QT[k];
+  if(t==='multi'){ // find pair start
+    var bq=$$('.opts[data-q2]').filter(function(b){var a=+b.dataset.q.slice(1),z=+b.dataset.q2.slice(1);return b.dataset.q[0]===s&&n>=a&&n<=z;})[0];
+    if(!bq) return false; var v=(state.ans[bq.dataset.q]||'').split(',').filter(Boolean); return v.length>n-(+bq.dataset.q.slice(1));
+  }
+  return !!(state.ans[k]&&String(state.ans[k]).trim());
+}
+function target(s,n){ return document.getElementById(s+'q'+n) || $('[data-q="'+s+n+'"]') ||
+  $$('.opts[data-q2]').map(function(b){return b;}).filter(function(b){var a=+b.dataset.q.slice(1),z=+b.dataset.q2.slice(1);return b.dataset.q[0]===s&&n>=a&&n<=z;}).map(function(b){return b.previousElementSibling;})[0]; }
+function grid(){
+  ['L','R'].forEach(function(s){
+    var g=$('.panel[data-s="'+s+'"] .grid'); if(!g) return; if(!g.children.length){
+      qnums(s).forEach(function(n){var a=document.createElement('a'); a.href='#'; a.textContent=n; a.dataset.n=n;
+        a.onclick=function(e){e.preventDefault(); var t=target(s,n); if(t){ t.scrollIntoView({behavior:'smooth',block:'center'}); var f=t.matches&&t.matches('.ans')?t:(t.querySelector&&t.querySelector('.ans,.ans-opt')); if(f) setTimeout(function(){f.focus({preventScroll:true});},350);} };
+        g.appendChild(a);});
+    }
+    $$('a',g).forEach(function(a){ if(!state.done[s]) a.className=answered(s,+a.dataset.n)?'done':''; });
+  });
+}
+// ---- grading ----
+function norm(x){ return String(x||'').toLowerCase().replace(/[’']/g,"'").replace(/[£$€]/g,'').replace(/[.,;:!?]+$/,'').replace(/\s+/g,' ').trim(); }
+function variants(key){ // "(the) station / train station" -> list
+  var out=[]; String(key).split(/\s*\/\s*|\s+OR\s+/).forEach(function(alt){
+    var opts=[''], parts=alt.split(/(\([^)]*\))/);
+    parts.forEach(function(p){ if(/^\(.*\)$/.test(p)){ var inner=p.slice(1,-1); opts=opts.concat(opts.map(function(o){return o+inner;})); } else opts=opts.map(function(o){return o+p;}); });
+    opts.forEach(function(o){out.push(norm(o));});
+  }); return out;
+}
+function isRight(k,val){ var key=KEY[k]; if(key==null) return null; var v=norm(val); if(!v) return false;
+  return variants(key).some(function(x){ return x===v || x.replace(/-/g,' ')===v.replace(/-/g,' '); }); }
+var BAND={L:[[39,9],[37,8.5],[35,8],[32,7.5],[30,7],[26,6.5],[23,6],[18,5.5],[16,5],[13,4.5],[10,4],[8,3.5],[6,3],[4,2.5]],
+          R:[[39,9],[37,8.5],[35,8],[33,7.5],[30,7],[27,6.5],[23,6],[19,5.5],[15,5],[13,4.5],[10,4],[8,3.5],[6,3],[4,2.5]]};
+function band(s,sc){ for(var i=0;i<BAND[s].length;i++) if(sc>=BAND[s][i][0]) return BAND[s][i][1]; return 'dưới 2.5'; }
+function grade(s){
+  var sect=$('#sect'+s), total=0, got=0, res={};
+  if(!Object.keys(KEY).some(function(k){return k[0]===s;})){ alert('Chưa có đáp án cho phần này.'); return; }
+  $$('.fix',sect).forEach(function(f){f.remove();});
+  $$('.ans',sect).forEach(function(el){ var k=el.dataset.q, r=isRight(k,el.value); if(r===null) return; total++;
+    el.classList.remove('ok-mark','bad-mark'); el.classList.add(r?'ok-mark':'bad-mark'); res[+k.slice(1)]=r; if(r) got++;
+    else{ var f=document.createElement('span'); f.className='fix'; f.textContent='✓ '+String(KEY[k]); el.insertAdjacentElement('afterend',f);} });
+  $$('.opts',sect).forEach(function(bq){
+    var q=+bq.dataset.q.slice(1), q2=bq.dataset.q2?+bq.dataset.q2.slice(1):q, keys=[], picked=$$('.ans-opt',bq).filter(function(b){return b.checked;}).map(function(b){return b.value;});
+    for(var n=q;n<=q2;n++){ var kv=KEY[s+n]; if(kv!=null) keys.push(String(kv).toUpperCase().trim()); }
+    if(!keys.length) return;
+    $$('.opt',bq).forEach(function(o){ var v=$('input',o).value; o.classList.remove('right','wrong');
+      if(keys.indexOf(v)>=0) o.classList.add('right'); else if($('input',o).checked) o.classList.add('wrong'); });
+    var hits=picked.filter(function(p){return keys.indexOf(p)>=0;});
+    for(var m=q;m<=q2;m++){ total++; var ok=(m-q)<hits.length; res[m]=ok; if(ok) got++; }
+  });
+  state.done[s]={got:got,total:total}; save();
+  var g=$('.panel[data-s="'+s+'"] .grid'); $$('a',g).forEach(function(a){ var r=res[+a.dataset.n]; a.className=r===true?'g-ok':r===false?'g-bad':''; });
+  showScore(s); sect.classList.add('done-lock');
+}
+function showScore(s){ var d=state.done[s], el=$('.panel[data-s="'+s+'"] .score'); if(!el) return; if(!d){el.innerHTML='';return;}
+  el.innerHTML='Đúng '+d.got+'/'+d.total+(d.total===40?' <span class="band">Band ≈ '+band(s,d.got)+'</span>':''); }
+$$('.panel').forEach(function(p){ var s=p.dataset.s;
+  $('[data-act=submit]',p).onclick=function(){
+    var miss=qnums(s).filter(function(n){return !answered(s,n);}).length;
+    if(miss && !confirm('Còn '+miss+' câu chưa làm. Vẫn nộp bài?')) return;
+    grade(s); p.scrollIntoView({behavior:'smooth'}); };
+  $('[data-act=reset]',p).onclick=function(){
+    if(!confirm('Xoá hết bài làm phần này và làm lại?')) return;
+    var sect=$('#sect'+s); Object.keys(state.ans).forEach(function(k){ if(k[0]===s) delete state.ans[k]; });
+    delete state.done[s]; state.time[s]=0; save();
+    $$('.ans',sect).forEach(function(el){el.value=''; el.classList.remove('ok-mark','bad-mark');});
+    $$('.ans-opt',sect).forEach(function(b){b.checked=false;}); $$('.opt',sect).forEach(function(o){o.classList.remove('right','wrong');});
+    $$('.fix',sect).forEach(function(f){f.remove();}); sect.classList.remove('done-lock');
+    $$('audio',sect).forEach(function(a){a.pause(); a.currentTime=0;});
+    showScore(s); grid(); window.scrollTo(0,0); };
+});
+// ---- tabs & timer ----
+function tab(s){ cur=s; $$('.tabs button').forEach(function(b){b.setAttribute('aria-selected',b.dataset.s===s);});
+  $$('.sect').forEach(function(x){x.classList.toggle('on',x.id==='sect'+s);});
+  if(!$('#sect'+s)) return;
+  if(s==='R') $$('#sectL audio').forEach(function(a){a.pause();});
+  if(!MODE){ try{history.replaceState(null,'',s==='R'?'#reading':'#listening');}catch(e){} } tick(); }
+$$('.tabs button').forEach(function(b){b.onclick=function(){tab(b.dataset.s); window.scrollTo(0,0);};});
+function fmt(t){var m=Math.floor(t/60),x=t%60;return (m<10?'0':'')+m+':'+(x<10?'0':'')+x;}
+function tick(){ $('#timer').textContent=fmt(state.time[cur]||0); }
+setInterval(function(){ if(document.hidden||state.done[cur]) return; state.time[cur]=(state.time[cur]||0)+1; tick(); if(state.time[cur]%10===0) save(); },1000);
+// restore graded state
+['L','R'].forEach(function(s){ if(state.done[s]&&$('#sect'+s)) grade(s); });
+grid(); tab(MODE?MODE[0]:(location.hash==='#reading'?'R':'L'));
+})();
+</script>
+</body>
+</html>
