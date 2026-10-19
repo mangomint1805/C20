@@ -1,0 +1,1106 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light only">
+<title>Cambridge IELTS 18 · Test 1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--paper:#faf8f4;--card:#fff;--line:#ddd7c9;--ink:#1e232b;--dim:#666e7a;--brand:#a8691a;--brand-soft:#f2e2c4;--brand-ink:#6b4410;
+--ok:#1f8f6c;--ok-soft:#e1f4ec;--bad:#c14636;--bad-soft:#fbe6e2;--warn:#1f8f6c;--panel2:#f2efe8;}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--paper);color:var(--ink);font-family:'IBM Plex Sans',system-ui,sans-serif;line-height:1.6;font-size:16px}
+a{color:var(--brand)}
+header.top{position:sticky;top:0;z-index:20;background:rgba(250,248,244,.97);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.bar{max-width:1280px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.bar h1{font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:21px;margin:0;flex:1;min-width:180px}
+.bar h1 small{display:block;font-family:'IBM Plex Sans',sans-serif;font-weight:500;font-size:12.5px;color:var(--dim)}
+.tabs{display:flex;background:var(--panel2);border-radius:10px;padding:3px}
+.tabs button{font:inherit;font-weight:600;font-size:14.5px;border:0;background:none;padding:7px 14px;border-radius:8px;cursor:pointer;color:var(--dim)}
+.tabs button[aria-selected=true]{background:var(--card);color:var(--brand-ink);box-shadow:0 1px 3px rgba(0,0,0,.1)}
+.timer{font-variant-numeric:tabular-nums;font-weight:600;color:var(--dim);font-size:14px;min-width:60px;text-align:right}
+main{max-width:1280px;margin:0 auto;padding:16px}
+.sect{display:none}.sect.on{display:block}
+.part,.passage{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:18px 20px;margin:0 0 18px}
+.part-title{font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:23px;margin:0 0 10px;color:var(--brand-ink)}
+.part-title em{font-style:normal;font-family:'IBM Plex Sans',sans-serif;font-size:15px;color:var(--dim);margin-left:6px}
+.audio{display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:var(--panel2);border:1px solid var(--line);border-radius:6px;padding:8px 12px;margin:0 0 12px}
+.audio span{font-weight:700;color:var(--brand-ink);font-size:14px}
+.audio audio{flex:1;min-width:220px;height:38px}
+p{margin:7px 0}
+em{color:#3b4350}
+table{border-collapse:collapse;width:100%;margin:10px 0;font-size:15px}
+th,td{border:1px solid var(--line);padding:8px 10px;vertical-align:top;text-align:left;font-weight:400}
+thead th{background:var(--panel2)}
+thead th strong{font-weight:700}
+ul{padding-left:22px;margin:6px 0}
+.figure{max-width:100%;height:auto;border:1px solid var(--line);border-radius:8px;display:block;margin:8px 0}
+/* widgets */
+.gap{font:inherit;font-size:15px;width:9.5em;max-width:100%;padding:3px 8px;border:1.5px solid #cfc6b2;border-radius:5px;background:var(--panel2);color:var(--ink);margin:0 2px}
+.gap:focus,.sel:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px var(--brand-soft)}
+.gap::placeholder{color:#b3a68c;font-weight:600}
+.sel{font:inherit;font-size:14.5px;padding:3px 6px;border:1.5px solid #cfc6b2;border-radius:5px;background:var(--panel2);color:var(--ink);margin:0 2px;max-width:100%}
+.qline{scroll-margin-top:80px}
+.qn{display:inline-block;min-width:30px;font-family:'Fraunces',Georgia,serif;font-size:19px;font-weight:600;color:var(--brand);margin-right:6px}
+blockquote.opts{margin:6px 0 12px 34px;padding:0;display:grid;gap:5px}
+.opt{display:flex;gap:8px;align-items:flex-start;padding:7px 12px;border:1px solid var(--line);border-radius:4px;cursor:pointer;background:var(--panel2)}
+.opt:hover{border-color:#cfc6b2}
+.opt input{margin-top:5px;accent-color:var(--brand);width:16px;height:16px;flex:none}
+.opt b{color:var(--brand-ink);flex:none}
+.opt:has(input:checked){border-color:var(--brand);background:var(--brand-soft)}
+/* grading marks */
+.ok-mark{border-color:var(--ok)!important;background:var(--ok-soft)!important}
+.bad-mark{border-color:var(--bad)!important;background:var(--bad-soft)!important}
+.fix{display:inline-block;font-size:13px;font-weight:700;color:var(--ok);background:var(--ok-soft);border-radius:6px;padding:0 6px;margin-left:4px}
+.opt.right{border-color:var(--ok);background:var(--ok-soft)}
+.opt.wrong{border-color:var(--bad);background:var(--bad-soft)}
+/* reading split */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
+.ptext{max-height:calc(100vh - 150px);overflow:auto;position:sticky;top:76px;padding-right:12px;border-right:1px solid var(--line)}
+.ptext p strong:first-child{color:var(--brand-ink)}
+@media (max-width:900px){.split{grid-template-columns:1fr}.ptext{max-height:none;position:static;border-right:0;padding-right:0;border-bottom:1px solid var(--line);padding-bottom:12px}}
+/* answer panel */
+.panel{background:var(--card);border:1.5px solid var(--brand);border-radius:6px;padding:14px 16px;margin:0 0 18px}
+.panel h2{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:18px;margin:0 0 8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(38px,1fr));gap:5px}
+.grid a{display:flex;align-items:center;justify-content:center;height:34px;border-radius:7px;border:1.5px solid var(--line);text-decoration:none;color:var(--dim);font-weight:600;font-size:14px;background:#fff}
+.grid a.done{border-color:var(--brand);color:var(--brand-ink);background:var(--brand-soft)}
+.grid a.g-ok{border-color:var(--ok);background:var(--ok);color:#fff}
+.grid a.g-bad{border-color:var(--bad);background:var(--bad);color:#fff}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:12px}
+.btn{font:inherit;font-weight:600;font-size:15px;border:1px solid var(--brand);border-radius:4px;padding:10px 16px;cursor:pointer;background:var(--brand);color:#fff}
+.btn.alt{background:#fff;color:var(--brand-ink);border:1.5px solid var(--brand)}
+.score{font-weight:700;font-size:16px}
+.score .band{display:inline-block;margin-left:6px;background:var(--ok);color:#fff;border-radius:7px;padding:1px 9px}
+.hint{color:var(--dim);font-size:13.5px;margin:6px 0 0}
+footer{max-width:1280px;margin:0 auto;padding:10px 16px 40px;color:var(--dim);font-size:13px}
+.done-lock .ans,.done-lock .ans-opt{pointer-events:none}
+.modelabel{font-weight:700;font-size:14px;color:var(--brand-ink);background:var(--brand-soft);border-radius:4px;padding:6px 12px}
+.back{font-size:13.5px;font-weight:600;color:var(--brand-ink);text-decoration:none;white-space:nowrap}
+body.one .tabs{display:none}
+
+/* lời thoại & vị trí đáp án */
+.script{display:none;margin:16px 0 0;border:1px solid var(--line);border-radius:6px;background:var(--panel2)}
+.revealed .script{display:block}
+.script summary{cursor:pointer;font-weight:700;color:var(--brand-ink);padding:10px 14px}
+.script-body{padding:0 16px 12px;font-size:15px;max-height:60vh;overflow:auto}
+.script-body p{margin:8px 0}
+.script-body b{color:var(--brand-ink)}
+.evhl{background:#fff1b8;border-radius:3px;box-shadow:0 0 0 2px #f1d36b;position:relative}
+.evhl::before{content:"Câu " attr(data-q);font-size:11px;font-weight:700;color:#fff;background:var(--brand);border-radius:3px;padding:0 4px;margin-right:4px}
+mark.ev{background:#fff1b8;box-shadow:0 0 0 2px #f1d36b;border-radius:3px;color:inherit}
+.evtag{font-size:11px;font-weight:700;color:#fff;background:var(--brand);border-radius:3px;padding:0 4px;margin-right:3px}
+.flash{animation:flash 1.4s ease-out}
+@keyframes flash{0%{box-shadow:0 0 0 6px #f1d36b}100%{box-shadow:0 0 0 2px #f1d36b}}
+.loc{display:none;font:inherit;font-size:12.5px;font-weight:700;color:var(--brand-ink);background:#fff7e0;border:1px solid #f1d36b;border-radius:5px;padding:0 6px;margin-left:5px;cursor:pointer;vertical-align:middle}
+.revealed .loc{display:inline-block}
+.xpb{padding:0 5px}
+#xpSheet{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;justify-content:center;padding:0 12px 12px;transform:translateY(110%);transition:transform .25s ease;pointer-events:none}
+#xpSheet.on{transform:none;pointer-events:auto}
+#xpSheet .xp-in{width:100%;max-width:720px;background:var(--card);border:1px solid var(--line);border-top:4px solid var(--brand);border-radius:12px;box-shadow:0 10px 34px rgba(30,35,43,.22);padding:14px 16px 12px;max-height:55vh;overflow:auto}
+#xpSheet .xp-head{display:flex;justify-content:space-between;align-items:center;gap:10px}
+#xpSheet .xp-t{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:17px;color:var(--brand-ink)}
+#xpSheet .xp-x{border:0;background:none;font-size:18px;cursor:pointer;color:var(--dim);padding:2px 6px}
+#xpSheet .xp-a{margin-top:6px;font-size:14.5px}
+#xpSheet .xp-a b{color:#1f8f6c}
+#xpSheet .xp-ok{color:#1f8f6c;font-weight:600;margin-left:6px;font-size:13px}
+#xpSheet .xp-no{color:#c0392b;font-weight:600;margin-left:6px;font-size:13px}
+#xpSheet .xp-b{margin:8px 0 10px;line-height:1.6;font-size:15px}
+#xpSheet .xp-f{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+#xpSheet .xp-f button{font:inherit;font-size:13.5px;border:1px solid var(--line);background:var(--paper);border-radius:7px;padding:5px 10px;cursor:pointer;color:var(--ink)}
+#xpSheet .xp-f button:disabled{opacity:.4;cursor:default}
+#xpSheet .xp-f span{display:flex;gap:6px}
+.done-lock .loc{pointer-events:auto}
+.score .after{display:block;font-weight:500;font-size:13px;color:var(--dim);margin-top:2px}
+/* thi thử */
+.exam .audio{display:none}
+.exambar{position:sticky;top:64px;z-index:15;background:#fff7e0;border:1.5px solid #f1d36b;border-radius:6px;padding:10px 14px;margin:0 0 14px;font-size:15px}
+.exambar.over{position:static;background:var(--ok-soft);border-color:var(--ok)}
+.exambar .cd{font-family:'Fraunces',Georgia,serif;font-size:20px}
+.exambar .cd.low{color:var(--bad)}
+.eprog{height:6px;background:var(--line);border-radius:4px;overflow:hidden;margin-top:8px}
+.eprog i{display:block;height:100%;background:var(--brand)}
+.overlay{position:fixed;inset:0;z-index:60;background:rgba(30,35,43,.55);display:flex;align-items:center;justify-content:center;padding:16px}
+.overlay[hidden]{display:none}
+.ocard{background:var(--card);border-radius:8px;max-width:480px;width:100%;padding:22px 22px 18px;box-shadow:0 20px 50px rgba(0,0,0,.25)}
+.ocard h2{font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:24px;margin:0 0 8px}
+.ocard ul{padding-left:20px;font-size:15px}
+.ocard label{display:block;font-weight:600;font-size:14px;margin:10px 0 4px}
+.ocard input{width:100%;font:inherit;padding:9px 11px;border:1px solid var(--line);border-radius:4px;background:var(--panel2)}
+.ocard .err{color:var(--bad);font-size:14px;min-height:20px;margin:6px 0 0}
+.ocard .row{justify-content:flex-end}
+/* tô sáng */
+.ptools{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:-4px 0 10px;font-size:13px;color:var(--dim)}
+.mini{font:inherit;font-size:13px;font-weight:600;border:1px solid var(--line);background:var(--panel2);color:var(--brand-ink);border-radius:5px;padding:3px 9px;cursor:pointer}
+.mini.vocab{border-color:var(--brand);background:var(--brand-soft)}
+mark.hl{background:#ffe58a;color:inherit;border-radius:2px;cursor:pointer}
+mark.hl.has-note{border-bottom:2px dotted var(--brand)}
+mark.hl.has-note::after{content:"📝";font-size:11px;margin-left:1px}
+.hltool{position:absolute;z-index:70;display:flex;gap:4px;background:var(--ink);border-radius:6px;padding:4px;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+.hltool[hidden],.notebox[hidden]{display:none}
+.hltool button{font:inherit;font-size:13px;font-weight:600;color:#fff;background:none;border:0;border-radius:4px;padding:5px 9px;cursor:pointer}
+.hltool button:hover{background:rgba(255,255,255,.15)}
+.notebox{position:absolute;z-index:70;width:270px;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:10px;box-shadow:0 10px 26px rgba(0,0,0,.2)}
+.notebox textarea{width:100%;font:inherit;font-size:14px;border:1px solid var(--line);border-radius:4px;padding:6px;margin-bottom:6px;resize:vertical}
+.notebox .btn{padding:5px 12px;font-size:13px}
+.exam .ptools span{display:none}
+</style>
+</head>
+<body>
+<header class="top"><div class="bar">
+  <h1><a href="index.html" style="color:inherit;text-decoration:none">Cambridge IELTS 18 · Test 1</a><small>Listening &amp; Reading · luyện tập tự chấm</small></h1>
+  <div class="tabs" role="tablist">
+    <button role="tab" aria-selected="true" data-s="L">🎧 Listening</button>
+    <button role="tab" aria-selected="false" data-s="R">📖 Reading</button>
+  </div>
+  <span class="modelabel" id="modelabel" hidden></span><span class="timer" id="timer" title="Thời gian làm phần này">00:00</span><a class="back" href="index.html">← Trang chủ</a>
+</div></header>
+<main>
+  <div class="sect on" id="sectL">
+    <div class="panel" data-s="L">
+      <h2>Phiếu trả lời Listening</h2>
+      <div class="grid"></div>
+      <div class="row"><button class="btn" data-act="submit">Nộp bài &amp; chấm điểm</button><button class="btn alt" data-act="reset">Làm lại</button><span class="score"></span></div>
+      <p class="hint">Bấm số câu để nhảy tới câu đó. Bài làm được tự lưu trên máy này. Thời gian thi thật: khoảng 30 phút.</p>
+    </div>
+    <section class="part" id="part1"><h3 class="part-title" id="part-1-questions-110">PART 1 <em>Questions 1–10</em></h3><div class="audio"><span>🎧 Part 1</span><audio controls preload="none" src="audio/t1-part1.mp3"></audio></div><p><em>Complete the notes below.</em></p><p><em>Write <strong>ONE WORD AND/OR A NUMBER</strong> for each
+answer.</em></p><table>
+<colgroup>
+<col style="width: 101%"/>
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><p><strong>Transport survey</strong></p>
+<p><strong>Name:</strong> Sadie Jones</p>
+<p><strong>Year of birth:</strong> 1991</p>
+<p><strong>Postcode:</strong> <input aria-label="Câu 1" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L1" placeholder="1" spellcheck="false" type="text"/> </p>
+<p><strong>Travelling by bus</strong></p>
+<p>Date of bus journey: <input aria-label="Câu 2" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L2" placeholder="2" spellcheck="false" type="text"/> </p>
+<p>Reason for trip: shopping and visit to the <input aria-label="Câu 3" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L3" placeholder="3" spellcheck="false" type="text"/>
+</p>
+<p>Travelled by bus because cost of <input aria-label="Câu 4" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L4" placeholder="4" spellcheck="false" type="text"/>  too
+high</p>
+<p>Got on bus at <input aria-label="Câu 5" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L5" placeholder="5" spellcheck="false" type="text"/>  Street</p>
+<p>Complaints about bus service:</p>
+<ul>
+<li><p>bus today was <input aria-label="Câu 6" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L6" placeholder="6" spellcheck="false" type="text"/> </p></li>
+<li><p>frequency of buses in the <input aria-label="Câu 7" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L7" placeholder="7" spellcheck="false" type="text"/> </p></li>
+</ul>
+<p><strong>Travelling by car</strong></p>
+<p>Goes to the <input aria-label="Câu 8" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L8" placeholder="8" spellcheck="false" type="text"/>  by car</p>
+<p><strong>Travelling by bicycle</strong></p>
+<p>Dislikes travelling by bike in the city centre because of the
+<input aria-label="Câu 9" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L9" placeholder="9" spellcheck="false" type="text"/> </p>
+<p>Doesn’t own a bike because of a lack of <input aria-label="Câu 10" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L10" placeholder="10" spellcheck="false" type="text"/>
+</p></td>
+</tr>
+</tbody>
+</table><details class="script"><summary>📜 Lời thoại Part 1</summary><div class="script-body"><p><b>MAN:</b> <span id="trL1-0-0">Excuse me.</span> <span id="trL1-0-1">Would you mind if I asked you some questions?</span> <span id="trL1-0-2">We’re doing a survey on transport.</span></p><p><b>SADIE:</b> <span id="trL1-1-0">Yes, that’s OK.</span></p><p><b>MAN:</b> <span id="trL1-2-0">First of all, can I take your name?</span></p><p><b>SADIE:</b> <span id="trL1-3-0">Yes.</span> <span id="trL1-3-1">It’s Sadie Jones.</span></p><p><b>MAN:</b> <span id="trL1-4-0">Thanks very much.</span> <span id="trL1-4-1">And could I have your date of birth – just the year will do, actually.</span> <span id="trL1-4-2">Is that all right?</span></p><p><b>SADIE:</b> <span id="trL1-5-0">Yes, that’s fine.</span> <span id="trL1-5-1">It’s 1991.</span></p><p><b>MAN:</b> <span id="trL1-6-0">So next your postcode, please.</span></p><p><b>SADIE:</b> <span id="trL1-7-0">It’s DW30 7YZ.</span></p><p><b>MAN:</b> <span id="trL1-8-0">Great.</span> <span id="trL1-8-1">Thanks.</span> <span id="trL1-8-2">Is that in Wells?</span></p><p><b>SADIE:</b> <span id="trL1-9-0">No it’s actually in Harborne – Wells isn’t far from there, though.</span></p><p><b>MAN:</b> <span id="trL1-10-0">I really like that area.</span> <span id="trL1-10-1">My grandmother lived there when I was a kid.</span></p><p><b>SADIE:</b> <span id="trL1-11-0">Yes, it is nice.</span></p><p><b>MAN:</b> <span id="trL1-12-0">Right, so now I want to ask you some questions about how you travelled here today.</span> <span id="trL1-12-1">Did you use public transport?</span></p><p><b>SADIE:</b> <span id="trL1-13-0">Yes.</span> <span id="trL1-13-1">I came by bus.</span></p><p><b>MAN:</b> <span id="trL1-14-0">OK.</span> <span id="trL1-14-1">And that was today.</span> <span id="trL1-14-2">It’s the 24th of April, isn’t it?</span></p><p><b>SADIE:</b> <span id="trL1-15-0">Isn’t it the 25th?</span> <span id="trL1-15-1">No, actually, you’re right.</span></p><p><b>MAN:</b> <span id="trL1-16-0">Ha ha.</span> <span id="trL1-16-1">And what was the reason for your trip today?</span> <span id="trL1-16-2">I can see you’ve got some shopping with you.</span></p><p><b>SADIE:</b> <span id="trL1-17-0">Yes.</span> <span id="trL1-17-1">I did some shopping but the main reason I came here was to go to the dentist.</span></p><p><b>MAN:</b> <span id="trL1-18-0">That’s not much fun.</span> <span id="trL1-18-1">Hope it was nothing serious.</span></p><p><b>SADIE:</b> <span id="trL1-19-0">No, it was just a check-up.</span> <span id="trL1-19-1">It’s fine.</span></p><p><b>MAN:</b> <span id="trL1-20-0">Good.</span> <span id="trL1-20-1">Do you normally travel by bus into the city centre?</span></p><p><b>SADIE:</b> <span id="trL1-21-0">Yes.</span> <span id="trL1-21-1">I stopped driving in ages ago because parking was so difficult to find and it costs so much.</span></p><p><b>MAN:</b> <span id="trL1-22-0">I see.</span></p><p><b>SADIE:</b> <span id="trL1-23-0">The bus is much more convenient too.</span> <span id="trL1-23-1">It only takes about 30 minutes.</span></p><p><b>MAN:</b> <span id="trL1-24-0">That’s good.</span> <span id="trL1-24-1">So where did you start your journey?</span></p><p><b>SADIE:</b> <span id="trL1-25-0">At the bus stop on Claxby Street.</span></p><p><b>MAN:</b> <span id="trL1-26-0">Is that C-L-A-X-B-Y?</span></p><p><b>SADIE:</b> <span id="trL1-27-0">That’s right.</span></p><p><b>MAN:</b> <span id="trL1-28-0">And how satisfied with the service are you?</span> <span id="trL1-28-1">Do you have any complaints?</span></p><p><b>SADIE:</b> <span id="trL1-29-0">Well, as I said, it’s very convenient and quick when it’s on time, but this morning it was late.</span> <span id="trL1-29-1">Only about 10 minutes, but still.</span></p><p><b>MAN:</b> <span id="trL1-30-0">Yes, I understand that’s annoying.</span> <span id="trL1-30-1">And what about the timetable?</span> <span id="trL1-30-2">Do you have any comments about that?</span></p><p><b>SADIE:</b> <span id="trL1-31-0">Mmm.</span> <span id="trL1-31-1">I suppose I mainly use the bus during the day, but any time I’ve been in town in the evening – for dinner or at the cinema – I’ve noticed you have to wait a long time for a bus – there aren’t that many.</span></p><p><b>MAN:</b> <span id="trL1-32-0">OK, thanks.</span> <span id="trL1-32-1">So now I’d like to ask you about your car use.</span></p><p><b>SADIE:</b> <span id="trL1-33-0">Well, I have got a car but I don’t use it that often.</span> <span id="trL1-33-1">Mainly just to go to the supermarket.</span> <span id="trL1-33-2">But that’s about it really.</span> <span id="trL1-33-3">My husband uses it at the weekends to go to the golf club.</span></p><p><b>MAN:</b> <span id="trL1-34-0">And what about a bicycle?</span></p><p><b>SADIE:</b> <span id="trL1-35-0">I don’t actually have one at the moment.</span></p><p><b>MAN:</b> <span id="trL1-36-0">What about the city bikes you can rent?</span> <span id="trL1-36-1">Do you ever use those?</span></p><p><b>SADIE:</b> <span id="trL1-37-0">No – I’m not keen on cycling there because of all the pollution.</span> <span id="trL1-37-1">But I would like to get a bike – it would be good to use it to get to work.</span></p><p><b>MAN:</b> <span id="trL1-38-0">So why haven’t you got one now?</span></p><p><b>SADIE:</b> <span id="trL1-39-0">Well, I live in a flat – on the second floor and it doesn’t have any storage – so we’d have to leave it in the hall outside the flat.</span></p><p><b>MAN:</b> <span id="trL1-40-0">I see.</span> <span id="trL1-40-1">OK.</span> <span id="trL1-40-2">Well, I think that’s all …</span></p></div></details></section><section class="part" id="part2"><h3 class="part-title" id="part-2-questions-1120">PART 2 <em>Questions 11–20</em></h3><div class="audio"><span>🎧 Part 2</span><audio controls preload="none" src="audio/t1-part2.mp3"></audio></div><p><strong>Questions 11–13</strong></p><p><em>Choose the correct letter, <strong>A</strong>, <strong>B</strong>
+or <strong>C</strong>.</em></p><p><strong>Becoming a volunteer for ACE</strong></p><p class="qline" id="Lq11"><strong class="qn">11</strong> Why does the speaker apologise about the
+seats?</p><blockquote class="opts" data-q="L11">
+<label class="opt"><input class="ans-opt" data-q="L11" name="Lq11" type="radio" value="A"/><b>A</b><span> They are too small.</span></label>
+<label class="opt"><input class="ans-opt" data-q="L11" name="Lq11" type="radio" value="B"/><b>B</b><span> There are not enough of them.</span></label>
+<label class="opt"><input class="ans-opt" data-q="L11" name="Lq11" type="radio" value="C"/><b>C</b><span> Some of them are very close together.</span></label>
+</blockquote><p class="qline" id="Lq12"><strong class="qn">12</strong> What does the speaker say about the age of
+volunteers?</p><blockquote class="opts" data-q="L12">
+<label class="opt"><input class="ans-opt" data-q="L12" name="Lq12" type="radio" value="A"/><b>A</b><span> The age of volunteers is less important than other
+factors.</span></label>
+<label class="opt"><input class="ans-opt" data-q="L12" name="Lq12" type="radio" value="B"/><b>B</b><span> Young volunteers are less reliable than older
+ones.</span></label>
+<label class="opt"><input class="ans-opt" data-q="L12" name="Lq12" type="radio" value="C"/><b>C</b><span> Most volunteers are about 60 years old.</span></label>
+</blockquote><p class="qline" id="Lq13"><strong class="qn">13</strong> What does the speaker say about training?</p><blockquote class="opts" data-q="L13">
+<label class="opt"><input class="ans-opt" data-q="L13" name="Lq13" type="radio" value="A"/><b>A</b><span> It is continuous.</span></label>
+<label class="opt"><input class="ans-opt" data-q="L13" name="Lq13" type="radio" value="B"/><b>B</b><span> It is conducted by a manager.</span></label>
+<label class="opt"><input class="ans-opt" data-q="L13" name="Lq13" type="radio" value="C"/><b>C</b><span> It takes place online.</span></label>
+</blockquote><p><strong>Questions 14 and 15</strong></p><p><em>Choose <strong>TWO</strong> letters,
+<strong>A–E</strong>.</em></p><p class="qline" id="Lq14"><strong class="qn">14–15</strong> Which <strong>TWO</strong> issues does the
+speaker ask the audience to consider before they apply to be
+volunteers?</p><blockquote class="opts" data-q="L14" data-q2="L15">
+<label class="opt"><input class="ans-opt" data-pick="2" data-q="L14" name="Lq14" type="checkbox" value="A"/><b>A</b><span> their financial situation</span></label>
+<label class="opt"><input class="ans-opt" data-pick="2" data-q="L14" name="Lq14" type="checkbox" value="B"/><b>B</b><span> their level of commitment</span></label>
+<label class="opt"><input class="ans-opt" data-pick="2" data-q="L14" name="Lq14" type="checkbox" value="C"/><b>C</b><span> their work experience</span></label>
+<label class="opt"><input class="ans-opt" data-pick="2" data-q="L14" name="Lq14" type="checkbox" value="D"/><b>D</b><span> their ambition</span></label>
+<label class="opt"><input class="ans-opt" data-pick="2" data-q="L14" name="Lq14" type="checkbox" value="E"/><b>E</b><span> their availability</span></label>
+</blockquote><p><strong>Questions 16–20</strong></p><p><em>What does the speaker suggest would be helpful for each of the
+following areas of voluntary work?</em></p><p><em>Choose <strong>FIVE</strong> answers from the box and write the
+correct letter, <strong>A–G</strong>, next to Questions 16–20.</em></p><table style="width:71%;">
+<colgroup>
+<col style="width: 70%"/>
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><p><strong>Helpful things volunteers might offer</strong></p>
+<p><strong>A</strong> experience on stage</p>
+<p><strong>B</strong> original, new ideas</p>
+<p><strong>C</strong> parenting skills</p>
+<p><strong>D</strong> an understanding of food and diet</p>
+<p><strong>E</strong> retail experience</p>
+<p><strong>F</strong> a good memory</p>
+<p><strong>G</strong> a good level of fitness</p></td>
+</tr>
+</tbody>
+</table><p><strong>Area of voluntary work</strong></p><p class="qline" id="Lq16"><strong class="qn">16</strong> Fundraising <select aria-label="Câu 16" class="ans sel" data-q="L16"><option value="">16 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option></select></p><p class="qline" id="Lq17"><strong class="qn">17</strong> Litter collection <select aria-label="Câu 17" class="ans sel" data-q="L17"><option value="">17 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option></select></p><p class="qline" id="Lq18"><strong class="qn">18</strong> ‘Playmates’ <select aria-label="Câu 18" class="ans sel" data-q="L18"><option value="">18 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option></select></p><p class="qline" id="Lq19"><strong class="qn">19</strong> Story club <select aria-label="Câu 19" class="ans sel" data-q="L19"><option value="">19 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option></select></p><p class="qline" id="Lq20"><strong class="qn">20</strong> First aid <select aria-label="Câu 20" class="ans sel" data-q="L20"><option value="">20 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option></select></p><details class="script"><summary>📜 Lời thoại Part 2</summary><div class="script-body"><p><span id="trL2-0-0">Good evening, everyone.</span> <span id="trL2-0-1">Let me start by welcoming you all to this talk and thanking you for taking the time to consider joining ACE voluntary organisation.</span> <span id="trL2-0-2">ACE offers support to people and services in the local area and we’re now looking for more volunteers to help us do this.</span></p><p><span id="trL2-1-0">By the way, I hope you’re all comfortable – we have brought in extra seats so that no one has to stand, but it does mean that the people at the back of the room may be a bit squashed.</span> <span id="trL2-1-1">We’ll only be here for about half an hour so, hopefully, that’s OK.</span></p><p><span id="trL2-2-0">One of the first questions we’re often asked is how old you need to be to volunteer.</span> <span id="trL2-2-1">Well, you can be as young as 16 or you can be 60 or over; it all depends on what type of voluntary work you want to do.</span> <span id="trL2-2-2">Other considerations, such as reliability, are crucial in voluntary work and age isn’t related to these, in our experience.</span></p><p><span id="trL2-3-0">Another question we get asked relates to training.</span> <span id="trL2-3-1">Well, there’s plenty of that and it’s all face-to-face.</span> <span id="trL2-3-2">What’s more, training doesn’t end when you start working for us – it takes place before, during and after periods of work.</span> <span id="trL2-3-3">Often, it’s run by other experienced volunteers as managers tend to prefer to get on with other things.</span></p><p><span id="trL2-4-0">Now, I would ask you to consider a couple of important issues before you decide to apply for voluntary work.</span> <span id="trL2-4-1">We don’t worry about why you want to be a volunteer – people have many different reasons that range from getting work experience to just doing something they’ve always wanted to do.</span> <span id="trL2-4-2">But it is critical that you have enough hours in the day for whatever role we agree is suitable for you – if being a volunteer becomes stressful then it’s best not to do it at all.</span> <span id="trL2-4-3">You may think that your income is important, but we don’t ask about that.</span> <span id="trL2-4-4">It’s up to you to decide if you can work without earning money.</span></p><p><span id="trL2-4-5">What we value is dedication.</span> <span id="trL2-4-6">Some of our most loyal volunteers earn very little themselves but still give their full energy to the work they do with us.</span></p><p><span id="trL2-5-0">OK, so let’s take a look at some of the work areas that we need volunteers for and the sort of things that would help you in those.</span></p><p><span id="trL2-6-0">You may wish simply to help us raise money.</span> <span id="trL2-6-1">If you have the creativity to come up with an imaginative or novel way of fundraising, we’d be delighted, as standing in the local streets or shops with a collection box can be rather boring!</span></p><p><span id="trL2-7-0">One outdoor activity that we need volunteers for is litter collection and for this it’s useful if you can walk for long periods, sometimes uphill.</span> <span id="trL2-7-1">Some of our regular collectors are quite elderly, but very active and keen to protect the environment.</span></p><p><span id="trL2-8-0">If you enjoy working with children, we have three vacancies for what are called ‘playmates’.</span> <span id="trL2-8-1">These volunteers help children learn about staying healthy through a range of out-of-school activities.</span> <span id="trL2-8-2">You don’t need to have children yourself, but it’s good if you know something about nutrition and can give clear instructions.</span></p><p><span id="trL2-9-0">If that doesn’t appeal to you, maybe you would be interested in helping out at our story club for disabled children, especially if you have done some acting.</span> <span id="trL2-9-1">We put on three performances a year based on books they have read and we’re always looking for support with the theatrical side of this.</span></p><p><span id="trL2-10-0">The last area I’ll mention today is first aid.</span> <span id="trL2-10-1">Volunteers who join this group can end up teaching others in vulnerable groups who may be at risk of injury.</span> <span id="trL2-10-2">Initially, though, your priority will be to take in a lot of information and not forget any important steps or details.</span></p><p><span id="trL2-11-0">Right, so does anyone have any questions …</span></p></div></details></section><section class="part" id="part3"><h3 class="part-title" id="part-3-questions-2130">PART 3 <em>Questions 21–30</em></h3><div class="audio"><span>🎧 Part 3</span><audio controls preload="none" src="audio/t1-part3.mp3"></audio></div><p><strong>Questions 21–26</strong></p><p><em>Choose the correct letter, <strong>A</strong>, <strong>B</strong>
+or <strong>C</strong>.</em></p><p><strong>Talk on jobs in fashion design</strong></p><p class="qline" id="Lq21"><strong class="qn">21</strong> What problem did Chantal have at the start of the
+talk?</p><blockquote class="opts" data-q="L21">
+<label class="opt"><input class="ans-opt" data-q="L21" name="Lq21" type="radio" value="A"/><b>A</b><span> Her view of the speaker was blocked.</span></label>
+<label class="opt"><input class="ans-opt" data-q="L21" name="Lq21" type="radio" value="B"/><b>B</b><span> She was unable to find an empty seat.</span></label>
+<label class="opt"><input class="ans-opt" data-q="L21" name="Lq21" type="radio" value="C"/><b>C</b><span> The students next to her were talking.</span></label>
+</blockquote><p class="qline" id="Lq22"><strong class="qn">22</strong> What were Hugo and Chantal surprised to hear
+about the job market?</p><blockquote class="opts" data-q="L22">
+<label class="opt"><input class="ans-opt" data-q="L22" name="Lq22" type="radio" value="A"/><b>A</b><span> It has become more competitive than it used to
+be.</span></label>
+<label class="opt"><input class="ans-opt" data-q="L22" name="Lq22" type="radio" value="B"/><b>B</b><span> There is more variety in it than they had
+realised.</span></label>
+<label class="opt"><input class="ans-opt" data-q="L22" name="Lq22" type="radio" value="C"/><b>C</b><span> Some areas of it are more exciting than
+others.</span></label>
+</blockquote><p class="qline" id="Lq23"><strong class="qn">23</strong> Hugo and Chantal agree that the speaker’s message
+was</p><blockquote class="opts" data-q="L23">
+<label class="opt"><input class="ans-opt" data-q="L23" name="Lq23" type="radio" value="A"/><b>A</b><span> unfair to them at times.</span></label>
+<label class="opt"><input class="ans-opt" data-q="L23" name="Lq23" type="radio" value="B"/><b>B</b><span> hard for them to follow.</span></label>
+<label class="opt"><input class="ans-opt" data-q="L23" name="Lq23" type="radio" value="C"/><b>C</b><span> critical of the industry.</span></label>
+</blockquote><p class="qline" id="Lq24"><strong class="qn">24</strong> What do Hugo and Chantal criticise about their
+school careers advice?</p><blockquote class="opts" data-q="L24">
+<label class="opt"><input class="ans-opt" data-q="L24" name="Lq24" type="radio" value="A"/><b>A</b><span> when they received the advice</span></label>
+<label class="opt"><input class="ans-opt" data-q="L24" name="Lq24" type="radio" value="B"/><b>B</b><span> how much advice was given</span></label>
+<label class="opt"><input class="ans-opt" data-q="L24" name="Lq24" type="radio" value="C"/><b>C</b><span> who gave the advice</span></label>
+</blockquote><p class="qline" id="Lq25"><strong class="qn">25</strong> When discussing their future, Hugo and Chantal
+disagree on</p><blockquote class="opts" data-q="L25">
+<label class="opt"><input class="ans-opt" data-q="L25" name="Lq25" type="radio" value="A"/><b>A</b><span> which is the best career in fashion.</span></label>
+<label class="opt"><input class="ans-opt" data-q="L25" name="Lq25" type="radio" value="B"/><b>B</b><span> when to choose a career in fashion.</span></label>
+<label class="opt"><input class="ans-opt" data-q="L25" name="Lq25" type="radio" value="C"/><b>C</b><span> why they would like a career in fashion.</span></label>
+</blockquote><p class="qline" id="Lq26"><strong class="qn">26</strong> How does Hugo feel about being an unpaid
+assistant?</p><blockquote class="opts" data-q="L26">
+<label class="opt"><input class="ans-opt" data-q="L26" name="Lq26" type="radio" value="A"/><b>A</b><span> He is realistic about the practice.</span></label>
+<label class="opt"><input class="ans-opt" data-q="L26" name="Lq26" type="radio" value="B"/><b>B</b><span> He feels the practice is dishonest.</span></label>
+<label class="opt"><input class="ans-opt" data-q="L26" name="Lq26" type="radio" value="C"/><b>C</b><span> He thinks others want to change the practice.</span></label>
+</blockquote><p><strong>Questions 27 and 28</strong></p><p><em>Choose <strong>TWO</strong> letters,
+<strong>A–E</strong>.</em></p><p class="qline" id="Lq27"><strong class="qn">27–28</strong> Which <strong>TWO</strong> mistakes did the
+speaker admit she made in her first job?</p><blockquote class="opts" data-q="L27" data-q2="L28">
+<label class="opt"><input class="ans-opt" data-pick="2" data-q="L27" name="Lq27" type="checkbox" value="A"/><b>A</b><span> being dishonest to her employer</span></label>
+<label class="opt"><input class="ans-opt" data-pick="2" data-q="L27" name="Lq27" type="checkbox" value="B"/><b>B</b><span> paying too much attention to how she looked</span></label>
+<label class="opt"><input class="ans-opt" data-pick="2" data-q="L27" name="Lq27" type="checkbox" value="C"/><b>C</b><span> expecting to become well known</span></label>
+<label class="opt"><input class="ans-opt" data-pick="2" data-q="L27" name="Lq27" type="checkbox" value="D"/><b>D</b><span> trying to earn a lot of money</span></label>
+<label class="opt"><input class="ans-opt" data-pick="2" data-q="L27" name="Lq27" type="checkbox" value="E"/><b>E</b><span> openly disliking her client</span></label>
+</blockquote><p><strong>Questions 29 and 30</strong></p><p><em>Choose <strong>TWO</strong> letters,
+<strong>A–E</strong>.</em></p><p class="qline" id="Lq29"><strong class="qn">29–30</strong> Which <strong>TWO</strong> pieces of retail
+information do Hugo and Chantal agree would be useful?</p><blockquote class="opts" data-q="L29" data-q2="L30">
+<label class="opt"><input class="ans-opt" data-pick="2" data-q="L29" name="Lq29" type="checkbox" value="A"/><b>A</b><span> the reasons people return fashion items</span></label>
+<label class="opt"><input class="ans-opt" data-pick="2" data-q="L29" name="Lq29" type="checkbox" value="B"/><b>B</b><span> how much time people have to shop for clothes</span></label>
+<label class="opt"><input class="ans-opt" data-pick="2" data-q="L29" name="Lq29" type="checkbox" value="C"/><b>C</b><span> fashion designs people want but can’t find</span></label>
+<label class="opt"><input class="ans-opt" data-pick="2" data-q="L29" name="Lq29" type="checkbox" value="D"/><b>D</b><span> the best time of year for fashion buying</span></label>
+<label class="opt"><input class="ans-opt" data-pick="2" data-q="L29" name="Lq29" type="checkbox" value="E"/><b>E</b><span> the most popular fashion sizes</span></label>
+</blockquote><details class="script"><summary>📜 Lời thoại Part 3</summary><div class="script-body"><p><b>HUGO:</b> <span id="trL3-0-0">Hi Chantal.</span> <span id="trL3-0-1">What did you think of the talk, then?</span></p><p><b>CHANTAL:</b> <span id="trL3-1-0">Hi Hugo.</span> <span id="trL3-1-1">I thought it was good once I’d moved seats.</span></p><p><b>HUGO:</b> <span id="trL3-2-0">Oh – were the people beside you chatting or something?</span></p><p><b>CHANTAL:</b> <span id="trL3-3-0">It wasn’t that.</span> <span id="trL3-3-1">I went early so that I’d get a seat and not have to stand, but then this guy sat right in front of me and he was so tall!</span></p><p><b>HUGO:</b> <span id="trL3-4-0">It’s hard to see through people’s heads, isn’t it?</span></p><p><b>CHANTAL:</b> <span id="trL3-5-0">Impossible!</span> <span id="trL3-5-1">Anyway, to answer your question, I thought it was really interesting, especially what the speaker said about the job market.</span></p><p><b>HUGO:</b> <span id="trL3-6-0">Me too.</span> <span id="trL3-6-1">I mean we know we’re going into a really competitive field so it’s obvious that we may struggle to get work.</span></p><p><b>CHANTAL:</b> <span id="trL3-7-0">That’s right – and we know we can’t all have that ‘dream job’.</span></p><p><b>HUGO:</b> <span id="trL3-8-0">Yeah, but it looks like there’s a whole range of … areas of work that we hadn’t even thought of – like fashion journalism, for instance.</span></p><p><b>CHANTAL:</b> <span id="trL3-9-0">Yeah – I wasn’t expecting so many career options.</span></p><p><b>HUGO:</b> <span id="trL3-10-0">Mmm.</span> <span id="trL3-10-1">Overall, she had quite a strong message, didn’t she?</span></p><p><b>CHANTAL:</b> <span id="trL3-11-0">She did.</span> <span id="trL3-11-1">She kept saying things like ‘I know you all think this, but …’ and then she’d tell us how it really is.</span></p><p><b>HUGO:</b> <span id="trL3-12-0">Perhaps she thinks students are a bit narrow-minded about the industry.</span></p><p><b>CHANTAL:</b> <span id="trL3-13-0">It was a bit harsh, though!</span> <span id="trL3-13-1">We know it’s a tough industry.</span></p><p><b>HUGO:</b> <span id="trL3-14-0">Yeah – and we’re only first years, after all.</span> <span id="trL3-14-1">We’ve got a lot to learn.</span></p><p><b>CHANTAL:</b> <span id="trL3-15-0">Exactly.</span> <span id="trL3-15-1">Do you think our secondary-school education should have been more career-focused?</span></p><p><b>HUGO:</b> <span id="trL3-16-0">Well, we had numerous talks on careers, which was good, but none of them were very inspiring.</span> <span id="trL3-16-1">They could have asked more people like today’s speaker to talk to us.</span></p><p><b>CHANTAL:</b> <span id="trL3-17-0">I agree.</span> <span id="trL3-17-1">We were told about lots of different careers – just when we needed to be, but not by the experts who really know stuff.</span></p><p><b>HUGO:</b> <span id="trL3-18-0">So did today’s talk influence your thoughts on what career you’d like to take up in the future?</span></p><p><b>CHANTAL:</b> <span id="trL3-19-0">Well, I promised myself that I’d go through this course and keep an open mind till the end.</span></p><p><b>HUGO:</b> <span id="trL3-20-0">But I think it’s better to pick an area of the industry now and then aim to get better and better at it.</span></p><p><b>CHANTAL:</b> <span id="trL3-21-0">Well, I think we’ll just have to differ on that issue!</span></p><p><b>HUGO:</b> <span id="trL3-22-0">One thing’s for certain, though.</span> <span id="trL3-22-1">From what she said, we’ll be unpaid assistants in the industry for quite a long time.</span></p><p><b>CHANTAL:</b> <span id="trL3-23-0">Mmm.</span></p><p><b>HUGO:</b> <span id="trL3-24-0">I’m prepared for that, aren’t you?</span></p><p><b>CHANTAL:</b> <span id="trL3-25-0">Actually, I’m not going to accept that view.</span></p><p><b>HUGO:</b> <span id="trL3-26-0">Really?</span> <span id="trL3-26-1">But she knows it’s the case – and everyone else says the same.</span></p><p><b>CHANTAL:</b> <span id="trL3-27-0">That doesn’t mean it has to be true for me.</span></p><p><b>HUGO:</b> <span id="trL3-28-0">OK.</span> <span id="trL3-28-1">Well – I hope you’re right!</span></p><p><b>CHANTAL:</b> <span id="trL3-29-0">I thought the speaker’s account of her first job was fascinating.</span></p><p><b>HUGO:</b> <span id="trL3-30-0">Yeah – she admitted she was lucky to get work being a personal dresser for a musician.</span> <span id="trL3-30-1">She didn’t even apply for the job and there she was getting paid to choose all his clothes.</span></p><p><b>CHANTAL:</b> <span id="trL3-31-0">It must have felt amazing – though she said all she was looking for back then was experience, not financial reward.</span></p><p><b>HUGO:</b> <span id="trL3-32-0">Mmm.</span> <span id="trL3-32-1">And then he was so mean, telling her she was more interested in her own appearance than his!</span></p><p><b>CHANTAL:</b> <span id="trL3-33-0">But – she did realise he was right about that, which really made me think.</span> <span id="trL3-33-1">I’m always considering my own clothes but now I can see you should be focusing on your client!</span></p><p><b>HUGO:</b> <span id="trL3-34-0">She obviously regretted losing the job.</span></p><p><b>CHANTAL:</b> <span id="trL3-35-0">Well, as she said, she should have hidden her negative feelings about him, but she didn’t.</span></p><p><b>HUGO:</b> <span id="trL3-36-0">It was really brave the way she picked herself up and took that job in retail.</span> <span id="trL3-36-1">Fancy working in a shop after that!</span></p><p><b>CHANTAL:</b> <span id="trL3-37-0">Yeah – well, she recommended we all do it at some point.</span> <span id="trL3-37-1">I guess as a designer you’d get to find out some useful information, like how big or small the average shopper is.</span></p><p><b>HUGO:</b> <span id="trL3-38-0">I think that’s an issue for manufacturers, not designers.</span> <span id="trL3-38-1">However, it would be useful to know if there’s a gap in the market – you know, an item that no one’s stocking but that consumers are looking for.</span></p><p><b>CHANTAL:</b> <span id="trL3-39-0">Yeah, people don’t give up searching.</span> <span id="trL3-39-1">They also take things back to the store if they aren’t right.</span></p><p><b>HUGO:</b> <span id="trL3-40-0">Yeah.</span> <span id="trL3-40-1">Imagine you worked in an expensive shop and you found out the garments sold there were being returned because they … fell apart in the wash!</span></p><p><b>CHANTAL:</b> <span id="trL3-41-0">Yeah, it would be good to know that kind of thing.</span></p><p><b>HUGO:</b> <span id="trL3-42-0">Yeah.</span></p></div></details></section><section class="part" id="part4"><h3 class="part-title" id="part-4-questions-3140">PART 4 <em>Questions 31–40</em></h3><div class="audio"><span>🎧 Part 4</span><audio controls preload="none" src="audio/t1-part4.mp3"></audio></div><p><em>Complete the notes below.</em></p><p><em>Write <strong>ONE WORD ONLY</strong> for each answer.</em></p><table>
+<colgroup>
+<col style="width: 100%"/>
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><p><strong>Elephant translocation</strong></p>
+<p><strong>Reasons for overpopulation at Majete National
+Park</strong></p>
+<ul>
+<li><p>strict enforcement of anti-poaching laws</p></li>
+<li><p>successful breeding</p></li>
+</ul>
+<p><strong>Problems caused by elephant overpopulation</strong></p>
+<ul>
+<li><p>greater competition, causing hunger for elephants</p></li>
+<li><p>damage to <input aria-label="Câu 31" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L31" placeholder="31" spellcheck="false" type="text"/>  in the park</p></li>
+</ul>
+<p><strong>The translocation process</strong></p>
+<ul>
+<li><p>a suitable group of elephants from the same <input aria-label="Câu 32" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L32" placeholder="32" spellcheck="false" type="text"/>
+ was selected</p></li>
+<li><p>vets and park staff made use of <input aria-label="Câu 33" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L33" placeholder="33" spellcheck="false" type="text"/>  to
+help guide the elephants into an open plain</p></li>
+<li><p>elephants were immobilised with tranquilisers</p>
+<ul>
+<li><p>this process had to be completed quickly to reduce
+<input aria-label="Câu 34" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L34" placeholder="34" spellcheck="false" type="text"/> </p></li>
+<li><p>elephants had to be turned on their <input aria-label="Câu 35" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L35" placeholder="35" spellcheck="false" type="text"/> 
+to avoid damage to their lungs</p></li>
+<li><p>elephants’ <input aria-label="Câu 36" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L36" placeholder="36" spellcheck="false" type="text"/>  had to be monitored
+constantly</p></li>
+<li><p>tracking devices were fitted to the matriarchs</p></li>
+<li><p>data including the size of their tusks and <input aria-label="Câu 37" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L37" placeholder="37" spellcheck="false" type="text"/>
+ was taken</p></li>
+</ul></li>
+<li><p>elephants were taken by truck to their new reserve</p></li>
+</ul>
+<p><strong>Advantages of translocation at Nkhotakota Wildlife
+Park</strong></p>
+<ul>
+<li><p><input aria-label="Câu 38" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L38" placeholder="38" spellcheck="false" type="text"/>  opportunities |</p></li>
+<li><p>a reduction in the number of poachers and <input aria-label="Câu 39" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L39" placeholder="39" spellcheck="false" type="text"/>
+</p></li>
+<li><p>an example of conservation that other parks can follow</p></li>
+<li><p>an increase in <input aria-label="Câu 40" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L40" placeholder="40" spellcheck="false" type="text"/>  as a contributor to
+GDP</p></li>
+</ul></td>
+</tr>
+</tbody>
+</table><details class="script"><summary>📜 Lời thoại Part 4</summary><div class="script-body"><p><span id="trL4-0-0">For my presentation today I want to tell you about how groups of elephants have been moved and settled in new reserves.</span> <span id="trL4-0-1">This is known as translocation and has been carried out in Malawi in Africa in recent years.</span> <span id="trL4-0-2">The reason this is being done is because of overpopulation of elephants in some areas.</span></p><p><span id="trL4-1-0">Overpopulation is a good problem to have and not one we tend to hear about very often.</span> <span id="trL4-1-1">In Malawi’s Majete National Park the elephant population had been wiped out by poachers, who killed the elephants for their ivory.</span> <span id="trL4-1-2">But in 2003, the park was restocked and effective law enforcement was introduced.</span> <span id="trL4-1-3">Since then, not a single elephant has been poached.</span> <span id="trL4-1-4">In this safe environment, the elephant population boomed.</span></p><p><span id="trL4-1-5">Breeding went so well that there were more elephants than the park could support.</span></p><p><span id="trL4-2-0">This led to a number of problems.</span> <span id="trL4-2-1">Firstly, there was more competition for food, which meant that some elephants were suffering from hunger.</span> <span id="trL4-2-2">As there was a limit to the amount of food in the national park, some elephants began looking further afield.</span> <span id="trL4-2-3">Elephants were routinely knocking down fences around the park, which then had to be repaired at a significant cost.</span></p><p><span id="trL4-3-0">To solve this problem, the decision was made to move dozens of elephants from Majete National Park to Nkhotakota Wildlife Park, where there were no elephants.</span> <span id="trL4-3-1">But, obviously, attempting to move significant numbers of elephants to a new home 300 kilometres away is quite a challenge.</span></p><p><span id="trL4-4-0">So how did this translocation process work in practice?</span></p><p><span id="trL4-5-0">Elephants were moved in groups of between eight and twenty, all belonging to one family.</span> <span id="trL4-5-1">Because relationships are very important to elephants, they all had to be moved at the same time.</span> <span id="trL4-5-2">A team of vets and park rangers flew over the park in helicopters and targeted a group, which were rounded up and directed to a designated open plain.</span></p><p><span id="trL4-6-0">The vets then used darts to immobilise the elephants – this was a tricky manoeuvre, as they not only had to select the right dose of tranquiliser for different-sized elephants but they had to dart the elephants as they were running around.</span> <span id="trL4-6-1">This also had to be done as quickly as possible so as to minimise the stress caused.</span> <span id="trL4-6-2">As soon as the elephants began to flop onto the ground, the team moved in to take care of them.</span></p><p><span id="trL4-7-0">To avoid the risk of suffocation, the team had to make sure none of the elephants were lying on their chests because their lungs could be crushed in this position.</span> <span id="trL4-7-1">So all the elephants had to be placed on their sides.</span> <span id="trL4-7-2">One person stayed with each elephant while they waited for the vets to do checks.</span> <span id="trL4-7-3">It was very important to keep an eye on their breathing – if there were fewer than six breaths per minute, the elephant would need urgent medical attention.</span> <span id="trL4-7-4">Collars were fitted to the matriarch in each group so their movements could be tracked in their new home.</span></p><p><span id="trL4-7-5">Measurements were taken of each elephant’s tusks – elephants with large tusks would be at greater risk from poachers – and also of their feet.</span> <span id="trL4-7-6">The elephants were then taken to a recovery area before being loaded onto trucks and transported to their new home.</span></p><p><span id="trL4-8-0">The elephants translocated to Nkhotakota settled in very well and the project has generally been accepted to have been a huge success – and not just for the elephants.</span> <span id="trL4-8-1">Employment prospects have improved enormously, contributing to rising living standards for the whole community.</span> <span id="trL4-8-2">Poaching is no longer an issue, as former poachers are able to find more reliable sources of income.</span> <span id="trL4-8-3">In fact, many of them volunteered to give up their weapons, as they were no longer of any use to them.</span></p><p><span id="trL4-9-0">More than two dozen elephants have been born at Nkhotakota since relocation.</span> <span id="trL4-9-1">With an area of more than 1,800 square kilometres, there’s plenty of space for the elephant population to continue to grow.</span> <span id="trL4-9-2">Their presence is also helping to rebalance Nkhotakota’s damaged ecosystem and providing a sustainable conservation model, which could be replicated in other parks.</span> <span id="trL4-9-3">All this has been a big draw for tourism, which contributes five times more than the illegal wildlife trade to GDP, and this is mainly because of the elephants.</span> <span id="trL4-9-4">There’s also been a dramatic rise in interest …</span></p></div></details></section>
+  </div>
+  <div class="sect" id="sectR">
+    <div class="panel" data-s="R">
+      <h2>Phiếu trả lời Reading</h2>
+      <div class="grid"></div>
+      <div class="row"><button class="btn" data-act="submit">Nộp bài &amp; chấm điểm</button><button class="btn alt" data-act="reset">Làm lại</button><span class="score"></span></div>
+      <p class="hint">Bấm số câu để nhảy tới câu đó. Bài làm được tự lưu trên máy này. Thời gian thi thật: 60 phút.</p>
+    </div>
+    <section class="passage" id="passage1"><h3 class="part-title" id="reading-passage-1-questions-113">READING PASSAGE 1 <em>Questions
+1–13</em></h3><div class="split"><div class="ptext"><p><em>You should spend about 20 minutes on <strong>Questions
+1–13</strong>, which are based on Reading Passage 1 below.</em></p><p><strong>Urban farming</strong></p><p><em>In Paris, urban farmers are trying a soil-free approach to
+agriculture that uses less space and fewer resources. Could it help
+cities face the threats to our food supplies?</em></p><p>On top of a striking new exhibition hall in southern Paris, the
+world’s largest urban rooftop farm has started to bear fruit.
+Strawberries that are small, intensely flavoured and resplendently red
+sprout abundantly from large plastic tubes. Peer inside and you see the
+tubes are completely hollow, the roots of dozens of strawberry plants
+dangling down inside them. From identical vertical tubes nearby burst
+row upon row of lettuces; near those are aromatic herbs, such as basil,
+sage and peppermint. Opposite, in narrow, horizontal trays packed not
+with soil but with coconut fibre, grow cherry tomatoes, shiny aubergines
+and brightly coloured chards.</p><p>Pascal Hardy, an engineer and sustainable development consultant,
+began experimenting with vertical farming and aeroponic growing towers –
+as the soil-free plastic tubes are known – on his Paris apartment block
+roof five years ago. The urban rooftop space above the exhibition hall
+is somewhat bigger: 14,000 square metres and almost exactly the size of
+a couple of football pitches. Already, the team of young urban farmers
+who tend it have picked, in one day, 3,000 lettuces and 150 punnets of
+strawberries. When the remaining two thirds of the vast open area are in
+production, 20 staff will harvest up to 1,000 kg of perhaps 35 different
+varieties of fruit and vegetables, every day. ‘We’re not ever,
+obviously, going to feed the whole city this way,’ cautions Hardy. ‘In
+the urban environment you’re working with very significant practical
+constraints, clearly, on what you can do and where. But if enough unused
+space can be developed like this, there’s no reason why you shouldn’t
+eventually target maybe between 5% and 10% of consumption.’</p><p>Perhaps most significantly, however, this is a real-life showcase for
+the work of Hardy’s flourishing urban agriculture consultancy,
+Agripolis, which is currently fielding enquiries from around the world
+to design, build and equip a new breed of soil-free inner-city farm.
+‘The method’s advantages are many,’ he says. ‘First, I don’t much like
+the fact that most of the fruit and vegetables we eat have been treated
+with something like 17 different pesticides, or that the intensive
+farming techniques that produced them are such huge generators of
+greenhouse gases. I don’t much like the fact, either, that they’ve
+travelled an average of 2,000 refrigerated kilometres to my plate, that
+their quality is so poor, because the varieties are selected for their
+capacity to withstand such substantial journeys, or that 80% of the
+price I pay goes to wholesalers and transport companies, not the
+producers.’</p><p>Produce grown using this soil-free method, on the other hand – which
+relies solely on a small quantity of water, enriched with organic
+nutrients, pumped around a closed circuit of pipes, towers and trays –
+is ‘produced up here, and sold locally, just down there. It barely
+travels at all,’ Hardy says. ‘You can select crop varieties for their
+flavour, not their resistance to the transport and storage chain, and
+you can pick them when they’re really at their best, and not before.’ No
+soil is exhausted, and the water that gently showers the plants’ roots
+every 12 minutes is recycled, so the method uses 90% less water than a
+classic intensive farm for the same yield.</p><p>Urban farming is not, of course, a new phenomenon. Inner-city
+agriculture is booming from Shanghai to Detroit and Tokyo to Bangkok.
+Strawberries are being grown in disused shipping containers, mushrooms
+in underground carparks. Aeroponic farming, he says, is ‘virtuous’. The
+equipment weighs little, can be installed on almost any flat surface and
+is cheap to buy: roughly €100 to €150 per square metre. It is cheap to
+run, too, consuming a tiny fraction of the electricity used by some
+techniques.</p><p>Produce grown this way typically sells at prices that, while
+generally higher than those of classic intensive agriculture, are lower
+than soil-based organic growers. There are limits to what farmers can
+grow this way, of course, and much of the produce is suited to the
+summer months. ‘Root vegetables we cannot do, at least not yet,’ he
+says. ‘Radishes are OK, but carrots, potatoes, that kind of thing – the
+roots are simply too long. Fruit trees are obviously not an option. And
+beans tend to take up a lot of space for not much return.’ Nevertheless,
+urban farming of the kind being practised in Paris is one part of a
+bigger and fast-changing picture that is bringing food production closer
+to our lives.</p></div><div class="pqs"><p><strong>Questions 1–3</strong></p><p><em>Complete the sentences below.</em></p><p><em>Choose <strong>NO MORE THAN TWO WORDS AND/OR A NUMBER</strong>
+from the passage for each answer.</em></p><p><em>Write your answers in boxes 1–3 on your answer sheet.</em></p><p><strong>Urban farming in Paris</strong></p><p class="qline" id="Rq1"><strong class="qn">1</strong> Vertical tubes are used to grow strawberries,
+<input aria-label="Câu 1" autocapitalize="off" autocomplete="off" class="ans gap" data-q="R1" placeholder="1" spellcheck="false" type="text"/> and herbs.</p><p class="qline" id="Rq2"><strong class="qn">2</strong> There will eventually be a daily harvest of as
+much as <input aria-label="Câu 2" autocapitalize="off" autocomplete="off" class="ans gap" data-q="R2" placeholder="2" spellcheck="false" type="text"/> in weight of fruit and vegetables.</p><p class="qline" id="Rq3"><strong class="qn">3</strong> It may be possible that the farm’s produce will
+account for as much as 10% of the city’s <input aria-label="Câu 3" autocapitalize="off" autocomplete="off" class="ans gap" data-q="R3" placeholder="3" spellcheck="false" type="text"/> overall.</p><p><strong>Questions 4–7</strong></p><p><em>Complete the table below.</em></p><p><em>Choose <strong>ONE WORD ONLY</strong> from the passage for each
+answer.</em></p><p><em>Write your answers in boxes 4–7 on your answer sheet.</em></p><p><strong>Intensive farming versus aeroponic urban farming</strong></p><table style="width:99%;">
+<colgroup>
+<col style="width: 11%"/>
+<col style="width: 20%"/>
+<col style="width: 38%"/>
+<col style="width: 28%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th><strong>Growth</strong></th>
+<th><strong>Selection</strong></th>
+<th><strong>Sale</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Intensive farming</strong></td>
+<td><ul>
+<li><p>wide range of <input aria-label="Câu 4" autocapitalize="off" autocomplete="off" class="ans gap" data-q="R4" placeholder="4" spellcheck="false" type="text"/>  used</p></li>
+<li><p>techniques pollute air</p></li>
+</ul></td>
+<td><ul>
+<li><p>quality not good</p></li>
+<li><p>varieties of fruit and vegetables chosen that can survive long
+<input aria-label="Câu 5" autocapitalize="off" autocomplete="off" class="ans gap" data-q="R5" placeholder="5" spellcheck="false" type="text"/> </p></li>
+</ul></td>
+<td><ul>
+<li><input aria-label="Câu 6" autocapitalize="off" autocomplete="off" class="ans gap" data-q="R6" placeholder="6" spellcheck="false" type="text"/>  receive very little of overall
+income</li>
+</ul></td>
+</tr>
+<tr class="even">
+<td><strong>Aeroponic urban farming</strong></td>
+<td><ul>
+<li><p>no soil used</p></li>
+<li><p>nutrients added to water, which is recycled</p></li>
+</ul></td>
+<td><ul>
+<li>produce chosen because of its <input aria-label="Câu 7" autocapitalize="off" autocomplete="off" class="ans gap" data-q="R7" placeholder="7" spellcheck="false" type="text"/> </li>
+</ul></td>
+<td></td>
+</tr>
+</tbody>
+</table><p><strong>Questions 8–13</strong></p><p><em>Do the following statements agree with the information given in
+Reading Passage 1?</em></p><p><em>In boxes 8–13 on your answer sheet, write</em></p><blockquote>
+<p><strong>TRUE</strong> <em>if the statement agrees with the
+information</em></p>
+<p><strong>FALSE</strong> <em>if the statement contradicts the
+information</em></p>
+<p><strong>NOT GIVEN</strong> <em>if there is no information on
+this</em></p>
+</blockquote><p class="qline" id="Rq8"><strong class="qn">8</strong> Urban farming can take place above or below
+ground. <select aria-label="Câu 8" class="ans sel" data-q="R8"><option value="">8 ▾</option><option value="TRUE">TRUE</option><option value="FALSE">FALSE</option><option value="NOT GIVEN">NOT GIVEN</option></select></p><p class="qline" id="Rq9"><strong class="qn">9</strong> Some of the equipment used in aeroponic farming
+can be made by hand. <select aria-label="Câu 9" class="ans sel" data-q="R9"><option value="">9 ▾</option><option value="TRUE">TRUE</option><option value="FALSE">FALSE</option><option value="NOT GIVEN">NOT GIVEN</option></select></p><p class="qline" id="Rq10"><strong class="qn">10</strong> Urban farming relies more on electricity than
+some other types of farming. <select aria-label="Câu 10" class="ans sel" data-q="R10"><option value="">10 ▾</option><option value="TRUE">TRUE</option><option value="FALSE">FALSE</option><option value="NOT GIVEN">NOT GIVEN</option></select></p><p class="qline" id="Rq11"><strong class="qn">11</strong> Fruit and vegetables grown on an aeroponic urban
+farm are cheaper than traditionally grown organic produce. <select aria-label="Câu 11" class="ans sel" data-q="R11"><option value="">11 ▾</option><option value="TRUE">TRUE</option><option value="FALSE">FALSE</option><option value="NOT GIVEN">NOT GIVEN</option></select></p><p class="qline" id="Rq12"><strong class="qn">12</strong> Most produce can be grown on an aeroponic urban
+farm at any time of the year. <select aria-label="Câu 12" class="ans sel" data-q="R12"><option value="">12 ▾</option><option value="TRUE">TRUE</option><option value="FALSE">FALSE</option><option value="NOT GIVEN">NOT GIVEN</option></select></p><p class="qline" id="Rq13"><strong class="qn">13</strong> Beans take longer to grow on an urban farm than
+other vegetables. <select aria-label="Câu 13" class="ans sel" data-q="R13"><option value="">13 ▾</option><option value="TRUE">TRUE</option><option value="FALSE">FALSE</option><option value="NOT GIVEN">NOT GIVEN</option></select></p></div></div></section><section class="passage" id="passage2"><h3 class="part-title" id="reading-passage-2-questions-1426">READING PASSAGE 2
+<em>Questions 14–26</em></h3><div class="split"><div class="ptext"><p><em>You should spend about 20 minutes on <strong>Questions
+14–26</strong>, which are based on Reading Passage 2 below.</em></p><p><strong>Forest management in Pennsylvania, USA</strong></p><p><em>How managing low-quality wood (also known as low-use wood) for
+bioenergy can encourage sustainable forest management</em></p><p><strong>A</strong> A tree’s ‘value’ depends on several factors
+including its species, size, form, condition, quality, function, and
+accessibility, and depends on the management goals for a given forest.
+The same tree can be valued very differently by each person who looks at
+it. A large, straight black cherry tree has high value as timber to be
+cut into logs or made into furniture, but for a landowner more
+interested in wildlife habitat, the real value of that stem (or trunk)
+may be the food it provides to animals. Likewise, if the tree suffers
+from black knot disease, its value for timber decreases, but to a
+woodworker interested in making bowls, it brings an opportunity for a
+unique and beautiful piece of art.</p><p><strong>B</strong> In the past, Pennsylvania landowners were solely
+interested in the value of their trees as high-quality timber. The norm
+was to remove the stems of highest quality and leave behind poorly
+formed trees that were not as well suited to the site where they grew.
+This practice, called ‘high-grading’, has left a legacy of ‘low-use
+wood’ in the forests. Some people even call these ‘junk trees’, and they
+are abundant in Pennsylvania. These trees have lower economic value for
+traditional timber markets, compete for growth with higher-value trees,
+shade out desirable regeneration and decrease the health of a stand*
+leaving it more vulnerable to poor weather and disease. Management that
+specifically targets low-use wood can help landowners manage these
+forest health issues, and wood energy markets help promote this.</p><p><strong>C</strong> Wood energy markets can accept less expensive wood
+material of lower quality than would be suitable for traditional timber
+markets. Most wood used for energy in Pennsylvania is used to produce
+heat or electricity through combustion. Many schools and hospitals use
+wood boiler systems to heat and power their facilities, many homes are
+primarily heated with wood, and some coal plants incorporate wood into
+their coal streams to produce electricity. Wood can also be gasified for
+electrical generation and can even be made into liquid fuels like
+ethanol and gasoline for lorries and cars. All these products are made
+primarily from low-use wood. Several tree- and plant-cutting approaches,
+which could greatly improve the long-term quality of a forest, focus
+strongly or solely on the use of wood for those markets.</p><p><strong>D</strong> One such approach is called a Timber Stand
+Improvement (TSI) Cut. In a TSI Cut, really poor-quality tree and plant
+material is cut down to allow more space, light, and other resources to
+the highest-valued stems that remain. Removing invasive plants might be
+another primary goal of a TSI Cut. The stems that are left behind might
+then grow in size and develop more foliage and larger crowns or tops
+that produce more coverage for wildlife; they have a better chance to
+regenerate in a less crowded environment. TSI Cuts can be tailored to
+one farmer’s specific management goals for his or her land.</p><p><strong>E</strong> Another approach that might yield a high amount of
+low-use wood is a Salvage Cut. With the many pests and pathogens
+visiting forests including hemlock wooly adelgid, Asian longhorned
+beetle, emerald ash borer, and gypsy moth, to name just a few, it is
+important to remember that those working in the forests can help ease
+these issues through cutting procedures. These types of cut reduce the
+number of sick trees and seek to manage the future spread of a pest
+problem. They leave vigorous trees that have stayed healthy enough to
+survive the outbreak.</p><p><strong>F</strong> A Shelterwood Cut, which only takes place in a
+mature forest that has already been thinned several times, involves
+removing all the mature trees when other seedlings have become
+established. This then allows the forester to decide which tree species
+are regenerated. It leaves a young forest where all trees are at a
+similar point in their growth. It can also be used to develop a two-tier
+forest so that there are two harvests and the money that comes in is
+spread out over a decade or more.</p><p><strong>G</strong> Thinnings and dense and dead wood removal for fire
+prevention also center on the production of low-use wood. However, it is
+important to remember that some retention of what many would classify as
+low-use wood is very important. The tops of trees that have been cut
+down should be left on the site so that their nutrients cycle back into
+the soil. In addition, trees with many cavities are extremely important
+habitats for insect predators like woodpeckers, bats and small mammals.
+They help control problem insects and increase the health and resilience
+of the forest. It is also important to remember that not all small trees
+are low-use. For example, many species like hawthorn provide food for
+wildlife. Finally, rare species of trees in a forest should also stay
+behind as they add to its structural diversity.</p><p><em>* Stand – An area covered with trees that have common features
+(e.g. size)</em></p></div><div class="pqs"><p><strong>Questions 14–18</strong></p><p><em>Reading Passage 2 has seven paragraphs,
+<strong>A–G</strong>.</em></p><p><em>Which paragraph contains the following information?</em></p><p><em>Write the correct letter, <strong>A–G</strong>, in boxes 14–18 on
+your answer sheet.</em></p><p><em><strong>NB</strong> You may use any letter more than
+once.</em></p><p class="qline" id="Rq14"><strong class="qn">14</strong> bad outcomes for a forest when people focus only
+on its financial reward <select aria-label="Câu 14" class="ans sel" data-q="R14"><option value="">14 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option></select></p><p class="qline" id="Rq15"><strong class="qn">15</strong> reference to the aspects of any tree that
+contribute to its worth <select aria-label="Câu 15" class="ans sel" data-q="R15"><option value="">15 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option></select></p><p class="qline" id="Rq16"><strong class="qn">16</strong> mention of the potential use of wood to help run
+vehicles <select aria-label="Câu 16" class="ans sel" data-q="R16"><option value="">16 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option></select></p><p class="qline" id="Rq17"><strong class="qn">17</strong> examples of insects that attack trees <select aria-label="Câu 17" class="ans sel" data-q="R17"><option value="">17 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option></select></p><p class="qline" id="Rq18"><strong class="qn">18</strong> an alternative name for trees that produce
+low-use wood <select aria-label="Câu 18" class="ans sel" data-q="R18"><option value="">18 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option></select></p><p><strong>Questions 19–21</strong></p><p><em>Look at the following purposes (Questions 19–21) and the list of
+timber cuts below.</em></p><p><em>Match each purpose with the correct timber cut,
+<strong>A</strong>, <strong>B</strong> or <strong>C</strong>.</em></p><p><em>Write the correct letter, <strong>A</strong>, <strong>B</strong>
+or <strong>C</strong>, in boxes 19–21 on your answer sheet.</em></p><p><em><strong>NB</strong> You may use any letter more than
+once.</em></p><table>
+<colgroup>
+<col style="width: 100%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><p><strong>List of Timber Cuts</strong></p>
+<p><strong>A</strong> a TSI Cut</p>
+<p><strong>B</strong> a Salvage Cut</p>
+<p><strong>C</strong> a Shelterwood Cut</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+</tr>
+</tbody>
+</table><p class="qline" id="Rq19"><strong class="qn">19</strong> to remove trees that are diseased <select aria-label="Câu 19" class="ans sel" data-q="R19"><option value="">19 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option></select></p><p class="qline" id="Rq20"><strong class="qn">20</strong> to generate income across a number of years
+<select aria-label="Câu 20" class="ans sel" data-q="R20"><option value="">20 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option></select></p><p class="qline" id="Rq21"><strong class="qn">21</strong> to create a forest whose trees are close in age
+<select aria-label="Câu 21" class="ans sel" data-q="R21"><option value="">21 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option></select></p><p><strong>Questions 22–26</strong></p><p><em>Complete the sentences below.</em></p><p><em>Choose <strong>ONE WORD ONLY</strong> from the passage for each
+answer.</em></p><p><em>Write your answers in boxes 22–26 on your answer sheet.</em></p><p class="qline" id="Rq22"><strong class="qn">22</strong> Some dead wood is removed to avoid the
+possibility of <input aria-label="Câu 22" autocapitalize="off" autocomplete="off" class="ans gap" data-q="R22" placeholder="22" spellcheck="false" type="text"/> .</p><p class="qline" id="Rq23"><strong class="qn">23</strong> The <input aria-label="Câu 23" autocapitalize="off" autocomplete="off" class="ans gap" data-q="R23" placeholder="23" spellcheck="false" type="text"/> from the tops of cut trees can help
+improve soil quality.</p><p class="qline" id="Rq24"><strong class="qn">24</strong> Some damaged trees should be left, as their
+<input aria-label="Câu 24" autocapitalize="off" autocomplete="off" class="ans gap" data-q="R24" placeholder="24" spellcheck="false" type="text"/> provide habitats for a range of creatures.</p><p class="qline" id="Rq25"><strong class="qn">25</strong> Some trees that are small, such as <input aria-label="Câu 25" autocapitalize="off" autocomplete="off" class="ans gap" data-q="R25" placeholder="25" spellcheck="false" type="text"/> , are a
+source of food for animals and insects.</p><p class="qline" id="Rq26"><strong class="qn">26</strong> Any trees that are <input aria-label="Câu 26" autocapitalize="off" autocomplete="off" class="ans gap" data-q="R26" placeholder="26" spellcheck="false" type="text"/> should be left to grow,
+as they add to the variety of species in the forest.</p></div></div></section><section class="passage" id="passage3"><h3 class="part-title" id="reading-passage-3-questions-2740">READING PASSAGE 3
+<em>Questions 27–40</em></h3><div class="split"><div class="ptext"><p><em>You should spend about 20 minutes on <strong>Questions
+27–40</strong>, which are based on Reading Passage 3 below.</em></p><p><strong>Conquering Earth’s space junk problem</strong></p><p><em>Satellites, rocket shards and collision debris are creating major
+traffic risks in orbit around the planet. Researchers are working to
+reduce these threats</em></p><p><strong>A</strong> Last year, commercial companies, military and
+civil departments and amateurs sent more than 400 satellites into orbit,
+over four times the yearly average in the previous decade. Numbers could
+rise even more sharply if leading space companies follow through on
+plans to deploy hundreds to thousands of large constellations of
+satellites to space in the next few years.</p><p>All that traffic can lead to disaster. Ten years ago, a US commercial
+Iridium satellite smashed into an inactive Russian communications
+satellite called Cosmos-2251, creating thousands of new pieces of space
+shrapnel that now threaten other satellites in low Earth orbit – the
+zone stretching up to 2,000 kilometres in altitude. Altogether, there
+are roughly 20,000 human-made objects in orbit, from working satellites
+to small rocket pieces. And satellite operators can’t steer away from
+every potential crash, because each move consumes time and fuel that
+could otherwise be used for the spacecraft’s main job.</p><p><strong>B</strong> Concern about space junk goes back to the
+beginning of the satellite era, but the number of objects in orbit is
+rising so rapidly that researchers are investigating new ways of
+attacking the problem. Several teams are trying to improve methods for
+assessing what is in orbit, so that satellite operators can work more
+efficiently in ever-more-crowded space. Some researchers are now
+starting to compile a massive data set that includes the best possible
+information on where everything is in orbit. Others are developing
+taxonomies of space debris – working on measuring properties such as the
+shape and size of an object, so that satellite operators know how much
+to worry about what’s coming their way.</p><p>The alternative, many say, is unthinkable. Just a few uncontrolled
+space crashes could generate enough debris to set off a runaway cascade
+of fragments, rendering near-Earth space unusable. ‘If we go on like
+this, we will reach a point of no return,’ says Carolin Frueh, an
+astrodynamical researcher at Purdue University in West Lafayette,
+Indiana.</p><p><strong>C</strong> Even as our ability to monitor space objects
+increases, so too does the total number of items in orbit. That means
+companies, governments and other players in space are collaborating in
+new ways to avoid a shared threat. International groups such as the
+Inter-Agency Space Debris Coordination Committee have developed
+guidelines on space sustainability. Those include inactivating
+satellites at the end of their useful life by venting pressurised
+materials or leftover fuel that might lead to explosions. The
+intergovernmental groups also advise lowering satellites deep enough
+into the atmosphere that they will burn up or disintegrate within 25
+years. But so far, only about half of all missions have abided by this
+25-year goal, says Holger Krag, head of the European Space Agency’s
+space-debris office in Darmstadt, Germany. Operators of the planned
+large constellations of satellites say they will be responsible stewards
+in their enterprises in space, but Krag worries that problems could
+increase, despite their best intentions. ‘What happens to those that
+fail or go bankrupt?’ he asks. ‘They are probably not going to spend
+money to remove their satellites from space.’</p><p><strong>D</strong> In theory, given the vastness of space, satellite
+operators should have plenty of room for all these missions to fly
+safely without ever nearing another object. So some scientists are
+tackling the problem of space junk by trying to find out where all the
+debris is to a high degree of precision. That would alleviate the need
+for many of the unnecessary manoeuvres that are carried out to avoid
+potential collisions. ‘If you knew precisely where everything was, you
+would almost never have a problem,’ says Marlon Sorge, a space-debris
+specialist at the Aerospace Corporation in El Segundo, California.</p><p><strong>E</strong> The field is called space traffic management,
+because it’s similar to managing traffic on the roads or in the air.
+Think about a busy day at an airport, says Moriba Jah, an
+astrodynamicist at the University of Texas at Austin: planes line up in
+the sky, landing and taking off close to one another in a carefully
+choreographed routine. Air-traffic controllers know the location of the
+planes down to one metre in accuracy. The same can’t be said for space
+debris. Not all objects in orbit are known, and even those included in
+databases are not tracked consistently.</p><p><strong>F</strong> An additional problem is that there is no
+authoritative catalogue that accurately lists the orbits of all known
+space debris. Jah illustrates this with a web-based database that he has
+developed. It draws on several sources, such as catalogues maintained by
+the US and Russian governments, to visualise where objects are in space.
+When he types in an identifier for a particular space object, the
+database draws a purple line to designate its orbit. Only this doesn’t
+quite work for a number of objects, such as a Russian rocket body
+designated in the database as object number 32280. When Jah enters that
+number, the database draws two purple lines: the US and Russian sources
+contain two completely different orbits for the same object. Jah says
+that it is almost impossible to tell which is correct, unless a third
+source of information made it possible to cross-correlate.</p><p>Jah describes himself as a space environmentalist: ‘I want to make
+space a place that is safe to operate, that is free and useful for
+generations to come.’ Until that happens, he argues, the space community
+will continue devolving into a tragedy in which all spaceflight
+operators are polluting a common resource.</p></div><div class="pqs"><p><strong>Questions 27–31</strong></p><p><em>Reading Passage 3 has six sections,
+<strong>A–F</strong>.</em></p><p><em>Which section contains the following information?</em></p><p><em>Write the correct letter, <strong>A–F</strong>, in boxes 27–31 on
+your answer sheet.</em></p><p class="qline" id="Rq27"><strong class="qn">27</strong> a reference to the cooperation that takes place
+to try and minimise risk <select aria-label="Câu 27" class="ans sel" data-q="R27"><option value="">27 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option></select></p><p class="qline" id="Rq28"><strong class="qn">28</strong> an explanation of a person’s aims <select aria-label="Câu 28" class="ans sel" data-q="R28"><option value="">28 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option></select></p><p class="qline" id="Rq29"><strong class="qn">29</strong> a description of a major collision that occurred
+in space <select aria-label="Câu 29" class="ans sel" data-q="R29"><option value="">29 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option></select></p><p class="qline" id="Rq30"><strong class="qn">30</strong> a comparison between tracking objects in space
+and the efficiency of a transportation system <select aria-label="Câu 30" class="ans sel" data-q="R30"><option value="">30 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option></select></p><p class="qline" id="Rq31"><strong class="qn">31</strong> a reference to efforts to classify space junk
+<select aria-label="Câu 31" class="ans sel" data-q="R31"><option value="">31 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option></select></p><p><strong>Questions 32–35</strong></p><p><em>Complete the summary below.</em></p><p><em>Choose <strong>ONE WORD ONLY</strong> from the passage for each
+answer.</em></p><p><em>Write your answers in boxes 32–35 on your answer sheet.</em></p><table>
+<colgroup>
+<col style="width: 100%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><p><strong>The Inter-Agency Space Debris Coordination
+Committee</strong></p>
+<p>The committee gives advice on how the <input aria-label="Câu 32" autocapitalize="off" autocomplete="off" class="ans gap" data-q="R32" placeholder="32" spellcheck="false" type="text"/>  of
+space can be achieved. The committee advises that when satellites are no
+longer active, any unused <input aria-label="Câu 33" autocapitalize="off" autocomplete="off" class="ans gap" data-q="R33" placeholder="33" spellcheck="false" type="text"/>  or pressurised
+material that could cause <input aria-label="Câu 34" autocapitalize="off" autocomplete="off" class="ans gap" data-q="R34" placeholder="34" spellcheck="false" type="text"/>  should be
+removed.</p>
+<p>Although operators of large satellite constellations accept that they
+have obligations as stewards of space, Holger Krag points out that the
+operators that become <input aria-label="Câu 35" autocapitalize="off" autocomplete="off" class="ans gap" data-q="R35" placeholder="35" spellcheck="false" type="text"/>  are unlikely to
+prioritise removing their satellites from space.</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+</tr>
+</tbody>
+</table><p><strong>Questions 36–40</strong></p><p><em>Look at the following statements (Questions 36–40) and the list
+of people below.</em></p><p><em>Match each statement with the correct person, <strong>A</strong>,
+<strong>B</strong>, <strong>C</strong> or <strong>D</strong>.</em></p><p><em>Write the correct letter, <strong>A</strong>, <strong>B</strong>,
+<strong>C</strong> or <strong>D</strong>, in boxes 36–40 on your answer
+sheet.</em></p><p><em><strong>NB</strong> You may use any letter more than
+once.</em></p><table>
+<colgroup>
+<col style="width: 100%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><p><strong>List of People</strong></p>
+<p><strong>A</strong> Carolin Frueh</p>
+<p><strong>B</strong> Holger Krag</p>
+<p><strong>C</strong> Marlon Sorge</p>
+<p><strong>D</strong> Moriba Jah</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+</tr>
+</tbody>
+</table><p class="qline" id="Rq36"><strong class="qn">36</strong> Knowing the exact location of space junk would
+help prevent any possible danger. <select aria-label="Câu 36" class="ans sel" data-q="R36"><option value="">36 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option></select></p><p class="qline" id="Rq37"><strong class="qn">37</strong> Space should be available to everyone and should
+be preserved for the future. <select aria-label="Câu 37" class="ans sel" data-q="R37"><option value="">37 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option></select></p><p class="qline" id="Rq38"><strong class="qn">38</strong> A recommendation regarding satellites is widely
+ignored. <select aria-label="Câu 38" class="ans sel" data-q="R38"><option value="">38 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option></select></p><p class="qline" id="Rq39"><strong class="qn">39</strong> There is conflicting information about where some
+satellites are in space. <select aria-label="Câu 39" class="ans sel" data-q="R39"><option value="">39 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option></select></p><p class="qline" id="Rq40"><strong class="qn">40</strong> There is a risk we will not be able to undo the
+damage that occurs in space. <select aria-label="Câu 40" class="ans sel" data-q="R40"><option value="">40 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option></select></p></div></div></section>
+  </div>
+</main>
+<div class="overlay" id="namebox" hidden><form class="ocard" id="nmForm">
+  <h2>Gửi kết quả cho thầy</h2>
+  <p style="color:var(--dim);margin:0 0 6px">Nhập tên một lần, lần sau máy sẽ tự nhớ.</p>
+  <label for="nmName">Họ và tên</label><input id="nmName" autocomplete="name">
+  <label for="nmLop">Lớp / nhóm (nếu có)</label><input id="nmLop">
+  <p class="err" id="nmErr"></p>
+  <div class="row"><button type="button" class="btn alt" id="nmSkip">Bỏ qua</button><button type="submit" class="btn">Nộp bài</button></div>
+</form></div>
+<div class="overlay" id="examstart" hidden><form class="ocard" id="exForm">
+  <h2 id="exTitle">Thi thử</h2>
+  <ul id="exRules"></ul>
+  <label for="exName">Họ và tên</label><input id="exName" autocomplete="name">
+  <label for="exLop">Lớp / nhóm (nếu có)</label><input id="exLop">
+  <p class="err" id="exErr"></p>
+  <div class="row"><a class="btn alt" href="index.html" style="text-decoration:none">Quay lại</a><button type="submit" class="btn">Bắt đầu làm bài</button></div>
+</form></div>
+<footer><a href="index.html">← Danh sách 4 test</a> · Cambridge IELTS 18 · Test 1 — trang luyện tập cho học viên. Band chỉ là ước tính theo thang điểm thường dùng.</footer>
+<script src="config.js"></script>
+<script src="fc.js"></script>
+<script src="vocab.js"></script>
+<script>
+(function(){
+'use strict';
+var KEY={"L1": "DW30 7YZ", "L2": "24(th) April / April 24(th)", "L3": "dentist", "L4": "parking", "L5": "Claxby", "L6": "late", "L7": "evening", "L8": "supermarket", "L9": "pollution", "L10": "storage", "L11": "C", "L12": "A", "L13": "A", "L14": "B", "L15": "E", "L16": "B", "L17": "G", "L18": "D", "L19": "A", "L20": "F", "L21": "A", "L22": "B", "L23": "A", "L24": "C", "L25": "B", "L26": "A", "L27": "B", "L28": "E", "L29": "A", "L30": "C", "L31": "fences", "L32": "family", "L33": "helicopters", "L34": "stress", "L35": "sides", "L36": "breathing", "L37": "feet", "L38": "employment", "L39": "weapons", "L40": "tourism", "R1": "lettuces", "R2": "1,000 kg / 1000 kg", "R3": "(food) consumption", "R4": "pesticides", "R5": "journeys", "R6": "producers", "R7": "flavour / flavor", "R8": "TRUE", "R9": "NOT GIVEN", "R10": "FALSE", "R11": "TRUE", "R12": "FALSE", "R13": "NOT GIVEN", "R14": "B", "R15": "A", "R16": "C", "R17": "E", "R18": "B", "R19": "B", "R20": "C", "R21": "C", "R22": "fire", "R23": "nutrients", "R24": "cavities", "R25": "hawthorn", "R26": "rare", "R27": "C", "R28": "F", "R29": "A", "R30": "E", "R31": "B", "R32": "sustainability", "R33": "fuel", "R34": "explosions", "R35": "bankrupt", "R36": "C", "R37": "D", "R38": "B", "R39": "D", "R40": "A"}, QT={"L1": "text", "L2": "text", "L3": "text", "L4": "text", "L5": "text", "L6": "text", "L7": "text", "L8": "text", "L9": "text", "L10": "text", "L11": "mcq", "L12": "mcq", "L13": "mcq", "L14": "multi", "L15": "multi", "L16": "select", "L17": "select", "L18": "select", "L19": "select", "L20": "select", "L21": "mcq", "L22": "mcq", "L23": "mcq", "L24": "mcq", "L25": "mcq", "L26": "mcq", "L27": "multi", "L28": "multi", "L29": "multi", "L30": "multi", "L31": "text", "L32": "text", "L33": "text", "L34": "text", "L35": "text", "L36": "text", "L37": "text", "L38": "text", "L39": "text", "L40": "text", "R1": "text", "R2": "text", "R3": "text", "R4": "text", "R5": "text", "R6": "text", "R7": "text", "R8": "select", "R9": "select", "R10": "select", "R11": "select", "R12": "select", "R13": "select", "R14": "select", "R15": "select", "R16": "select", "R17": "select", "R18": "select", "R19": "select", "R20": "select", "R21": "select", "R22": "text", "R23": "text", "R24": "text", "R25": "text", "R26": "text", "R27": "select", "R28": "select", "R29": "select", "R30": "select", "R31": "select", "R32": "text", "R33": "text", "R34": "text", "R35": "text", "R36": "select", "R37": "select", "R38": "select", "R39": "select", "R40": "select"}, EV={"L1": "trL1-7-0", "L2": "trL1-14-2", "L3": "trL1-17-1", "L4": "trL1-21-1", "L5": "trL1-25-0", "L6": "trL1-29-0", "L7": "trL1-31-1", "L8": "trL1-33-1", "L9": "trL1-37-0", "L10": "trL1-39-0", "L11": "trL2-1-0", "L12": "trL2-2-2", "L13": "trL2-3-2", "L14": "trL2-4-5", "L15": "trL2-4-2", "L16": "trL2-6-1", "L17": "trL2-7-0", "L18": "trL2-8-2", "L19": "trL2-9-0", "L20": "trL2-10-2", "L21": "trL3-3-1", "L22": "trL3-8-0", "L23": "trL3-13-0", "L24": "trL3-17-1", "L25": "trL3-20-0", "L26": "trL3-24-0", "L27": "trL3-32-1", "L28": "trL3-11-0", "L29": "trL3-39-1", "L30": "trL3-28-0", "L31": "trL4-2-3", "L32": "trL4-5-0", "L33": "trL4-5-2", "L34": "trL4-6-1", "L35": "trL4-7-1", "L36": "trL4-7-3", "L37": "trL4-7-5", "L38": "trL4-8-1", "L39": "trL4-8-3", "L40": "trL4-9-3", "R1": "From identical vertical tubes nearby burst row upon row of lettuces; near those are aromatic herbs, such as basil, sage and peppermint.", "R2": "When the remaining two thirds of the vast open area are in production, 20 staff will harvest up to 1,000 kg of perhaps 35 different varieties of fruit and vegetables, every day.", "R3": "But if enough unused space can be developed like this, there’s no reason why you shouldn’t eventually target maybe between 5% and 10% of consumption.’", "R4": "‘First, I don’t much like the fact that most of the fruit and vegetables we eat have been treated with something like 17 different pesticides, or that the intensive farming techniques that produced them are such huge generators of greenhouse gases.", "R5": "I don’t much like the fact, either, that they’ve travelled an average of 2,000 refrigerated kilometres to my plate, that their quality is so poor, because the varieties are selected for their capacity to withstand such substantial journeys, or that 80% of the price I pay goes to wholesalers and transport companies, not the producers.’", "R6": "I don’t much like the fact, either, that they’ve travelled an average of 2,000 refrigerated kilometres to my plate, that their quality is so poor, because the varieties are selected for their capacity to withstand such substantial journeys, or that 80% of the price I pay goes to wholesalers and transport companies, not the producers.’", "R7": "‘You can select crop varieties for their flavour, not their resistance to the transport and storage chain, and you can pick them when they’re really at their best, and not before.’", "R8": "Strawberries are being grown in disused shipping containers, mushrooms in underground carparks.", "R9": "The equipment weighs little, can be installed on almost any flat surface and is cheap to buy: roughly €100 to €150 per square metre.", "R10": "It is cheap to run, too, consuming a tiny fraction of the electricity used by some techniques.", "R11": "Produce grown this way typically sells at prices that, while generally higher than those of classic intensive agriculture, are lower than soil-based organic growers.", "R12": "There are limits to what farmers can grow this way, of course, and much of the produce is suited to the summer months.", "R13": "And beans tend to take up a lot of space for not much return.’", "R14": "This practice, called ‘high-grading’, has left a legacy of ‘low-use wood’ in the forests.", "R15": "A tree’s ‘value’ depends on several factors including its species, size, form, condition, quality, function, and accessibility, and depends on the management goals for a given forest.", "R16": "Wood can also be gasified for electrical generation and can even be made into liquid fuels like ethanol and gasoline for lorries and cars.", "R17": "With the many pests and pathogens visiting forests including hemlock wooly adelgid, Asian longhorned beetle, emerald ash borer, and gypsy moth, to name just a few, it is important to remember that those working in the forests can help ease these issues through cutting procedures.", "R18": "Some people even call these ‘junk trees’, and they are abundant in Pennsylvania.", "R19": "These types of cut reduce the number of sick trees and seek to manage the future spread of a pest problem.", "R20": "It can also be used to develop a two-tier forest so that there are two harvests and the money that comes in is spread out over a decade or more.", "R21": "It leaves a young forest where all trees are at a similar point in their growth.", "R22": "Thinnings and dense and dead wood removal for fire prevention also center on the production of low-use wood.", "R23": "The tops of trees that have been cut down should be left on the site so that their nutrients cycle back into the soil.", "R24": "In addition, trees with many cavities are extremely important habitats for insect predators like woodpeckers, bats and small mammals.", "R25": "For example, many species like hawthorn provide food for wildlife.", "R26": "Finally, rare species of trees in a forest should also stay behind as they add to its structural diversity.", "R27": "That means companies, governments and other players in space are collaborating in new ways to avoid a shared threat.", "R28": "Jah describes himself as a space environmentalist: ‘I want to make space a place that is safe to operate, that is free and useful for generations to come.’", "R29": "Ten years ago, a US commercial Iridium satellite smashed into an inactive Russian communications satellite called Cosmos-2251, creating thousands of new pieces of space shrapnel that now threaten other satellites in low Earth orbit – the zone stretching up to 2,000 kilometres in altitude.", "R30": "Air-traffic controllers know the location of the planes down to one metre in accuracy.", "R31": "Others are developing taxonomies of space debris – working on measuring properties such as the shape and size of an object, so that satellite operators know how much to worry about what’s coming their way.", "R32": "International groups such as the Inter-Agency Space Debris Coordination Committee have developed guidelines on space sustainability.", "R33": "Those include inactivating satellites at the end of their useful life by venting pressurised materials or leftover fuel that might lead to explosions.", "R34": "Those include inactivating satellites at the end of their useful life by venting pressurised materials or leftover fuel that might lead to explosions.", "R35": "‘What happens to those that fail or go bankrupt?’ he asks.", "R36": "‘If you knew precisely where everything was, you would almost never have a problem,’ says Marlon Sorge, a space-debris specialist at the Aerospace Corporation in El Segundo, California.", "R37": "Jah describes himself as a space environmentalist: ‘I want to make space a place that is safe to operate, that is free and useful for generations to come.’", "R38": "But so far, only about half of all missions have abided by this 25-year goal, says Holger Krag, head of the European Space Agency’s space-debris office in Darmstadt, Germany.", "R39": "When Jah enters that number, the database draws two purple lines: the US and Russian sources contain two completely different orbits for the same object.", "R40": "‘If we go on like this, we will reach a point of no return,’ says Carolin Frueh, an astrodynamical researcher at Purdue University in West Lafayette, Indiana."}, XP={"L1": "Câu hỏi 'your postcode' → Sadie đọc 'DW30 7YZ'. Postcode gồm cả chữ và số nên viết đúng y nguyên. Tên khu 'Harborne' và 'Wells' nhắc sau đó chỉ là thông tin gây nhiễu, không phải postcode.", "L2": "Người hỏi nói 'the 24th of April'. Bẫy: Sadie hỏi lại 'Isn't it the 25th?' nhưng rồi sửa 'No, actually, you're right' → vẫn là 24th April, không phải 25.", "L3": "'Reason for trip: shopping and visit to the ___' = 'I did some shopping but the main reason I came here was to go to the dentist'. Từ cần điền là 'dentist' (danh từ sau 'the').", "L4": "'cost of ___ too high' = 'parking ... costs so much'. Cô bỏ lái xe vào trung tâm vì chỗ đỗ xe khó tìm và đắt → 'parking'.", "L5": "'Got on bus at ___ Street' = 'At the bus stop on Claxby Street'. Tên đường được đánh vần 'C-L-A-X-B-Y' nên phải viết đúng chính tả 'Claxby'.", "L6": "Phàn nàn về xe buýt hôm nay: 'this morning it was late' → 'late'. Chú ý 'convenient and quick' là ý khen, không phải phàn nàn.", "L7": "'frequency of buses in the ___' = 'any time I've been in town in the evening ... you have to wait a long time for a bus – there aren't that many'. 'Ít chuyến' = frequency thấp → 'evening'. 'During the day' là bẫy vì ban ngày cô không phàn nàn.", "L8": "'Goes to the ___ by car' = 'Mainly just to go to the supermarket'. Bẫy: 'golf club' là chồng cô đi chứ không phải Sadie.", "L9": "'Dislikes travelling by bike in the city centre because of the ___' = 'I'm not keen on cycling there because of all the pollution'. 'not keen on' = 'dislikes' → 'pollution'.", "L10": "'lack of ___' = 'it doesn't have any storage'. Căn hộ không có chỗ cất xe nên chưa mua xe đạp → 'storage'.", "L11": "'people at the back of the room may be a bit squashed' (bị chen chúc) = C 'some of them are very close together'. B sai vì đã có 'extra seats so that no one has to stand' – ghế đủ. A (ghế nhỏ) không được nhắc.", "L12": "'Other considerations, such as reliability, are crucial ... and age isn't related to these' → tuổi kém quan trọng hơn các yếu tố khác = A. B sai vì bài nói độ tin cậy không liên quan tuổi. C sai: '60 or over' chỉ là giới hạn tuổi, không phải tuổi phổ biến.", "L13": "'training doesn't end ... it takes place before, during and after periods of work' = A 'continuous' (liên tục). B sai: 'run by other experienced volunteers', không phải manager. C sai: 'it's all face-to-face', không online.", "L14": "Hai yếu tố cần cân nhắc: 'What we value is dedication' = B 'level of commitment' (dedication = commitment), và 'enough hours in the day' = E 'availability'. A sai vì 'we don't ask about that' (thu nhập); C, D chỉ là lý do làm tình nguyện mà họ 'don't worry about'.", "L15": "Hai yếu tố cần cân nhắc: 'it is critical that you have enough hours in the day' = E 'availability' (có đủ thời gian), và 'What we value is dedication' = B 'commitment'. A sai vì thu nhập 'we don't ask about that'; C (work experience) chỉ là một lý do họ không quan tâm.", "L16": "Fundraising: 'the creativity to come up with an imaginative or novel way of fundraising' → 'imaginative/novel' = B 'original, new ideas'.", "L17": "Litter collection: 'it's useful if you can walk for long periods, sometimes uphill' → cần thể lực tốt = G 'a good level of fitness'. Chi tiết 'quite elderly, but very active' cũng nhấn mạnh sự khỏe mạnh.", "L18": "Playmates: 'it's good if you know something about nutrition' → nutrition = D 'an understanding of food and diet'. Bẫy C: 'You don't need to have children yourself' → không cần kỹ năng làm cha mẹ.", "L19": "Story club: 'especially if you have done some acting' và 'support with the theatrical side' → kinh nghiệm diễn xuất = A 'experience on stage'.", "L20": "First aid: 'take in a lot of information and not forget any important steps or details' → không quên chi tiết = F 'a good memory'.", "L21": "'this guy sat right in front of me and he was so tall' → bị che tầm nhìn = A. C sai: Hugo hỏi 'were the people beside you chatting?' và Chantal trả lời 'It wasn't that'. B sai vì cô đến sớm để có ghế.", "L22": "'a whole range of ... areas of work that we hadn't even thought of' và 'I wasn't expecting so many career options' → bất ngờ vì có nhiều lựa chọn = B. A sai: 'competitive field' là điều họ đã biết ('we know'), không gây bất ngờ.", "L23": "Chantal: 'It was a bit harsh, though!' và Hugo đồng ý 'we're only first years' → thông điệp hơi khắt khe/không công bằng với họ = A 'unfair to them at times'. B, C không được nhắc.", "L24": "'not by the experts who really know stuff' → họ chê người đưa lời khuyên = C. A sai vì 'just when we needed to be' (đúng lúc). B sai vì 'numerous talks' (đã có nhiều).", "L25": "Hugo: 'better to pick an area of the industry now', Chantal muốn 'keep an open mind till the end' → bất đồng về thời điểm chọn nghề = B. Câu 'we'll just have to differ on that issue' xác nhận bất đồng.", "L26": "Hugo chấp nhận việc làm trợ lý không lương: 'I'm prepared for that' vì 'everyone else says the same' → anh nhìn nhận thực tế = A 'realistic'. B, C sai: Hugo không chê thực tế này là gian dối, cũng không nói ai muốn thay đổi nó.", "L27": "Hai lỗi diễn giả thừa nhận: 'more interested in her own appearance than his' và cô 'realise he was right' = B; 'she should have hidden her negative feelings about him, but she didn't' = E 'openly disliking her client'. D sai: cô tìm 'experience, not financial reward'.", "L28": "Hai lỗi: 'she should have hidden her negative feelings about him' = E (thể hiện rõ sự không thích khách hàng), và quá chú ý vẻ ngoài của mình = B. D sai vì cô 'not financial reward'; C không được nhắc.", "L29": "Cả hai đồng ý nên biết lý do khách trả hàng: 'take things back to the store' + 'it would be good to know that kind of thing' = A, và 'gap in the market' = C. E (size) bị Hugo bác: 'an issue for manufacturers, not designers'.", "L30": "'an item that no one's stocking but that consumers are looking for' = C 'designs people want but can't find', Chantal đồng ý 'people don't give up searching'. Cặp còn lại là A (lý do trả hàng). E bị loại vì 'not designers'.", "L31": "'damage to ___ in the park' = 'knocking down fences around the park'. 'knocking down' = damage → 'fences' (số nhiều, đúng như bài nói).", "L32": "'from the same ___' = 'all belonging to one family' → 'family'. Lưu ý 'same' trong đề = 'one' trong bài.", "L33": "'made use of ___ to help guide the elephants into an open plain' = 'flew over the park in helicopters ... directed to a designated open plain' → 'helicopters'. Bẫy: 'darts' dùng để gây mê, ở bước sau.", "L34": "'completed quickly to reduce ___' = 'as quickly as possible so as to minimise the stress caused'. 'minimise' = 'reduce' → 'stress'.", "L35": "'turned on their ___ to avoid damage to their lungs' = 'all the elephants had to be placed on their sides'. Bẫy: 'chests' là tư thế phải tránh, không phải đáp án.", "L36": "'monitored constantly' = 'keep an eye on their breathing' → 'breathing'. 'keep an eye on' = theo dõi.", "L37": "'size of their tusks and ___' = 'Measurements were taken of each elephant's tusks ... and also of their feet' → 'feet'. Phần giữa câu về poachers chỉ là thông tin chen vào.", "L38": "'___ opportunities' = 'Employment prospects have improved enormously' → 'employment'. 'prospects' = 'opportunities'; cần danh từ 'employment' đứng trước.", "L39": "'reduction in the number of poachers and ___' = 'many of them volunteered to give up their weapons' → số vũ khí giảm → 'weapons'.", "L40": "'increase in ___ as a contributor to GDP' = 'a big draw for tourism, which contributes five times more ... to GDP' → 'tourism'. Bẫy: 'illegal wildlife trade' là cái bị so sánh, không phải đáp án.", "R1": "Câu liệt kê những thứ trồng trong ống đứng: strawberries, ___ and herbs. Bài viết 'From identical vertical tubes nearby burst row upon row of lettuces; near those are aromatic herbs'. Cần danh từ số nhiều 'lettuces', đúng vị trí giữa strawberries và herbs.", "R2": "'eventually a daily harvest' = 'When the remaining two thirds... are in production... every day'. 'as much as' = 'up to'. Đề hỏi 'in weight' nên đáp án là khối lượng '1,000 kg'. Bẫy: '3,000 lettuces' và '150 punnets' là số lượng đã hái, không phải cân nặng.", "R3": "'as much as 10%' = 'between 5% and 10% of consumption'. Hardy nói có thể đáp ứng 5–10% lượng tiêu thụ thực phẩm của thành phố, nên điền 'consumption' (danh từ, có thể thêm 'food').", "R4": "Cột Growth của Intensive farming: 'wide range of ___ used'. Bài nói rau quả 'treated with something like 17 different pesticides'. '17 different' = 'wide range of', 'treated with' = 'used'. Điền danh từ số nhiều 'pesticides'.", "R5": "'varieties... chosen that can survive long ___' = 'varieties are selected for their capacity to withstand such substantial journeys'. 'chosen' = 'selected', 'survive' = 'withstand', 'long' = 'substantial'. Điền 'journeys'.", "R6": "Cột Sale: '___ receive very little of overall income'. Bài nói 80% giá tiền thuộc về 'wholesalers and transport companies, not the producers' → người sản xuất (producers) nhận rất ít. Bẫy: 'wholesalers' là bên nhận nhiều tiền, ngược nghĩa.", "R7": "'produce chosen because of its ___' = 'select crop varieties for their flavour'. 'chosen' = 'select'. Điền 'flavour' (Mỹ: flavor). Không chọn 'resistance' vì bài nói rõ 'not their resistance'.", "R8": "TRUE. Bài nêu ví dụ trồng trên mái nhà (rooftop farm) và 'mushrooms in underground carparks' (bãi xe dưới lòng đất). Vậy urban farming có thể ở 'above or below ground' – khớp với đề.", "R9": "NOT GIVEN. Bài có nói về thiết bị (equipment): nhẹ, lắp được trên mặt phẳng, giá rẻ 'cheap to buy'. Nhưng không hề nói thiết bị có thể tự làm bằng tay 'made by hand'.", "R10": "FALSE. Đề nói urban farming dùng NHIỀU điện hơn. Bài nói ngược lại: 'consuming a tiny fraction of the electricity used by some techniques' – chỉ dùng một phần rất nhỏ lượng điện so với một số phương pháp khác.", "R11": "TRUE. Bài nói giá bán 'are lower than soil-based organic growers'. 'cheaper' = 'lower prices', 'traditionally grown organic produce' = 'soil-based organic'. Lưu ý: nó đắt hơn intensive agriculture, nhưng đề chỉ so với organic.", "R12": "FALSE. Đề nói phần lớn nông sản trồng được quanh năm 'at any time of the year'. Bài nói ngược lại: 'much of the produce is suited to the summer months' – phần lớn chỉ hợp với mùa hè.", "R13": "NOT GIVEN. Bài có nhắc đến beans nhưng chỉ nói chúng 'take up a lot of space for not much return' (tốn chỗ, thu hoạch ít). Không nói gì về thời gian sinh trưởng lâu hơn rau khác.", "R14": "Đoạn B: chủ đất trước đây 'solely interested in the value of their trees as high-quality timber' (chỉ quan tâm lợi nhuận) → kiểu chặt 'high-grading' để lại 'low-use wood', làm rừng yếu, dễ bị bệnh. 'focus only on financial reward' = 'solely interested in the value'.", "R15": "Đoạn A mở đầu: giá trị của cây phụ thuộc 'species, size, form, condition, quality...'. 'aspects... that contribute to its worth' = 'value depends on several factors'.", "R16": "Đoạn C: gỗ có thể làm thành 'liquid fuels like ethanol and gasoline for lorries and cars'. 'vehicles' = 'lorries and cars', 'help run' = 'fuels'.", "R17": "Đoạn E liệt kê sâu bệnh hại rừng: 'Asian longhorned beetle, emerald ash borer, and gypsy moth'. Đây là các ví dụ côn trùng (insects) tấn công cây – 'pests' trong bài.", "R18": "Đoạn B: 'Some people even call these junk trees' – 'junk trees' chính là tên gọi khác (alternative name) của cây cho 'low-use wood'.", "R19": "Salvage Cut (đoạn E) 'reduce the number of sick trees'. 'diseased' = 'sick'. TSI Cut chủ yếu bỏ cây kém chất lượng và cây xâm lấn, không phải cây bệnh.", "R20": "Shelterwood Cut (đoạn F) tạo rừng hai tầng để có hai lần thu hoạch và 'the money that comes in is spread out over a decade or more'. 'generate income across a number of years' = 'money... spread out over a decade'.", "R21": "Shelterwood Cut (đoạn F) 'leaves a young forest where all trees are at a similar point in their growth'. 'close in age' = 'at a similar point in their growth'.", "R22": "'Some dead wood is removed to avoid the possibility of ___' = 'dead wood removal for fire prevention'. 'avoid' = 'prevention'. Chỉ một từ: 'fire'.", "R23": "'The ___ from the tops of cut trees can help improve soil quality' = 'tops of trees... left on the site so that their nutrients cycle back into the soil'. Điền danh từ 'nutrients'.", "R24": "'damaged trees... their ___ provide habitats' = 'trees with many cavities are extremely important habitats'. 'cavities' (các hốc cây) là phần hư hại tạo chỗ ở cho woodpeckers, bats, small mammals.", "R25": "'Some trees that are small, such as ___' = 'not all small trees are low-use. For example, many species like hawthorn provide food for wildlife'. 'such as' = 'like'. Điền 'hawthorn'.", "R26": "'Any trees that are ___ should be left... add to the variety' = 'rare species of trees... should also stay behind as they add to its structural diversity'. 'left' = 'stay behind', 'variety' = 'diversity'. Điền tính từ 'rare'.", "R27": "Đoạn C: các bên 'are collaborating in new ways to avoid a shared threat'. 'cooperation' = 'collaborating', 'minimise risk' = 'avoid a shared threat'.", "R28": "Đoạn F: Jah nói 'I want to make space a place that is safe to operate...' – đây là mục tiêu (aims) của một người. 'aims' = 'I want to'.", "R29": "Đoạn A: vệ tinh Iridium của Mỹ 'smashed into' vệ tinh Nga Cosmos-2251, tạo ra hàng nghìn mảnh vỡ. 'major collision' = 'smashed into... creating thousands of new pieces'.", "R30": "Đoạn E so sánh với sân bay: 'Air-traffic controllers know the location of the planes down to one metre' nhưng 'The same can't be said for space debris'. 'transportation system' = 'airport/air traffic'. Đoạn D chỉ nói biết vị trí chính xác sẽ giúp ích, không có so sánh.", "R31": "Đoạn B: 'Others are developing taxonomies of space debris'. 'classify' = 'taxonomies' (hệ thống phân loại), 'space junk' = 'space debris'.", "R32": "'gives advice on how the ___ of space can be achieved' = 'developed guidelines on space sustainability'. 'advice' = 'guidelines'. Cần danh từ sau 'the': 'sustainability'.", "R33": "'any unused ___ or pressurised material' = 'venting pressurised materials or leftover fuel'. 'unused' = 'leftover'. Điền 'fuel'.", "R34": "'that could cause ___' = 'that might lead to explosions'. 'cause' = 'lead to'. Điền danh từ 'explosions'.", "R35": "Krag hỏi 'What happens to those that fail or go bankrupt?' và nói họ sẽ không chi tiền dọn vệ tinh. 'become ___' = 'go bankrupt'. Điền tính từ 'bankrupt' (không chọn 'fail' vì 'become fail' sai ngữ pháp).", "R36": "Marlon Sorge: 'If you knew precisely where everything was, you would almost never have a problem'. 'exact location' = 'precisely where everything was', 'prevent any possible danger' = 'almost never have a problem'.", "R37": "Moriba Jah muốn không gian 'free and useful for generations to come'. 'available to everyone' = 'free', 'preserved for the future' = 'for generations to come'.", "R38": "Holger Krag nói 'only about half of all missions have abided by this 25-year goal'. 'recommendation' = 'goal/advise', 'widely ignored' = chỉ khoảng một nửa tuân thủ.", "R39": "Cơ sở dữ liệu của Jah vẽ 'two purple lines': nguồn Mỹ và Nga cho 'two completely different orbits for the same object'. 'conflicting information' = 'two completely different orbits'.", "R40": "Carolin Frueh: 'we will reach a point of no return'. 'not be able to undo the damage' = 'point of no return' (điểm không thể quay lại)."}, N='1';
+var CFG=window.C20CFG||{};
+var QS=new URLSearchParams(location.search), MODE=(QS.get('part')||'').toUpperCase();
+if(!/^(L[1-4]|R[1-3]|L|R)$/.test(MODE)) MODE='';
+var EXAM=QS.get('thi')==='1' && (MODE==='L'||MODE==='R');
+var SK='cam18.t'+N+(MODE?'.'+MODE:'')+(EXAM?'.thi':'');
+function $(s,r){return (r||document).querySelector(s);} function $$(s,r){return [].slice.call((r||document).querySelectorAll(s));}
+function lsGet(k){ try{ return localStorage.getItem(k); }catch(e){ return null; } }
+function lsSet(k,v){ try{ localStorage.setItem(k,v); }catch(e){} }
+function esc(t){ return String(t).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
+
+// ================= chế độ làm riêng một phần / thi thử =================
+(function(){
+  if(!MODE) return;
+  var s=MODE[0], n=MODE.slice(1);
+  document.body.classList.add('one');
+  var other=document.getElementById(s==='L'?'sectR':'sectL'); if(other) other.remove();
+  if(n){ $$(s==='L'?'.part':'.passage').forEach(function(x){ if(x.id!==(s==='L'?'part':'passage')+n) x.remove(); }); }
+  var lab=document.getElementById('modelabel'); lab.hidden=false;
+  lab.textContent=(EXAM?'Thi thử · ':'')+(s==='L'?'Listening':'Reading')+(n?(s==='L'?' · Part ':' · Passage ')+n:(EXAM?'':' · cả phần'));
+  document.title=document.title+' · '+lab.textContent;
+  if(n) $$('.hint').forEach(function(h){ h.textContent='Bấm số câu để nhảy tới câu đó. Bài làm được tự lưu trên máy này.'+(s==='R'?' Gợi ý: khoảng 20 phút cho một passage.':''); });
+  if(EXAM){ document.body.classList.add('exam');
+    $$('.hint').forEach(function(h){ h.textContent=s==='L'?'Thi thử: audio phát liền 4 part, mỗi part chỉ nghe một lần, không tạm dừng. Nghe xong có 2 phút kiểm tra rồi bài tự nộp.':'Thi thử: 60 phút cho 3 passage. Hết giờ bài tự nộp.'; });
+    $$('[data-act=reset]').forEach(function(b){ b.textContent='Thi lại'; });
+  }
+})();
+
+var state={};
+try{state=JSON.parse(lsGet(SK))||{};}catch(e){state={};}
+state.ans=state.ans||{}; state.done=state.done||{}; state.time=state.time||{L:0,R:0};
+function save(){ lsSet(SK,JSON.stringify(state)); }
+var cur=MODE?MODE[0]:'L';
+
+// ================= lưu & khôi phục bài làm =================
+$$('.ans').forEach(function(el){var q=el.dataset.q; if(state.ans[q]!=null) el.value=state.ans[q];
+  el.addEventListener('input',function(){state.ans[q]=el.value; save(); grid();}); el.addEventListener('change',function(){state.ans[q]=el.value; save(); grid();});});
+$$('.opts').forEach(function(bq){
+  var q=bq.dataset.q, q2=bq.dataset.q2, boxes=$$('.ans-opt',bq);
+  var saved=state.ans[q]; if(saved!=null){ boxes.forEach(function(b){ b.checked=String(saved).split(',').indexOf(b.value)>=0; }); }
+  boxes.forEach(function(b){ b.addEventListener('change',function(){
+    if(q2){ var pick=+b.dataset.pick, on=boxes.filter(function(x){return x.checked;}); if(on.length>pick){ b.checked=false; return; } }
+    state.ans[q]=boxes.filter(function(x){return x.checked;}).map(function(x){return x.value;}).join(','); save(); grid();
+  }); });
+});
+
+// ================= danh sách câu =================
+var PRESENT={};
+$$('.ans').forEach(function(el){PRESENT[el.dataset.q]=1;});
+$$('.opts').forEach(function(b){ var s=b.dataset.q[0],a=+b.dataset.q.slice(1),z=b.dataset.q2?+b.dataset.q2.slice(1):a; for(var n=a;n<=z;n++) PRESENT[s+n]=1; });
+function qnums(s){ return Object.keys(QT).filter(function(k){return k[0]===s&&PRESENT[k];}).map(function(k){return +k.slice(1);}).sort(function(a,b){return a-b;}); }
+function pairOf(s,n){ return $$('.opts[data-q2]').filter(function(b){var a=+b.dataset.q.slice(1),z=+b.dataset.q2.slice(1);return b.dataset.q[0]===s&&n>=a&&n<=z;})[0]; }
+function answered(s,n){
+  var k=s+n;
+  if(QT[k]==='multi'){ var bq=pairOf(s,n); if(!bq) return false; var v=(state.ans[bq.dataset.q]||'').split(',').filter(Boolean); return v.length>n-(+bq.dataset.q.slice(1)); }
+  return !!(state.ans[k]&&String(state.ans[k]).trim());
+}
+function target(s,n){ var bq; return document.getElementById(s+'q'+n) || $('[data-q="'+s+n+'"]') || ((bq=pairOf(s,n))&&bq.previousElementSibling); }
+function grid(){
+  ['L','R'].forEach(function(s){
+    var g=$('.panel[data-s="'+s+'"] .grid'); if(!g) return; if(!g.children.length){
+      qnums(s).forEach(function(n){var a=document.createElement('a'); a.href='#'; a.textContent=n; a.dataset.n=n;
+        a.onclick=function(e){e.preventDefault(); var t=target(s,n); if(t){ t.scrollIntoView({behavior:'smooth',block:'center'}); var f=t.matches&&t.matches('.ans')?t:(t.querySelector&&t.querySelector('.ans,.ans-opt')); if(f) setTimeout(function(){f.focus({preventScroll:true});},350);} };
+        g.appendChild(a);});
+    }
+    $$('a',g).forEach(function(a){ if(!state.done[s]) a.className=answered(s,+a.dataset.n)?'done':''; });
+  });
+}
+
+// ================= chấm điểm =================
+function norm(x){ return String(x||'').toLowerCase().replace(/[’']/g,"'").replace(/[£$€]/g,'').replace(/[.,;:!?]+$/,'').replace(/\s+/g,' ').trim(); }
+function variants(key){
+  var out=[]; String(key).split(/\s*\/\s*|\s+OR\s+/).forEach(function(alt){
+    var opts=[''], parts=alt.split(/(\([^)]*\))/);
+    parts.forEach(function(p){ if(/^\(.*\)$/.test(p)){ var inner=p.slice(1,-1); opts=opts.concat(opts.map(function(o){return o+inner;})); } else opts=opts.map(function(o){return o+p;}); });
+    opts.forEach(function(o){out.push(norm(o));});
+  }); return out;
+}
+function isRight(k,val){ var key=KEY[k]; if(key==null) return null; var v=norm(val); if(!v) return false;
+  return variants(key).some(function(x){ return x===v || x.replace(/-/g,' ')===v.replace(/-/g,' '); }); }
+var BAND={L:[[39,9],[37,8.5],[35,8],[32,7.5],[30,7],[26,6.5],[23,6],[18,5.5],[16,5],[13,4.5],[10,4],[8,3.5],[6,3],[4,2.5]],
+          R:[[39,9],[37,8.5],[35,8],[33,7.5],[30,7],[27,6.5],[23,6],[19,5.5],[15,5],[13,4.5],[10,4],[8,3.5],[6,3],[4,2.5]]};
+function band(s,sc){ for(var i=0;i<BAND[s].length;i++) if(sc>=BAND[s][i][0]) return BAND[s][i][1]; return 'dưới 2.5'; }
+var lastRes={};
+function grade(s){
+  var sect=$('#sect'+s), total=0, got=0, res={};
+  $$('.fix',sect).forEach(function(f){f.remove();});
+  $$('.ans',sect).forEach(function(el){ var k=el.dataset.q, r=isRight(k,el.value); if(r===null) return; total++;
+    el.classList.remove('ok-mark','bad-mark'); el.classList.add(r?'ok-mark':'bad-mark'); res[+k.slice(1)]=r; if(r) got++;
+    else{ var f=document.createElement('span'); f.className='fix'; f.textContent='✓ '+String(KEY[k]); el.insertAdjacentElement('afterend',f);} });
+  $$('.opts',sect).forEach(function(bq){
+    var q=+bq.dataset.q.slice(1), q2=bq.dataset.q2?+bq.dataset.q2.slice(1):q, keys=[], picked=$$('.ans-opt',bq).filter(function(b){return b.checked;}).map(function(b){return b.value;});
+    for(var n=q;n<=q2;n++){ var kv=KEY[s+n]; if(kv!=null) keys.push(String(kv).toUpperCase().trim()); }
+    if(!keys.length) return;
+    $$('.opt',bq).forEach(function(o){ var v=$('input',o).value; o.classList.remove('right','wrong');
+      if(keys.indexOf(v)>=0) o.classList.add('right'); else if($('input',o).checked) o.classList.add('wrong'); });
+    var hits=picked.filter(function(p){return keys.indexOf(p)>=0;});
+    for(var m=q;m<=q2;m++){ total++; var ok=(m-q)<hits.length; res[m]=ok; if(ok) got++; }
+  });
+  state.done[s]={got:got,total:total}; save(); lastRes[s]=res;
+  var g=$('.panel[data-s="'+s+'"] .grid'); $$('a',g).forEach(function(a){ var r=res[+a.dataset.n]; a.className=r===true?'g-ok':r===false?'g-bad':''; });
+  showScore(s); sect.classList.add('done-lock','revealed'); addLocs(s);
+  return res;
+}
+function showScore(s){ var d=state.done[s], el=$('.panel[data-s="'+s+'"] .score'); if(!el) return; if(!d){el.innerHTML='';return;}
+  el.innerHTML='Đúng '+d.got+'/'+d.total+(d.total===40?' <span class="band">Band ≈ '+band(s,d.got)+'</span>':'')+
+    '<span class="after">Bấm 📍 cạnh mỗi câu để xem chỗ có đáp án'+(s==='L'?' trong lời thoại':' trong bài đọc')+', bấm 💡 để đọc giải thích tiếng Việt.</span>'; }
+
+// ================= 1. lời thoại & vị trí đáp án =================
+function addLocs(s){
+  var sect=$('#sect'+s); $$('.loc,.xpb',sect).forEach(function(b){b.remove();});
+  qnums(s).forEach(function(n){
+    var k=s+n; if(!EV[k] && !XP[k]) return;
+    if(QT[k]==='multi'){ var bq=pairOf(s,n); if(bq && +bq.dataset.q.slice(1)!==n) return; }
+    var frag=[];
+    if(EV[k]){ var b=document.createElement('button'); b.type='button'; b.className='loc'; b.title='Xem chỗ có đáp án câu '+n; b.textContent='📍 '+n;
+      b.onclick=function(){ showEv(s,n); }; frag.push(b); }
+    if(XP[k]){ var x=document.createElement('button'); x.type='button'; x.className='loc xpb'; x.title='Giải thích câu '+n; x.textContent='💡';
+      x.onclick=function(){ showXp(s,n); }; frag.push(x); }
+    var w=$('[data-q="'+k+'"]',sect), anchor=null, parent=null;
+    if(w && w.classList.contains('ans')){ anchor=w.nextElementSibling&&w.nextElementSibling.classList.contains('fix')?w.nextElementSibling:w; }
+    else { parent=target(s,n); }
+    frag.forEach(function(el){ if(anchor){ anchor.insertAdjacentElement('afterend',el); anchor=el; } else if(parent) parent.appendChild(el); });
+  });
+}
+function keyText(s,n){
+  var k=s+n, bq=QT[k]==='multi'?pairOf(s,n):null;
+  if(bq){ var a=+bq.dataset.q.slice(1), z=+bq.dataset.q2.slice(1), o=[]; for(var m=a;m<=z;m++) if(KEY[s+m]!=null) o.push(KEY[s+m]); return {q:a+'–'+z, a:o.join(' & ')}; }
+  return {q:''+n, a:String(KEY[k]==null?'':KEY[k]).split('/').map(function(x){return x.trim();}).join(' / ')};
+}
+function showXp(s,n){
+  var box=$('#xpSheet'); if(!box){ box=document.createElement('div'); box.id='xpSheet'; box.setAttribute('role','dialog');
+    box.innerHTML='<div class="xp-in"><div class="xp-head"><b class="xp-t"></b><button type="button" class="xp-x" aria-label="Đóng">✕</button></div><div class="xp-a"></div><p class="xp-b"></p><div class="xp-f"><button type="button" class="xp-ev">📍 Xem chỗ có đáp án</button><span><button type="button" class="xp-prev">‹ Câu trước</button><button type="button" class="xp-next">Câu sau ›</button></span></div></div>';
+    document.body.appendChild(box); $('.xp-x',box).onclick=function(){ box.classList.remove('on'); };
+    document.addEventListener('keydown',function(e){ if(e.key==='Escape') box.classList.remove('on'); }); }
+  var kt=keyText(s,n), res=(lastRes[s]||{})[n];
+  $('.xp-t',box).textContent=(s==='L'?'Listening':'Reading')+' · Câu '+kt.q;
+  $('.xp-a',box).innerHTML='Đáp án: <b></b>'+(res===true?' <span class="xp-ok">Bạn làm đúng ✓</span>':res===false?' <span class="xp-no">Bạn làm sai ✗</span>':'');
+  $('b',$('.xp-a',box)).textContent=kt.a;
+  $('.xp-b',box).textContent=XP[s+n]||'';
+  var ev=$('.xp-ev',box); ev.style.display=EV[s+n]?'':'none'; ev.onclick=function(){ box.classList.remove('on'); showEv(s,n); };
+  var list=qnums(s).filter(function(m){ if(!XP[s+m]) return false; if(QT[s+m]!=='multi') return true; var b=pairOf(s,m); return !b||+b.dataset.q.slice(1)===m; }), i=list.indexOf(n);
+  var pv=$('.xp-prev',box), nx=$('.xp-next',box);
+  pv.disabled=i<=0; nx.disabled=i<0||i>=list.length-1;
+  pv.onclick=function(){ if(i>0) showXp(s,list[i-1]); }; nx.onclick=function(){ if(i<list.length-1) showXp(s,list[i+1]); };
+  box.classList.add('on');
+}
+function flash(el){ el.classList.remove('flash'); void el.offsetWidth; el.classList.add('flash'); }
+function showEv(s,n){
+  var k=s+n, v=EV[k];
+  if(s==='L'){
+    var sp=document.getElementById(v); if(!sp) return;
+    var d=sp.closest('details'); if(d) d.open=true;
+    $$('.evhl').forEach(function(x){x.classList.remove('evhl');});
+    sp.classList.add('evhl'); sp.setAttribute('data-q',n);
+    sp.scrollIntoView({behavior:'smooth',block:'center'}); flash(sp);
+  } else {
+    var pi=n<=13?1:n<=26?2:3, box=$('#passage'+pi+' .ptext'); if(!box) return;
+    var m=markSentence(box,v,n); if(m){ m.scrollIntoView({behavior:'smooth',block:'center'}); flash(m); }
+  }
+}
+function markSentence(root,sentence,n){
+  var old=root.querySelector('mark.ev[data-q="'+n+'"]'); if(old) return old;
+  var tgt=sentence.replace(/\s+/g,''), head=tgt.slice(0,40);
+  var ps=$$('p',root);
+  for(var i=0;i<ps.length;i++){
+    var walker=document.createTreeWalker(ps[i],NodeFilter.SHOW_TEXT,null), map=[], str='', node;
+    while((node=walker.nextNode())){ var t=node.nodeValue; for(var j=0;j<t.length;j++){ if(!/\s/.test(t[j])){ map.push([node,j]); str+=t[j]; } } }
+    var at=str.indexOf(head); if(at<0) continue;
+    var end=Math.min(str.length,at+tgt.length)-1, first=null;
+    // gom theo từng text node rồi bọc <mark>
+    var segs=[], k=at;
+    while(k<=end){ var nd=map[k][0], st=map[k][1], en=st; while(k+1<=end && map[k+1][0]===nd){ k++; en=map[k][1]; } segs.push([nd,st,en+1]); k++; }
+    segs.reverse().forEach(function(sg){ var r=document.createRange(); r.setStart(sg[0],sg[1]); r.setEnd(sg[0],sg[2]);
+      var mk=document.createElement('mark'); mk.className='ev'; mk.setAttribute('data-q',n); try{ r.surroundContents(mk); first=mk; }catch(e){} });
+    if(first){ var tag=document.createElement('sup'); tag.className='evtag'; tag.textContent=n; first.insertBefore(tag,first.firstChild); }
+    return first;
+  }
+  return null;
+}
+
+// ================= 3. gửi kết quả về Google Sheet + lưu lịch sử =================
+function who(){ return {name:lsGet('cam20.name')||'', lop:lsGet('cam20.lop')||''}; }
+function logResult(s,res,auto){
+  var d=state.done[s]; if(!d) return;
+  var wrong=Object.keys(res).filter(function(n){return res[n]===false;}).map(Number).sort(function(a,b){return a-b;});
+  var byPart={}; Object.keys(res).forEach(function(n){ n=+n; var pk=s==='L'?'L'+Math.ceil(n/10):'R'+(n<=13?1:n<=26?2:3); var b=byPart[pk]||(byPart[pk]=[0,0]); b[1]++; if(res[n]) b[0]++; });
+  var rec={t:Date.now(), test:+N, sec:s, part:MODE.length===2?MODE:(s), exam:EXAM, got:d.got, total:d.total, byPart:byPart,
+    band:d.total===40?band(s,d.got):'', secs:state.time[s]||0, wrong:wrong};
+  var h=[]; try{ h=JSON.parse(lsGet('cam18.hist'))||[]; }catch(e){}
+  h.push(rec); if(h.length>300) h=h.slice(-300); lsSet('cam18.hist',JSON.stringify(h));
+  var url=CFG.SCRIPT_URL; if(!url) return;
+  var w=who(), body={kind:'cam20', name:w.name, lop:w.lop, test:'Cam 18 · Test '+N,
+    part:(s==='L'?'Listening':'Reading')+(MODE.length===2?(s==='L'?' Part ':' Passage ')+MODE.slice(1):''),
+    mode:EXAM?'Thi thử':'Luyện tập', got:d.got, total:d.total, band:rec.band, minutes:Math.round((state.time[s]||0)/6)/10,
+    wrong:wrong.join(', '), auto:!!auto, submittedAt:new Date().toISOString(), userAgent:navigator.userAgent};
+  try{ fetch(url,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(body)}); }catch(e){}
+}
+function askName(cb){
+  var w=who(); if(w.name){ cb(); return; }
+  var m=$('#namebox'); m.hidden=false; $('#nmName').value=w.name; $('#nmLop').value=w.lop; setTimeout(function(){$('#nmName').focus();},50);
+  $('#nmForm').onsubmit=function(e){ e.preventDefault(); var nm=$('#nmName').value.trim(); if(!nm){ $('#nmErr').textContent='Nhập họ tên để thầy nhận được kết quả nhé.'; return; }
+    lsSet('cam20.name',nm); lsSet('cam20.lop',$('#nmLop').value.trim()); m.hidden=true; cb(); };
+  $('#nmSkip').onclick=function(){ m.hidden=true; cb(); };
+}
+function submit(s,auto){
+  var p=$('.panel[data-s="'+s+'"]'); if(!p||state.done[s]) return;
+  var go=function(){ var res=grade(s); logResult(s,res,auto); stopExam(); p.scrollIntoView({behavior:'smooth'}); };
+  if(auto){ go(); return; }
+  var miss=qnums(s).filter(function(n){return !answered(s,n);}).length;
+  if(miss && !confirm('Còn '+miss+' câu chưa làm. Vẫn nộp bài?')) return;
+  askName(go);
+}
+$$('.panel').forEach(function(p){ var s=p.dataset.s;
+  $('[data-act=submit]',p).onclick=function(){ submit(s,false); };
+  $('[data-act=reset]',p).onclick=function(){
+    if(!confirm(EXAM?'Thi lại từ đầu? Bài làm lần này sẽ bị xoá.':'Xoá hết bài làm phần này và làm lại?')) return;
+    var sect=$('#sect'+s); Object.keys(state.ans).forEach(function(k){ if(k[0]===s) delete state.ans[k]; });
+    delete state.done[s]; state.time[s]=0; delete state.started; delete state.apart; delete state.apos; delete state.audioEnd; save();
+    if(EXAM){ location.reload(); return; }
+    $$('.ans',sect).forEach(function(el){el.value=''; el.classList.remove('ok-mark','bad-mark');});
+    $$('.ans-opt',sect).forEach(function(b){b.checked=false;}); $$('.opt',sect).forEach(function(o){o.classList.remove('right','wrong');});
+    $$('.fix,.loc,.evtag',sect).forEach(function(f){f.remove();});
+    $$('mark.ev',sect).forEach(function(mk){ var t=document.createTextNode(mk.textContent); mk.replaceWith(t); });
+    $$('.evhl',sect).forEach(function(x){x.classList.remove('evhl');}); $$('details.script',sect).forEach(function(d){d.open=false;});
+    sect.classList.remove('done-lock','revealed');
+    $$('audio',sect).forEach(function(a){a.pause(); a.currentTime=0;});
+    showScore(s); grid(); window.scrollTo(0,0); };
+});
+
+// ================= 2. chế độ thi thử =================
+var examTimer=null;
+function stopExam(){ if(examTimer){ clearInterval(examTimer); examTimer=null; } $$('#sectL audio').forEach(function(a){a.pause();}); var eb=$('#exambar'); if(eb&&EXAM&&state.done[MODE[0]]){ eb.classList.add('over'); eb.innerHTML='<b>Đã nộp bài thi thử.</b> Xem điểm, đáp án và '+(MODE[0]==='L'?'lời thoại':'vị trí đáp án trong bài')+' ở dưới, hoặc bấm “Thi lại” để làm lại.'; } }
+function fmt(t){t=Math.max(0,Math.round(t));var m=Math.floor(t/60),x=t%60;return (m<10?'0':'')+m+':'+(x<10?'0':'')+x;}
+function setupExam(){
+  if(!EXAM) return;
+  var s=MODE[0], sect=$('#sect'+s), bar=document.createElement('div'); bar.id='exambar'; bar.className='exambar';
+  sect.insertBefore(bar, sect.firstChild);
+  if(state.done[s]){ bar.innerHTML='<b>Đã nộp bài thi thử.</b> Xem điểm và lời thoại ở dưới, hoặc bấm “Thi lại” để làm lại.'; bar.classList.add('over'); return; }
+  var w=who();
+  var rules=s==='L'?['Audio phát liền Part 1 → Part 4, mỗi part chỉ nghe một lần, không tạm dừng hay tua.','Vừa nghe vừa điền đáp án. Nghe xong có 2 phút kiểm tra, sau đó bài tự nộp.','Đeo tai nghe và kiểm tra âm lượng trước khi bắt đầu.']
+                   :['Có 60 phút cho 3 passage (40 câu). Đồng hồ đếm ngược ở góc trên.','Hết giờ bài tự nộp, nên nhớ để ý thời gian.'];
+  var ov=$('#examstart'); ov.hidden=state.started?true:false;
+  $('#exTitle').textContent='Thi thử '+(s==='L'?'Listening':'Reading')+' · Test '+N;
+  $('#exRules').innerHTML=rules.map(function(r){return '<li>'+esc(r)+'</li>';}).join('');
+  $('#exName').value=w.name; $('#exLop').value=w.lop;
+  $('#exForm').onsubmit=function(e){ e.preventDefault(); var nm=$('#exName').value.trim(); if(!nm){ $('#exErr').textContent='Nhập họ tên trước khi bắt đầu nhé.'; return; }
+    lsSet('cam20.name',nm); lsSet('cam20.lop',$('#exLop').value.trim()); ov.hidden=true; state.started=Date.now(); save(); run(true); };
+  if(state.started) run(false);
+  function run(fresh){
+    if(s==='R'){
+      var LIM=60*60;
+      var tickR=function(){ var left=LIM-(Date.now()-state.started)/1000; state.time.R=Math.min(LIM,Math.round((Date.now()-state.started)/1000));
+        bar.innerHTML='⏳ Còn lại <b class="cd'+(left<300?' low':'')+'">'+fmt(left)+'</b> · hết giờ bài tự nộp'; $('#timer').textContent=fmt(left);
+        if(left<=0){ stopExam(); submit('R',true); } };
+      tickR(); examTimer=setInterval(tickR,1000);
+    } else {
+      var auds=$$('#sectL .audio audio'); var idx=state.apart||0;
+      var showBar=function(txt,pct){ bar.innerHTML=txt+(pct!=null?'<div class="eprog"><i style="width:'+pct+'%"></i></div>':''); };
+      var endPhase=function(){ if(!state.audioEnd){ state.audioEnd=Date.now(); save(); }
+        var tickE=function(){ var left=120-(Date.now()-state.audioEnd)/1000; showBar('✅ Đã nghe xong. Còn <b class="cd low">'+fmt(left)+'</b> để kiểm tra lại đáp án, sau đó bài tự nộp.',null); $('#timer').textContent=fmt(left);
+          if(left<=0){ stopExam(); submit('L',true); } };
+        tickE(); examTimer=setInterval(tickE,1000); };
+      if(state.audioEnd||idx>=auds.length){ endPhase(); return; }
+      var play=function(){
+        var a=auds[idx]; if(!a){ endPhase(); return; }
+        if(state.apos && state.apart===idx){ try{ a.currentTime=state.apos; }catch(e){} }
+        a.onended=function(){ idx++; state.apart=idx; state.apos=0; save(); play(); };
+        a.ontimeupdate=function(){ if(!a.duration) return; var pct=a.currentTime/a.duration*100;
+          showBar('🎧 Đang phát <b>Part '+(idx+1)+'</b> / 4 · '+fmt(a.currentTime)+' / '+fmt(a.duration),pct);
+          if(Math.floor(a.currentTime)%3===0){ state.apart=idx; state.apos=a.currentTime; save(); } };
+        var pr=a.play(); if(pr&&pr.catch) pr.catch(function(){ showBar('<button type="button" class="btn" id="exResume">▶ Bấm để tiếp tục nghe Part '+(idx+1)+'</button>',null); $('#exResume').onclick=function(){ play(); }; });
+        var pc=document.getElementById('part'+(idx+1)); if(pc && fresh!==false) pc.scrollIntoView({behavior:'smooth'});
+      };
+      if(fresh) play();
+      else showBar('<button type="button" class="btn" id="exResume">▶ Tiếp tục nghe Part '+(idx+1)+'</button> <span class="hint">Trang vừa tải lại, bấm để nghe tiếp từ chỗ dừng.</span>',null), $('#exResume').onclick=function(){ play(); };
+      examTimer=setInterval(function(){ state.time.L=Math.round((Date.now()-state.started)/1000); $('#timer').textContent=fmt(state.time.L); },1000);
+    }
+  }
+}
+
+// ================= 4. tô sáng & ghi chú trong bài đọc =================
+var HK='cam18.hl.t'+N;
+function hlLoad(){ var o={}; try{o=JSON.parse(lsGet(HK))||{};}catch(e){} return o; }
+function hlSave(){ var o={}; $$('.passage').forEach(function(ps){ $$('.ptext p',ps).forEach(function(p,i){ if(p.querySelector('mark.hl')){ var c=p.cloneNode(true); $$('mark.ev,.evtag,.loc',c).forEach(function(x){ if(x.tagName==='MARK') x.replaceWith(document.createTextNode(x.textContent)); else x.remove(); }); o[ps.id+':'+i]=c.innerHTML; } }); }); lsSet(HK,JSON.stringify(o)); }
+function hlRestore(){ var o=hlLoad(); Object.keys(o).forEach(function(k){ var a=k.split(':'), ps=document.getElementById(a[0]); if(!ps) return; var p=$$('.ptext p',ps)[+a[1]]; if(p) p.innerHTML=o[k]; }); }
+function setupHighlight(){
+  if(!$('.ptext')) return;
+  hlRestore();
+  var tb=document.createElement('div'); tb.className='hltool'; tb.hidden=true;
+  tb.innerHTML='<button type="button" data-h="y">🖍 Tô vàng</button><button type="button" data-h="n">📝 Ghi chú</button>';
+  document.body.appendChild(tb);
+  var nb=document.createElement('div'); nb.className='notebox'; nb.hidden=true;
+  nb.innerHTML='<textarea rows="3" placeholder="Ghi chú của bạn…"></textarea><div><button type="button" data-n="save" class="btn">Lưu</button> <button type="button" data-n="del" class="btn alt">Bỏ tô</button></div>';
+  document.body.appendChild(nb);
+  var range=null, curMark=null;
+  function place(el,x,y){ el.style.left=Math.max(8,Math.min(window.innerWidth-el.offsetWidth-8,x))+'px'; el.style.top=(y+window.scrollY)+'px'; }
+  function onSel(){
+    var sel=window.getSelection(); if(!sel.rangeCount||sel.isCollapsed){ tb.hidden=true; return; }
+    var r=sel.getRangeAt(0), p1=r.startContainer.parentElement&&r.startContainer.parentElement.closest('.ptext p'), p2=r.endContainer.parentElement&&r.endContainer.parentElement.closest('.ptext p');
+    if(!p1||p1!==p2||!r.toString().trim()){ tb.hidden=true; return; }
+    range=r.cloneRange(); tb.hidden=false; var rc=r.getBoundingClientRect(); place(tb,rc.left+rc.width/2-tb.offsetWidth/2,rc.top-44);
+  }
+  document.addEventListener('mouseup',function(e){ if(tb.contains(e.target)||nb.contains(e.target)) return; setTimeout(onSel,10); });
+  document.addEventListener('touchend',function(e){ if(tb.contains(e.target)||nb.contains(e.target)) return; setTimeout(onSel,250); });
+  document.addEventListener('mousedown',function(e){ if(!nb.contains(e.target)&&!(e.target.closest&&e.target.closest('mark.hl'))) nb.hidden=true; });
+  function wrap(){ if(!range) return null; var mk=document.createElement('mark'); mk.className='hl';
+    try{ mk.appendChild(range.extractContents()); range.insertNode(mk); }catch(e){ return null; } window.getSelection().removeAllRanges(); tb.hidden=true; range=null; hlSave(); return mk; }
+  tb.addEventListener('click',function(e){ var b=e.target.closest('button'); if(!b) return; var mk=wrap(); if(mk&&b.dataset.h==='n') openNote(mk); });
+  function openNote(mk){ curMark=mk; nb.hidden=false; $('textarea',nb).value=mk.getAttribute('data-note')||''; var rc=mk.getBoundingClientRect(); place(nb,rc.left,rc.bottom+6); $('textarea',nb).focus(); }
+  document.addEventListener('click',function(e){ var mk=e.target.closest&&e.target.closest('mark.hl'); if(mk && !window.getSelection().toString()) openNote(mk); });
+  nb.addEventListener('click',function(e){ var b=e.target.closest('button'); if(!b||!curMark) return;
+    if(b.dataset.n==='save'){ var v=$('textarea',nb).value.trim(); if(v){ curMark.setAttribute('data-note',v); curMark.title=v; curMark.classList.add('has-note'); } else { curMark.removeAttribute('data-note'); curMark.removeAttribute('title'); curMark.classList.remove('has-note'); } }
+    else { var t=document.createDocumentFragment(); while(curMark.firstChild) t.appendChild(curMark.firstChild); curMark.replaceWith(t); }
+    nb.hidden=true; curMark=null; hlSave(); });
+  $$('.passage').forEach(function(ps){
+    var h=document.createElement('div'); h.className='ptools';
+    h.innerHTML='<span>Bôi đen chữ trong bài để tô vàng hoặc ghi chú.</span><button type="button" class="mini" data-clear>Xoá tô sáng</button>';
+    var head=$('.part-title',ps); head.insertAdjacentElement('afterend',h);
+    $('[data-clear]',h).onclick=function(){ if(!confirm('Xoá hết tô sáng và ghi chú của passage này?')) return; $$('.ptext mark.hl',ps).forEach(function(mk){ var t=document.createDocumentFragment(); while(mk.firstChild) t.appendChild(mk.firstChild); mk.replaceWith(t); }); hlSave(); };
+  });
+}
+
+// ================= 6. flashcard từ vựng từng passage =================
+function setupVocab(){
+  var V=(window.C20VOCAB||{})[N]; if(!V||!window.C20FC) return;
+  $$('.passage').forEach(function(ps){ var i=+ps.id.replace('passage',''), cards=V['R'+i]; if(!cards) return;
+    var bar=$('.ptools',ps); if(!bar){ bar=document.createElement('div'); bar.className='ptools'; $('.part-title',ps).insertAdjacentElement('afterend',bar); }
+    var b=document.createElement('button'); b.type='button'; b.className='mini vocab'; b.textContent='🃏 Từ vựng ('+cards.length+')';
+    b.onclick=function(){ window.C20FC.open(cards,'Từ vựng · Test '+N+' · Passage '+i,'cam18.fc.t'+N+'.R'+i); };
+    bar.appendChild(b);
+  });
+}
+
+// ================= tab & đồng hồ =================
+function tab(s){ cur=s; $$('.tabs button').forEach(function(b){b.setAttribute('aria-selected',b.dataset.s===s);});
+  $$('.sect').forEach(function(x){x.classList.toggle('on',x.id==='sect'+s);});
+  if(!$('#sect'+s)) return;
+  if(s==='R') $$('#sectL audio').forEach(function(a){a.pause();});
+  if(!MODE){ try{history.replaceState(null,'',s==='R'?'#reading':'#listening');}catch(e){} } tick(); }
+$$('.tabs button').forEach(function(b){b.onclick=function(){tab(b.dataset.s); window.scrollTo(0,0);};});
+function tick(){ if(!EXAM) $('#timer').textContent=fmt(state.time[cur]||0); }
+if(!EXAM) setInterval(function(){ if(document.hidden||state.done[cur]) return; state.time[cur]=(state.time[cur]||0)+1; tick(); if(state.time[cur]%10===0) save(); },1000);
+
+setupHighlight(); setupVocab();
+['L','R'].forEach(function(s){ if(state.done[s]&&$('#sect'+s)) grade(s); });
+grid(); tab(MODE?MODE[0]:(location.hash==='#reading'?'R':'L'));
+setupExam();
+})();
+
+</script>
+</body>
+</html>

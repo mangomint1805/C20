@@ -1,10 +1,11 @@
-# Cambridge IELTS 20 & 17 · Luyện tập Listening & Reading
+# Cambridge IELTS 20 · 18 · 17 · Luyện tập Listening & Reading
 
-Trang luyện tập cho học viên: 4 test của Cambridge IELTS 20 và 4 test của Cambridge IELTS 17 (Academic), mỗi test gồm Listening 40 câu (có audio từng Part) và Reading 40 câu.
+Trang luyện tập cho học viên: 4 test mỗi bộ Cambridge IELTS 20, 18 và 17 (Academic), mỗi test gồm Listening 40 câu (có audio từng Part) và Reading 40 câu.
 
-**Cambridge 20:** https://mangomint1805.github.io/C20/  
-**Cambridge 17:** https://mangomint1805.github.io/C20/c17/  
-(Trên trang chủ có nút chuyển qua lại giữa hai bộ.)
+**Trang chủ (chọn bộ đề):** https://mangomint1805.github.io/C20/  
+- Cambridge 20: https://mangomint1805.github.io/C20/c20/  
+- Cambridge 18: https://mangomint1805.github.io/C20/c18/  
+- Cambridge 17: https://mangomint1805.github.io/C20/c17/
 
 > Cambridge 17 · Test 4: hiện mới có audio Part 1.
 

@@ -1,0 +1,1184 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light only">
+<title>Cambridge IELTS 18 · Test 2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--paper:#faf8f4;--card:#fff;--line:#ddd7c9;--ink:#1e232b;--dim:#666e7a;--brand:#a8691a;--brand-soft:#f2e2c4;--brand-ink:#6b4410;
+--ok:#1f8f6c;--ok-soft:#e1f4ec;--bad:#c14636;--bad-soft:#fbe6e2;--warn:#1f8f6c;--panel2:#f2efe8;}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--paper);color:var(--ink);font-family:'IBM Plex Sans',system-ui,sans-serif;line-height:1.6;font-size:16px}
+a{color:var(--brand)}
+header.top{position:sticky;top:0;z-index:20;background:rgba(250,248,244,.97);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.bar{max-width:1280px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.bar h1{font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:21px;margin:0;flex:1;min-width:180px}
+.bar h1 small{display:block;font-family:'IBM Plex Sans',sans-serif;font-weight:500;font-size:12.5px;color:var(--dim)}
+.tabs{display:flex;background:var(--panel2);border-radius:10px;padding:3px}
+.tabs button{font:inherit;font-weight:600;font-size:14.5px;border:0;background:none;padding:7px 14px;border-radius:8px;cursor:pointer;color:var(--dim)}
+.tabs button[aria-selected=true]{background:var(--card);color:var(--brand-ink);box-shadow:0 1px 3px rgba(0,0,0,.1)}
+.timer{font-variant-numeric:tabular-nums;font-weight:600;color:var(--dim);font-size:14px;min-width:60px;text-align:right}
+main{max-width:1280px;margin:0 auto;padding:16px}
+.sect{display:none}.sect.on{display:block}
+.part,.passage{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:18px 20px;margin:0 0 18px}
+.part-title{font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:23px;margin:0 0 10px;color:var(--brand-ink)}
+.part-title em{font-style:normal;font-family:'IBM Plex Sans',sans-serif;font-size:15px;color:var(--dim);margin-left:6px}
+.audio{display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:var(--panel2);border:1px solid var(--line);border-radius:6px;padding:8px 12px;margin:0 0 12px}
+.audio span{font-weight:700;color:var(--brand-ink);font-size:14px}
+.audio audio{flex:1;min-width:220px;height:38px}
+p{margin:7px 0}
+em{color:#3b4350}
+table{border-collapse:collapse;width:100%;margin:10px 0;font-size:15px}
+th,td{border:1px solid var(--line);padding:8px 10px;vertical-align:top;text-align:left;font-weight:400}
+thead th{background:var(--panel2)}
+thead th strong{font-weight:700}
+ul{padding-left:22px;margin:6px 0}
+.figure{max-width:100%;height:auto;border:1px solid var(--line);border-radius:8px;display:block;margin:8px 0}
+/* widgets */
+.gap{font:inherit;font-size:15px;width:9.5em;max-width:100%;padding:3px 8px;border:1.5px solid #cfc6b2;border-radius:5px;background:var(--panel2);color:var(--ink);margin:0 2px}
+.gap:focus,.sel:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px var(--brand-soft)}
+.gap::placeholder{color:#b3a68c;font-weight:600}
+.sel{font:inherit;font-size:14.5px;padding:3px 6px;border:1.5px solid #cfc6b2;border-radius:5px;background:var(--panel2);color:var(--ink);margin:0 2px;max-width:100%}
+.qline{scroll-margin-top:80px}
+.qn{display:inline-block;min-width:30px;font-family:'Fraunces',Georgia,serif;font-size:19px;font-weight:600;color:var(--brand);margin-right:6px}
+blockquote.opts{margin:6px 0 12px 34px;padding:0;display:grid;gap:5px}
+.opt{display:flex;gap:8px;align-items:flex-start;padding:7px 12px;border:1px solid var(--line);border-radius:4px;cursor:pointer;background:var(--panel2)}
+.opt:hover{border-color:#cfc6b2}
+.opt input{margin-top:5px;accent-color:var(--brand);width:16px;height:16px;flex:none}
+.opt b{color:var(--brand-ink);flex:none}
+.opt:has(input:checked){border-color:var(--brand);background:var(--brand-soft)}
+/* grading marks */
+.ok-mark{border-color:var(--ok)!important;background:var(--ok-soft)!important}
+.bad-mark{border-color:var(--bad)!important;background:var(--bad-soft)!important}
+.fix{display:inline-block;font-size:13px;font-weight:700;color:var(--ok);background:var(--ok-soft);border-radius:6px;padding:0 6px;margin-left:4px}
+.opt.right{border-color:var(--ok);background:var(--ok-soft)}
+.opt.wrong{border-color:var(--bad);background:var(--bad-soft)}
+/* reading split */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
+.ptext{max-height:calc(100vh - 150px);overflow:auto;position:sticky;top:76px;padding-right:12px;border-right:1px solid var(--line)}
+.ptext p strong:first-child{color:var(--brand-ink)}
+@media (max-width:900px){.split{grid-template-columns:1fr}.ptext{max-height:none;position:static;border-right:0;padding-right:0;border-bottom:1px solid var(--line);padding-bottom:12px}}
+/* answer panel */
+.panel{background:var(--card);border:1.5px solid var(--brand);border-radius:6px;padding:14px 16px;margin:0 0 18px}
+.panel h2{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:18px;margin:0 0 8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(38px,1fr));gap:5px}
+.grid a{display:flex;align-items:center;justify-content:center;height:34px;border-radius:7px;border:1.5px solid var(--line);text-decoration:none;color:var(--dim);font-weight:600;font-size:14px;background:#fff}
+.grid a.done{border-color:var(--brand);color:var(--brand-ink);background:var(--brand-soft)}
+.grid a.g-ok{border-color:var(--ok);background:var(--ok);color:#fff}
+.grid a.g-bad{border-color:var(--bad);background:var(--bad);color:#fff}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:12px}
+.btn{font:inherit;font-weight:600;font-size:15px;border:1px solid var(--brand);border-radius:4px;padding:10px 16px;cursor:pointer;background:var(--brand);color:#fff}
+.btn.alt{background:#fff;color:var(--brand-ink);border:1.5px solid var(--brand)}
+.score{font-weight:700;font-size:16px}
+.score .band{display:inline-block;margin-left:6px;background:var(--ok);color:#fff;border-radius:7px;padding:1px 9px}
+.hint{color:var(--dim);font-size:13.5px;margin:6px 0 0}
+footer{max-width:1280px;margin:0 auto;padding:10px 16px 40px;color:var(--dim);font-size:13px}
+.done-lock .ans,.done-lock .ans-opt{pointer-events:none}
+.modelabel{font-weight:700;font-size:14px;color:var(--brand-ink);background:var(--brand-soft);border-radius:4px;padding:6px 12px}
+.back{font-size:13.5px;font-weight:600;color:var(--brand-ink);text-decoration:none;white-space:nowrap}
+body.one .tabs{display:none}
+
+/* lời thoại & vị trí đáp án */
+.script{display:none;margin:16px 0 0;border:1px solid var(--line);border-radius:6px;background:var(--panel2)}
+.revealed .script{display:block}
+.script summary{cursor:pointer;font-weight:700;color:var(--brand-ink);padding:10px 14px}
+.script-body{padding:0 16px 12px;font-size:15px;max-height:60vh;overflow:auto}
+.script-body p{margin:8px 0}
+.script-body b{color:var(--brand-ink)}
+.evhl{background:#fff1b8;border-radius:3px;box-shadow:0 0 0 2px #f1d36b;position:relative}
+.evhl::before{content:"Câu " attr(data-q);font-size:11px;font-weight:700;color:#fff;background:var(--brand);border-radius:3px;padding:0 4px;margin-right:4px}
+mark.ev{background:#fff1b8;box-shadow:0 0 0 2px #f1d36b;border-radius:3px;color:inherit}
+.evtag{font-size:11px;font-weight:700;color:#fff;background:var(--brand);border-radius:3px;padding:0 4px;margin-right:3px}
+.flash{animation:flash 1.4s ease-out}
+@keyframes flash{0%{box-shadow:0 0 0 6px #f1d36b}100%{box-shadow:0 0 0 2px #f1d36b}}
+.loc{display:none;font:inherit;font-size:12.5px;font-weight:700;color:var(--brand-ink);background:#fff7e0;border:1px solid #f1d36b;border-radius:5px;padding:0 6px;margin-left:5px;cursor:pointer;vertical-align:middle}
+.revealed .loc{display:inline-block}
+.xpb{padding:0 5px}
+#xpSheet{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;justify-content:center;padding:0 12px 12px;transform:translateY(110%);transition:transform .25s ease;pointer-events:none}
+#xpSheet.on{transform:none;pointer-events:auto}
+#xpSheet .xp-in{width:100%;max-width:720px;background:var(--card);border:1px solid var(--line);border-top:4px solid var(--brand);border-radius:12px;box-shadow:0 10px 34px rgba(30,35,43,.22);padding:14px 16px 12px;max-height:55vh;overflow:auto}
+#xpSheet .xp-head{display:flex;justify-content:space-between;align-items:center;gap:10px}
+#xpSheet .xp-t{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:17px;color:var(--brand-ink)}
+#xpSheet .xp-x{border:0;background:none;font-size:18px;cursor:pointer;color:var(--dim);padding:2px 6px}
+#xpSheet .xp-a{margin-top:6px;font-size:14.5px}
+#xpSheet .xp-a b{color:#1f8f6c}
+#xpSheet .xp-ok{color:#1f8f6c;font-weight:600;margin-left:6px;font-size:13px}
+#xpSheet .xp-no{color:#c0392b;font-weight:600;margin-left:6px;font-size:13px}
+#xpSheet .xp-b{margin:8px 0 10px;line-height:1.6;font-size:15px}
+#xpSheet .xp-f{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+#xpSheet .xp-f button{font:inherit;font-size:13.5px;border:1px solid var(--line);background:var(--paper);border-radius:7px;padding:5px 10px;cursor:pointer;color:var(--ink)}
+#xpSheet .xp-f button:disabled{opacity:.4;cursor:default}
+#xpSheet .xp-f span{display:flex;gap:6px}
+.done-lock .loc{pointer-events:auto}
+.score .after{display:block;font-weight:500;font-size:13px;color:var(--dim);margin-top:2px}
+/* thi thử */
+.exam .audio{display:none}
+.exambar{position:sticky;top:64px;z-index:15;background:#fff7e0;border:1.5px solid #f1d36b;border-radius:6px;padding:10px 14px;margin:0 0 14px;font-size:15px}
+.exambar.over{position:static;background:var(--ok-soft);border-color:var(--ok)}
+.exambar .cd{font-family:'Fraunces',Georgia,serif;font-size:20px}
+.exambar .cd.low{color:var(--bad)}
+.eprog{height:6px;background:var(--line);border-radius:4px;overflow:hidden;margin-top:8px}
+.eprog i{display:block;height:100%;background:var(--brand)}
+.overlay{position:fixed;inset:0;z-index:60;background:rgba(30,35,43,.55);display:flex;align-items:center;justify-content:center;padding:16px}
+.overlay[hidden]{display:none}
+.ocard{background:var(--card);border-radius:8px;max-width:480px;width:100%;padding:22px 22px 18px;box-shadow:0 20px 50px rgba(0,0,0,.25)}
+.ocard h2{font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:24px;margin:0 0 8px}
+.ocard ul{padding-left:20px;font-size:15px}
+.ocard label{display:block;font-weight:600;font-size:14px;margin:10px 0 4px}
+.ocard input{width:100%;font:inherit;padding:9px 11px;border:1px solid var(--line);border-radius:4px;background:var(--panel2)}
+.ocard .err{color:var(--bad);font-size:14px;min-height:20px;margin:6px 0 0}
+.ocard .row{justify-content:flex-end}
+/* tô sáng */
+.ptools{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:-4px 0 10px;font-size:13px;color:var(--dim)}
+.mini{font:inherit;font-size:13px;font-weight:600;border:1px solid var(--line);background:var(--panel2);color:var(--brand-ink);border-radius:5px;padding:3px 9px;cursor:pointer}
+.mini.vocab{border-color:var(--brand);background:var(--brand-soft)}
+mark.hl{background:#ffe58a;color:inherit;border-radius:2px;cursor:pointer}
+mark.hl.has-note{border-bottom:2px dotted var(--brand)}
+mark.hl.has-note::after{content:"📝";font-size:11px;margin-left:1px}
+.hltool{position:absolute;z-index:70;display:flex;gap:4px;background:var(--ink);border-radius:6px;padding:4px;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+.hltool[hidden],.notebox[hidden]{display:none}
+.hltool button{font:inherit;font-size:13px;font-weight:600;color:#fff;background:none;border:0;border-radius:4px;padding:5px 9px;cursor:pointer}
+.hltool button:hover{background:rgba(255,255,255,.15)}
+.notebox{position:absolute;z-index:70;width:270px;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:10px;box-shadow:0 10px 26px rgba(0,0,0,.2)}
+.notebox textarea{width:100%;font:inherit;font-size:14px;border:1px solid var(--line);border-radius:4px;padding:6px;margin-bottom:6px;resize:vertical}
+.notebox .btn{padding:5px 12px;font-size:13px}
+.exam .ptools span{display:none}
+</style>
+</head>
+<body>
+<header class="top"><div class="bar">
+  <h1><a href="index.html" style="color:inherit;text-decoration:none">Cambridge IELTS 18 · Test 2</a><small>Listening &amp; Reading · luyện tập tự chấm</small></h1>
+  <div class="tabs" role="tablist">
+    <button role="tab" aria-selected="true" data-s="L">🎧 Listening</button>
+    <button role="tab" aria-selected="false" data-s="R">📖 Reading</button>
+  </div>
+  <span class="modelabel" id="modelabel" hidden></span><span class="timer" id="timer" title="Thời gian làm phần này">00:00</span><a class="back" href="index.html">← Trang chủ</a>
+</div></header>
+<main>
+  <div class="sect on" id="sectL">
+    <div class="panel" data-s="L">
+      <h2>Phiếu trả lời Listening</h2>
+      <div class="grid"></div>
+      <div class="row"><button class="btn" data-act="submit">Nộp bài &amp; chấm điểm</button><button class="btn alt" data-act="reset">Làm lại</button><span class="score"></span></div>
+      <p class="hint">Bấm số câu để nhảy tới câu đó. Bài làm được tự lưu trên máy này. Thời gian thi thật: khoảng 30 phút.</p>
+    </div>
+    <section class="part" id="part1"><h3 class="part-title" id="part-1-questions-110">PART 1 <em>Questions 1–10</em></h3><div class="audio"><span>🎧 Part 1</span><audio controls preload="none" src="audio/t2-part1.mp3"></audio></div><p><strong>Questions 1–5</strong></p><p><em>Complete the notes below.</em></p><p><em>Write <strong>ONE WORD ONLY</strong> for each answer.</em></p><table>
+<colgroup>
+<col style="width: 101%"/>
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><p><strong>Working at Milo’s Restaurants</strong></p>
+<p><strong>Benefits</strong></p>
+<ul>
+<li><p><input aria-label="Câu 1" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L1" placeholder="1" spellcheck="false" type="text"/>  provided for all staff</p></li>
+<li><p><input aria-label="Câu 2" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L2" placeholder="2" spellcheck="false" type="text"/>  during weekdays at all Milo’s
+Restaurants</p></li>
+<li><p><input aria-label="Câu 3" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L3" placeholder="3" spellcheck="false" type="text"/>  provided after midnight</p></li>
+</ul>
+<p><strong>Person specification</strong></p>
+<ul>
+<li><p>must be prepared to work well in a team</p></li>
+<li><p>must care about maintaining a high standard of
+<input aria-label="Câu 4" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L4" placeholder="4" spellcheck="false" type="text"/> </p></li>
+<li><p>must have a qualification in <input aria-label="Câu 5" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L5" placeholder="5" spellcheck="false" type="text"/> </p></li>
+</ul></td>
+</tr>
+</tbody>
+</table><p><strong>Questions 6–10</strong></p><p><em>Complete the table below.</em></p><p><em>Write <strong>ONE WORD AND/OR A NUMBER</strong> for each
+answer.</em></p><table style="width:99%;">
+<colgroup>
+<col style="width: 20%"/>
+<col style="width: 12%"/>
+<col style="width: 34%"/>
+<col style="width: 31%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Location</strong></th>
+<th><strong>Job title</strong></th>
+<th><strong>Responsibilities include</strong></th>
+<th><strong>Pay and conditions</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><input aria-label="Câu 6" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L6" placeholder="6" spellcheck="false" type="text"/>  Street</td>
+<td>Breakfast supervisor</td>
+<td><p>Checking portions, etc. are correct</p>
+<p>Making sure <input aria-label="Câu 7" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L7" placeholder="7" spellcheck="false" type="text"/>  is clean</p></td>
+<td><p>Starting salary £ <input aria-label="Câu 8" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L8" placeholder="8" spellcheck="false" type="text"/>  per hour</p>
+<p>Start work at 5.30 a.m.</p></td>
+</tr>
+<tr class="even">
+<td>City Road</td>
+<td>Junior chef</td>
+<td><p>Supporting senior chefs</p>
+<p>Maintaining stock and organising <input aria-label="Câu 9" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L9" placeholder="9" spellcheck="false" type="text"/> </p></td>
+<td><p>Annual salary £23,000</p>
+<p>No work on a <input aria-label="Câu 10" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L10" placeholder="10" spellcheck="false" type="text"/>  once a month</p></td>
+</tr>
+</tbody>
+</table><details class="script"><summary>📜 Lời thoại Part 1</summary><div class="script-body"><p><b>WOMAN:</b> <span id="trL1-0-0">So, I understand you’re interested in restaurant work?</span></p><p><b>MAN:</b> <span id="trL1-1-0">Yes.</span> <span id="trL1-1-1">I’ve got a bit of experience and I can provide references.</span></p><p><b>WOMAN:</b> <span id="trL1-2-0">That’s good.</span> <span id="trL1-2-1">I can check all that later.</span> <span id="trL1-2-2">Now, Milo’s Restaurants have some vacancies at the moment.</span> <span id="trL1-2-3">They’re a really good company to work for.</span> <span id="trL1-2-4">Lots of benefits.</span></p><p><b>MAN:</b> <span id="trL1-3-0">Oh right.</span></p><p><b>WOMAN:</b> <span id="trL1-4-0">Yes.</span> <span id="trL1-4-1">They’ve got a very good reputation for looking after staff.</span> <span id="trL1-4-2">For example, all employees get training – even temporary staff.</span></p><p><b>MAN:</b> <span id="trL1-5-0">Oh really?</span> <span id="trL1-5-1">That’s quite unusual, isn’t it?</span></p><p><b>WOMAN:</b> <span id="trL1-6-0">Certainly is.</span></p><p><b>MAN:</b> <span id="trL1-7-0">And do staff get free uniforms too?</span></p><p><b>WOMAN:</b> <span id="trL1-8-0">Um … you just need to wear a white T-shirt and black trousers, it says here.</span> <span id="trL1-8-1">So I guess not … But another benefit of working for a big company like this is that you can get a discount at any of their restaurants.</span></p><p><b>MAN:</b> <span id="trL1-9-0">Even at weekends?</span></p><p><b>WOMAN:</b> <span id="trL1-10-0">No, but you’ll be working then anyway.</span></p><p><b>MAN:</b> <span id="trL1-11-0">Oh yes.</span> <span id="trL1-11-1">I suppose so.</span> <span id="trL1-11-2">Most of their restaurants are in the city centre, aren’t they?</span> <span id="trL1-11-3">So, easy to get to by bus?</span></p><p><b>WOMAN:</b> <span id="trL1-12-0">Yes.</span> <span id="trL1-12-1">That’s right.</span> <span id="trL1-12-2">But if you have to do a late shift and finish work after midnight, the company will pay for you to get a taxi home.</span></p><p><b>MAN:</b> <span id="trL1-13-0">I probably won’t need one.</span> <span id="trL1-13-1">I think I’d use my bike.</span></p><p><b>WOMAN:</b> <span id="trL1-14-0">OK.</span> <span id="trL1-14-1">Now, they do have some quite specific requirements for the kind of person they’re looking for.</span> <span id="trL1-14-2">Milo’s is a young, dynamic company and they’re really keen on creating a strong team.</span> <span id="trL1-14-3">It’s really important that you can fit in and get on well with everyone.</span></p><p><b>MAN:</b> <span id="trL1-15-0">Yeah.</span> <span id="trL1-15-1">I’ve got no problem with that.</span> <span id="trL1-15-2">It sounds good, actually.</span> <span id="trL1-15-3">The last place I worked for was quite demanding too.</span> <span id="trL1-15-4">We had to make sure we gave a really high level of service.</span></p><p><b>WOMAN:</b> <span id="trL1-16-0">That’s good to hear because that will be equally important at Milo’s.</span> <span id="trL1-16-1">I know they want people who have an eye for detail.</span></p><p><b>MAN:</b> <span id="trL1-17-0">That’s fine.</span> <span id="trL1-17-1">I’m very used to working in that kind of environment.</span></p><p><b>WOMAN:</b> <span id="trL1-18-0">Perfect.</span> <span id="trL1-18-1">So the only other thing that’s required is good communication skills, so you’ll need to have a certificate in English.</span></p><p><b>MAN:</b> <span id="trL1-19-0">Sure.</span></p><p><b>WOMAN:</b> <span id="trL1-20-0">OK.</span> <span id="trL1-20-1">Let’s have a look at the current job vacancies at Milo’s.</span> <span id="trL1-20-2">The first one is in Wivenhoe Street.</span></p><p><b>MAN:</b> <span id="trL1-21-0">Sorry, where?</span></p><p><b>WOMAN:</b> <span id="trL1-22-0">Wivenhoe.</span> <span id="trL1-22-1">W-I-V-E-N-H-O-E.</span> <span id="trL1-22-2">It’s quite central, just off Cork Street.</span></p><p><b>MAN:</b> <span id="trL1-23-0">Oh right.</span></p><p><b>WOMAN:</b> <span id="trL1-24-0">They’re looking for a breakfast supervisor.</span></p><p><b>MAN:</b> <span id="trL1-25-0">That would be OK.</span></p><p><b>WOMAN:</b> <span id="trL1-26-0">So you’re probably familiar with the kind of responsibilities involved.</span> <span id="trL1-26-1">Obviously checking that all the portions are correct, etc., and then things like checking all the procedures for cleaning the equipment are being followed.</span></p><p><b>MAN:</b> <span id="trL1-27-0">OK.</span> <span id="trL1-27-1">And what about the salary?</span> <span id="trL1-27-2">In my last job I was getting £9.50 per hour.</span> <span id="trL1-27-3">I was hoping to get a bit more than that.</span></p><p><b>WOMAN:</b> <span id="trL1-28-0">Well, to begin with, you’d be getting £9.75 but that goes up to £11.25 after three months.</span></p><p><b>MAN:</b> <span id="trL1-29-0">That’s not too bad.</span> <span id="trL1-29-1">And I suppose it’s a very early start?</span></p><p><b>WOMAN:</b> <span id="trL1-30-0">Mmm.</span> <span id="trL1-30-1">That’s the only unattractive thing about this job.</span> <span id="trL1-30-2">But then you have the afternoons and evenings free.</span> <span id="trL1-30-3">So the restaurant starts serving breakfast from 7 a.m.</span> <span id="trL1-30-4">And you’d have to be there at 5.30 to set everything up.</span> <span id="trL1-30-5">But you’d be finished at 12.30.</span></p><p><b>MAN:</b> <span id="trL1-31-0">Mmm.</span> <span id="trL1-31-1">Well, as you say, there are advantages to that.</span></p><p><b>WOMAN:</b> <span id="trL1-32-0">Now, you might also be interested in the job at the City Road branch.</span> <span id="trL1-32-1">That’s for a junior chef, so again a position of responsibility.</span></p><p><b>MAN:</b> <span id="trL1-33-0">I might prefer that, actually.</span></p><p><b>WOMAN:</b> <span id="trL1-34-0">Right, well obviously this role would involve supporting the sous chef and other senior staff.</span> <span id="trL1-34-1">And you’d be responsible for making sure there’s enough stock each week – and sorting out all the deliveries.</span></p><p><b>MAN:</b> <span id="trL1-35-0">I’ve never done that before, but I imagine it’s fairly straightforward, once you get the hang of it.</span></p><p><b>WOMAN:</b> <span id="trL1-36-0">Yes, and you’d be working alongside more experienced staff to begin with, so I’m sure it wouldn’t be a problem.</span> <span id="trL1-36-1">The salary’s slightly higher here.</span> <span id="trL1-36-2">It’s an annual salary of £23,000.</span></p><p><b>MAN:</b> <span id="trL1-37-0">Right.</span></p><p><b>WOMAN:</b> <span id="trL1-38-0">I know that if they like you, it’s likely you’ll be promoted quite quickly.</span> <span id="trL1-38-1">So that’s worth thinking about.</span></p><p><b>MAN:</b> <span id="trL1-39-0">Yes.</span> <span id="trL1-39-1">It does sound interesting.</span> <span id="trL1-39-2">What are the hours like?</span></p><p><b>WOMAN:</b> <span id="trL1-40-0">The usual, I think.</span> <span id="trL1-40-1">There’s a lot of evening and weekend work, but they’re closed on Mondays.</span> <span id="trL1-40-2">But you do get one Sunday off every four weeks.</span> <span id="trL1-40-3">So would you like me to send off your …</span></p></div></details></section><section class="part" id="part2"><h3 class="part-title" id="part-2-questions-1120">PART 2 <em>Questions 11–20</em></h3><div class="audio"><span>🎧 Part 2</span><audio controls preload="none" src="audio/t2-part2.mp3"></audio></div><p><strong>Questions 11 and 12</strong></p><p><em>Choose <strong>TWO</strong> letters,
+<strong>A–E</strong>.</em></p><p class="qline" id="Lq11"><strong class="qn">11–12</strong> What are the <strong>TWO</strong> main reasons
+why this site has been chosen for the housing development?</p><blockquote class="opts" data-q="L11" data-q2="L12">
+<label class="opt"><input class="ans-opt" data-pick="2" data-q="L11" name="Lq11" type="checkbox" value="A"/><b>A</b><span> It has suitable geographical features.</span></label>
+<label class="opt"><input class="ans-opt" data-pick="2" data-q="L11" name="Lq11" type="checkbox" value="B"/><b>B</b><span> There is easy access to local facilities.</span></label>
+<label class="opt"><input class="ans-opt" data-pick="2" data-q="L11" name="Lq11" type="checkbox" value="C"/><b>C</b><span> It has good connections with the airport.</span></label>
+<label class="opt"><input class="ans-opt" data-pick="2" data-q="L11" name="Lq11" type="checkbox" value="D"/><b>D</b><span> The land is of little agricultural value.</span></label>
+<label class="opt"><input class="ans-opt" data-pick="2" data-q="L11" name="Lq11" type="checkbox" value="E"/><b>E</b><span> It will be convenient for workers.</span></label>
+</blockquote><p><strong>Questions 13 and 14</strong></p><p><em>Choose <strong>TWO</strong> letters,
+<strong>A–E</strong>.</em></p><p class="qline" id="Lq13"><strong class="qn">13–14</strong> Which <strong>TWO</strong> aspects of the
+planned housing development have people given positive feedback
+about?</p><blockquote class="opts" data-q="L13" data-q2="L14">
+<label class="opt"><input class="ans-opt" data-pick="2" data-q="L13" name="Lq13" type="checkbox" value="A"/><b>A</b><span> the facilities for cyclists</span></label>
+<label class="opt"><input class="ans-opt" data-pick="2" data-q="L13" name="Lq13" type="checkbox" value="B"/><b>B</b><span> the impact on the environment</span></label>
+<label class="opt"><input class="ans-opt" data-pick="2" data-q="L13" name="Lq13" type="checkbox" value="C"/><b>C</b><span> the encouragement of good relations between
+residents</span></label>
+<label class="opt"><input class="ans-opt" data-pick="2" data-q="L13" name="Lq13" type="checkbox" value="D"/><b>D</b><span> the low cost of all the accommodation</span></label>
+<label class="opt"><input class="ans-opt" data-pick="2" data-q="L13" name="Lq13" type="checkbox" value="E"/><b>E</b><span> the rural location</span></label>
+</blockquote><p><strong>Questions 15–20</strong></p><p><em>Label the map below.</em></p><p><em>Write the correct letter, <strong>A–I</strong>, next to Questions
+15–20.</em></p><p><img class="figure" src="img-t2/d8dc8bd56abc72b16f4a8ef359d2fcd204ee44a3.png"/></p><p class="qline" id="Lq15"><strong class="qn">15</strong> School <select aria-label="Câu 15" class="ans sel" data-q="L15"><option value="">15 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option><option value="H">H</option><option value="I">I</option></select></p><p class="qline" id="Lq16"><strong class="qn">16</strong> Sports centre <select aria-label="Câu 16" class="ans sel" data-q="L16"><option value="">16 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option><option value="H">H</option><option value="I">I</option></select></p><p class="qline" id="Lq17"><strong class="qn">17</strong> Clinic <select aria-label="Câu 17" class="ans sel" data-q="L17"><option value="">17 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option><option value="H">H</option><option value="I">I</option></select></p><p class="qline" id="Lq18"><strong class="qn">18</strong> Community centre <select aria-label="Câu 18" class="ans sel" data-q="L18"><option value="">18 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option><option value="H">H</option><option value="I">I</option></select></p><p class="qline" id="Lq19"><strong class="qn">19</strong> Supermarket <select aria-label="Câu 19" class="ans sel" data-q="L19"><option value="">19 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option><option value="H">H</option><option value="I">I</option></select></p><p class="qline" id="Lq20"><strong class="qn">20</strong> Playground <select aria-label="Câu 20" class="ans sel" data-q="L20"><option value="">20 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option><option value="H">H</option><option value="I">I</option></select></p><details class="script"><summary>📜 Lời thoại Part 2</summary><div class="script-body"><p><span id="trL2-0-0">Hello everyone.</span> <span id="trL2-0-1">It’s good to see that so many members of the public have shown up for our presentation on the new housing development planned on the outskirts of Nunston.</span> <span id="trL2-0-2">I’m Mark Reynolds and I’m Communications Manager at the development.</span></p><p><span id="trL2-1-0">I’ll start by giving you a brief overview of our plans for the development.</span> <span id="trL2-1-1">So one thing I’m sure you’ll want to know is why we’ve selected this particular site for a housing development.</span> <span id="trL2-1-2">At present it’s being used for farming, like much of the land around Nunston.</span> <span id="trL2-1-3">But because of the new industrial centre in Nunston, there’s a lot of demand for housing for employees in the region, as many employees are having to commute long distances at present.</span> <span id="trL2-1-4">Of course, there’s also the fact that we have an international airport just 20 minutes’ drive away, but although that’s certainly convenient, it wasn’t one of our major criteria for choosing the site.</span></p><p><span id="trL2-1-5">We were more interested in the fact that there’s an excellent hospital just 15 kilometres away, and a large secondary school even closer than that.</span> <span id="trL2-1-6">One drawback to the site is that it’s on quite a steep slope, but we’ve taken account of that in our planning so it shouldn’t be a major problem.</span></p><p><span id="trL2-2-0">We’ve had a lot of positive feedback about the plans.</span> <span id="trL2-2-1">People like the wide variety of accommodation types and prices, and the fact that it’s only a short drive to get out into the countryside from the development.</span> <span id="trL2-2-2">We were particularly pleased that so many people liked the designs for the layout of the development, with the majority of people saying it generally made a good impression and blended in well with the natural features of the landscape, with provision made for protecting trees and wildlife on the site.</span> <span id="trL2-2-3">Some people have mentioned that they’d like to see more facilities for cyclists, and we’ll look at that, but the overall feedback has been that the design and facilities of the development make it seem a place where people of all ages can live together happily.</span></p><p><span id="trL2-3-0">OK.</span> <span id="trL2-3-1">So I’ll put a map of the proposed development up on the screen.</span> <span id="trL2-3-2">You’ll see it’s bounded on the south side by the main road, which then goes on to Nunston.</span> <span id="trL2-3-3">Another boundary is formed by London Road, on the western side of the development.</span> <span id="trL2-3-4">Inside the development there’ll be about 400 houses and 3 apartment blocks.</span></p><p><span id="trL2-4-0">There’ll also be a school for children up to 11 years old.</span> <span id="trL2-4-1">If you look at the South Entrance at the bottom of the map, there’s a road from there that goes right up through the development.</span> <span id="trL2-4-2">The school will be on that road, at the corner of the second turning to the left.</span></p><p><span id="trL2-5-0">A large sports centre is planned with facilities for indoor and outdoor activities.</span> <span id="trL2-5-1">This will be on the western side of the development, just below the road that branches off from London Road.</span></p><p><span id="trL2-6-0">There’ll be a clinic where residents can go if they have any health problems.</span> <span id="trL2-6-1">Can you see the lake towards the top of the map?</span> <span id="trL2-6-2">The clinic will be just below this, to the right of a street of houses.</span></p><p><span id="trL2-7-0">There’ll also be a community centre for people of all ages.</span> <span id="trL2-7-1">On the northeast side of the development, there’ll be a row of specially designed houses specifically for residents over 65, and the community centre will be adjoining this.</span></p><p><span id="trL2-8-0">We haven’t forgotten about shopping.</span> <span id="trL2-8-1">There’ll be a supermarket between the two entrances to the development.</span> <span id="trL2-8-2">We’re planning to leave the three large trees near London Road, and it’ll be just to the south of these.</span></p><p><span id="trL2-9-0">It’s planned to have a playground for younger children.</span> <span id="trL2-9-1">If you look at the road that goes up from the South Entrance, you’ll see it curves round to the left at the top, and the playground will be in that curve, with nice views of the lake.</span></p><p><span id="trL2-10-0">OK, so now does anyone …</span></p></div></details></section><section class="part" id="part3"><h3 class="part-title" id="part-3-questions-2130">PART 3 <em>Questions 21–30</em></h3><div class="audio"><span>🎧 Part 3</span><audio controls preload="none" src="audio/t2-part3.mp3"></audio></div><p><strong>Questions 21–24</strong></p><p><em>Choose the correct letter, <strong>A</strong>, <strong>B</strong>
+or <strong>C</strong>.</em></p><p class="qline" id="Lq21"><strong class="qn">21</strong> Why do the students think the Laki eruption of
+1783 is so important?</p><blockquote class="opts" data-q="L21">
+<label class="opt"><input class="ans-opt" data-q="L21" name="Lq21" type="radio" value="A"/><b>A</b><span> It was the most severe eruption in modern
+times.</span></label>
+<label class="opt"><input class="ans-opt" data-q="L21" name="Lq21" type="radio" value="B"/><b>B</b><span> It led to the formal study of volcanoes.</span></label>
+<label class="opt"><input class="ans-opt" data-q="L21" name="Lq21" type="radio" value="C"/><b>C</b><span> It had a profound effect on society.</span></label>
+</blockquote><p class="qline" id="Lq22"><strong class="qn">22</strong> What surprised Adam about observations made at
+the time?</p><blockquote class="opts" data-q="L22">
+<label class="opt"><input class="ans-opt" data-q="L22" name="Lq22" type="radio" value="A"/><b>A</b><span> the number of places producing them</span></label>
+<label class="opt"><input class="ans-opt" data-q="L22" name="Lq22" type="radio" value="B"/><b>B</b><span> the contradictions in them</span></label>
+<label class="opt"><input class="ans-opt" data-q="L22" name="Lq22" type="radio" value="C"/><b>C</b><span> the lack of scientific data to support them</span></label>
+</blockquote><p class="qline" id="Lq23"><strong class="qn">23</strong> According to Michelle, what did the contemporary
+sources say about the Laki haze?</p><blockquote class="opts" data-q="L23">
+<label class="opt"><input class="ans-opt" data-q="L23" name="Lq23" type="radio" value="A"/><b>A</b><span> People thought it was similar to ordinary fog.</span></label>
+<label class="opt"><input class="ans-opt" data-q="L23" name="Lq23" type="radio" value="B"/><b>B</b><span> It was associated with health issues.</span></label>
+<label class="opt"><input class="ans-opt" data-q="L23" name="Lq23" type="radio" value="C"/><b>C</b><span> It completely blocked out the sun for weeks.</span></label>
+</blockquote><p class="qline" id="Lq24"><strong class="qn">24</strong> Adam corrects Michelle when she claims that
+Benjamin Franklin</p><blockquote class="opts" data-q="L24">
+<label class="opt"><input class="ans-opt" data-q="L24" name="Lq24" type="radio" value="A"/><b>A</b><span> came to the wrong conclusion about the cause of
+the haze.</span></label>
+<label class="opt"><input class="ans-opt" data-q="L24" name="Lq24" type="radio" value="B"/><b>B</b><span> was the first to identify the reason for the
+haze.</span></label>
+<label class="opt"><input class="ans-opt" data-q="L24" name="Lq24" type="radio" value="C"/><b>C</b><span> supported the opinions of other observers about
+the haze.</span></label>
+</blockquote><p><strong>Questions 25 and 26</strong></p><p><em>Choose <strong>TWO</strong> letters,
+<strong>A–E</strong>.</em></p><p class="qline" id="Lq25"><strong class="qn">25–26</strong> Which <strong>TWO</strong> issues following
+the Laki eruption surprised the students?</p><blockquote class="opts" data-q="L25" data-q2="L26">
+<label class="opt"><input class="ans-opt" data-pick="2" data-q="L25" name="Lq25" type="checkbox" value="A"/><b>A</b><span> how widespread the effects were</span></label>
+<label class="opt"><input class="ans-opt" data-pick="2" data-q="L25" name="Lq25" type="checkbox" value="B"/><b>B</b><span> how long-lasting the effects were</span></label>
+<label class="opt"><input class="ans-opt" data-pick="2" data-q="L25" name="Lq25" type="checkbox" value="C"/><b>C</b><span> the number of deaths it caused</span></label>
+<label class="opt"><input class="ans-opt" data-pick="2" data-q="L25" name="Lq25" type="checkbox" value="D"/><b>D</b><span> the speed at which the volcanic ash cloud
+spread</span></label>
+<label class="opt"><input class="ans-opt" data-pick="2" data-q="L25" name="Lq25" type="checkbox" value="E"/><b>E</b><span> how people ignored the warning signs</span></label>
+</blockquote><p><strong>Questions 27–30</strong></p><p><em>What comment do the students make about the impact of the Laki
+eruption on the following countries?</em></p><p><em>Choose <strong>FOUR</strong> answers from the box and write the
+correct letter, <strong>A–F</strong>, next to Questions 27–30.</em></p><table style="width:99%;">
+<colgroup>
+<col style="width: 98%"/>
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><p><strong>Comments</strong></p>
+<p><strong>A</strong> This country suffered the most severe loss of
+life.</p>
+<p><strong>B</strong> The impact on agriculture was predictable.</p>
+<p><strong>C</strong> There was a significant increase in deaths of
+young people.</p>
+<p><strong>D</strong> Animals suffered from a sickness.</p>
+<p><strong>E</strong> This country saw the highest rise in food prices
+in the world.</p>
+<p><strong>F</strong> It caused a particularly harsh winter.</p></td>
+</tr>
+</tbody>
+</table><p><strong>Countries</strong></p><p class="qline" id="Lq27"><strong class="qn">27</strong> Iceland <select aria-label="Câu 27" class="ans sel" data-q="L27"><option value="">27 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option></select></p><p class="qline" id="Lq28"><strong class="qn">28</strong> Egypt <select aria-label="Câu 28" class="ans sel" data-q="L28"><option value="">28 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option></select></p><p class="qline" id="Lq29"><strong class="qn">29</strong> UK <select aria-label="Câu 29" class="ans sel" data-q="L29"><option value="">29 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option></select></p><p class="qline" id="Lq30"><strong class="qn">30</strong> USA <select aria-label="Câu 30" class="ans sel" data-q="L30"><option value="">30 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option></select></p><details class="script"><summary>📜 Lời thoại Part 3</summary><div class="script-body"><p><b>ADAM:</b> <span id="trL3-0-0">So, Michelle, shall we make a start on our presentation?</span> <span id="trL3-0-1">We haven’t got that much time left.</span></p><p><b>MICHELLE:</b> <span id="trL3-1-0">No, Adam.</span> <span id="trL3-1-1">But at least we’ve done all the background reading.</span> <span id="trL3-1-2">I found it really interesting – I’d never even heard of the Laki eruption before this.</span></p><p><b>ADAM:</b> <span id="trL3-2-0">Me neither.</span> <span id="trL3-2-1">I suppose 1783 is a long time ago.</span></p><p><b>MICHELLE:</b> <span id="trL3-3-0">But it was a huge eruption and it had such devastating consequences.</span></p><p><b>ADAM:</b> <span id="trL3-4-0">I know.</span> <span id="trL3-4-1">It was great there were so many primary sources to look at.</span> <span id="trL3-4-2">It really gives you a sense of how catastrophic the volcano was.</span> <span id="trL3-4-3">People were really trying to make sense of the science for the first time.</span></p><p><b>MICHELLE:</b> <span id="trL3-5-0">That’s right.</span> <span id="trL3-5-1">But what I found more significant was how it impacted directly and indirectly on political events, as well as having massive social and economic consequences.</span></p><p><b>ADAM:</b> <span id="trL3-6-0">I know.</span> <span id="trL3-6-1">That should be the main focus of our presentation.</span></p><p><b>MICHELLE:</b> <span id="trL3-7-0">The observations made by people at the time were interesting, weren’t they?</span> <span id="trL3-7-1">I mean, they all gave a pretty consistent account of what happened, even if they didn’t always use the same terminology.</span></p><p><b>ADAM:</b> <span id="trL3-8-0">Yeah.</span> <span id="trL3-8-1">I was surprised there were so many weather stations established by that time – so, you know, you can see how the weather changed, often by the hour.</span></p><p><b>MICHELLE:</b> <span id="trL3-9-0">Right.</span> <span id="trL3-9-1">Writers at the time talked about the Laki haze to describe the volcanic fog that spread across Europe.</span> <span id="trL3-9-2">They all realised that this wasn’t the sort of fog they were used to – and of course this was in pre-industrial times – so they hadn’t experienced sulphur-smelling fog before.</span></p><p><b>ADAM:</b> <span id="trL3-10-0">No, that’s true.</span></p><p><b>MICHELLE:</b> <span id="trL3-11-0">Reports from the period blamed the haze for an increase in headaches, respiratory issues and asthma attacks.</span> <span id="trL3-11-1">And they all describe how it covered the sun and made it look a strange red colour.</span></p><p><b>ADAM:</b> <span id="trL3-12-0">Must have been very weird.</span></p><p><b>MICHELLE:</b> <span id="trL3-13-0">It’s interesting that Benjamin Franklin wrote about the haze.</span> <span id="trL3-13-1">Did you read that?</span> <span id="trL3-13-2">He was the American ambassador in Paris at the time.</span></p><p><b>ADAM:</b> <span id="trL3-14-0">Yeah.</span> <span id="trL3-14-1">At first no one realised that the haze was caused by the volcanic eruption in Iceland.</span></p><p><b>MICHELLE:</b> <span id="trL3-15-0">It was Benjamin Franklin who realised that before anyone else.</span></p><p><b>ADAM:</b> <span id="trL3-16-0">He’s often credited with that, apparently.</span> <span id="trL3-16-1">But a French naturalist beat him to it – I can’t remember his name.</span> <span id="trL3-16-2">I’d have to look it up.</span> <span id="trL3-16-3">Then other naturalists had the same idea – all independently of each other.</span></p><p><b>MICHELLE:</b> <span id="trL3-17-0">Oh right.</span> <span id="trL3-17-1">We should talk about the immediate impact of the eruption, which was obviously enormous – especially in Iceland, where so many people died.</span></p><p><b>ADAM:</b> <span id="trL3-18-0">Mmm.</span> <span id="trL3-18-1">You’d expect that – and the fact that the volcanic ash drifted so swiftly – but not that the effects would go on for so long.</span> <span id="trL3-18-2">Or that two years after the eruption, strange weather events were being reported as far away as North America and North Africa.</span></p><p><b>MICHELLE:</b> <span id="trL3-19-0">No.</span> <span id="trL3-19-1">I found all that hard to believe too.</span> <span id="trL3-19-2">It must have been terrible – and there was nothing anyone could do about it, even if they knew the ash cloud was coming in their direction.</span></p><p><b>MICHELLE:</b> <span id="trL3-20-0">We should run through some of the terrible consequences of the eruption experienced in different countries.</span> <span id="trL3-20-1">There’s quite a varied range.</span></p><p><b>ADAM:</b> <span id="trL3-21-0">Starting with Iceland, where the impact on farming was devastating.</span></p><p><b>MICHELLE:</b> <span id="trL3-22-0">Mmm.</span> <span id="trL3-22-1">One of the most dramatic things there was the effect on livestock as they grazed in the fields.</span> <span id="trL3-22-2">They were poisoned because they ate vegetation that had been contaminated with fluorine as a result of the volcanic fallout.</span></p><p><b>ADAM:</b> <span id="trL3-23-0">That was horrible.</span> <span id="trL3-23-1">In Egypt, the bizarre weather patterns led to a severe drought and as a result the Nile didn’t flood, which meant the crops all failed.</span></p><p><b>MICHELLE:</b> <span id="trL3-24-0">It’s so far from where the eruption happened and yet the famine there led to more people dying than any other country.</span> <span id="trL3-24-1">It was worse than the plague.</span></p><p><b>ADAM:</b> <span id="trL3-25-0">OK.</span> <span id="trL3-25-1">Then in the UK the mortality rate went up a lot – presumably from respiratory illnesses.</span> <span id="trL3-25-2">According to one report it was about double the usual number and included an unusually high percentage of people under the age of 25.</span></p><p><b>MICHELLE:</b> <span id="trL3-26-0">Mmm.</span> <span id="trL3-26-1">I think people will be surprised to hear that the weather in the USA was badly affected too.</span> <span id="trL3-26-2">George Washington even makes a note in his diary that they were snowbound until March in Virginia.</span> <span id="trL3-26-3">That was before he became president.</span></p><p><b>ADAM:</b> <span id="trL3-27-0">Yes, and there was ice floating down the Mississippi, which was unprecedented.</span></p><p><b>MICHELLE:</b> <span id="trL3-28-0">Astonishing, really.</span> <span id="trL3-28-1">Anyway, what do you think …</span></p></div></details></section><section class="part" id="part4"><h3 class="part-title" id="part-4-questions-3140">PART 4 <em>Questions 31–40</em></h3><div class="audio"><span>🎧 Part 4</span><audio controls preload="none" src="audio/t2-part4.mp3"></audio></div><p><em>Complete the notes below.</em></p><p><em>Write <strong>ONE WORD ONLY</strong> for each answer.</em></p><table>
+<colgroup>
+<col style="width: 100%"/>
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><p><strong>Pockets</strong></p>
+<p><strong>Reason for choice of subject</strong></p>
+<ul>
+<li>They are <input aria-label="Câu 31" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L31" placeholder="31" spellcheck="false" type="text"/>  but can be overlooked by
+consumers and designers.</li>
+</ul>
+<p><strong>Pockets in men’s clothes</strong></p>
+<ul>
+<li><p>Men started to wear <input aria-label="Câu 32" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L32" placeholder="32" spellcheck="false" type="text"/>  in the 18th
+century.</p></li>
+<li><p>A <input aria-label="Câu 33" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L33" placeholder="33" spellcheck="false" type="text"/>  sewed pockets into the lining of
+the garments.</p></li>
+<li><p>The wearer could use the pockets for small items.</p></li>
+<li><p>Bigger pockets might be made for men who belonged to a certain
+type of <input aria-label="Câu 34" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L34" placeholder="34" spellcheck="false" type="text"/>  .</p></li>
+</ul>
+<p><strong>Pockets in women’s clothes</strong></p>
+<ul>
+<li><p>Women’s pockets were less <input aria-label="Câu 35" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L35" placeholder="35" spellcheck="false" type="text"/>  than
+men’s.</p></li>
+<li><p>Women were very concerned about pickpockets.</p></li>
+<li><p>Pockets were produced in pairs using <input aria-label="Câu 36" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L36" placeholder="36" spellcheck="false" type="text"/> 
+to link them together.</p></li>
+<li><p>Pockets hung from the women’s <input aria-label="Câu 37" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L37" placeholder="37" spellcheck="false" type="text"/>  under
+skirts and petticoats.</p></li>
+<li><p>Items such as <input aria-label="Câu 38" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L38" placeholder="38" spellcheck="false" type="text"/>  could be reached
+through a gap in the material.</p></li>
+<li><p>Pockets, of various sizes, stayed inside clothing for many
+decades.</p></li>
+<li><p>When dresses changed shape, hidden pockets had a negative effect
+on the <input aria-label="Câu 39" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L39" placeholder="39" spellcheck="false" type="text"/>  of women.</p></li>
+<li><p>Bags called ‘pouches’ became popular, before women carried a
+<input aria-label="Câu 40" autocapitalize="off" autocomplete="off" class="ans gap" data-q="L40" placeholder="40" spellcheck="false" type="text"/>  .</p></li>
+</ul></td>
+</tr>
+</tbody>
+</table><details class="script"><summary>📜 Lời thoại Part 4</summary><div class="script-body"><p><span id="trL4-0-0">Good morning.</span> <span id="trL4-0-1">Now, we’ve been asked to choose an aspect of European clothing or fashion and to talk about its development over time.</span></p><p><span id="trL4-1-0">I decided to focus on a rather small area of clothing and that’s pockets.</span> <span id="trL4-1-1">I chose pockets for two reasons, really.</span> <span id="trL4-1-2">We all have them – in jeans, jackets, coats, for example – and even though we often carry bags or briefcases as well, nothing is quite as convenient as being able to pop your phone or credit card into your pocket.</span> <span id="trL4-1-3">Yet, I suspect that, other than that, people don’t really think about pockets too much and they’re rather overlooked as a fashion item.</span></p><p><span id="trL4-2-0">It’s certainly very interesting to go back in time and see how pockets developed for men and women.</span> <span id="trL4-2-1">In the 18th century, fashions were quite different from the way they are now, and pockets were too.</span> <span id="trL4-2-2">If we think about male fashion first … that was the time when suits became popular.</span> <span id="trL4-2-3">Trousers were knee-length only and referred to as ‘breeches’, the waistcoats were short and the jackets were long, but all three garments were lined with material and pockets were sewn into this cloth by whichever tailor the customer used.</span> <span id="trL4-2-4">The wearer could then carry small objects such as pencils or coins on their person and reach them through a gap in the lining.</span></p><p><span id="trL4-2-5">Coat pockets became increasingly decorative on the outside for men who wanted to look stylish, but they were often larger but plainer if the wearer was someone with a profession who needed to carry medical instruments – a doctor or physician, for example.</span></p><p><span id="trL4-3-0">The development of women’s pockets was a little different.</span> <span id="trL4-3-1">For one thing, they weren’t nearly as visible or as easy to reach as men’s.</span> <span id="trL4-3-2">In the 18th and 19th centuries, women carried numerous possessions on their person and some of these could be worth a lot of money.</span> <span id="trL4-3-3">Women were more vulnerable to theft and wealthy women, in particular, worried constantly about pickpockets.</span> <span id="trL4-3-4">So – what they did was to have a pair of pockets made that were tied together with string.</span></p><p><span id="trL4-3-5">The pockets were made of fabric, which might be recycled cloth if the wearer had little money or something more expensive, such as linen, sometimes featuring very delicate embroidery.</span> <span id="trL4-3-6">Women tied the pockets around their waist so that they hung beneath their clothes.</span> <span id="trL4-3-7">Remember, skirts were long then and there was plenty of room to hide a whole range of small possessions between the layers of petticoats that were commonly worn.</span> <span id="trL4-3-8">They would have an opening in the folds of their skirts through which they could reach whatever they needed, like their perfume.</span> <span id="trL4-3-9">Working women, of course, also needed to carry around items that they might use for whatever job or trade they were involved in, but their pairs of pockets still remained on the inside of their clothing, they just got bigger or longer – sometimes reaching down to their knees!</span></p><p><span id="trL4-4-0">So the tie-on pockets went well into the 19th century and only changed when fashion altered towards the end of that period.</span> <span id="trL4-4-1">That’s when dresses became tighter and less bulky, and the pairs of pockets became very noticeable – they stood out too much and detracted from the woman’s image.</span> <span id="trL4-4-2">Women who had been used to carrying around a range of personal possessions – and still wanted to – needed somewhere to carry these items about their person.</span> <span id="trL4-4-3">That was when small bags, or pouches as they were known, came into fashion and, of course, they inevitably led on to the handbag of more modern times, particularly when fashion removed pockets altogether.</span></p></div></details></section>
+  </div>
+  <div class="sect" id="sectR">
+    <div class="panel" data-s="R">
+      <h2>Phiếu trả lời Reading</h2>
+      <div class="grid"></div>
+      <div class="row"><button class="btn" data-act="submit">Nộp bài &amp; chấm điểm</button><button class="btn alt" data-act="reset">Làm lại</button><span class="score"></span></div>
+      <p class="hint">Bấm số câu để nhảy tới câu đó. Bài làm được tự lưu trên máy này. Thời gian thi thật: 60 phút.</p>
+    </div>
+    <section class="passage" id="passage1"><h3 class="part-title" id="reading-passage-1-questions-113">READING PASSAGE 1 <em>Questions
+1–13</em></h3><div class="split"><div class="ptext"><p><em>You should spend about 20 minutes on <strong>Questions
+1–13</strong>, which are based on Reading Passage 1 below.</em></p><p><strong>Stonehenge</strong></p><p>For centuries, historians and archaeologists have puzzled over the
+many mysteries of Stonehenge, a prehistoric monument that took an
+estimated 1,500 years to erect. Located on Salisbury Plain in southern
+England, it is comprised of roughly 100 massive upright stones placed in
+a circular layout.</p><p>Archaeologists believe England’s most iconic prehistoric ruin was
+built in several stages, with the earliest constructed 5,000 or more
+years ago. First, Neolithic* Britons used primitive tools, which may
+have been fashioned out of deer antlers, to dig a massive circular ditch
+and bank, or henge. Deep pits dating back to that era and located within
+the circle may have once held a ring of timber posts, according to some
+scholars.</p><p>Several hundred years later, it is thought, Stonehenge’s builders
+hoisted an estimated 80 bluestones, 43 of which remain today, into
+standing positions and placed them in either a horseshoe or circular
+formation. These stones have been traced all the way to the Preseli
+Hills in Wales, some 300 kilometres from Stonehenge. How, then, did
+prehistoric builders without sophisticated tools or engineering haul
+these boulders, which weigh up to four tons, over such a great
+distance?</p><p>According to one long-standing theory among archaeologists,
+Stonehenge’s builders fashioned sledges and rollers out of tree trunks
+to lug the bluestones from the Preseli Hills. They then transferred the
+boulders onto rafts and floated them first along the Welsh coast and
+then up the River Avon toward Salisbury Plain; alternatively, they may
+have towed each stone with a fleet of vessels. More recent
+archaeological hypotheses have them transporting the bluestones with
+supersized wicker baskets on a combination of ball bearings and long
+grooved planks, hauled by oxen.</p><p>As early as the 1970s, geologists have been adding their voices to
+the debate over how Stonehenge came into being. Challenging the classic
+image of industrious builders pushing, carting, rolling or hauling giant
+stones from faraway Wales, some scientists have suggested that it was
+glaciers, not humans, that carried the bluestones to Salisbury Plain.
+Most archaeologists have remained sceptical about this theory, however,
+wondering how the forces of nature could possibly have delivered the
+exact number of stones needed to complete the circle.</p><p>The third phase of construction took place around 2000 BCE. At this
+point, sandstone slabs – known as ‘sarsens’ – were arranged into an
+outer crescent or ring; some were assembled into the iconic three-pieced
+structures called trilithons that stand tall in the centre of
+Stonehenge. Some 50 of these stones are now visible on the site, which
+may once have contained many more. Radiocarbon dating has revealed that
+work continued at Stonehenge until roughly 1600 BCE, with the bluestones
+in particular being repositioned multiple times.</p><p>But who were the builders of Stonehenge? In the 17th century,
+archaeologist John Aubrey made the claim that Stonehenge was the work of
+druids, who had important religious, judicial and political roles in
+Celtic** society. This theory was widely popularized by the antiquarian
+William Stukeley, who had unearthed primitive graves at the site. Even
+today, people who identify as modern druids continue to gather at
+Stonehenge for the summer solstice. However, in the mid-20th century,
+radiocarbon dating demonstrated that Stonehenge stood more than 1,000
+years before the Celts inhabited the region.</p><p>Many modern historians and archaeologists now agree that several
+distinct tribes of people contributed to Stonehenge, each undertaking a
+different phase of its construction. Bones, tools and other artefacts
+found on the site seem to support this hypothesis. The first stage was
+achieved by Neolithic agrarians who were likely to have been indigenous
+to the British Isles. Later, it is believed, groups with advanced tools
+and a more communal way of life left their mark on the site. Some
+believe that they were immigrants from the European continent, while
+others maintain that they were probably native Britons, descended from
+the original builders.</p><p>If the facts surrounding the architects and construction of
+Stonehenge remain shadowy at best, the purpose of the striking monument
+is even more of a mystery. While there is consensus among the majority
+of modern scholars that Stonehenge once served the function of burial
+ground, they have yet to determine what other purposes it had.</p><p>In the 1960s, the astronomer Gerald Hawkins suggested that the
+cluster of megalithic stones operated as a form of calendar, with
+different points corresponding to astrological phenomena such as
+solstices, equinoxes and eclipses occurring at different times of the
+year. While his theory has received a considerable amount of attention
+over the decades, critics maintain that Stonehenge’s builders probably
+lacked the knowledge necessary to predict such events or that England’s
+dense cloud cover would have obscured their view of the skies.</p><p>More recently, signs of illness and injury in the human remains
+unearthed at Stonehenge led a group of British archaeologists to
+speculate that it was considered a place of healing, perhaps because
+bluestones were thought to have curative powers.</p><p><em>* Neolithic – The era, also known as the New Stone Age, which
+began around 12,000 years ago and ended around 3500 BCE</em></p><p><em>** Celtic – The Celts were people who lived in Britain and
+northwest Europe during the Iron Age from 600 BCE to 43 CE</em></p></div><div class="pqs"><p><strong>Questions 1–8</strong></p><p><em>Complete the notes below.</em></p><p><em>Choose <strong>NO MORE THAN TWO WORDS</strong> from the passage
+for each answer.</em></p><p><em>Write your answers in boxes 1–8 on your answer sheet.</em></p><table>
+<colgroup>
+<col style="width: 101%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><p><strong>Stonehenge</strong></p>
+<p><strong>Construction</strong></p>
+<p>Stage 1:</p>
+<ul>
+<li><p>the ditch and henge were dug, possibly using tools made from
+<input aria-label="Câu 1" autocapitalize="off" autocomplete="off" class="ans gap" data-q="R1" placeholder="1" spellcheck="false" type="text"/> </p></li>
+<li><p><input aria-label="Câu 2" autocapitalize="off" autocomplete="off" class="ans gap" data-q="R2" placeholder="2" spellcheck="false" type="text"/>  may have been arranged in deep pits
+inside the circle</p></li>
+</ul>
+<p>Stage 2:</p>
+<ul>
+<li><p>bluestones from the Preseli Hills were placed in standing
+position</p></li>
+<li><p>theories about the transportation of the bluestones:</p>
+<ul>
+<li><p>archaeological:</p>
+<ul>
+<li><p>builders used <input aria-label="Câu 3" autocapitalize="off" autocomplete="off" class="ans gap" data-q="R3" placeholder="3" spellcheck="false" type="text"/>  to make sledges and
+rollers</p></li>
+<li><p><input aria-label="Câu 4" autocapitalize="off" autocomplete="off" class="ans gap" data-q="R4" placeholder="4" spellcheck="false" type="text"/>  pulled them on giant baskets</p></li>
+</ul></li>
+<li><p>geological:</p>
+<ul>
+<li>they were brought from Wales by <input aria-label="Câu 5" autocapitalize="off" autocomplete="off" class="ans gap" data-q="R5" placeholder="5" spellcheck="false" type="text"/> </li>
+</ul></li>
+</ul></li>
+</ul>
+<p>Stage 3:</p>
+<ul>
+<li>sandstone slabs were arranged into an outer crescent or ring</li>
+</ul>
+<p><strong>Builders</strong></p>
+<ul>
+<li>a theory arose in the 17th century that its builders were Celtic
+<input aria-label="Câu 6" autocapitalize="off" autocomplete="off" class="ans gap" data-q="R6" placeholder="6" spellcheck="false" type="text"/> </li>
+</ul>
+<p><strong>Purpose</strong></p>
+<ul>
+<li><p>many experts agree it has been used as a <input aria-label="Câu 7" autocapitalize="off" autocomplete="off" class="ans gap" data-q="R7" placeholder="7" spellcheck="false" type="text"/>
+ site</p></li>
+<li><p>in the 1960s, it was suggested that it worked as a kind of
+<input aria-label="Câu 8" autocapitalize="off" autocomplete="off" class="ans gap" data-q="R8" placeholder="8" spellcheck="false" type="text"/> </p></li>
+</ul></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+</tr>
+</tbody>
+</table><p><strong>Questions 9–13</strong></p><p><em>Do the following statements agree with the information given in
+Reading Passage 1?</em></p><p><em>In boxes 9–13 on your answer sheet, write</em></p><blockquote>
+<p><strong>TRUE</strong> <em>if the statement agrees with the
+information</em></p>
+<p><strong>FALSE</strong> <em>if the statement contradicts the
+information</em></p>
+<p><strong>NOT GIVEN</strong> <em>if there is no information on
+this</em></p>
+</blockquote><p class="qline" id="Rq9"><strong class="qn">9</strong> During the third phase of construction, sandstone
+slabs were placed in both the outer areas and the middle of the
+Stonehenge site. <select aria-label="Câu 9" class="ans sel" data-q="R9"><option value="">9 ▾</option><option value="TRUE">TRUE</option><option value="FALSE">FALSE</option><option value="NOT GIVEN">NOT GIVEN</option></select></p><p class="qline" id="Rq10"><strong class="qn">10</strong> There is scientific proof that the bluestones
+stood in the same spot until approximately 1600 BCE. <select aria-label="Câu 10" class="ans sel" data-q="R10"><option value="">10 ▾</option><option value="TRUE">TRUE</option><option value="FALSE">FALSE</option><option value="NOT GIVEN">NOT GIVEN</option></select></p><p class="qline" id="Rq11"><strong class="qn">11</strong> John Aubrey’s claim about Stonehenge was
+supported by 20th-century findings. <select aria-label="Câu 11" class="ans sel" data-q="R11"><option value="">11 ▾</option><option value="TRUE">TRUE</option><option value="FALSE">FALSE</option><option value="NOT GIVEN">NOT GIVEN</option></select></p><p class="qline" id="Rq12"><strong class="qn">12</strong> Objects discovered at Stonehenge seem to indicate
+that it was constructed by a number of different groups of people. <select aria-label="Câu 12" class="ans sel" data-q="R12"><option value="">12 ▾</option><option value="TRUE">TRUE</option><option value="FALSE">FALSE</option><option value="NOT GIVEN">NOT GIVEN</option></select></p><p class="qline" id="Rq13"><strong class="qn">13</strong> Criticism of Gerald Hawkins’ theory about
+Stonehenge has come mainly from other astronomers. <select aria-label="Câu 13" class="ans sel" data-q="R13"><option value="">13 ▾</option><option value="TRUE">TRUE</option><option value="FALSE">FALSE</option><option value="NOT GIVEN">NOT GIVEN</option></select></p></div></div></section><section class="passage" id="passage2"><h3 class="part-title" id="reading-passage-2-questions-1426">READING PASSAGE 2
+<em>Questions 14–26</em></h3><div class="split"><div class="ptext"><p><em>You should spend about 20 minutes on <strong>Questions
+14–26</strong>, which are based on Reading Passage 2 below.</em></p><p><strong>Living with artificial intelligence</strong></p><p><em>Powerful artificial intelligence (AI) needs to be reliably
+aligned with human values, but does this mean AI will eventually have to
+police those values?</em></p><p>This has been the decade of AI, with one astonishing feat after
+another. A chess-playing AI that can defeat not only all human chess
+players, but also all previous human-programmed chess machines, after
+learning the game in just four hours? That’s yesterday’s news, what’s
+next? True, these prodigious accomplishments are all in so-called narrow
+AI, where machines perform highly specialised tasks. But many experts
+believe this restriction is very temporary. By mid-century, we may have
+artificial general intelligence (AGI) – machines that can achieve
+human-level performance on the full range of tasks that we ourselves can
+tackle.</p><p>If so, there’s little reason to think it will stop there. Machines
+will be free of many of the physical constraints on human intelligence.
+Our brains run at slow biochemical processing speeds on the power of a
+light bulb, and their size is restricted by the dimensions of the human
+birth canal. It is remarkable what they accomplish, given these
+handicaps. But they may be as far from the physical limits of thought as
+our eyes are from the incredibly powerful Webb Space Telescope.</p><p>Once machines are better than us at designing even smarter machines,
+progress towards these limits could accelerate. What would this mean for
+us? Could we ensure a safe and worthwhile coexistence with such
+machines? On the plus side, AI is already useful and profitable for many
+things, and super AI might be expected to be super useful, and super
+profitable. But the more powerful AI becomes, the more important it will
+be to specify its goals with great care. Folklore is full of tales of
+people who ask for the wrong thing, with disastrous consequences – King
+Midas, for example, might have wished that everything he touched turned
+to gold, but didn’t really intend this to apply to his breakfast.</p><p>So we need to create powerful AI machines that are ‘human-friendly’ –
+that have goals reliably aligned with our own values. One thing that
+makes this task difficult is that we are far from reliably
+human-friendly ourselves. We do many terrible things to each other and
+to many other creatures with whom we share the planet. If
+superintelligent machines don’t do a lot better than us, we’ll be in
+deep trouble. We’ll have powerful new intelligence amplifying the dark
+sides of our own fallible natures.</p><p>For safety’s sake, then, we want the machines to be ethically as well
+as cognitively superhuman. We want them to aim for the moral high
+ground, not for the troughs in which many of us spend some of our time.
+Luckily they’ll be smart enough for the job. If there are routes to the
+moral high ground, they’ll be better than us at finding them, and
+steering us in the right direction.</p><p>However, there are two big problems with this utopian vision. One is
+how we get the machines started on the journey, the other is what it
+would mean to reach this destination. The ‘getting started’ problem is
+that we need to tell the machines what they’re looking for with
+sufficient clarity that we can be confident they will find it – whatever
+‘it’ actually turns out to be. This won’t be easy, given that we are
+tribal creatures and conflicted about the ideals ourselves. We often
+ignore the suffering of strangers, and even contribute to it, at least
+indirectly. How then, do we point machines in the direction of something
+better?</p><p>As for the ‘destination’ problem, we might, by putting ourselves in
+the hands of these moral guides and gatekeepers, be sacrificing our own
+autonomy – an important part of what makes us human. Machines who are
+better than us at sticking to the moral high ground may be expected to
+discourage some of the lapses we presently take for granted. We might
+lose our freedom to discriminate in favour of our own communities, for
+example.</p><p>Loss of freedom to behave badly isn’t always a bad thing, of course:
+denying ourselves the freedom to put children to work in factories, or
+to smoke in restaurants are signs of progress. But are we ready for
+ethical silicon police limiting our options? They might be so good at
+doing it that we won’t notice them; but few of us are likely to welcome
+such a future.</p><p>These issues might seem far-fetched, but they are to some extent
+already here. AI already has some input into how resources are used in
+our National Health Service (NHS) here in the UK, for example. If it was
+given a greater role, it might do so much more efficiently than humans
+can manage, and act in the interests of taxpayers and those who use the
+health system. However, we’d be depriving some humans (e.g. senior
+doctors) of the control they presently enjoy. Since we’d want to ensure
+that people are treated equally and that policies are fair, the goals of
+AI would need to be specified correctly.</p><p>We have a new powerful technology to deal with – itself, literally, a
+new way of thinking. For our own safety, we need to point these new
+thinkers in the right direction, and get them to act well for us. It is
+not yet clear whether this is possible, but if it is, it will require a
+cooperative spirit, and a willingness to set aside self-interest.</p><p>Both general intelligence and moral reasoning are often thought to be
+uniquely human capacities. But safety seems to require that we think of
+them as a package: if we are to give general intelligence to machines,
+we’ll need to give them moral authority, too. And where exactly would
+that leave human beings? All the more reason to think about the
+destination now, and to be careful about what we wish for.</p></div><div class="pqs"><p><strong>Questions 14–19</strong></p><p><em>Choose the correct letter, <strong>A</strong>,
+<strong>B</strong>, <strong>C</strong> or <strong>D</strong>.</em></p><p><em>Write the correct letter in boxes 14–19 on your answer
+sheet.</em></p><p class="qline" id="Rq14"><strong class="qn">14</strong> What point does the writer make about AI in the
+first paragraph?</p><blockquote class="opts" data-q="R14">
+<label class="opt"><input class="ans-opt" data-q="R14" name="Rq14" type="radio" value="A"/><b>A</b><span> It is difficult to predict how quickly AI will
+progress.</span></label>
+<label class="opt"><input class="ans-opt" data-q="R14" name="Rq14" type="radio" value="B"/><b>B</b><span> Much can be learned about the use of AI in chess
+machines.</span></label>
+<label class="opt"><input class="ans-opt" data-q="R14" name="Rq14" type="radio" value="C"/><b>C</b><span> The future is unlikely to see limitations on the
+capabilities of AI.</span></label>
+<label class="opt"><input class="ans-opt" data-q="R14" name="Rq14" type="radio" value="D"/><b>D</b><span> Experts disagree on which specialised tasks AI
+will be able to perform.</span></label>
+</blockquote><p class="qline" id="Rq15"><strong class="qn">15</strong> What is the writer doing in the second
+paragraph?</p><blockquote class="opts" data-q="R15">
+<label class="opt"><input class="ans-opt" data-q="R15" name="Rq15" type="radio" value="A"/><b>A</b><span> explaining why machines will be able to outperform
+humans</span></label>
+<label class="opt"><input class="ans-opt" data-q="R15" name="Rq15" type="radio" value="B"/><b>B</b><span> describing the characteristics that humans and
+machines share</span></label>
+<label class="opt"><input class="ans-opt" data-q="R15" name="Rq15" type="radio" value="C"/><b>C</b><span> giving information about the development of
+machine intelligence</span></label>
+<label class="opt"><input class="ans-opt" data-q="R15" name="Rq15" type="radio" value="D"/><b>D</b><span> indicating which aspects of humans are the most
+advanced</span></label>
+</blockquote><p class="qline" id="Rq16"><strong class="qn">16</strong> Why does the writer mention the story of King
+Midas?</p><blockquote class="opts" data-q="R16">
+<label class="opt"><input class="ans-opt" data-q="R16" name="Rq16" type="radio" value="A"/><b>A</b><span> to compare different visions of progress</span></label>
+<label class="opt"><input class="ans-opt" data-q="R16" name="Rq16" type="radio" value="B"/><b>B</b><span> to illustrate that poorly defined objectives can
+go wrong</span></label>
+<label class="opt"><input class="ans-opt" data-q="R16" name="Rq16" type="radio" value="C"/><b>C</b><span> to emphasise the need for cooperation</span></label>
+<label class="opt"><input class="ans-opt" data-q="R16" name="Rq16" type="radio" value="D"/><b>D</b><span> to point out the financial advantages of a course
+of action</span></label>
+</blockquote><p class="qline" id="Rq17"><strong class="qn">17</strong> What challenge does the writer refer to in the
+fourth paragraph?</p><blockquote class="opts" data-q="R17">
+<label class="opt"><input class="ans-opt" data-q="R17" name="Rq17" type="radio" value="A"/><b>A</b><span> encouraging humans to behave in a more principled
+way</span></label>
+<label class="opt"><input class="ans-opt" data-q="R17" name="Rq17" type="radio" value="B"/><b>B</b><span> deciding which values we want AI to share with
+us</span></label>
+<label class="opt"><input class="ans-opt" data-q="R17" name="Rq17" type="radio" value="C"/><b>C</b><span> creating a better world for all creatures on the
+planet</span></label>
+<label class="opt"><input class="ans-opt" data-q="R17" name="Rq17" type="radio" value="D"/><b>D</b><span> ensuring AI is more human-friendly than we are
+ourselves</span></label>
+</blockquote><p class="qline" id="Rq18"><strong class="qn">18</strong> What does the writer suggest about the future of
+AI in the fifth paragraph?</p><blockquote class="opts" data-q="R18">
+<label class="opt"><input class="ans-opt" data-q="R18" name="Rq18" type="radio" value="A"/><b>A</b><span> The safety of machines will become a key
+issue.</span></label>
+<label class="opt"><input class="ans-opt" data-q="R18" name="Rq18" type="radio" value="B"/><b>B</b><span> It is hard to know what impact machines will have
+on the world.</span></label>
+<label class="opt"><input class="ans-opt" data-q="R18" name="Rq18" type="radio" value="C"/><b>C</b><span> Machines will be superior to humans in certain
+respects.</span></label>
+<label class="opt"><input class="ans-opt" data-q="R18" name="Rq18" type="radio" value="D"/><b>D</b><span> Many humans will oppose machines having a wider
+role.</span></label>
+</blockquote><p class="qline" id="Rq19"><strong class="qn">19</strong> Which of the following best summarises the
+writer’s argument in the sixth paragraph?</p><blockquote class="opts" data-q="R19">
+<label class="opt"><input class="ans-opt" data-q="R19" name="Rq19" type="radio" value="A"/><b>A</b><span> More intelligent machines will result in greater
+abuses of power.</span></label>
+<label class="opt"><input class="ans-opt" data-q="R19" name="Rq19" type="radio" value="B"/><b>B</b><span> Machine learning will share very few features with
+human learning.</span></label>
+<label class="opt"><input class="ans-opt" data-q="R19" name="Rq19" type="radio" value="C"/><b>C</b><span> There are a limited number of people with the
+knowledge to program machines.</span></label>
+<label class="opt"><input class="ans-opt" data-q="R19" name="Rq19" type="radio" value="D"/><b>D</b><span> Human shortcomings will make creating the machines
+we need more difficult.</span></label>
+</blockquote><p><strong>Questions 20–23</strong></p><p><em>Do the following statements agree with the claims of the writer
+in Reading Passage 2?</em></p><p><em>In boxes 20–23 on your answer sheet, write</em></p><blockquote>
+<p><strong>YES</strong> <em>if the statement agrees with the claims of
+the writer</em></p>
+<p><strong>NO</strong> <em>if the statement contradicts the claims of
+the writer</em></p>
+<p><strong>NOT GIVEN</strong> <em>if it is impossible to say what the
+writer thinks about this</em></p>
+</blockquote><p class="qline" id="Rq20"><strong class="qn">20</strong> Machines with the ability to make moral decisions
+may prevent us from promoting the interests of our communities. <select aria-label="Câu 20" class="ans sel" data-q="R20"><option value="">20 ▾</option><option value="YES">YES</option><option value="NO">NO</option><option value="NOT GIVEN">NOT GIVEN</option></select></p><p class="qline" id="Rq21"><strong class="qn">21</strong> Silicon police would need to exist in large
+numbers in order to be effective. <select aria-label="Câu 21" class="ans sel" data-q="R21"><option value="">21 ▾</option><option value="YES">YES</option><option value="NO">NO</option><option value="NOT GIVEN">NOT GIVEN</option></select></p><p class="qline" id="Rq22"><strong class="qn">22</strong> Many people are comfortable with the prospect of
+their independence being restricted by machines. <select aria-label="Câu 22" class="ans sel" data-q="R22"><option value="">22 ▾</option><option value="YES">YES</option><option value="NO">NO</option><option value="NOT GIVEN">NOT GIVEN</option></select></p><p class="qline" id="Rq23"><strong class="qn">23</strong> If we want to ensure that machines act in our
+best interests, we all need to work together. <select aria-label="Câu 23" class="ans sel" data-q="R23"><option value="">23 ▾</option><option value="YES">YES</option><option value="NO">NO</option><option value="NOT GIVEN">NOT GIVEN</option></select></p><p><strong>Questions 24–26</strong></p><p><em>Complete the summary using the list of phrases,
+<strong>A–F</strong>, below.</em></p><p><em>Write the correct letter, <strong>A–F</strong>, in boxes 24–26 on
+your answer sheet.</em></p><table>
+<colgroup>
+<col style="width: 100%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><p><strong>Using AI in the UK health system</strong></p>
+<p>AI currently has a limited role in the way <select aria-label="Câu 24" class="ans sel" data-q="R24"><option value="">24 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option></select>
+ are allocated in the health service. The positive aspect of AI
+having a bigger role is that it would be more efficient and lead to
+patient benefits. However, such a change would result, for example, in
+certain <select aria-label="Câu 25" class="ans sel" data-q="R25"><option value="">25 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option></select>  not having their current level of
+<select aria-label="Câu 26" class="ans sel" data-q="R26"><option value="">26 ▾</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option></select>  It is therefore important that AI goals
+are appropriate so that discriminatory practices could be
+avoided.</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+</tr>
+</tbody>
+</table><table>
+<colgroup>
+<col style="width: 100%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><p><strong>A</strong> medical practitioners</p>
+<p><strong>B</strong> specialised tasks</p>
+<p><strong>C</strong> available resources</p>
+<p><strong>D</strong> reduced illness</p>
+<p><strong>E</strong> professional authority</p>
+<p><strong>F</strong> technology experts</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+</tr>
+</tbody>
+</table></div></div></section><section class="passage" id="passage3"><h3 class="part-title" id="reading-passage-3-questions-2740">READING PASSAGE 3
+<em>Questions 27–40</em></h3><div class="split"><div class="ptext"><p><em>You should spend about 20 minutes on <strong>Questions
+27–40</strong>, which are based on Reading Passage 3 below.</em></p><p><strong>An ideal city</strong></p><p><em>Leonardo da Vinci’s ideal city was centuries ahead of its
+time</em></p><p>The word ‘genius’ is universally associated with the name of Leonardo
+da Vinci. A true Renaissance man, he embodied scientific spirit,
+artistic talent and humanist sensibilities. Five hundred years have
+passed since Leonardo died in his home at Château du Clos Lucé, outside
+Tours, France. Yet far from fading into insignificance, his thinking has
+carried down the centuries and still surprises today.</p><p>The Renaissance marked the transition from the 15th century to
+modernity and took place after the spread of the plague in the 14th
+century, which caused a global crisis resulting in some 200 million
+deaths across Europe and Asia. Today, the world is on the cusp of a
+climate crisis, which is predicted to cause widespread displacement,
+extinctions and death, if left unaddressed. Then, as now, radical
+solutions were called for to revolutionise the way people lived and
+safeguard humanity against catastrophe.</p><p>Around 1486 – after a pestilence that killed half the population in
+Milan, Italy – Leonardo turned his thoughts to urban planning problems.
+Following a typical Renaissance trend, he began to work on an ‘ideal
+city’ project, which – due to its excessive costs – would remain
+unfulfilled. Yet given that unsustainable urban models are a key cause
+of global climate change today, it’s only natural to wonder how Leonardo
+might have changed the shape of modern cities.</p><p>Although the Renaissance is renowned as an era of incredible progress
+in art and architecture, it is rarely noted that the 15th century also
+marked the birth of urbanism as a true academic discipline. The rigour
+and method behind the conscious conception of a city had been largely
+missing in Western thought until the moment when prominent Renaissance
+men pushed forward large-scale urban projects in Italy, such as the
+reconfiguration of the town of Pienza and the expansion of the city of
+Ferrara. These works surely inspired Leonardo’s decision to rethink the
+design of medieval cities, with their winding and overcrowded streets
+and with houses piled against one another.</p><p>It is not easy to identify a coordinated vision of Leonardo’s ideal
+city because of his disordered way of working with notes and sketches.
+But from the largest collection of Leonardo’s papers ever assembled, a
+series of innovative thoughts can be reconstructed regarding the
+foundation of a new city along the Ticino River, which runs from
+Switzerland into Italy and is 248 kilometres long. He designed the city
+for the easy transport of goods and clean urban spaces, and he wanted a
+comfortable and spacious city, with well-ordered streets and
+architecture. He recommended ‘high, strong walls’, with ‘towers and
+battlements of all necessary and pleasant beauty’.</p><p>His plans for a modern and ‘rational’ city were consistent with
+Renaissance ideals. But, in keeping with his personality, Leonardo
+included several innovations in his urban design. Leonardo wanted the
+city to be built on several levels, linked with vertical outdoor
+staircases. This design can be seen in some of today’s high-rise
+buildings but was unconventional at the time. Indeed, this idea of
+taking full advantage of the interior spaces wasn’t implemented until
+the 1920s and 1930s, with the birth of the Modernist movement.</p><p>While in the upper layers of the city, people could walk undisturbed
+between elegant palaces and streets, the lower layer was the place for
+services, trade, transport and industry. But the true originality of
+Leonardo’s vision was its fusion of architecture and engineering.
+Leonardo designed extensive hydraulic plants to create artificial canals
+throughout the city. The canals, regulated by clocks and basins, were
+supposed to make it easier for boats to navigate inland. Leonardo also
+thought that the width of the streets ought to match the average height
+of the adjacent houses: a rule still followed in many contemporary
+cities across Italy, to allow access to sun and reduce the risk of
+damage from earthquakes.</p><p>Although some of these features existed in Roman cities, before
+Leonardo’s drawings there had never been a multi-level, compact modern
+city which was thoroughly technically conceived. Indeed, it wasn’t until
+the 19th century that some of his ideas were applied. For example, the
+subdivision of the city by function – with services and infrastructures
+located in the lower levels and wide and well-ventilated boulevards and
+walkways above for residents – is an idea that can be found in
+Georges-Eugène Haussmann’s renovation of Paris under Emperor Napoleon
+III between 1853 and 1870.</p><p>Today, Leonardo’s ideas are not simply valid, they actually suggest a
+way forward for urban planning. Many scholars think that the compact
+city, built upwards instead of outwards, integrated with nature
+(especially water systems), with efficient transport infrastructure,
+could help modern cities become more efficient and sustainable. This is
+yet another reason why Leonardo was aligned so closely with modern urban
+planning and centuries ahead of his time.</p></div><div class="pqs"><p><strong>Questions 27–33</strong></p><p><em>Do the following statements agree with the information given in
+Reading Passage 3?</em></p><p><em>In boxes 27–33 on your answer sheet, write</em></p><blockquote>
+<p><strong>TRUE</strong> <em>if the statement agrees with the
+information</em></p>
+<p><strong>FALSE</strong> <em>if the statement contradicts the
+information</em></p>
+<p><strong>NOT GIVEN</strong> <em>if there is no information on
+this</em></p>
+</blockquote><p class="qline" id="Rq27"><strong class="qn">27</strong> People first referred to Leonardo da Vinci as a
+genius 500 years ago. <select aria-label="Câu 27" class="ans sel" data-q="R27"><option value="">27 ▾</option><option value="TRUE">TRUE</option><option value="FALSE">FALSE</option><option value="NOT GIVEN">NOT GIVEN</option></select></p><p class="qline" id="Rq28"><strong class="qn">28</strong> The current climate crisis is predicted to cause
+more deaths than the plague. <select aria-label="Câu 28" class="ans sel" data-q="R28"><option value="">28 ▾</option><option value="TRUE">TRUE</option><option value="FALSE">FALSE</option><option value="NOT GIVEN">NOT GIVEN</option></select></p><p class="qline" id="Rq29"><strong class="qn">29</strong> Some of the challenges we face today can be
+compared to those of earlier times. <select aria-label="Câu 29" class="ans sel" data-q="R29"><option value="">29 ▾</option><option value="TRUE">TRUE</option><option value="FALSE">FALSE</option><option value="NOT GIVEN">NOT GIVEN</option></select></p><p class="qline" id="Rq30"><strong class="qn">30</strong> Leonardo da Vinci’s ‘ideal city’ was constructed
+in the 15th century. <select aria-label="Câu 30" class="ans sel" data-q="R30"><option value="">30 ▾</option><option value="TRUE">TRUE</option><option value="FALSE">FALSE</option><option value="NOT GIVEN">NOT GIVEN</option></select></p><p class="qline" id="Rq31"><strong class="qn">31</strong> Poor town planning is a major contributor to
+climate change. <select aria-label="Câu 31" class="ans sel" data-q="R31"><option value="">31 ▾</option><option value="TRUE">TRUE</option><option value="FALSE">FALSE</option><option value="NOT GIVEN">NOT GIVEN</option></select></p><p class="qline" id="Rq32"><strong class="qn">32</strong> In Renaissance times, local people fought against
+the changes to Pienza and Ferrara. <select aria-label="Câu 32" class="ans sel" data-q="R32"><option value="">32 ▾</option><option value="TRUE">TRUE</option><option value="FALSE">FALSE</option><option value="NOT GIVEN">NOT GIVEN</option></select></p><p class="qline" id="Rq33"><strong class="qn">33</strong> Leonardo da Vinci kept a neat, organised record
+of his designs. <select aria-label="Câu 33" class="ans sel" data-q="R33"><option value="">33 ▾</option><option value="TRUE">TRUE</option><option value="FALSE">FALSE</option><option value="NOT GIVEN">NOT GIVEN</option></select></p><p><strong>Questions 34–40</strong></p><p><em>Complete the summary below.</em></p><p><em>Choose <strong>ONE WORD ONLY</strong> from the passage for each
+answer.</em></p><p><em>Write your answers in boxes 34–40 on your answer sheet.</em></p><table>
+<colgroup>
+<col style="width: 100%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><p><strong>Leonardo da Vinci’s ideal city</strong></p>
+<p>A collection of Leonardo da Vinci’s paperwork reveals his design of a
+new city beside the Ticino River. This was to provide better
+<input aria-label="Câu 34" autocapitalize="off" autocomplete="off" class="ans gap" data-q="R34" placeholder="34" spellcheck="false" type="text"/>  for trade and a less polluted environment.
+Although Leonardo da Vinci’s city shared many of the ideals of his time,
+some of his innovations were considered unconventional in their design.
+They included features that can be seen in some tower blocks today, such
+as <input aria-label="Câu 35" autocapitalize="off" autocomplete="off" class="ans gap" data-q="R35" placeholder="35" spellcheck="false" type="text"/>  on the exterior of a building.</p>
+<p>Leonardo da Vinci wasn’t only an architect. His expertise in
+<input aria-label="Câu 36" autocapitalize="off" autocomplete="off" class="ans gap" data-q="R36" placeholder="36" spellcheck="false" type="text"/>  was evident in his plans for artificial
+canals within his ideal city. He also believed that the height of houses
+should relate to the width of streets in case earthquakes occurred. The
+design of many cities in Italy today follows this <input aria-label="Câu 37" autocapitalize="off" autocomplete="off" class="ans gap" data-q="R37" placeholder="37" spellcheck="false" type="text"/>
+</p>
+<p>While some cities from <input aria-label="Câu 38" autocapitalize="off" autocomplete="off" class="ans gap" data-q="R38" placeholder="38" spellcheck="false" type="text"/>  times have
+aspects that can also be found in Leonardo’s designs, his ideas weren’t
+put into practice until long after his death. <input aria-label="Câu 39" autocapitalize="off" autocomplete="off" class="ans gap" data-q="R39" placeholder="39" spellcheck="false" type="text"/>
+ is one example of a city that was redesigned in the 19th century
+in the way that Leonardo had envisaged. His ideas are also relevant to
+today’s world, where building <input aria-label="Câu 40" autocapitalize="off" autocomplete="off" class="ans gap" data-q="R40" placeholder="40" spellcheck="false" type="text"/>  no longer
+seems to be the best approach.</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+</tr>
+</tbody>
+</table></div></div></section>
+  </div>
+</main>
+<div class="overlay" id="namebox" hidden><form class="ocard" id="nmForm">
+  <h2>Gửi kết quả cho thầy</h2>
+  <p style="color:var(--dim);margin:0 0 6px">Nhập tên một lần, lần sau máy sẽ tự nhớ.</p>
+  <label for="nmName">Họ và tên</label><input id="nmName" autocomplete="name">
+  <label for="nmLop">Lớp / nhóm (nếu có)</label><input id="nmLop">
+  <p class="err" id="nmErr"></p>
+  <div class="row"><button type="button" class="btn alt" id="nmSkip">Bỏ qua</button><button type="submit" class="btn">Nộp bài</button></div>
+</form></div>
+<div class="overlay" id="examstart" hidden><form class="ocard" id="exForm">
+  <h2 id="exTitle">Thi thử</h2>
+  <ul id="exRules"></ul>
+  <label for="exName">Họ và tên</label><input id="exName" autocomplete="name">
+  <label for="exLop">Lớp / nhóm (nếu có)</label><input id="exLop">
+  <p class="err" id="exErr"></p>
+  <div class="row"><a class="btn alt" href="index.html" style="text-decoration:none">Quay lại</a><button type="submit" class="btn">Bắt đầu làm bài</button></div>
+</form></div>
+<footer><a href="index.html">← Danh sách 4 test</a> · Cambridge IELTS 18 · Test 2 — trang luyện tập cho học viên. Band chỉ là ước tính theo thang điểm thường dùng.</footer>
+<script src="config.js"></script>
+<script src="fc.js"></script>
+<script src="vocab.js"></script>
+<script>
+(function(){
+'use strict';
+var KEY={"L1": "training", "L2": "discount", "L3": "taxi", "L4": "service", "L5": "English", "L6": "Wivenhoe", "L7": "equipment", "L8": "9.75", "L9": "deliveries", "L10": "Sunday", "L11": "B", "L12": "E", "L13": "B", "L14": "C", "L15": "G", "L16": "C", "L17": "D", "L18": "B", "L19": "H", "L20": "A", "L21": "C", "L22": "A", "L23": "B", "L24": "B", "L25": "A", "L26": "B", "L27": "D", "L28": "A", "L29": "C", "L30": "F", "L31": "convenient", "L32": "suits", "L33": "tailor", "L34": "profession", "L35": "visible", "L36": "string / strings", "L37": "waist / waists", "L38": "perfume", "L39": "image", "L40": "handbag", "R1": "(deer) antlers", "R2": "(timber) posts", "R3": "tree trunks", "R4": "oxen", "R5": "glaciers", "R6": "druids", "R7": "burial", "R8": "calendar", "R9": "TRUE", "R10": "FALSE", "R11": "FALSE", "R12": "TRUE", "R13": "NOT GIVEN", "R14": "C", "R15": "A", "R16": "B", "R17": "D", "R18": "C", "R19": "D", "R20": "YES", "R21": "NOT GIVEN", "R22": "NO", "R23": "YES", "R24": "C", "R25": "A", "R26": "E", "R27": "NOT GIVEN", "R28": "NOT GIVEN", "R29": "TRUE", "R30": "FALSE", "R31": "TRUE", "R32": "NOT GIVEN", "R33": "FALSE", "R34": "transport", "R35": "staircases", "R36": "engineering", "R37": "rule", "R38": "Roman", "R39": "Paris", "R40": "outwards"}, QT={"L1": "text", "L2": "text", "L3": "text", "L4": "text", "L5": "text", "L6": "text", "L7": "text", "L8": "text", "L9": "text", "L10": "text", "L11": "multi", "L12": "multi", "L13": "multi", "L14": "multi", "L15": "select", "L16": "select", "L17": "select", "L18": "select", "L19": "select", "L20": "select", "L21": "mcq", "L22": "mcq", "L23": "mcq", "L24": "mcq", "L25": "multi", "L26": "multi", "L27": "select", "L28": "select", "L29": "select", "L30": "select", "L31": "text", "L32": "text", "L33": "text", "L34": "text", "L35": "text", "L36": "text", "L37": "text", "L38": "text", "L39": "text", "L40": "text", "R1": "text", "R2": "text", "R3": "text", "R4": "text", "R5": "text", "R6": "text", "R7": "text", "R8": "text", "R9": "select", "R10": "select", "R11": "select", "R12": "select", "R13": "select", "R14": "mcq", "R15": "mcq", "R16": "mcq", "R17": "mcq", "R18": "mcq", "R19": "mcq", "R20": "select", "R21": "select", "R22": "select", "R23": "select", "R24": "select", "R25": "select", "R26": "select", "R27": "select", "R28": "select", "R29": "select", "R30": "select", "R31": "select", "R32": "select", "R33": "select", "R34": "text", "R35": "text", "R36": "text", "R37": "text", "R38": "text", "R39": "text", "R40": "text"}, EV={"L1": "trL1-4-2", "L2": "trL1-8-1", "L3": "trL1-12-2", "L4": "trL1-15-4", "L5": "trL1-18-1", "L6": "trL1-20-2", "L7": "trL1-26-1", "L8": "trL1-28-0", "L9": "trL1-19-0", "L10": "trL1-40-2", "L11": "trL2-1-5", "L12": "trL2-1-3", "L13": "trL2-2-2", "L14": "trL2-2-3", "L15": "trL2-4-2", "L16": "trL2-5-1", "L17": "trL2-6-2", "L18": "trL2-7-1", "L19": "trL2-8-2", "L20": "trL2-3-0", "L21": "trL3-5-1", "L22": "trL3-8-1", "L23": "trL3-11-0", "L24": "trL3-16-1", "L25": "trL3-18-2", "L26": "trL3-18-1", "L27": "trL3-22-2", "L28": "trL3-24-0", "L29": "trL3-25-2", "L30": "trL3-19-0", "L31": "trL4-1-2", "L32": "trL4-2-2", "L33": "trL4-2-3", "L34": "trL4-2-5", "L35": "trL4-3-1", "L36": "trL4-3-4", "L37": "trL4-3-6", "L38": "trL4-3-8", "L39": "trL4-4-1", "L40": "trL4-4-3", "R1": "First, Neolithic* Britons used primitive tools, which may have been fashioned out of deer antlers, to dig a massive circular ditch and bank, or henge.", "R2": "Deep pits dating back to that era and located within the circle may have once held a ring of timber posts, according to some scholars.", "R3": "According to one long-standing theory among archaeologists, Stonehenge’s builders fashioned sledges and rollers out of tree trunks to lug the bluestones from the Preseli Hills.", "R4": "More recent archaeological hypotheses have them transporting the bluestones with supersized wicker baskets on a combination of ball bearings and long grooved planks, hauled by oxen.", "R5": "Challenging the classic image of industrious builders pushing, carting, rolling or hauling giant stones from faraway Wales, some scientists have suggested that it was glaciers, not humans, that carried the bluestones to Salisbury Plain.", "R6": "In the 17th century, archaeologist John Aubrey made the claim that Stonehenge was the work of druids, who had important religious, judicial and political roles in Celtic** society.", "R7": "While there is consensus among the majority of modern scholars that Stonehenge once served the function of burial ground, they have yet to determine what other purposes it had.", "R8": "In the 1960s, the astronomer Gerald Hawkins suggested that the cluster of megalithic stones operated as a form of calendar, with different points corresponding to astrological phenomena such as solstices, equinoxes and eclipses occurring at different times of the year.", "R9": "At this point, sandstone slabs – known as ‘sarsens’ – were arranged into an outer crescent or ring; some were assembled into the iconic three-pieced structures called trilithons that stand tall in the centre of Stonehenge.", "R10": "Radiocarbon dating has revealed that work continued at Stonehenge until roughly 1600 BCE, with the bluestones in particular being repositioned multiple times.", "R11": "However, in the mid-20th century, radiocarbon dating demonstrated that Stonehenge stood more than 1,000 years before the Celts inhabited the region.", "R12": "Bones, tools and other artefacts found on the site seem to support this hypothesis.", "R13": "While his theory has received a considerable amount of attention over the decades, critics maintain that Stonehenge’s builders probably lacked the knowledge necessary to predict such events or that England’s dense cloud cover would have obscured their view of the skies.", "R14": "But many experts believe this restriction is very temporary.", "R15": "Machines will be free of many of the physical constraints on human intelligence.", "R16": "Folklore is full of tales of people who ask for the wrong thing, with disastrous consequences – King Midas, for example, might have wished that everything he touched turned to gold, but didn’t really intend this to apply to his breakfast.", "R17": "If superintelligent machines don’t do a lot better than us, we’ll be in deep trouble.", "R18": "If there are routes to the moral high ground, they’ll be better than us at finding them, and steering us in the right direction.", "R19": "This won’t be easy, given that we are tribal creatures and conflicted about the ideals ourselves.", "R20": "We might lose our freedom to discriminate in favour of our own communities, for example.", "R21": "But are we ready for ethical silicon police limiting our options?", "R22": "They might be so good at doing it that we won’t notice them; but few of us are likely to welcome such a future.", "R23": "It is not yet clear whether this is possible, but if it is, it will require a cooperative spirit, and a willingness to set aside self-interest.", "R24": "AI already has some input into how resources are used in our National Health Service (NHS) here in the UK, for example.", "R25": "However, we’d be depriving some humans (e.g. senior doctors) of the control they presently enjoy.", "R26": "However, we’d be depriving some humans (e.g. senior doctors) of the control they presently enjoy.", "R27": "Five hundred years have passed since Leonardo died in his home at Château du Clos Lucé, outside Tours, France.", "R28": "Today, the world is on the cusp of a climate crisis, which is predicted to cause widespread displacement, extinctions and death, if left unaddressed.", "R29": "Then, as now, radical solutions were called for to revolutionise the way people lived and safeguard humanity against catastrophe.", "R30": "Following a typical Renaissance trend, he began to work on an ‘ideal city’ project, which – due to its excessive costs – would remain unfulfilled.", "R31": "Yet given that unsustainable urban models are a key cause of global climate change today, it’s only natural to wonder how Leonardo might have changed the shape of modern cities.", "R32": "The rigour and method behind the conscious conception of a city had been largely missing in Western thought until the moment when prominent Renaissance men pushed forward large-scale urban projects in Italy, such as the reconfiguration of the town of Pienza and the expansion of the city of Ferrara.", "R33": "It is not easy to identify a coordinated vision of Leonardo’s ideal city because of his disordered way of working with notes and sketches.", "R34": "He designed the city for the easy transport of goods and clean urban spaces, and he wanted a comfortable and spacious city, with well-ordered streets and architecture.", "R35": "Leonardo wanted the city to be built on several levels, linked with vertical outdoor staircases.", "R36": "But the true originality of Leonardo’s vision was its fusion of architecture and engineering.", "R37": "Leonardo also thought that the width of the streets ought to match the average height of the adjacent houses: a rule still followed in many contemporary cities across Italy, to allow access to sun and reduce the risk of damage from earthquakes.", "R38": "Although some of these features existed in Roman cities, before Leonardo’s drawings there had never been a multi-level, compact modern city which was thoroughly technically conceived.", "R39": "For example, the subdivision of the city by function – with services and infrastructures located in the lower levels and wide and well-ventilated boulevards and walkways above for residents – is an idea that can be found in Georges-Eugène Haussmann’s renovation of Paris under Emperor Napoleon III between 1853 and 1870.", "R40": "Many scholars think that the compact city, built upwards instead of outwards, integrated with nature (especially water systems), with efficient transport infrastructure, could help modern cities become more efficient and sustainable."}, XP={"L1": "Bài nói: \"all employees get training – even temporary staff\" → mọi nhân viên đều được đào tạo, khớp với \"provided for all staff\". Bẫy: người đàn ông hỏi về \"free uniforms\" nhưng câu trả lời là không (phải tự mặc áo trắng, quần đen), nên không điền uniforms.", "L2": "\"you can get a discount at any of their restaurants\" = \"at all Milo’s Restaurants\". Khi hỏi \"Even at weekends?\" thì câu trả lời là \"No\" → giảm giá chỉ áp dụng ngày thường (\"during weekdays\"). Đáp án là danh từ discount.", "L3": "\"finish work after midnight\" = \"after midnight\"; công ty \"will pay for you to get a taxi home\" → taxi. Bẫy: \"bus\" được nhắc trước (đi làm bằng xe buýt) và \"bike\" là ý định của người đàn ông, không phải phúc lợi.", "L4": "Đề: \"maintaining a high standard of ___\" = bài nói: \"a really high level of service\". Người phụ nữ xác nhận điều này \"equally important at Milo’s\". Điền danh từ service.", "L5": "\"qualification\" trong đề = \"certificate\" trong bài: \"you’ll need to have a certificate in English\". Viết hoa English vì là tên ngôn ngữ. \"communication skills\" chỉ là lý do, không phải đáp án.", "L6": "Tên đường được đánh vần trong bài: \"W-I-V-E-N-H-O-E\" → Wivenhoe. Bẫy: \"Cork Street\" cũng xuất hiện ngay sau nhưng chỉ là đường gần đó (\"just off Cork Street\").", "L7": "Đề: \"Making sure ___ is clean\" = bài: \"checking all the procedures for cleaning the equipment are being followed\". \"portions\" đã dùng cho dòng trên (Checking portions), nên đáp án là equipment.", "L8": "\"Starting salary\" = \"to begin with, you’d be getting £9.75\". Bẫy: £9.50 là lương ở công việc cũ, £11.25 là lương sau ba tháng, không phải lương khởi điểm.", "L9": "Đề đã có \"Maintaining stock\", phần còn lại \"organising ___\" = \"sorting out all the deliveries\" (sorting out = organising). Điền danh từ số nhiều deliveries.", "L10": "\"No work on a ___ once a month\" = \"you do get one Sunday off every four weeks\" (every four weeks ≈ once a month). Bẫy: \"closed on Mondays\" là ngày nghỉ hằng tuần, không phải mỗi tháng một lần.", "L11": "B: bệnh viện cách 15 km và trường cấp hai còn gần hơn → \"easy access to local facilities\". E: khu công nghiệp mới tạo nhu cầu nhà ở cho \"employees\" đang phải đi làm xa → \"convenient for workers\". C sai vì sân bay \"wasn’t one of our major criteria\"; A sai vì dốc là \"drawback\"; D không được nói là lý do.", "L12": "B: bệnh viện cách 15 km và trường cấp hai còn gần hơn → \"easy access to local facilities\". E: khu công nghiệp mới tạo nhu cầu nhà ở cho \"employees\" đang phải đi làm xa → \"convenient for workers\". C sai vì sân bay \"wasn’t one of our major criteria\"; A sai vì dốc là \"drawback\"; D không được nói là lý do.", "L13": "B: thiết kế \"blended in well with the natural features\" và bảo vệ \"trees and wildlife\" → tác động tốt tới môi trường. C: \"people of all ages can live together happily\" → quan hệ tốt giữa cư dân. A sai vì người ta muốn thêm tiện ích cho xe đạp; D sai vì có \"variety of ... prices\" chứ không phải tất cả đều rẻ; E: chỉ nói gần nông thôn, không phải nằm ở nông thôn.", "L14": "B: thiết kế \"blended in well with the natural features\" và bảo vệ \"trees and wildlife\" → tác động tốt tới môi trường. C: \"people of all ages can live together happily\" → quan hệ tốt giữa cư dân. A sai vì người ta muốn thêm tiện ích cho xe đạp; D sai vì có \"variety of ... prices\" chứ không phải tất cả đều rẻ; E: chỉ nói gần nông thôn, không phải nằm ở nông thôn.", "L15": "Bắt đầu từ \"South Entrance\" ở cuối bản đồ, đi theo con đường chạy thẳng lên trên. Trường học nằm trên đường này, \"at the corner of the second turning to the left\" → ở góc của ngã rẽ trái thứ hai → vị trí G.", "L16": "Trung tâm thể thao ở phía tây (\"western side\", gần London Road), \"just below the road that branches off from London Road\" → ngay bên dưới con đường rẽ ra từ London Road → vị trí C.", "L17": "Tìm cái hồ (\"lake\") ở phía trên bản đồ. Phòng khám nằm \"just below this\" (ngay dưới hồ) và \"to the right of a street of houses\" (bên phải một dãy nhà) → vị trí D.", "L18": "Ở góc đông bắc (\"northeast side\" = phía trên bên phải) có dãy nhà cho người trên 65 tuổi; trung tâm cộng đồng \"adjoining this\" (nằm sát cạnh dãy nhà đó) → vị trí B.", "L19": "Siêu thị nằm \"between the two entrances\" (giữa hai lối vào) và \"just to the south of\" ba cây lớn gần London Road (ngay phía dưới ba cái cây) → vị trí H.", "L20": "Đi theo con đường từ South Entrance lên trên; ở đoạn cuối nó \"curves round to the left\" (uốn cong sang trái). Sân chơi nằm trong khúc cong đó, \"with nice views of the lake\" (nhìn ra hồ) → vị trí A.", "L21": "Michelle: \"what I found more significant\" là tác động tới chính trị, \"massive social and economic consequences\" → C (profound effect on society), Adam đồng ý \"That should be the main focus\". B chỉ là ý Adam nói trước (\"make sense of the science\") nhưng không phải lý do quan trọng nhất; A không được nhắc.", "L22": "Adam: \"I was surprised there were so many weather stations\" → nhiều nơi ghi lại quan sát → A (the number of places producing them). B sai vì Michelle nói các ghi chép \"pretty consistent\" (nhất quán); C sai vì có dữ liệu thời tiết theo từng giờ.", "L23": "Các tài liệu thời đó \"blamed the haze for an increase in headaches, respiratory issues and asthma attacks\" → liên quan đến sức khoẻ → B. A sai: họ nhận ra \"this wasn’t the sort of fog they were used to\". C sai: sương \"covered the sun\" làm mặt trời đỏ, không nói che hoàn toàn nhiều tuần.", "L24": "Michelle cho rằng Franklin \"realised that before anyone else\" (người đầu tiên). Adam sửa: \"a French naturalist beat him to it\" → có người phát hiện trước ông → B. Adam không nói Franklin kết luận sai (A), và các nhà tự nhiên học khác nghĩ ra độc lập (không phải C).", "L25": "Adam nói số người chết và tro bụi lan nhanh là điều \"You’d expect\" (đoán trước được) → loại C và D. Điều bất ngờ: \"the effects would go on for so long\" → B, và hai năm sau thời tiết lạ xuất hiện \"as far away as North America and North Africa\" → A (lan rộng). Michelle: \"I found all that hard to believe too\". E không được nhắc.", "L26": "Adam nói số người chết và tro bụi lan nhanh là điều \"You’d expect\" (đoán trước được) → loại C và D. Điều bất ngờ: \"the effects would go on for so long\" → B, và hai năm sau thời tiết lạ xuất hiện \"as far away as North America and North Africa\" → A (lan rộng). Michelle: \"I found all that hard to believe too\". E không được nhắc.", "L27": "Iceland: gia súc (\"livestock\" = animals) bị \"poisoned\" vì ăn cỏ nhiễm fluorine → bị bệnh → D. Bẫy: Iceland có nhiều người chết nhưng nước chết nhiều nhất là Egypt.", "L28": "Egypt: nạn đói \"led to more people dying than any other country\" = \"suffered the most severe loss of life\" → A. Mất mùa ở đây không được nói là \"predictable\" hay giá thực phẩm tăng, nên không chọn B, E.", "L29": "UK: tỷ lệ tử vong tăng gấp đôi, với \"an unusually high percentage of people under the age of 25\" = \"significant increase in deaths of young people\" → C.", "L30": "USA: \"snowbound until March\" (bị tuyết chặn tới tháng Ba) và băng trôi trên sông Mississippi → mùa đông khắc nghiệt bất thường = \"a particularly harsh winter\" → F.", "L31": "Lý do chọn túi áo: \"nothing is quite as convenient as\" bỏ điện thoại vào túi → convenient (tính từ, sau \"They are\"). Vế sau \"can be overlooked\" khớp với \"they’re rather overlooked as a fashion item\".", "L32": "\"Men started to wear ___\" = \"that was the time when suits became popular\" (thế kỷ 18). Điền danh từ số nhiều suits; breeches, waistcoats, jackets chỉ là các phần của bộ suit.", "L33": "\"A ___ sewed pockets into the lining\" = \"pockets were sewn into this cloth by whichever tailor the customer used\" → tailor (thợ may). Đề có \"A\" nên dùng danh từ số ít.", "L34": "Túi to hơn (\"larger but plainer\") dành cho \"someone with a profession who needed to carry medical instruments\" → profession (nghề nghiệp, ví dụ bác sĩ). Không điền doctor vì đề nói \"a certain type of ___\".", "L35": "\"less ___ than men’s\" = \"weren’t nearly as visible ... as men’s\" → visible. Bài có hai tính từ (visible, easy to reach) nhưng đề yêu cầu ONE WORD nên chỉ visible phù hợp.", "L36": "\"produced in pairs using ___ to link them together\" = \"a pair of pockets made that were tied together with string\" → string (link = tie). Bẫy: fabric, linen là chất liệu làm túi, không phải thứ nối hai túi.", "L37": "\"Pockets hung from the women’s ___ under skirts\" = \"tied the pockets around their waist so that they hung beneath their clothes\" → waist (beneath = under).", "L38": "\"reached through a gap in the material\" = \"an opening in the folds of their skirts through which they could reach whatever they needed, like their perfume\" → perfume (gap = opening, such as = like).", "L39": "Khi váy bó hơn, túi lộ ra và \"detracted from the woman’s image\" (làm xấu hình ảnh) = \"had a negative effect on the ___ of women\" → image.", "L40": "\"pouches\" (túi nhỏ) thịnh hành trước, rồi \"inevitably led on to the handbag of more modern times\" → handbag. Đề có \"a\" nên dùng số ít.", "R1": "Đề 'tools made from' = bài 'tools, which may have been fashioned out of deer antlers'. Đáp án là danh từ số nhiều 'antlers' (gạc hươu), có thể viết 'deer antlers' vì vẫn trong giới hạn 2 từ.", "R2": "Đề 'deep pits inside the circle' = bài 'Deep pits ... located within the circle'. Bài nói các hố này 'may have once held a ring of timber posts' → cái được xếp trong hố là 'posts' (cột gỗ), viết 'timber posts' cũng đúng.", "R3": "Đề 'used ... to make sledges and rollers' = bài 'fashioned sledges and rollers out of tree trunks'. Đáp án 'tree trunks' (thân cây) đúng 2 từ, nhớ giữ số nhiều.", "R4": "Đề 'pulled them on giant baskets' = bài 'supersized wicker baskets ... hauled by oxen'. 'pulled' = 'hauled', 'giant' = 'supersized'. Chỗ trống cần chủ ngữ làm hành động kéo → 'oxen' (bò đực, số nhiều của ox).", "R5": "Đề hỏi giả thuyết địa chất ('geological') = bài 'geologists ... suggested that it was glaciers, not humans, that carried the bluestones'. 'brought' = 'carried' → đáp án 'glaciers' (sông băng).", "R6": "Đề 'a theory arose in the 17th century' = bài 'In the 17th century, archaeologist John Aubrey made the claim'. Ông cho rằng Stonehenge là 'the work of druids' (tu sĩ của người Celt) → 'builders were Celtic druids'.", "R7": "Đề 'many experts agree' = bài 'there is consensus among the majority of modern scholars'. 'used as a ... site' = 'served the function of burial ground' → đáp án 'burial' (chôn cất), 'ground' ~ 'site'.", "R8": "Đề 'in the 1960s ... worked as a kind of' = bài 'In the 1960s ... operated as a form of calendar'. 'worked as' = 'operated as', 'a kind of' = 'a form of' → 'calendar' (lịch).", "R9": "TRUE. Giai đoạn 3 các phiến sa thạch được xếp thành 'an outer crescent or ring' (phía ngoài) và một số tạo thành trilithons 'that stand tall in the centre' (ở giữa). Vậy 'both the outer areas and the middle' đúng với bài.", "R10": "FALSE. Bài có bằng chứng khoa học (radiocarbon dating) cho thấy công việc kéo dài đến 1600 BCE, nhưng bluestones lại 'being repositioned multiple times' (bị dời chỗ nhiều lần) → ngược với 'stood in the same spot'.", "R11": "FALSE. Aubrey cho rằng người xây là druids (người Celt). Nhưng giữa thế kỷ 20 'radiocarbon dating demonstrated that Stonehenge stood more than 1,000 years before the Celts' → phát hiện thế kỷ 20 bác bỏ, không ủng hộ ý của ông.", "R12": "TRUE. 'Objects discovered' = 'Bones, tools and other artefacts found on the site'; 'a number of different groups' = 'several distinct tribes of people'. Bài nói các đồ vật này 'seem to support this hypothesis' → khớp với đề.", "R13": "NOT GIVEN. Bài có nhắc 'critics maintain...' (những người phê bình) nhưng không nói họ là ai, không hề nói họ là 'other astronomers'. Chỉ Hawkins được gọi là nhà thiên văn.", "R14": "C. Bài nói AI hiện chỉ là 'narrow AI' nhưng 'many experts believe this restriction is very temporary' và đến giữa thế kỷ có thể có AGI → tương lai AI sẽ không bị giới hạn. A sai vì bài không nói khó dự đoán tốc độ; B, D chỉ là chi tiết lấy từ bài, không phải ý chính.", "R15": "A. Đoạn 2 giải thích máy móc 'will be free of many of the physical constraints on human intelligence' (não người chậm, kích thước bị giới hạn) → lý do máy sẽ vượt con người. B sai vì nói về điểm khác nhau chứ không phải điểm chung; D sai vì bài nói về hạn chế của con người.", "R16": "B. Câu chuyện vua Midas minh họa 'people who ask for the wrong thing, with disastrous consequences' → mục tiêu đặt không rõ ràng sẽ gây hậu quả, đúng với 'specify its goals with great care'. D sai: vàng chỉ là chi tiết trong truyện, không nói lợi ích tài chính.", "R17": "D. Đoạn 4 nói khó tạo AI 'human-friendly' vì 'we are far from reliably human-friendly ourselves', và máy phải 'do a lot better than us' → AI phải thân thiện hơn chính con người. A sai vì thách thức là về máy chứ không phải dạy con người cư xử tốt hơn.", "R18": "C. Đoạn 5 nói máy sẽ 'ethically as well as cognitively superhuman' và 'better than us at finding' con đường đạo đức → máy vượt con người ở một số mặt. A sai vì 'safety' là an toàn của con người, không phải của máy; D không được nhắc trong đoạn này.", "R19": "D. Đoạn 6 nói khó chỉ cho máy biết mục tiêu vì 'we are tribal creatures and conflicted about the ideals ourselves' và hay 'ignore the suffering of strangers' → khuyết điểm của con người ('human shortcomings') làm việc tạo máy khó hơn. A, B, C không được nói tới.", "R20": "YES. 'Machines with the ability to make moral decisions' = 'Machines who are better than us at sticking to the moral high ground'. Bài nói 'We might lose our freedom to discriminate in favour of our own communities' → khớp với 'prevent us from promoting the interests of our communities'.", "R21": "NOT GIVEN. Bài có nhắc 'ethical silicon police limiting our options' và nói chúng có thể giỏi đến mức ta không nhận ra, nhưng không hề nói chúng cần tồn tại 'in large numbers' (với số lượng lớn).", "R22": "NO. Đề nói 'Many people are comfortable' với việc bị máy hạn chế tự do, nhưng tác giả viết 'few of us are likely to welcome such a future' (rất ít người hoan nghênh) → ngược lại.", "R23": "YES. 'ensure that machines act in our best interests' = 'get them to act well for us'; 'we all need to work together' = 'it will require a cooperative spirit, and a willingness to set aside self-interest'.", "R24": "C. Bài: 'AI already has some input into how resources are used in our National Health Service'. 'are allocated' = 'are used', và chỗ trống cần danh từ số nhiều → 'available resources'. B 'specialised tasks' không liên quan đến NHS.", "R25": "A. Bài: 'we’d be depriving some humans (e.g. senior doctors) of the control they presently enjoy'. 'certain ... not having' = 'depriving some humans' → 'senior doctors' = 'medical practitioners'. F 'technology experts' không được nhắc.", "R26": "E. Cùng câu với Q25: các bác sĩ sẽ mất 'the control they presently enjoy'. 'current level of' = 'presently enjoy', 'control' (quyền kiểm soát) ~ 'professional authority' (quyền hạn nghề nghiệp).", "R27": "NOT GIVEN. Con số 500 năm trong bài là thời gian 'since Leonardo died', không phải lúc người ta bắt đầu gọi ông là 'genius'. Bài chỉ nói tên ông gắn với 'genius', không nói từ khi nào.", "R28": "NOT GIVEN. Bài nói dịch hạch gây khoảng 200 triệu ca tử vong và khủng hoảng khí hậu 'is predicted to cause ... death', nhưng không so sánh khủng hoảng nào gây nhiều cái chết hơn.", "R29": "TRUE. Bài đặt dịch hạch thời Phục Hưng cạnh khủng hoảng khí hậu ngày nay và nói 'Then, as now, radical solutions were called for' → thách thức hôm nay có thể so sánh với thời trước.", "R30": "FALSE. Bài nói dự án 'ideal city' 'due to its excessive costs – would remain unfulfilled' (không bao giờ được thực hiện) → ngược với 'was constructed'.", "R31": "TRUE. 'Poor town planning' = 'unsustainable urban models'; 'a major contributor' = 'a key cause'. Bài: 'unsustainable urban models are a key cause of global climate change today'.", "R32": "NOT GIVEN. Bài có nhắc dự án ở Pienza và Ferrara và nói chúng truyền cảm hứng cho Leonardo, nhưng không nói gì về việc người dân địa phương phản đối ('fought against').", "R33": "FALSE. Bài nói khó thấy được tầm nhìn của Leonardo 'because of his disordered way of working with notes and sketches' (cách làm việc lộn xộn) → ngược với 'neat, organised record'.", "R34": "Đề 'better ... for trade and a less polluted environment' = bài 'for the easy transport of goods and clean urban spaces'. 'trade' ~ 'goods', 'less polluted' = 'clean' → cần danh từ 'transport'.", "R35": "Bài: thành phố nhiều tầng 'linked with vertical outdoor staircases', 'can be seen in some of today’s high-rise buildings'. 'on the exterior' = 'outdoor', 'tower blocks' = 'high-rise buildings' → 'staircases' (số nhiều).", "R36": "Đề nói ông 'wasn’t only an architect' → chuyên môn khác là 'engineering', thể hiện qua 'extensive hydraulic plants to create artificial canals'. Bẫy: 'architecture' cũng xuất hiện nhưng đề đã loại ý kiến trúc sư.", "R37": "Bài: độ rộng đường phải bằng chiều cao nhà, 'a rule still followed in many contemporary cities across Italy'. 'follows this ...' = 'still followed' → đáp án 'rule' (quy tắc).", "R38": "Đề 'some cities from ... times have aspects' = bài 'some of these features existed in Roman cities'. Chỗ trống đứng trước 'times' cần tính từ → 'Roman' (viết hoa).", "R39": "Đề 'redesigned in the 19th century' = bài 'it wasn’t until the 19th century' và 'Haussmann’s renovation of Paris ... between 1853 and 1870'. 'redesigned' = 'renovation' → 'Paris'. Không chọn 'Haussmann' vì đề cần tên thành phố.", "R40": "Bài: 'the compact city, built upwards instead of outwards' giúp thành phố bền vững hơn. Đề 'building ... no longer seems to be the best approach' → cách không còn tốt là xây 'outwards' (dàn trải ra ngoài). Bẫy: 'upwards' là cách được khuyên dùng."}, N='2';
+var CFG=window.C20CFG||{};
+var QS=new URLSearchParams(location.search), MODE=(QS.get('part')||'').toUpperCase();
+if(!/^(L[1-4]|R[1-3]|L|R)$/.test(MODE)) MODE='';
+var EXAM=QS.get('thi')==='1' && (MODE==='L'||MODE==='R');
+var SK='cam18.t'+N+(MODE?'.'+MODE:'')+(EXAM?'.thi':'');
+function $(s,r){return (r||document).querySelector(s);} function $$(s,r){return [].slice.call((r||document).querySelectorAll(s));}
+function lsGet(k){ try{ return localStorage.getItem(k); }catch(e){ return null; } }
+function lsSet(k,v){ try{ localStorage.setItem(k,v); }catch(e){} }
+function esc(t){ return String(t).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
+
+// ================= chế độ làm riêng một phần / thi thử =================
+(function(){
+  if(!MODE) return;
+  var s=MODE[0], n=MODE.slice(1);
+  document.body.classList.add('one');
+  var other=document.getElementById(s==='L'?'sectR':'sectL'); if(other) other.remove();
+  if(n){ $$(s==='L'?'.part':'.passage').forEach(function(x){ if(x.id!==(s==='L'?'part':'passage')+n) x.remove(); }); }
+  var lab=document.getElementById('modelabel'); lab.hidden=false;
+  lab.textContent=(EXAM?'Thi thử · ':'')+(s==='L'?'Listening':'Reading')+(n?(s==='L'?' · Part ':' · Passage ')+n:(EXAM?'':' · cả phần'));
+  document.title=document.title+' · '+lab.textContent;
+  if(n) $$('.hint').forEach(function(h){ h.textContent='Bấm số câu để nhảy tới câu đó. Bài làm được tự lưu trên máy này.'+(s==='R'?' Gợi ý: khoảng 20 phút cho một passage.':''); });
+  if(EXAM){ document.body.classList.add('exam');
+    $$('.hint').forEach(function(h){ h.textContent=s==='L'?'Thi thử: audio phát liền 4 part, mỗi part chỉ nghe một lần, không tạm dừng. Nghe xong có 2 phút kiểm tra rồi bài tự nộp.':'Thi thử: 60 phút cho 3 passage. Hết giờ bài tự nộp.'; });
+    $$('[data-act=reset]').forEach(function(b){ b.textContent='Thi lại'; });
+  }
+})();
+
+var state={};
+try{state=JSON.parse(lsGet(SK))||{};}catch(e){state={};}
+state.ans=state.ans||{}; state.done=state.done||{}; state.time=state.time||{L:0,R:0};
+function save(){ lsSet(SK,JSON.stringify(state)); }
+var cur=MODE?MODE[0]:'L';
+
+// ================= lưu & khôi phục bài làm =================
+$$('.ans').forEach(function(el){var q=el.dataset.q; if(state.ans[q]!=null) el.value=state.ans[q];
+  el.addEventListener('input',function(){state.ans[q]=el.value; save(); grid();}); el.addEventListener('change',function(){state.ans[q]=el.value; save(); grid();});});
+$$('.opts').forEach(function(bq){
+  var q=bq.dataset.q, q2=bq.dataset.q2, boxes=$$('.ans-opt',bq);
+  var saved=state.ans[q]; if(saved!=null){ boxes.forEach(function(b){ b.checked=String(saved).split(',').indexOf(b.value)>=0; }); }
+  boxes.forEach(function(b){ b.addEventListener('change',function(){
+    if(q2){ var pick=+b.dataset.pick, on=boxes.filter(function(x){return x.checked;}); if(on.length>pick){ b.checked=false; return; } }
+    state.ans[q]=boxes.filter(function(x){return x.checked;}).map(function(x){return x.value;}).join(','); save(); grid();
+  }); });
+});
+
+// ================= danh sách câu =================
+var PRESENT={};
+$$('.ans').forEach(function(el){PRESENT[el.dataset.q]=1;});
+$$('.opts').forEach(function(b){ var s=b.dataset.q[0],a=+b.dataset.q.slice(1),z=b.dataset.q2?+b.dataset.q2.slice(1):a; for(var n=a;n<=z;n++) PRESENT[s+n]=1; });
+function qnums(s){ return Object.keys(QT).filter(function(k){return k[0]===s&&PRESENT[k];}).map(function(k){return +k.slice(1);}).sort(function(a,b){return a-b;}); }
+function pairOf(s,n){ return $$('.opts[data-q2]').filter(function(b){var a=+b.dataset.q.slice(1),z=+b.dataset.q2.slice(1);return b.dataset.q[0]===s&&n>=a&&n<=z;})[0]; }
+function answered(s,n){
+  var k=s+n;
+  if(QT[k]==='multi'){ var bq=pairOf(s,n); if(!bq) return false; var v=(state.ans[bq.dataset.q]||'').split(',').filter(Boolean); return v.length>n-(+bq.dataset.q.slice(1)); }
+  return !!(state.ans[k]&&String(state.ans[k]).trim());
+}
+function target(s,n){ var bq; return document.getElementById(s+'q'+n) || $('[data-q="'+s+n+'"]') || ((bq=pairOf(s,n))&&bq.previousElementSibling); }
+function grid(){
+  ['L','R'].forEach(function(s){
+    var g=$('.panel[data-s="'+s+'"] .grid'); if(!g) return; if(!g.children.length){
+      qnums(s).forEach(function(n){var a=document.createElement('a'); a.href='#'; a.textContent=n; a.dataset.n=n;
+        a.onclick=function(e){e.preventDefault(); var t=target(s,n); if(t){ t.scrollIntoView({behavior:'smooth',block:'center'}); var f=t.matches&&t.matches('.ans')?t:(t.querySelector&&t.querySelector('.ans,.ans-opt')); if(f) setTimeout(function(){f.focus({preventScroll:true});},350);} };
+        g.appendChild(a);});
+    }
+    $$('a',g).forEach(function(a){ if(!state.done[s]) a.className=answered(s,+a.dataset.n)?'done':''; });
+  });
+}
+
+// ================= chấm điểm =================
+function norm(x){ return String(x||'').toLowerCase().replace(/[’']/g,"'").replace(/[£$€]/g,'').replace(/[.,;:!?]+$/,'').replace(/\s+/g,' ').trim(); }
+function variants(key){
+  var out=[]; String(key).split(/\s*\/\s*|\s+OR\s+/).forEach(function(alt){
+    var opts=[''], parts=alt.split(/(\([^)]*\))/);
+    parts.forEach(function(p){ if(/^\(.*\)$/.test(p)){ var inner=p.slice(1,-1); opts=opts.concat(opts.map(function(o){return o+inner;})); } else opts=opts.map(function(o){return o+p;}); });
+    opts.forEach(function(o){out.push(norm(o));});
+  }); return out;
+}
+function isRight(k,val){ var key=KEY[k]; if(key==null) return null; var v=norm(val); if(!v) return false;
+  return variants(key).some(function(x){ return x===v || x.replace(/-/g,' ')===v.replace(/-/g,' '); }); }
+var BAND={L:[[39,9],[37,8.5],[35,8],[32,7.5],[30,7],[26,6.5],[23,6],[18,5.5],[16,5],[13,4.5],[10,4],[8,3.5],[6,3],[4,2.5]],
+          R:[[39,9],[37,8.5],[35,8],[33,7.5],[30,7],[27,6.5],[23,6],[19,5.5],[15,5],[13,4.5],[10,4],[8,3.5],[6,3],[4,2.5]]};
+function band(s,sc){ for(var i=0;i<BAND[s].length;i++) if(sc>=BAND[s][i][0]) return BAND[s][i][1]; return 'dưới 2.5'; }
+var lastRes={};
+function grade(s){
+  var sect=$('#sect'+s), total=0, got=0, res={};
+  $$('.fix',sect).forEach(function(f){f.remove();});
+  $$('.ans',sect).forEach(function(el){ var k=el.dataset.q, r=isRight(k,el.value); if(r===null) return; total++;
+    el.classList.remove('ok-mark','bad-mark'); el.classList.add(r?'ok-mark':'bad-mark'); res[+k.slice(1)]=r; if(r) got++;
+    else{ var f=document.createElement('span'); f.className='fix'; f.textContent='✓ '+String(KEY[k]); el.insertAdjacentElement('afterend',f);} });
+  $$('.opts',sect).forEach(function(bq){
+    var q=+bq.dataset.q.slice(1), q2=bq.dataset.q2?+bq.dataset.q2.slice(1):q, keys=[], picked=$$('.ans-opt',bq).filter(function(b){return b.checked;}).map(function(b){return b.value;});
+    for(var n=q;n<=q2;n++){ var kv=KEY[s+n]; if(kv!=null) keys.push(String(kv).toUpperCase().trim()); }
+    if(!keys.length) return;
+    $$('.opt',bq).forEach(function(o){ var v=$('input',o).value; o.classList.remove('right','wrong');
+      if(keys.indexOf(v)>=0) o.classList.add('right'); else if($('input',o).checked) o.classList.add('wrong'); });
+    var hits=picked.filter(function(p){return keys.indexOf(p)>=0;});
+    for(var m=q;m<=q2;m++){ total++; var ok=(m-q)<hits.length; res[m]=ok; if(ok) got++; }
+  });
+  state.done[s]={got:got,total:total}; save(); lastRes[s]=res;
+  var g=$('.panel[data-s="'+s+'"] .grid'); $$('a',g).forEach(function(a){ var r=res[+a.dataset.n]; a.className=r===true?'g-ok':r===false?'g-bad':''; });
+  showScore(s); sect.classList.add('done-lock','revealed'); addLocs(s);
+  return res;
+}
+function showScore(s){ var d=state.done[s], el=$('.panel[data-s="'+s+'"] .score'); if(!el) return; if(!d){el.innerHTML='';return;}
+  el.innerHTML='Đúng '+d.got+'/'+d.total+(d.total===40?' <span class="band">Band ≈ '+band(s,d.got)+'</span>':'')+
+    '<span class="after">Bấm 📍 cạnh mỗi câu để xem chỗ có đáp án'+(s==='L'?' trong lời thoại':' trong bài đọc')+', bấm 💡 để đọc giải thích tiếng Việt.</span>'; }
+
+// ================= 1. lời thoại & vị trí đáp án =================
+function addLocs(s){
+  var sect=$('#sect'+s); $$('.loc,.xpb',sect).forEach(function(b){b.remove();});
+  qnums(s).forEach(function(n){
+    var k=s+n; if(!EV[k] && !XP[k]) return;
+    if(QT[k]==='multi'){ var bq=pairOf(s,n); if(bq && +bq.dataset.q.slice(1)!==n) return; }
+    var frag=[];
+    if(EV[k]){ var b=document.createElement('button'); b.type='button'; b.className='loc'; b.title='Xem chỗ có đáp án câu '+n; b.textContent='📍 '+n;
+      b.onclick=function(){ showEv(s,n); }; frag.push(b); }
+    if(XP[k]){ var x=document.createElement('button'); x.type='button'; x.className='loc xpb'; x.title='Giải thích câu '+n; x.textContent='💡';
+      x.onclick=function(){ showXp(s,n); }; frag.push(x); }
+    var w=$('[data-q="'+k+'"]',sect), anchor=null, parent=null;
+    if(w && w.classList.contains('ans')){ anchor=w.nextElementSibling&&w.nextElementSibling.classList.contains('fix')?w.nextElementSibling:w; }
+    else { parent=target(s,n); }
+    frag.forEach(function(el){ if(anchor){ anchor.insertAdjacentElement('afterend',el); anchor=el; } else if(parent) parent.appendChild(el); });
+  });
+}
+function keyText(s,n){
+  var k=s+n, bq=QT[k]==='multi'?pairOf(s,n):null;
+  if(bq){ var a=+bq.dataset.q.slice(1), z=+bq.dataset.q2.slice(1), o=[]; for(var m=a;m<=z;m++) if(KEY[s+m]!=null) o.push(KEY[s+m]); return {q:a+'–'+z, a:o.join(' & ')}; }
+  return {q:''+n, a:String(KEY[k]==null?'':KEY[k]).split('/').map(function(x){return x.trim();}).join(' / ')};
+}
+function showXp(s,n){
+  var box=$('#xpSheet'); if(!box){ box=document.createElement('div'); box.id='xpSheet'; box.setAttribute('role','dialog');
+    box.innerHTML='<div class="xp-in"><div class="xp-head"><b class="xp-t"></b><button type="button" class="xp-x" aria-label="Đóng">✕</button></div><div class="xp-a"></div><p class="xp-b"></p><div class="xp-f"><button type="button" class="xp-ev">📍 Xem chỗ có đáp án</button><span><button type="button" class="xp-prev">‹ Câu trước</button><button type="button" class="xp-next">Câu sau ›</button></span></div></div>';
+    document.body.appendChild(box); $('.xp-x',box).onclick=function(){ box.classList.remove('on'); };
+    document.addEventListener('keydown',function(e){ if(e.key==='Escape') box.classList.remove('on'); }); }
+  var kt=keyText(s,n), res=(lastRes[s]||{})[n];
+  $('.xp-t',box).textContent=(s==='L'?'Listening':'Reading')+' · Câu '+kt.q;
+  $('.xp-a',box).innerHTML='Đáp án: <b></b>'+(res===true?' <span class="xp-ok">Bạn làm đúng ✓</span>':res===false?' <span class="xp-no">Bạn làm sai ✗</span>':'');
+  $('b',$('.xp-a',box)).textContent=kt.a;
+  $('.xp-b',box).textContent=XP[s+n]||'';
+  var ev=$('.xp-ev',box); ev.style.display=EV[s+n]?'':'none'; ev.onclick=function(){ box.classList.remove('on'); showEv(s,n); };
+  var list=qnums(s).filter(function(m){ if(!XP[s+m]) return false; if(QT[s+m]!=='multi') return true; var b=pairOf(s,m); return !b||+b.dataset.q.slice(1)===m; }), i=list.indexOf(n);
+  var pv=$('.xp-prev',box), nx=$('.xp-next',box);
+  pv.disabled=i<=0; nx.disabled=i<0||i>=list.length-1;
+  pv.onclick=function(){ if(i>0) showXp(s,list[i-1]); }; nx.onclick=function(){ if(i<list.length-1) showXp(s,list[i+1]); };
+  box.classList.add('on');
+}
+function flash(el){ el.classList.remove('flash'); void el.offsetWidth; el.classList.add('flash'); }
+function showEv(s,n){
+  var k=s+n, v=EV[k];
+  if(s==='L'){
+    var sp=document.getElementById(v); if(!sp) return;
+    var d=sp.closest('details'); if(d) d.open=true;
+    $$('.evhl').forEach(function(x){x.classList.remove('evhl');});
+    sp.classList.add('evhl'); sp.setAttribute('data-q',n);
+    sp.scrollIntoView({behavior:'smooth',block:'center'}); flash(sp);
+  } else {
+    var pi=n<=13?1:n<=26?2:3, box=$('#passage'+pi+' .ptext'); if(!box) return;
+    var m=markSentence(box,v,n); if(m){ m.scrollIntoView({behavior:'smooth',block:'center'}); flash(m); }
+  }
+}
+function markSentence(root,sentence,n){
+  var old=root.querySelector('mark.ev[data-q="'+n+'"]'); if(old) return old;
+  var tgt=sentence.replace(/\s+/g,''), head=tgt.slice(0,40);
+  var ps=$$('p',root);
+  for(var i=0;i<ps.length;i++){
+    var walker=document.createTreeWalker(ps[i],NodeFilter.SHOW_TEXT,null), map=[], str='', node;
+    while((node=walker.nextNode())){ var t=node.nodeValue; for(var j=0;j<t.length;j++){ if(!/\s/.test(t[j])){ map.push([node,j]); str+=t[j]; } } }
+    var at=str.indexOf(head); if(at<0) continue;
+    var end=Math.min(str.length,at+tgt.length)-1, first=null;
+    // gom theo từng text node rồi bọc <mark>
+    var segs=[], k=at;
+    while(k<=end){ var nd=map[k][0], st=map[k][1], en=st; while(k+1<=end && map[k+1][0]===nd){ k++; en=map[k][1]; } segs.push([nd,st,en+1]); k++; }
+    segs.reverse().forEach(function(sg){ var r=document.createRange(); r.setStart(sg[0],sg[1]); r.setEnd(sg[0],sg[2]);
+      var mk=document.createElement('mark'); mk.className='ev'; mk.setAttribute('data-q',n); try{ r.surroundContents(mk); first=mk; }catch(e){} });
+    if(first){ var tag=document.createElement('sup'); tag.className='evtag'; tag.textContent=n; first.insertBefore(tag,first.firstChild); }
+    return first;
+  }
+  return null;
+}
+
+// ================= 3. gửi kết quả về Google Sheet + lưu lịch sử =================
+function who(){ return {name:lsGet('cam20.name')||'', lop:lsGet('cam20.lop')||''}; }
+function logResult(s,res,auto){
+  var d=state.done[s]; if(!d) return;
+  var wrong=Object.keys(res).filter(function(n){return res[n]===false;}).map(Number).sort(function(a,b){return a-b;});
+  var byPart={}; Object.keys(res).forEach(function(n){ n=+n; var pk=s==='L'?'L'+Math.ceil(n/10):'R'+(n<=13?1:n<=26?2:3); var b=byPart[pk]||(byPart[pk]=[0,0]); b[1]++; if(res[n]) b[0]++; });
+  var rec={t:Date.now(), test:+N, sec:s, part:MODE.length===2?MODE:(s), exam:EXAM, got:d.got, total:d.total, byPart:byPart,
+    band:d.total===40?band(s,d.got):'', secs:state.time[s]||0, wrong:wrong};
+  var h=[]; try{ h=JSON.parse(lsGet('cam18.hist'))||[]; }catch(e){}
+  h.push(rec); if(h.length>300) h=h.slice(-300); lsSet('cam18.hist',JSON.stringify(h));
+  var url=CFG.SCRIPT_URL; if(!url) return;
+  var w=who(), body={kind:'cam20', name:w.name, lop:w.lop, test:'Cam 18 · Test '+N,
+    part:(s==='L'?'Listening':'Reading')+(MODE.length===2?(s==='L'?' Part ':' Passage ')+MODE.slice(1):''),
+    mode:EXAM?'Thi thử':'Luyện tập', got:d.got, total:d.total, band:rec.band, minutes:Math.round((state.time[s]||0)/6)/10,
+    wrong:wrong.join(', '), auto:!!auto, submittedAt:new Date().toISOString(), userAgent:navigator.userAgent};
+  try{ fetch(url,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(body)}); }catch(e){}
+}
+function askName(cb){
+  var w=who(); if(w.name){ cb(); return; }
+  var m=$('#namebox'); m.hidden=false; $('#nmName').value=w.name; $('#nmLop').value=w.lop; setTimeout(function(){$('#nmName').focus();},50);
+  $('#nmForm').onsubmit=function(e){ e.preventDefault(); var nm=$('#nmName').value.trim(); if(!nm){ $('#nmErr').textContent='Nhập họ tên để thầy nhận được kết quả nhé.'; return; }
+    lsSet('cam20.name',nm); lsSet('cam20.lop',$('#nmLop').value.trim()); m.hidden=true; cb(); };
+  $('#nmSkip').onclick=function(){ m.hidden=true; cb(); };
+}
+function submit(s,auto){
+  var p=$('.panel[data-s="'+s+'"]'); if(!p||state.done[s]) return;
+  var go=function(){ var res=grade(s); logResult(s,res,auto); stopExam(); p.scrollIntoView({behavior:'smooth'}); };
+  if(auto){ go(); return; }
+  var miss=qnums(s).filter(function(n){return !answered(s,n);}).length;
+  if(miss && !confirm('Còn '+miss+' câu chưa làm. Vẫn nộp bài?')) return;
+  askName(go);
+}
+$$('.panel').forEach(function(p){ var s=p.dataset.s;
+  $('[data-act=submit]',p).onclick=function(){ submit(s,false); };
+  $('[data-act=reset]',p).onclick=function(){
+    if(!confirm(EXAM?'Thi lại từ đầu? Bài làm lần này sẽ bị xoá.':'Xoá hết bài làm phần này và làm lại?')) return;
+    var sect=$('#sect'+s); Object.keys(state.ans).forEach(function(k){ if(k[0]===s) delete state.ans[k]; });
+    delete state.done[s]; state.time[s]=0; delete state.started; delete state.apart; delete state.apos; delete state.audioEnd; save();
+    if(EXAM){ location.reload(); return; }
+    $$('.ans',sect).forEach(function(el){el.value=''; el.classList.remove('ok-mark','bad-mark');});
+    $$('.ans-opt',sect).forEach(function(b){b.checked=false;}); $$('.opt',sect).forEach(function(o){o.classList.remove('right','wrong');});
+    $$('.fix,.loc,.evtag',sect).forEach(function(f){f.remove();});
+    $$('mark.ev',sect).forEach(function(mk){ var t=document.createTextNode(mk.textContent); mk.replaceWith(t); });
+    $$('.evhl',sect).forEach(function(x){x.classList.remove('evhl');}); $$('details.script',sect).forEach(function(d){d.open=false;});
+    sect.classList.remove('done-lock','revealed');
+    $$('audio',sect).forEach(function(a){a.pause(); a.currentTime=0;});
+    showScore(s); grid(); window.scrollTo(0,0); };
+});
+
+// ================= 2. chế độ thi thử =================
+var examTimer=null;
+function stopExam(){ if(examTimer){ clearInterval(examTimer); examTimer=null; } $$('#sectL audio').forEach(function(a){a.pause();}); var eb=$('#exambar'); if(eb&&EXAM&&state.done[MODE[0]]){ eb.classList.add('over'); eb.innerHTML='<b>Đã nộp bài thi thử.</b> Xem điểm, đáp án và '+(MODE[0]==='L'?'lời thoại':'vị trí đáp án trong bài')+' ở dưới, hoặc bấm “Thi lại” để làm lại.'; } }
+function fmt(t){t=Math.max(0,Math.round(t));var m=Math.floor(t/60),x=t%60;return (m<10?'0':'')+m+':'+(x<10?'0':'')+x;}
+function setupExam(){
+  if(!EXAM) return;
+  var s=MODE[0], sect=$('#sect'+s), bar=document.createElement('div'); bar.id='exambar'; bar.className='exambar';
+  sect.insertBefore(bar, sect.firstChild);
+  if(state.done[s]){ bar.innerHTML='<b>Đã nộp bài thi thử.</b> Xem điểm và lời thoại ở dưới, hoặc bấm “Thi lại” để làm lại.'; bar.classList.add('over'); return; }
+  var w=who();
+  var rules=s==='L'?['Audio phát liền Part 1 → Part 4, mỗi part chỉ nghe một lần, không tạm dừng hay tua.','Vừa nghe vừa điền đáp án. Nghe xong có 2 phút kiểm tra, sau đó bài tự nộp.','Đeo tai nghe và kiểm tra âm lượng trước khi bắt đầu.']
+                   :['Có 60 phút cho 3 passage (40 câu). Đồng hồ đếm ngược ở góc trên.','Hết giờ bài tự nộp, nên nhớ để ý thời gian.'];
+  var ov=$('#examstart'); ov.hidden=state.started?true:false;
+  $('#exTitle').textContent='Thi thử '+(s==='L'?'Listening':'Reading')+' · Test '+N;
+  $('#exRules').innerHTML=rules.map(function(r){return '<li>'+esc(r)+'</li>';}).join('');
+  $('#exName').value=w.name; $('#exLop').value=w.lop;
+  $('#exForm').onsubmit=function(e){ e.preventDefault(); var nm=$('#exName').value.trim(); if(!nm){ $('#exErr').textContent='Nhập họ tên trước khi bắt đầu nhé.'; return; }
+    lsSet('cam20.name',nm); lsSet('cam20.lop',$('#exLop').value.trim()); ov.hidden=true; state.started=Date.now(); save(); run(true); };
+  if(state.started) run(false);
+  function run(fresh){
+    if(s==='R'){
+      var LIM=60*60;
+      var tickR=function(){ var left=LIM-(Date.now()-state.started)/1000; state.time.R=Math.min(LIM,Math.round((Date.now()-state.started)/1000));
+        bar.innerHTML='⏳ Còn lại <b class="cd'+(left<300?' low':'')+'">'+fmt(left)+'</b> · hết giờ bài tự nộp'; $('#timer').textContent=fmt(left);
+        if(left<=0){ stopExam(); submit('R',true); } };
+      tickR(); examTimer=setInterval(tickR,1000);
+    } else {
+      var auds=$$('#sectL .audio audio'); var idx=state.apart||0;
+      var showBar=function(txt,pct){ bar.innerHTML=txt+(pct!=null?'<div class="eprog"><i style="width:'+pct+'%"></i></div>':''); };
+      var endPhase=function(){ if(!state.audioEnd){ state.audioEnd=Date.now(); save(); }
+        var tickE=function(){ var left=120-(Date.now()-state.audioEnd)/1000; showBar('✅ Đã nghe xong. Còn <b class="cd low">'+fmt(left)+'</b> để kiểm tra lại đáp án, sau đó bài tự nộp.',null); $('#timer').textContent=fmt(left);
+          if(left<=0){ stopExam(); submit('L',true); } };
+        tickE(); examTimer=setInterval(tickE,1000); };
+      if(state.audioEnd||idx>=auds.length){ endPhase(); return; }
+      var play=function(){
+        var a=auds[idx]; if(!a){ endPhase(); return; }
+        if(state.apos && state.apart===idx){ try{ a.currentTime=state.apos; }catch(e){} }
+        a.onended=function(){ idx++; state.apart=idx; state.apos=0; save(); play(); };
+        a.ontimeupdate=function(){ if(!a.duration) return; var pct=a.currentTime/a.duration*100;
+          showBar('🎧 Đang phát <b>Part '+(idx+1)+'</b> / 4 · '+fmt(a.currentTime)+' / '+fmt(a.duration),pct);
+          if(Math.floor(a.currentTime)%3===0){ state.apart=idx; state.apos=a.currentTime; save(); } };
+        var pr=a.play(); if(pr&&pr.catch) pr.catch(function(){ showBar('<button type="button" class="btn" id="exResume">▶ Bấm để tiếp tục nghe Part '+(idx+1)+'</button>',null); $('#exResume').onclick=function(){ play(); }; });
+        var pc=document.getElementById('part'+(idx+1)); if(pc && fresh!==false) pc.scrollIntoView({behavior:'smooth'});
+      };
+      if(fresh) play();
+      else showBar('<button type="button" class="btn" id="exResume">▶ Tiếp tục nghe Part '+(idx+1)+'</button> <span class="hint">Trang vừa tải lại, bấm để nghe tiếp từ chỗ dừng.</span>',null), $('#exResume').onclick=function(){ play(); };
+      examTimer=setInterval(function(){ state.time.L=Math.round((Date.now()-state.started)/1000); $('#timer').textContent=fmt(state.time.L); },1000);
+    }
+  }
+}
+
+// ================= 4. tô sáng & ghi chú trong bài đọc =================
+var HK='cam18.hl.t'+N;
+function hlLoad(){ var o={}; try{o=JSON.parse(lsGet(HK))||{};}catch(e){} return o; }
+function hlSave(){ var o={}; $$('.passage').forEach(function(ps){ $$('.ptext p',ps).forEach(function(p,i){ if(p.querySelector('mark.hl')){ var c=p.cloneNode(true); $$('mark.ev,.evtag,.loc',c).forEach(function(x){ if(x.tagName==='MARK') x.replaceWith(document.createTextNode(x.textContent)); else x.remove(); }); o[ps.id+':'+i]=c.innerHTML; } }); }); lsSet(HK,JSON.stringify(o)); }
+function hlRestore(){ var o=hlLoad(); Object.keys(o).forEach(function(k){ var a=k.split(':'), ps=document.getElementById(a[0]); if(!ps) return; var p=$$('.ptext p',ps)[+a[1]]; if(p) p.innerHTML=o[k]; }); }
+function setupHighlight(){
+  if(!$('.ptext')) return;
+  hlRestore();
+  var tb=document.createElement('div'); tb.className='hltool'; tb.hidden=true;
+  tb.innerHTML='<button type="button" data-h="y">🖍 Tô vàng</button><button type="button" data-h="n">📝 Ghi chú</button>';
+  document.body.appendChild(tb);
+  var nb=document.createElement('div'); nb.className='notebox'; nb.hidden=true;
+  nb.innerHTML='<textarea rows="3" placeholder="Ghi chú của bạn…"></textarea><div><button type="button" data-n="save" class="btn">Lưu</button> <button type="button" data-n="del" class="btn alt">Bỏ tô</button></div>';
+  document.body.appendChild(nb);
+  var range=null, curMark=null;
+  function place(el,x,y){ el.style.left=Math.max(8,Math.min(window.innerWidth-el.offsetWidth-8,x))+'px'; el.style.top=(y+window.scrollY)+'px'; }
+  function onSel(){
+    var sel=window.getSelection(); if(!sel.rangeCount||sel.isCollapsed){ tb.hidden=true; return; }
+    var r=sel.getRangeAt(0), p1=r.startContainer.parentElement&&r.startContainer.parentElement.closest('.ptext p'), p2=r.endContainer.parentElement&&r.endContainer.parentElement.closest('.ptext p');
+    if(!p1||p1!==p2||!r.toString().trim()){ tb.hidden=true; return; }
+    range=r.cloneRange(); tb.hidden=false; var rc=r.getBoundingClientRect(); place(tb,rc.left+rc.width/2-tb.offsetWidth/2,rc.top-44);
+  }
+  document.addEventListener('mouseup',function(e){ if(tb.contains(e.target)||nb.contains(e.target)) return; setTimeout(onSel,10); });
+  document.addEventListener('touchend',function(e){ if(tb.contains(e.target)||nb.contains(e.target)) return; setTimeout(onSel,250); });
+  document.addEventListener('mousedown',function(e){ if(!nb.contains(e.target)&&!(e.target.closest&&e.target.closest('mark.hl'))) nb.hidden=true; });
+  function wrap(){ if(!range) return null; var mk=document.createElement('mark'); mk.className='hl';
+    try{ mk.appendChild(range.extractContents()); range.insertNode(mk); }catch(e){ return null; } window.getSelection().removeAllRanges(); tb.hidden=true; range=null; hlSave(); return mk; }
+  tb.addEventListener('click',function(e){ var b=e.target.closest('button'); if(!b) return; var mk=wrap(); if(mk&&b.dataset.h==='n') openNote(mk); });
+  function openNote(mk){ curMark=mk; nb.hidden=false; $('textarea',nb).value=mk.getAttribute('data-note')||''; var rc=mk.getBoundingClientRect(); place(nb,rc.left,rc.bottom+6); $('textarea',nb).focus(); }
+  document.addEventListener('click',function(e){ var mk=e.target.closest&&e.target.closest('mark.hl'); if(mk && !window.getSelection().toString()) openNote(mk); });
+  nb.addEventListener('click',function(e){ var b=e.target.closest('button'); if(!b||!curMark) return;
+    if(b.dataset.n==='save'){ var v=$('textarea',nb).value.trim(); if(v){ curMark.setAttribute('data-note',v); curMark.title=v; curMark.classList.add('has-note'); } else { curMark.removeAttribute('data-note'); curMark.removeAttribute('title'); curMark.classList.remove('has-note'); } }
+    else { var t=document.createDocumentFragment(); while(curMark.firstChild) t.appendChild(curMark.firstChild); curMark.replaceWith(t); }
+    nb.hidden=true; curMark=null; hlSave(); });
+  $$('.passage').forEach(function(ps){
+    var h=document.createElement('div'); h.className='ptools';
+    h.innerHTML='<span>Bôi đen chữ trong bài để tô vàng hoặc ghi chú.</span><button type="button" class="mini" data-clear>Xoá tô sáng</button>';
+    var head=$('.part-title',ps); head.insertAdjacentElement('afterend',h);
+    $('[data-clear]',h).onclick=function(){ if(!confirm('Xoá hết tô sáng và ghi chú của passage này?')) return; $$('.ptext mark.hl',ps).forEach(function(mk){ var t=document.createDocumentFragment(); while(mk.firstChild) t.appendChild(mk.firstChild); mk.replaceWith(t); }); hlSave(); };
+  });
+}
+
+// ================= 6. flashcard từ vựng từng passage =================
+function setupVocab(){
+  var V=(window.C20VOCAB||{})[N]; if(!V||!window.C20FC) return;
+  $$('.passage').forEach(function(ps){ var i=+ps.id.replace('passage',''), cards=V['R'+i]; if(!cards) return;
+    var bar=$('.ptools',ps); if(!bar){ bar=document.createElement('div'); bar.className='ptools'; $('.part-title',ps).insertAdjacentElement('afterend',bar); }
+    var b=document.createElement('button'); b.type='button'; b.className='mini vocab'; b.textContent='🃏 Từ vựng ('+cards.length+')';
+    b.onclick=function(){ window.C20FC.open(cards,'Từ vựng · Test '+N+' · Passage '+i,'cam18.fc.t'+N+'.R'+i); };
+    bar.appendChild(b);
+  });
+}
+
+// ================= tab & đồng hồ =================
+function tab(s){ cur=s; $$('.tabs button').forEach(function(b){b.setAttribute('aria-selected',b.dataset.s===s);});
+  $$('.sect').forEach(function(x){x.classList.toggle('on',x.id==='sect'+s);});
+  if(!$('#sect'+s)) return;
+  if(s==='R') $$('#sectL audio').forEach(function(a){a.pause();});
+  if(!MODE){ try{history.replaceState(null,'',s==='R'?'#reading':'#listening');}catch(e){} } tick(); }
+$$('.tabs button').forEach(function(b){b.onclick=function(){tab(b.dataset.s); window.scrollTo(0,0);};});
+function tick(){ if(!EXAM) $('#timer').textContent=fmt(state.time[cur]||0); }
+if(!EXAM) setInterval(function(){ if(document.hidden||state.done[cur]) return; state.time[cur]=(state.time[cur]||0)+1; tick(); if(state.time[cur]%10===0) save(); },1000);
+
+setupHighlight(); setupVocab();
+['L','R'].forEach(function(s){ if(state.done[s]&&$('#sect'+s)) grade(s); });
+grid(); tab(MODE?MODE[0]:(location.hash==='#reading'?'R':'L'));
+setupExam();
+})();
+
+</script>
+</body>
+</html>
