@@ -2,147 +2,201 @@
 <html lang="vi">
 <head>
 <script>try{if(localStorage.getItem('mt.theme')==='dark')document.documentElement.setAttribute('data-theme','dark')}catch(e){}</script>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<title>Minto English · Luyện đề IELTS Cambridge</title>
+<meta name="description" content="Cambridge IELTS 17–21 đủ Listening, Reading, Writing, Speaking: chấm điểm ngay, quy đổi band, giải thích tiếng Việt.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Minto English">
+<meta property="og:title" content="Minto English · Luyện đề IELTS Cambridge">
+<meta property="og:description" content="Đề Cambridge IELTS đủ 4 kỹ năng. Chấm điểm ngay, giải thích tiếng Việt, flashcard từ vựng.">
+<meta property="og:image" content="https://mangomint1805.github.io/cam/og.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:url" content="https://mangomint1805.github.io/cam/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="icons/fav-64.png">
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#a8691a">
 <link rel="apple-touch-icon" href="icons/apple-180.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="color-scheme" content="light only">
-<title>Cambridge IELTS · Luyện tập</title>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{
-  color-scheme:light;
-  --paper:#faf8f4; --card:#ffffff; --line:#ddd7c9; --ink:#1e232b; --dim:#666e7a; --panel2:#f2efe8;
-  --amber:#a8691a; --amber-soft:#f2e2c4; --amber-ink:#6b4410; --teal:#1f8f6c; --teal-soft:#e1f4ec;
-}
+:root{color-scheme:light;--paper:#faf8f4;--card:#fff;--line:#e6e0d3;--line2:#ddd7c9;--ink:#1e232b;--dim:#666e7a;--panel2:#f4f0e8;
+  --brand:#a8691a;--brand-soft:#f2e2c4;--brand-ink:#6b4410;--ok:#1f8f6c;--ok-soft:#e1f4ec}
 *{box-sizing:border-box}
 html,body{margin:0;background:var(--paper);color:var(--ink);font-family:'IBM Plex Sans',system-ui,sans-serif;line-height:1.55}
-.wrap{max-width:760px;margin:0 auto;padding:0 20px}
-header{padding:56px 0 24px}
-.kicker{color:var(--amber);font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin:0 0 8px}
-h1{font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:clamp(34px,6.5vw,50px);line-height:1.08;margin:0 0 12px;letter-spacing:-.01em}
-header p{margin:0;color:var(--dim);font-size:16px;max-width:56ch}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.hero{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:22px;align-items:stretch;padding:34px 0 8px}
+.hello .kicker{display:flex;align-items:center;gap:8px;color:var(--brand);font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin:0 0 10px}
+.hello h1{font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:clamp(32px,5vw,46px);line-height:1.08;margin:0 0 10px;letter-spacing:-.015em}
+.hello h1 em{font-style:normal;color:var(--brand-ink)}
+.hello p{margin:0;color:var(--dim);font-size:16px;max-width:52ch}
+.cta{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0 0}
+.btn{display:inline-flex;align-items:center;gap:8px;font:inherit;font-weight:700;font-size:15px;text-decoration:none;border-radius:11px;padding:12px 18px;border:1.5px solid var(--brand);background:var(--brand);color:#fff;cursor:pointer}
+.btn:hover{background:#94590f}
+.btn.alt{background:#fff;color:var(--brand-ink);border-color:var(--line2)}
+.btn.alt:hover{border-color:var(--brand)}
+.btn:focus-visible,.test:focus-visible,.tool:focus-visible{outline:3px solid #f2c879;outline-offset:2px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:0 10px 30px rgba(107,68,16,.06)}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.stat{background:var(--panel2);border-radius:12px;padding:12px 14px}
+.stat .lab{display:flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;color:var(--dim)}
+.stat b{display:block;font-family:'Fraunces',Georgia,serif;font-size:28px;font-weight:600;color:var(--brand-ink);line-height:1.15;margin-top:2px}
+.stat small{font-size:12px;color:var(--dim)}
+.resume{display:flex;align-items:center;gap:12px;margin-top:12px;padding:12px 14px;border-radius:12px;background:#fff8ea;border:1px solid #f0d9a8;text-decoration:none;color:var(--ink)}
+.resume b{display:block;font-size:14.5px}.resume small{color:var(--dim);font-size:12.5px}
+.resume .ic{color:var(--brand);width:22px;height:22px}
+.resume .go{margin-left:auto;color:var(--brand-ink)}
+.me{margin-top:12px;font-size:13.5px;color:var(--dim);display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.me input{font:inherit;font-size:14.5px;padding:8px 10px;border:1px solid var(--line2);border-radius:8px;background:#fff;color:var(--ink);flex:1 1 140px;min-width:0}
+.me input:focus-visible{outline:3px solid var(--brand-soft);border-color:var(--brand)}
+.me button{font:inherit;font-weight:700;font-size:13px;border:0;background:none;color:var(--brand-ink);cursor:pointer;text-decoration:underline}
+.sec{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin:34px 0 12px}
+.sec h2{font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:26px;margin:0}
+.sec span{color:var(--dim);font-size:14px}
+.tests{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.test{display:flex;gap:14px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;text-decoration:none;color:var(--ink);transition:border-color .15s,box-shadow .15s,transform .15s}
+.test:hover{border-color:var(--brand);box-shadow:0 8px 22px rgba(107,68,16,.09);transform:translateY(-1px)}
+.ring{flex:none;position:relative;width:60px;height:60px}
+.ring svg{width:60px;height:60px;transform:rotate(-90deg)}
+.ring .n{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1}
+.ring .n small{font-size:9.5px;letter-spacing:.1em;color:var(--dim);font-weight:700}
+.ring .n b{font-family:'Fraunces',Georgia,serif;font-size:22px;font-weight:600;color:var(--brand-ink)}
+.tinfo b{display:block;font-size:16px}
+.tinfo span{display:block;font-size:13px;color:var(--dim)}
+.badge{display:inline-block;margin-top:5px;font-size:12px;font-weight:700;border-radius:999px;padding:2px 9px;background:var(--panel2);color:var(--dim)}
+.badge.ok{background:var(--ok-soft);color:var(--ok)}
+.badge.mid{background:#fff3db;color:#8a5d06}
+.tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}
+.tool{display:flex;flex-direction:column;gap:8px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;text-decoration:none;color:var(--ink);transition:border-color .15s}
+.tool:hover{border-color:var(--brand)}
+.tool .ico{width:40px;height:40px;border-radius:11px;background:var(--brand-soft);color:var(--brand-ink);display:flex;align-items:center;justify-content:center}
+.tool .ico .ic{width:22px;height:22px}
+.tool b{font-size:15.5px}.tool span{font-size:13px;color:var(--dim)}
+.inst{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;background:#fff;border:1px dashed #d9b77a;border-radius:14px;padding:14px 16px;margin:24px 0 0;font-size:14px}
+.inst .ic{color:var(--brand);width:22px;height:22px}.inst b{color:var(--brand-ink)}.inst>span{flex:1 1 260px;color:var(--dim)}
+.inst button{font:inherit;font-weight:700;border:0;background:var(--brand);color:#fff;border-radius:9px;padding:8px 14px;cursor:pointer}
+.tips{margin:24px 0 0;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 20px}
+.tips summary{cursor:pointer;font-weight:700;color:var(--brand-ink)}
+.tips ul{margin:10px 0 0;padding-left:20px}.tips li{margin:6px 0;font-size:14.5px}
+footer{padding:28px 0 40px;color:var(--dim);font-size:13px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+@media (max-width:860px){.hero{grid-template-columns:1fr}.tools{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.tools{grid-template-columns:1fr}.hero{padding-top:22px}.sec{margin-top:26px}}
+.nenbar{display:flex;gap:14px;align-items:center;margin:18px 0 0;padding:16px 18px;border-radius:16px;text-decoration:none;color:var(--ink,#1e232b);background:linear-gradient(120deg,#fff7e8,#fdf0d8);border:1px solid #ecd3a6;transition:transform .15s,box-shadow .2s}
+.nenbar:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(168,105,26,.14)}
+.nenbar .ico{width:44px;height:44px;border-radius:12px;background:#a8691a;color:#fff;display:flex;align-items:center;justify-content:center;flex:none}.nenbar .ico .ic{width:24px;height:24px}
+.nenbar b{display:block;font-size:16px}.nenbar small{display:block;color:#6b5a40;font-size:13.5px}.nenbar .go{margin-left:auto;color:#a8691a;flex:none}
+html[data-theme=dark] .nenbar{background:linear-gradient(120deg,#2a2216,#231c12)!important;border-color:#5a4422!important}html[data-theme=dark] .nenbar small{color:#c9b693}
 
-.me{display:flex;flex-wrap:wrap;gap:8px 10px;align-items:flex-end;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:0 0 22px}
-.me label{display:flex;flex-direction:column;font-size:13px;font-weight:600;color:var(--dim);flex:1 1 170px}
-.me input{font:inherit;font-size:15px;padding:8px 10px;border:1px solid var(--line);border-radius:4px;background:var(--panel2);color:var(--ink);margin-top:3px}
-.me input:focus-visible{outline:3px solid var(--amber);outline-offset:1px}
-.me .ok{font-size:13px;color:var(--teal);font-weight:600;min-width:70px}
-
-.books{list-style:none;margin:0;padding:0;display:grid;gap:14px}
-.book{position:relative;display:grid;grid-template-columns:92px 1fr auto;gap:18px;align-items:center;background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:18px 20px;text-decoration:none;color:var(--ink);transition:border-color .2s,transform .2s,box-shadow .2s}
-.book:hover{border-color:var(--amber);transform:translateY(-2px);box-shadow:0 8px 22px rgba(107,68,16,.10)}
-.book:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
-.spine{height:112px;border-radius:6px 10px 10px 6px;background:linear-gradient(90deg,rgba(0,0,0,.18) 0 7px,transparent 7px),var(--c);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:inset -3px 0 0 rgba(255,255,255,.18)}
-.spine small{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;opacity:.9}
-.spine b{font-family:'Fraunces',Georgia,serif;font-size:40px;font-weight:600;line-height:1}
-.info h2{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:24px;margin:0}
-.info p{margin:3px 0 0;font-size:14px;color:var(--dim)}
-.info p.rel{margin-top:1px;font-size:12.5px;font-weight:600;color:var(--amber-ink);letter-spacing:.02em}
-.prog{display:inline-block;margin-top:8px;font-size:12.5px;font-weight:700;color:var(--teal);background:var(--teal-soft);border-radius:999px;padding:2px 10px}
-.prog.none{color:var(--dim);background:var(--panel2)}
-.note{display:inline-block;margin-top:6px;font-size:12.5px;color:var(--amber-ink)}
-.go{flex:none;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--amber-ink);transition:background .2s,border-color .2s}
-.book:hover .go{background:var(--amber-soft);border-color:var(--amber)}
-
-.tools{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0 0}
-.tool{display:flex;gap:12px;align-items:center;background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;text-decoration:none;color:var(--ink);transition:border-color .2s}
-.tool:hover{border-color:var(--amber)}
-.tool:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
-.tool .ic{font-size:26px;line-height:1}
-.tool b{display:block;font-size:15.5px}
-.tool span span{display:block;font-size:13px;color:var(--dim)}
-@media (max-width:760px){.tools{grid-template-columns:1fr}}
-.tips{margin:36px 0 0;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px 20px}
-.tips h2{font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:21px;margin:0 0 8px}
-.tips ul{margin:0;padding-left:20px}
-.tips li{margin:6px 0;font-size:15px}
-footer{padding:30px 0 50px;color:var(--dim);font-size:13px}
-
-@media (max-width:520px){
-  header{padding:38px 0 18px}
-  .book{grid-template-columns:70px 1fr;gap:14px;padding:16px}
-  .spine{height:92px}
-  .spine b{font-size:32px}
-  .go{display:none}
-  .info h2{font-size:21px}
-}
-@media (prefers-reduced-motion:reduce){.book{transition:none}.book:hover{transform:none}}
-.inst{display:flex;flex-wrap:wrap;gap:4px 10px;align-items:center;background:#fff;border:1px dashed #d9b77a;border-radius:12px;padding:12px 14px;margin:18px 0 0;font-size:14px}.inst b{color:#6b4410}.inst>span{flex:1 1 260px;color:#666e7a}.inst button{font:inherit;font-weight:700;border:0;background:#a8691a;color:#fff;border-radius:8px;padding:7px 12px;cursor:pointer}
+.books{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.book{display:flex;gap:16px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:var(--ink);transition:border-color .15s,box-shadow .15s,transform .15s}
+.book:hover{border-color:var(--brand);box-shadow:0 8px 22px rgba(107,68,16,.09);transform:translateY(-1px)}
+.book:focus-visible{outline:3px solid #f2c879;outline-offset:2px}
+.spine{flex:none;width:58px;height:76px;border-radius:5px 9px 9px 5px;background:linear-gradient(90deg,rgba(0,0,0,.18) 0 6px,transparent 6px),var(--c);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:inset -3px 0 0 rgba(255,255,255,.18),0 4px 10px rgba(0,0,0,.12)}
+.spine small{font-size:8.5px;letter-spacing:.12em;opacity:.9}.spine b{font-family:'Fraunces',Georgia,serif;font-size:27px;font-weight:600;line-height:1}
+.binfo{flex:1;min-width:0}.binfo b{display:block;font-size:16px}.binfo span{display:block;font-size:13px;color:var(--dim)}
+.dots{display:flex;gap:5px;margin-top:6px}.dots i{width:22px;height:6px;border-radius:9px;background:var(--panel2)}.dots i.h{background:#e9c27f}.dots i.on{background:var(--ok)}
+.book .go{color:var(--brand-ink);flex:none}
 </style>
-<link rel="icon" type="image/png" href="icons/fav-64.png">
-<meta property="og:title" content="Minto English · Luyện đề IELTS Cambridge"><meta property="og:description" content="Đề Cambridge IELTS đủ Listening, Reading, Writing, Speaking. Chấm điểm ngay, giải thích tiếng Việt."><meta property="og:image" content="https://mangomint1805.github.io/cam/og.png"><meta property="og:type" content="website"><meta name="twitter:card" content="summary_large_image">
 </head>
 <body data-nav="home">
 <div class="wrap">
-  <header>
-    <p class="kicker">IELTS Academic · Luyện tập tự chấm</p>
-    <h1>Chọn bộ đề Cambridge</h1>
-    <p>Mỗi bộ có 4 test đầy đủ Listening và Reading, có audio, chấm điểm ngay, xem chỗ có đáp án, giải thích tiếng Việt và flashcard từ vựng.</p>
-  </header>
-
-  <div class="me">
-    <label>Họ và tên<input id="meName" autocomplete="name" placeholder="Để thầy nhận được kết quả"></label>
-    <label>Lớp / nhóm<input id="meLop" placeholder="(nếu có)"></label>
-    <span class="ok" id="meOk"></span>
-  </div>
-
-  <ul class="books" id="books"></ul>
-
-  <div class="tools">
-    <a class="tool" href="phan-tich.html"><span class="ic" aria-hidden="true">📊</span><span><b>Điểm yếu & tiến bộ</b><span>Hay sai dạng câu nào, kèm bài luyện thêm; biểu đồ band qua các lần làm</span></span></a>
-    <a class="tool" href="huong-dan.html"><span class="ic" aria-hidden="true">❓</span><span><b>Hướng dẫn nhanh</b><span>Lần đầu dùng? Xem cách làm bài, xem đáp án, tra từ trong 2 phút</span></span></a>
-    <a class="tool" href="flashcards.html"><span class="ic" aria-hidden="true">🃏</span><span><b>Flashcard của tôi</b><span>Từ bạn lưu khi bấm tra từ trong bài (dùng chung với web TOEIC)</span></span></a>
-    <a class="tool" href="chinh-ta.html"><span class="ic" aria-hidden="true">✍️</span><span><b>Chép chính tả</b><span>Nghe từng câu trong đề, gõ lại, web chấm từng từ</span></span></a>
-  </div>
-
-<div class="inst" id="inst"><b>📱 Cài web như một app trên điện thoại</b><span>Android (Chrome): bấm <b>⋮</b> → <b>Thêm vào màn hình chính</b>. iPhone (Safari): bấm <b>Chia sẻ</b> <span aria-hidden="true">⬆️</span> → <b>Thêm vào MH chính</b>.</span><button type="button" id="instBtn" hidden>Cài ngay</button></div>
-<script>(function(){var b=document.getElementById('instBtn'),ev=null;if(window.matchMedia&&matchMedia('(display-mode: standalone)').matches){document.getElementById('inst').hidden=true;}window.addEventListener('beforeinstallprompt',function(e){e.preventDefault();ev=e;b.hidden=false;});b.onclick=function(){if(ev){ev.prompt();ev=null;b.hidden=true;}};})();</script>
-  <section class="tips">
-    <h2>Dùng thế nào? <a href="huong-dan.html" style="font-size:15px;font-family:'IBM Plex Sans',sans-serif;font-weight:700;color:var(--amber-ink)">Xem hướng dẫn có hình →</a></h2>
-    <ul>
-      <li>Nhập tên một lần ở trên là dùng được cho mọi bộ đề, kết quả sẽ được gửi cho thầy.</li>
-      <li>Chọn một bộ, rồi bấm vào từng test để làm cả bài, từng phần, hoặc thi thử có giờ.</li>
-      <li>Nộp bài xong, bấm <b>📍</b> để xem chỗ có đáp án và <b>💡</b> để đọc giải thích tiếng Việt.</li>
-      <li>Trong bài đọc, bấm vào <b>từ gạch chân</b> để xem nghĩa và nghe phát âm.</li>
-      <li>Bài làm tự lưu trên máy này. Mỗi bộ có trang <b>📈 Tiến độ</b> riêng, còn <b>📊 Phân tích điểm yếu</b> gom kết quả cả 5 bộ.</li>
-    </ul>
+  <section class="hero">
+    <div class="hello">
+      <p class="kicker"><span data-ic="target"></span>IELTS Academic · Cambridge 17–21</p>
+      <h1 id="hi">Luyện đề <em>IELTS Cambridge</em></h1>
+      <p>5 bộ đề, mỗi bộ 4 test đủ Listening, Reading, Writing và Speaking. Chấm điểm và quy đổi band ngay, xem chỗ có đáp án, giải thích tiếng Việt từng câu.</p>
+      <div class="cta"><a class="btn" href="#bo-de"><span data-ic="book"></span>Chọn bộ đề</a><a class="btn alt" href="nen.html"><span data-ic="layers"></span>Kiến thức nền</a></div>
+    </div>
+    <div class="panel">
+      <div class="stats" id="stats"></div>
+      <div id="resume"></div>
+      <div class="me" id="me"></div>
+    </div>
   </section>
 
-  <footer><a href="https://mangomint1805.github.io/toeic/" style="color:var(--amber-ink);font-weight:600">→ Luyện đề TOEIC (ETS 2026)</a><br>Cambridge IELTS 21 · 20 · 19 · 18 · 17 — tài liệu luyện tập cho học viên.</footer>
+  <div class="sec"><h2>Kế hoạch ôn thi</h2><span>Đếm ngược và gợi ý việc nên làm mỗi ngày</span></div>
+  <div id="plan"></div>
+
+  <a class="nenbar" href="nen.html"><span class="ico" data-ic="layers"></span><span><b>Mới bắt đầu IELTS? Học Kiến thức nền trước</b><small id="nenSub">Cách thi, mẹo từng kỹ năng, bố cục Writing, ngữ pháp band 6+. Giải thích tiếng Việt, có bài tập nhỏ.</small></span><span class="go" data-ic="arrow"></span></a>
+
+  <div class="sec" id="bo-de"><h2>Chọn bộ đề Cambridge</h2><span>Mỗi bộ: 4 test · Listening 40 · Reading 40 · Writing · Speaking</span></div>
+  <ul class="books" id="books"></ul>
+
+  <div class="sec"><h2>Công cụ ôn tập</h2></div>
+  <div class="tools">
+    <a class="tool" href="nen.html"><span class="ico" data-ic="layers"></span><b>Kiến thức nền</b><span>Cách thi, mẹo làm bài, ngữ pháp cho bạn mới học</span></a>
+    <a class="tool" href="phan-tich.html"><span class="ico" data-ic="chart"></span><b>Điểm yếu & tiến bộ</b><span>Hay sai dạng câu nào, biểu đồ band qua các lần làm</span></a>
+    <a class="tool" href="chinh-ta.html"><span class="ico" data-ic="pen"></span><b>Chép chính tả</b><span>Nghe từng câu trong đề, gõ lại, chấm từng từ</span></a>
+    <a class="tool" href="flashcards.html"><span class="ico" data-ic="cards"></span><b>Flashcard của tôi</b><span>Từ đã lưu khi bấm tra từ (dùng chung với web TOEIC)</span></a>
+    <a class="tool" href="huong-dan.html"><span class="ico" data-ic="help"></span><b>Hướng dẫn có hình</b><span>Cách làm bài, xem đáp án, tra từ trong 2 phút</span></a>
+  </div>
+
+  <div class="sec" id="huy-hieu"><h2>Huy hiệu</h2><span id="bdgN"></span></div>
+  <div id="badges"></div>
+
+  <div class="inst" id="inst"><span data-ic="phone"></span><b>Cài như app trên điện thoại</b><span>Android (Chrome): bấm <b>⋮</b> → <b>Thêm vào màn hình chính</b>. iPhone (Safari): bấm <b>Chia sẻ</b> → <b>Thêm vào MH chính</b>.</span><button type="button" id="instBtn" hidden>Cài ngay</button></div>
+
+  <details class="tips">
+    <summary>Hướng dẫn nhanh</summary>
+    <ul>
+      <li>Nhập tên một lần ở trên, kết quả mỗi lần nộp bài sẽ được gửi cho thầy.</li>
+      <li>Chọn một bộ, rồi bấm vào từng test để làm cả bài, từng phần, hoặc thi thử có giờ.</li>
+      <li>Nộp bài xong, bấm <b>📍</b> để xem chỗ có đáp án và <b>💡</b> để đọc giải thích tiếng Việt.</li>
+      <li>Trong bài đọc, bấm vào <b>từ gạch chân</b> để xem nghĩa, nghe phát âm và lưu flashcard.</li>
+      <li>Bài làm tự lưu trên máy này. Mỗi bộ có trang <b>Tiến độ</b> riêng, còn <b>Điểm yếu</b> gom kết quả cả 5 bộ.</li>
+    </ul>
+  </details>
+  <footer><span>© Minto English · Cambridge IELTS 21 · 20 · 19 · 18 · 17, tài liệu luyện tập cho học viên</span><a href="https://mangomint1805.github.io/toeic/" style="color:var(--brand-ink);font-weight:600">Luyện đề TOEIC →</a></footer>
 </div>
+<script src="shared/ui.js"></script>
 <script>
 (function(){
-  var BOOKS=[
-    {k:'c21', n:21, c:'#b0453a', hist:'cam21.hist', note:'', date:'tháng 7/2026'},
-    {k:'c20', n:20, c:'#a8691a', hist:'cam20.hist', note:'', date:'tháng 7/2025'},
-    {k:'c19', n:19, c:'#3f7d4a', hist:'cam19.hist', note:'', date:'tháng 7/2024'},
-    {k:'c18', n:18, c:'#1f6f8f', hist:'cam18.hist', note:'', date:'tháng 7/2023'},
-    {k:'c17', n:17, c:'#6d4c9a', hist:'cam17.hist', note:'', date:'tháng 7/2022'}
-  ];
+  var I=window.MICON;
   function get(k){ try{ return JSON.parse(localStorage.getItem(k)); }catch(e){ return null; } }
-  var html='';
+  function esc(t){ return String(t==null?'':t).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
+  var BOOKS=[{n:21,c:'#b0453a',date:'7/2026'},{n:20,c:'#a8691a',date:'7/2025'},{n:19,c:'#3f7d4a',date:'7/2024'},{n:18,c:'#1f6f8f',date:'7/2023'},{n:17,c:'#6d4c9a',date:'7/2022'}];
+  var name=''; try{ name=localStorage.getItem('cam20.name')||''; }catch(e){}
+  function hi(){ if(name){ var f=name.trim().split(/\s+/).pop(); document.getElementById('hi').innerHTML='Chào <em>'+esc(f)+'</em>, hôm nay luyện gì nhỉ?'; } }
+  hi();
+  var S=window.MSTATS?MSTATS():{streak:0,bestL:0,bestR:0,subs:0}, all=[];
+  BOOKS.forEach(function(b){ (get('cam'+b.n+'.hist')||[]).forEach(function(r){ r.book=b.n; all.push(r); }); });
+  all.sort(function(a,b){ return (a.t||0)-(b.t||0); });
+  var last=all[all.length-1];
+  function bd(x){ return x?(x%1?x.toFixed(1):x+'.0'):'–'; }
+  document.getElementById('stats').innerHTML=
+    '<div class="stat"><span class="lab">'+I('flame')+'Chuỗi ngày học</span><b>'+S.streak+'</b><small>ngày liên tục</small></div>'+
+    '<div class="stat"><span class="lab">'+I('trophy')+'Band cao nhất</span><b>'+(S.bestL||S.bestR?bd(S.bestL)+' <span style="font-size:15px;color:var(--dim)">/</span> '+bd(S.bestR):'–')+'</b><small>Listening / Reading</small></div>'+
+    '<div class="stat"><span class="lab">'+I('check')+'Bài đã nộp</span><b>'+(S.subs+(S.ws||0))+'</b><small>'+S.subs+' bài nghe đọc · '+(S.ws||0)+' bài viết</small></div>'+
+    '<div class="stat"><span class="lab">'+I('clock')+'Lần gần nhất</span><b style="font-size:20px">'+(last?'Cam '+last.book+' · T'+last.test:'–')+'</b><small>'+(last?(last.sec==='L'?'Listening':'Reading')+' · '+last.got+'/'+last.total:'chưa có')+'</small></div>';
+  if(last) document.getElementById('resume').innerHTML='<a class="resume" href="c'+last.book+'/">'+I('play')+'<span><b>Tiếp tục với Cambridge '+last.book+'</b><small>Lần trước: Test '+last.test+' · '+(last.sec==='L'?'Listening':'Reading')+'</small></span><span class="go">'+I('arrow')+'</span></a>';
+  var me=document.getElementById('me');
+  function drawMe(edit){
+    var lop=''; try{ lop=localStorage.getItem('cam20.lop')||''; }catch(e){}
+    if(name&&!edit){ me.innerHTML=I('user')+'<span>'+esc(name)+(lop?' · '+esc(lop):'')+'</span><button type="button" id="meEd">Đổi tên</button>'; document.getElementById('meEd').onclick=function(){ drawMe(true); }; return; }
+    me.innerHTML='<input id="meName" autocomplete="name" placeholder="Họ và tên (để thầy nhận kết quả)" value="'+esc(name)+'"><input id="meLop" placeholder="Lớp (nếu có)" value="'+esc(lop)+'"><button type="button" id="meOk">Lưu</button>';
+    document.getElementById('meOk').onclick=function(){ name=document.getElementById('meName').value.trim(); try{ localStorage.setItem('cam20.name',name); localStorage.setItem('cam20.lop',document.getElementById('meLop').value.trim()); }catch(e){} hi(); drawMe(false); };
+  }
+  drawMe(false);
+  var h='';
   BOOKS.forEach(function(b){
-    var h=get(b.hist)||[], tests={}; h.forEach(function(r){ tests[r.test]=1; });
-    var prog=h.length?'<span class="prog">✓ Đã nộp '+h.length+' bài · '+Object.keys(tests).length+'/4 test</span>':'<span class="prog none">Chưa làm bài nào</span>';
-    html+='<li><a class="book" href="'+b.k+'/" style="--c:'+b.c+'">'+
-      '<span class="spine" aria-hidden="true"><small>IELTS</small><b>'+b.n+'</b></span>'+
-      '<span class="info"><h2>Cambridge IELTS '+b.n+'</h2><p class="rel">Ra mắt '+b.date+'</p><p>4 test · Listening 40 câu · Reading 40 câu</p>'+prog+(b.note?'<br><span class="note">⚠ '+b.note+'</span>':'')+'</span>'+
-      '<span class="go" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>'+
-    '</a></li>';
+    var hs=get('cam'+b.n+'.hist')||[], t4=[0,0,0,0,0];
+    hs.forEach(function(r){ var k=r.test; if(!t4[k]) t4[k]={}; t4[k][r.sec]=1; });
+    var dots='', nt=0; for(var k=1;k<=4;k++){ var x=t4[k]||{}; var c=x.L&&x.R?'on':(x.L||x.R?'h':''); if(c) nt++; dots+='<i class="'+c+'" title="Test '+k+'"></i>'; }
+    h+='<li><a class="book" href="c'+b.n+'/" style="--c:'+b.c+'"><span class="spine" aria-hidden="true"><small>IELTS</small><b>'+b.n+'</b></span><span class="binfo"><b>Cambridge IELTS '+b.n+'</b><span>Ra mắt '+b.date+' · 4 test</span><span class="dots" aria-label="Đã làm '+nt+'/4 test">'+dots+'</span><span>'+(hs.length?'Đã nộp '+hs.length+' bài':'Chưa làm bài nào')+'</span></span><span class="go">'+I('arrow')+'</span></a></li>';
   });
-  document.getElementById('books').innerHTML=html;
-  var nm=document.getElementById('meName'), lp=document.getElementById('meLop'), ok=document.getElementById('meOk'), t0;
-  try{ nm.value=localStorage.getItem('cam20.name')||''; lp.value=localStorage.getItem('cam20.lop')||''; }catch(e){}
-  function keep(){ try{ localStorage.setItem('cam20.name',nm.value.trim()); localStorage.setItem('cam20.lop',lp.value.trim()); }catch(e){} ok.textContent='Đã lưu ✓'; clearTimeout(t0); t0=setTimeout(function(){ok.textContent='';},1500); }
-  nm.addEventListener('change',keep); lp.addEventListener('change',keep);
+  document.getElementById('books').innerHTML=h;
+  if(window.MPLAN) MPLAN(document.getElementById('plan'));
+  if(window.MBADGEHTML){ document.getElementById('badges').innerHTML=MBADGEHTML(); var bb=MBADGES(); document.getElementById('bdgN').textContent='Đã mở '+bb.filter(function(x){return x.at;}).length+'/'+bb.length; }
+  if(S.nen) document.getElementById('nenSub').textContent='Đã học '+S.nen+' bài. Học tiếp bài kế tiếp nhé!';
+  if(window.MFX) MFX();
+  var b=document.getElementById('instBtn'),ev=null;
+  if(window.matchMedia&&matchMedia('(display-mode: standalone)').matches) document.getElementById('inst').hidden=true;
+  window.addEventListener('beforeinstallprompt',function(e){ e.preventDefault(); ev=e; b.hidden=false; });
+  b.onclick=function(){ if(ev){ ev.prompt(); ev=null; b.hidden=true; } };
 })();
 </script>
 <script>if('serviceWorker' in navigator)window.addEventListener('load',function(){navigator.serviceWorker.register('sw.js',{scope:'./'}).catch(function(){});});</script>
-<script src="shared/ui.js"></script>
 </body>
 </html>

@@ -202,6 +202,7 @@ details.sample .in{padding:2px 16px 12px;white-space:pre-line;font-size:15px}
       var n=wc(ta.value); if(n<20){toast('Bài còn ngắn quá, viết thêm nhé.');return;}
       if(n<need&&!confirm('Bài mới có '+n+' từ (yêu cầu '+need+'). Vẫn gửi?'))return;
       withName(function(){
+        try{var wh=JSON.parse(lsg('cam.ws.hist')||'[]');wh.push({t:Date.now(),b:N,test:T,task:k,words:n});lss('cam.ws.hist',JSON.stringify(wh.slice(-100)));}catch(e){}
         var url=window.C20CFG&&window.C20CFG.SCRIPT_URL; if(!url)return;
         var used=end?Math.max(0,Math.round((Date.now()-(end-mins*60000))/60000)):'';
         var body={kind:'cam20',name:lsg('cam20.name')||'',lop:lsg('cam20.lop')||'',test:'Cam '+N+' · Test '+T,part:'Writing Task '+(k==='w1'?1:2),mode:'Writing',got:n,total:need,band:'',minutes:used,wrong:ta.value,auto:false,submittedAt:new Date().toISOString(),userAgent:navigator.userAgent.slice(0,120)};
