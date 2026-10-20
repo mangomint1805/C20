@@ -49,6 +49,7 @@
     '.vpop{position:absolute;z-index:70;max-width:300px;background:#fff;border:1px solid #ddd7c9;border-top:3px solid #a8691a;border-radius:10px;box-shadow:0 10px 30px rgba(30,35,43,.2);padding:10px 12px;font:14px/1.45 "IBM Plex Sans",system-ui,sans-serif;color:#1e232b}' +
     '.vpop .w{font-family:Fraunces,Georgia,serif;font-size:18px;font-weight:600;color:#6b4410}' +
     '.vpop .p{color:#666e7a;font-size:12.5px;margin-left:6px}' +
+    '.vpop .facts{margin-top:7px;font-size:12.5px}.vpop .facts a{color:#6b4410}.vpop .sv{font:600 12.5px/1 "IBM Plex Sans",sans-serif;border:1.5px solid #ddd7c9;background:#fff;border-radius:999px;padding:4px 9px;cursor:pointer;color:#6b4410}' +
     '.vpop .i{color:#666e7a;font-size:13px}' +
     '.vpop .v{margin-top:4px}' +
     '.vpop button{font:inherit;font-size:13px;border:1px solid #ddd7c9;background:#faf8f4;border-radius:7px;padding:2px 9px;cursor:pointer;margin-left:6px;vertical-align:2px}' +
@@ -128,16 +129,29 @@
     pop.style.left = left + 'px'; pop.style.top = top + 'px';
   }
   function sayNative(t) { try { speechSynthesis.cancel(); var u = new SpeechSynthesisUtterance(t); u.lang = 'en-GB'; u.rate = 0.9; speechSynthesis.speak(u); } catch (e) {} }
+  function fcGet() { try { return JSON.parse(localStorage.getItem('vocab.cards')) || {}; } catch (e) { return {}; } }
   function showDict(word, r) {
     var f = dictFind(word);
     var POS = { noun: 'n', verb: 'v', adjective: 'adj', adverb: 'adv', preposition: 'prep', conjunction: 'conj', pronoun: 'pron', phrase: 'phr' };
     var body = f ? f.e[1].map(function (d) { return '<div class="d"><b>' + esc(POS[d[0]] || d[0] || '') + '</b>' + esc(d[1].join('; ')) + '</div>'; }).join('')
                  : '<div class="d">Chưa có trong từ điển của web. Thử bấm vào từ gốc, hoặc hỏi thầy nhé.</div>';
     pop.innerHTML = '<button type="button" class="x" aria-label="Đóng">✕</button><span class="w">' + esc(f ? f.w : word) + '</span>' +
-      '<div class="i">' + esc(f ? f.e[0] || '' : '') + ' <button type="button" class="s">🔊 Nghe</button></div>' + body + (f ? '<div class="src">Từ điển Anh–Việt rút gọn</div>' : '');
+      '<div class="i">' + esc(f ? f.e[0] || '' : '') + ' <button type="button" class="s">🔊 Nghe</button></div>' + body + (f ? '<div class="facts"><button type="button" class="sv">' + (fcGet()[f.w] ? '★ Đã lưu' : '☆ Lưu flashcard') + '</button> <a href="../flashcards.html">Bộ flashcard →</a></div><div class="src">Từ điển Anh–Việt rút gọn</div>' : '');
     pop.hidden = false;
     pop.querySelector('.x').onclick = function () { pop.hidden = true; if (PICK) PICK.clear(); };
     pop.querySelector('.s').onclick = function () { sayNative(f ? f.w : word); };
+    var sv = pop.querySelector('.sv');
+    if (sv) sv.onclick = function () {
+      var C = fcGet();
+      if (C[f.w]) { delete C[f.w]; sv.textContent = '☆ Lưu flashcard'; }
+      else {
+        var blk = r.startContainer.parentElement && r.startContainer.parentElement.closest('p,li,td,div'), tx = (blk ? blk.textContent : '').replace(/\s+/g, ' ').trim();
+        var ex = tx.split(/(?<=[.!?])\s+/).filter(function (x) { return x.toLowerCase().indexOf(word.toLowerCase()) >= 0; })[0] || '';
+        C[f.w] = { w: f.w, ipa: f.e[0] || '', m: f.e[1].map(function (d) { return (POS[d[0]] ? POS[d[0]] + '. ' : '') + d[1].join('; '); }).join(' | '), ex: ex.slice(0, 220), src: document.title, at: Date.now(), lv: 0 };
+        sv.textContent = '★ Đã lưu';
+      }
+      try { localStorage.setItem('vocab.cards', JSON.stringify(C)); } catch (e) {}
+    };
     var rc = r.getBoundingClientRect();
     var left = Math.max(8, Math.min(window.innerWidth - pop.offsetWidth - 8, rc.left));
     var top = rc.bottom + 8 + window.scrollY;

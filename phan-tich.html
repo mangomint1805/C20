@@ -58,6 +58,10 @@ header p{margin:0;color:var(--dim);max-width:60ch}
 .empty a{color:var(--amber-ink);font-weight:700}
 footer{padding:30px 0 50px;color:var(--dim);font-size:13px}
 @media (max-width:520px){.sum{grid-template-columns:1fr 1fr}.sum .tile:last-child{grid-column:1/-1}}
+.prog-card{background:#fff;border:1px solid #ddd7c9;border-radius:12px;padding:16px 18px;margin:0 0 18px}
+.prog-card h2{font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:21px;margin:0 0 2px}
+.psub{color:#666e7a;font-size:13.5px;margin:0 0 8px}
+.plg{display:flex;gap:14px;font-size:13px;color:#666e7a}.plg i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:5px;vertical-align:-1px}
 </style>
 </head>
 <body>
@@ -69,6 +73,7 @@ footer{padding:30px 0 50px;color:var(--dim);font-size:13px}
     <p>Gom kết quả mọi bài đã nộp ở cả 5 bộ Cambridge trên máy này. Mỗi câu chỉ tính lần làm gần nhất. Bấm vào một dạng để xem mẹo và các bài luyện thêm đúng dạng đó.</p>
     <div class="tabs" role="tablist"><button role="tab" aria-selected="true" data-s="R">📖 Reading</button><button role="tab" aria-selected="false" data-s="L">🎧 Listening</button></div>
   </header>
+  <section class="prog-card" aria-labelledby="pgh"><h2 id="pgh">📈 Band qua các lần làm</h2><p class="psub">Band ước tính mỗi lần làm cả bài Listening hoặc cả bài Reading (40 câu), ở mọi bộ sách.</p><div id="pchart"></div></section>
   <div id="out"></div>
   <footer>Dữ liệu lấy từ bài làm đã lưu trên trình duyệt này. Làm trên máy khác sẽ có thống kê riêng.</footer>
 </div>
@@ -162,6 +167,27 @@ footer{padding:30px 0 50px;color:var(--dim);font-size:13px}
   var start='R'; try{ start=localStorage.getItem('cam.pt.tab')||'R'; }catch(e){}
   [].forEach.call(tabs,function(x){ x.setAttribute('aria-selected',x.dataset.s===start?'true':'false'); });
   render(start);
+})();
+</script>
+<script>
+(function(){
+  function get(k){ try{ return JSON.parse(localStorage.getItem(k)); }catch(e){ return null; } }
+  var LB=[[39,9],[37,8.5],[35,8],[32,7.5],[30,7],[26,6.5],[23,6],[18,5.5],[16,5],[13,4.5],[10,4],[8,3.5],[6,3],[4,2.5],[0,0]];
+  var RB=[[39,9],[37,8.5],[35,8],[33,7.5],[30,7],[27,6.5],[23,6],[19,5.5],[15,5],[13,4.5],[10,4],[8,3.5],[6,3],[4,2.5],[0,0]];
+  function band(t,g){ for(var i=0;i<t.length;i++) if(g>=t[i][0]) return t[i][1]; return 0; }
+  var all=[];
+  [21,20,19,18,17].forEach(function(b){ (get('cam'+b+'.hist')||[]).forEach(function(r){ if(r&&r.total===40&&(r.sec==='L'||r.sec==='R')) all.push({t:r.t||0,s:r.sec,b:band(r.sec==='L'?LB:RB,r.got),lab:'Cam '+b+' T'+r.test}); }); });
+  all.sort(function(a,b){ return a.t-b.t; });
+  var L=all.filter(function(x){return x.s==='L';}), R=all.filter(function(x){return x.s==='R';}), el=document.getElementById('pchart');
+  if(!all.length){ el.innerHTML='<p class="psub">Chưa có lần làm cả bài Listening hoặc Reading nào. Làm "Cả Listening" / "Cả Reading" hoặc thi thử để thấy biểu đồ.</p>'; return; }
+  var W=760,H=240,pl=36,pr=14,pt=16,pb=30,n=Math.max(L.length,R.length);
+  function x(i){ return pl+(n<2?(W-pl-pr)/2:i*(W-pl-pr)/(n-1)); }
+  function y(v){ return pt+(H-pt-pb)*(1-(v-3)/6); }
+  var g='';
+  [3,4,5,6,7,8,9].forEach(function(v){ g+='<line x1="'+pl+'" x2="'+(W-pr)+'" y1="'+y(v)+'" y2="'+y(v)+'" stroke="#eee6d6"/><text x="'+(pl-6)+'" y="'+(y(v)+4)+'" font-size="11" text-anchor="end" fill="#666e7a">'+v+'</text>'; });
+  function line(p,c){ if(!p.length) return ''; return '<path d="'+p.map(function(q,i){ return (i?'L':'M')+x(i)+' '+y(Math.max(3,q.b)); }).join(' ')+'" fill="none" stroke="'+c+'" stroke-width="2.5"/>'+p.map(function(q,i){ return '<circle cx="'+x(i)+'" cy="'+y(Math.max(3,q.b))+'" r="4.5" fill="#fff" stroke="'+c+'" stroke-width="2.5"><title>'+q.lab+' · '+new Date(q.t).toLocaleDateString('vi-VN')+'</title></circle><text x="'+x(i)+'" y="'+(y(Math.max(3,q.b))-9)+'" font-size="11" text-anchor="middle" font-weight="700" fill="'+c+'">'+q.b+'</text>'; }).join(''); }
+  for(var i=0;i<n;i++) g+='<text x="'+x(i)+'" y="'+(H-10)+'" font-size="11" text-anchor="middle" fill="#666e7a">Lần '+(i+1)+'</text>';
+  el.innerHTML='<svg viewBox="0 0 '+W+' '+H+'" width="100%" role="img" aria-label="Biểu đồ band">'+g+line(L,'#a8691a')+line(R,'#1f8f6c')+'</svg><div class="plg"><span><i style="background:#a8691a"></i>Listening</span><span><i style="background:#1f8f6c"></i>Reading</span></div>';
 })();
 </script>
 </body>
