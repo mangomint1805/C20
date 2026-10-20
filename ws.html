@@ -50,6 +50,7 @@ details.sample>summary{cursor:pointer;font-weight:600;color:var(--brand-ink);pad
 details.sample .in{padding:2px 16px 12px;white-space:pre-line;font-size:15px}
 .band{display:inline-block;background:var(--ok);color:#fff;border-radius:999px;padding:0 10px;font-weight:700;font-size:13px;margin-left:6px}
 .comment{background:var(--panel2);border-radius:6px;padding:10px 12px;margin-top:10px;font-size:14.5px;white-space:pre-line}
+.dtype{font-size:14.5px;margin:0 0 10px;color:var(--dim)}.dtype b{color:#fff;background:var(--brand);border-radius:999px;padding:1px 10px;font-size:13.5px}
 .tips{font-size:14.5px;margin:10px 0 0;padding-left:20px}
 .tips li{margin:4px 0}
 /* speaking */
@@ -127,6 +128,37 @@ details.sample .in{padding:2px 16px 12px;white-space:pre-line;font-size:15px}
   s.onerror=function(){$('#main').innerHTML='<div class="card">Bộ này chưa có phần Writing &amp; Speaking. <a href="'+B+'/">← Quay lại</a></div>';};
   document.head.appendChild(s);
 
+
+  var TYPES={
+    line:['Line graph','biểu đồ đường — số liệu thay đổi theo thời gian'],
+    bar:['Bar chart','biểu đồ cột — so sánh các nhóm'],
+    table:['Table','bảng số liệu'],
+    pie:['Pie chart','biểu đồ tròn — tỉ lệ phần trăm'],
+    map:['Map / Plan','bản đồ, sơ đồ — so sánh trước và sau'],
+    process:['Process / Diagram','quy trình — các bước tạo ra / diễn ra'],
+    mixed:['Mixed charts','kết hợp nhiều biểu đồ / bảng'],
+    opinion:['Agree / Disagree','nêu rõ đồng ý hay không và bảo vệ quan điểm'],
+    discuss:['Discuss both views','bàn cả 2 quan điểm, rồi nêu ý kiến của mình'],
+    advdis:['Advantages vs Disadvantages','lợi có lớn hơn hại không — phải kết luận rõ'],
+    posneg:['Positive or negative?','xu hướng này tích cực hay tiêu cực'],
+    twopart:['Two-part question','đề có 2 câu hỏi — phải trả lời đủ cả 2']
+  };
+  var TIPS={
+    line:['Overview: xu hướng chung (tăng/giảm) và đường cao nhất / thay đổi lớn nhất.','Nhóm các đường có xu hướng giống nhau vào cùng một đoạn.','Dùng từ chỉ xu hướng: rose sharply, declined gradually, peaked at, remained stable.'],
+    bar:['Overview: nhóm cao nhất / thấp nhất, khác biệt nổi bật.','So sánh theo nhóm, không liệt kê từng cột.','Dùng cấu trúc so sánh: twice as many as, slightly higher than, the largest proportion.'],
+    table:['Không liệt kê hết số — chọn số lớn nhất, nhỏ nhất, thay đổi đáng kể.','Overview: xu hướng chung của bảng.','Chia thân bài theo hàng hoặc theo cột có điểm chung.'],
+    pie:['Overview: phần lớn nhất / nhỏ nhất.','Dùng: accounted for, made up, a quarter, the majority.'],
+    map:['Overview: thay đổi lớn nhất (khu vực được xây mới, bị bỏ đi).','Dùng thì quá khứ / hiện tại hoàn thành và bị động: was demolished, has been replaced by, was converted into.','Dùng từ chỉ vị trí: to the north of, next to, opposite.'],
+    process:['Overview: có bao nhiêu bước, bắt đầu và kết thúc bằng gì.','Dùng bị động: is collected, are heated, is then transported.','Từ nối thứ tự: first, next, after that, finally.'],
+    mixed:['Overview: 1 ý chính cho MỖI biểu đồ.','Viết mỗi biểu đồ một đoạn thân bài; nếu có liên hệ thì nối chúng lại.'],
+    opinion:['Mở bài nêu rõ: agree / disagree / partly agree.','Mỗi đoạn thân bài 1 lý do + giải thích + ví dụ.','Giữ một quan điểm xuyên suốt, kết bài nhắc lại.'],
+    discuss:['Đoạn 1: quan điểm thứ nhất, Đoạn 2: quan điểm thứ hai — giải thích công bằng.','Ý kiến của mình nêu ở mở bài và kết bài (hoặc trong đoạn mình ủng hộ).'],
+    advdis:['Viết 1 đoạn lợi ích, 1 đoạn bất lợi.','Bắt buộc kết luận bên nào lớn hơn — nêu ngay từ mở bài.'],
+    posneg:['Chọn rõ: positive, negative hoặc vừa có mặt tốt vừa có mặt xấu nhưng nghiêng về bên nào.','Giải thích tại sao và đưa ví dụ cụ thể.'],
+    twopart:['Gạch chân 2 câu hỏi; mỗi câu trả lời trong 1 đoạn thân bài.','Mở bài trả lời ngắn gọn cả 2 câu hỏi.']
+  };
+  function tipsHTML(k,t){ var a=TIPS[t]||[]; return a.length?'<ul class="tips">'+a.map(function(x){return '<li>'+esc(x)+'</li>';}).join('')+'</ul>':''; }
+  var P2T={place:'Địa điểm',person:'Người',event:'Sự kiện / Trải nghiệm',thing:'Đồ vật / Sự vật'};
   var clockId=null;
   function render(){
     clearInterval(clockId); stopRec(); speechSynthesis&&speechSynthesis.cancel();
@@ -140,9 +172,8 @@ details.sample .in{padding:2px 16px 12px;white-space:pre-line;font-size:15px}
   function writing(k){
     var w=D[k], K='camws.'+B+'.t'+T+'.'+k, need=k==='w1'?150:250, mins=k==='w1'?20:40;
     var h='<div class="wgrid"><div class="left card"><h2 class="t">Writing Task '+(k==='w1'?1:2)+'</h2><p class="sub">Nên dành khoảng '+mins+' phút · tối thiểu '+need+' từ</p>'+
-      '<div class="prompt">'+esc(w.prompt)+'</div>'+(w.img?'<img class="figure" src="'+B+'/img-ws/'+esc(w.img)+'" alt="Biểu đồ / hình của Task 1">':'')+
-      (k==='w1'?'<ul class="tips"><li>Mở bài: viết lại đề bằng từ của mình (paraphrase).</li><li>Overview: 2 đặc điểm nổi bật nhất — không có overview thì khó qua band 5.</li><li>2 đoạn thân bài: số liệu cụ thể + so sánh. Không nêu ý kiến cá nhân.</li></ul>'
-        :'<ul class="tips"><li>Đọc kỹ dạng đề: discuss both views / agree–disagree / advantages–disadvantages / problem–solution.</li><li>Mở bài nêu rõ quan điểm; mỗi đoạn thân bài một ý chính + giải thích + ví dụ.</li><li>Kết bài tóm tắt lại quan điểm, không thêm ý mới.</li></ul>')+
+      (w.type?'<p class="dtype">Dạng đề: <b>'+esc(TYPES[w.type][0])+'</b> — '+esc(TYPES[w.type][1])+'</p>':'')+'<div class="prompt">'+esc(w.prompt)+'</div>'+(w.img?'<img class="figure" src="'+B+'/img-ws/'+esc(w.img)+'" alt="Biểu đồ / hình của Task 1">':'')+
+      tipsHTML(k,w.type)+
       (w.sample?'<details class="sample"><summary>📄 Xem bài mẫu'+(w.sample.band?'<span class="band">'+(w.sample.band==='Model'?'Bài mẫu giám khảo':'Band '+esc(w.sample.band))+'</span>':'')+'</summary><div class="in">'+esc(w.sample.text)+(w.sample.comment?'<div class="comment"><b>Nhận xét của giám khảo:</b>\n'+esc(w.sample.comment)+'</div>':'')+'</div></details>':'<p class="sub" style="margin-top:12px">Sách không có bài mẫu cho task này.</p>')+
       '</div><div class="card"><div class="wbar"><span class="clock" id="clk">'+mins+':00</span><button class="btn sm alt" id="clkBtn" type="button">▶ Bấm giờ '+mins+' phút</button><span class="wc" id="wc">0 từ</span><span class="saved" id="sv"></span></div>'+
       '<textarea id="essay" spellcheck="false" placeholder="Viết bài ở đây… (bài tự lưu trên máy này)"></textarea>'+
@@ -197,14 +228,14 @@ details.sample .in{padding:2px 16px 12px;white-space:pre-line;font-size:15px}
   function qrow(q,i){return '<div class="sq"><div class="txt">'+esc(q)+'<div class="rb" id="rb'+i+'"></div></div><div class="ctl"><button class="ic" data-say="'+i+'" type="button">🔊 Nghe</button><button class="ic" data-rec="'+i+'" type="button">🎙 Ghi âm</button></div></div>';}
   function speaking(){
     var s=D.s, Qs=[], h='';
-    h+='<div class="card"><h2 class="t">Speaking Part 1</h2><p class="sub">Giới thiệu & chủ đề quen thuộc · 4–5 phút. Trả lời 2–3 câu cho mỗi câu hỏi, có lý do / ví dụ.</p>';
+    h+='<div class="card"><h2 class="t">Speaking Part 1</h2><p class="dtype">Chủ đề: <b>'+esc(s.p1.slice(1).map(function(x){return x.topic;}).join(', ')||'—')+'</b></p><p class="sub">Giới thiệu & chủ đề quen thuộc · 4–5 phút. Trả lời 2–3 câu cho mỗi câu hỏi, có lý do / ví dụ.</p>';
     s.p1.forEach(function(tp){h+='<div class="topic">'+esc(tp.topic)+'</div>';tp.qs.forEach(function(q){h+=qrow(q,Qs.length);Qs.push(q);});});
     h+='</div><div class="card"><h2 class="t">Speaking Part 2</h2><p class="sub">1 phút chuẩn bị (được ghi chú) · nói 1–2 phút liên tục.</p>'+
       '<div class="cue"><b>'+esc(s.p2.card)+'</b>You should say:<ul>'+s.p2.points.map(function(p){return '<li>'+esc(p)+'</li>';}).join('')+'</ul>'+esc(s.p2.end||'')+'</div>'+
       '<div class="stage"><span class="big" id="p2c">1:00</span><span class="lbl" id="p2l">Sẵn sàng</span><button class="btn" id="p2go" type="button">▶ Bắt đầu chuẩn bị 1 phút</button><button class="ic" id="p2say" type="button">🔊 Nghe đề</button></div>'+
       '<textarea class="notes" id="p2n" placeholder="Ghi chú nhanh trong 1 phút chuẩn bị…"></textarea><div id="p2rb"></div>'+
       (s.p2.follow&&s.p2.follow.length?'<div class="topic">Câu hỏi thêm</div>'+s.p2.follow.map(function(q){var r=qrow(q,Qs.length);Qs.push(q);return r;}).join(''):'')+'</div>';
-    h+='<div class="card"><h2 class="t">Speaking Part 3</h2><p class="sub">Thảo luận sâu hơn · 4–5 phút. Nêu quan điểm, giải thích, so sánh, đưa ví dụ xã hội.</p>';
+    h+='<div class="card"><h2 class="t">Speaking Part 3</h2><p class="dtype">Chủ đề: <b>'+esc(s.p3.map(function(x){return x.topic;}).join(', '))+'</b></p><p class="sub">Thảo luận sâu hơn · 4–5 phút. Nêu quan điểm, giải thích, so sánh, đưa ví dụ xã hội.</p>';
     s.p3.forEach(function(tp){h+='<div class="topic">'+esc(tp.topic)+'</div>';tp.qs.forEach(function(q){h+=qrow(q,Qs.length);Qs.push(q);});});
     h+='<p class="sub" style="margin-top:12px">🎙 Bản ghi chỉ nằm trên máy của bạn để tự nghe lại, không gửi đi đâu.</p></div>';
     $('#main').innerHTML=h;
