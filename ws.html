@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<title>Writing &amp; Speaking · Cambridge IELTS</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--paper:#faf8f4;--card:#fff;--line:#ddd7c9;--ink:#1e232b;--dim:#666e7a;--panel2:#f2efe8;
+  --brand:#a8691a;--brand-soft:#f2e2c4;--brand-ink:#6b4410;--ok:#1f8f6c;--ok-soft:#e1f4ec;--bad:#c14636;--bad-soft:#fbe6e2}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--paper);color:var(--ink);font-family:'IBM Plex Sans',system-ui,sans-serif;line-height:1.6;font-size:16px}
+a{color:var(--brand)}
+[hidden]{display:none!important}
+header.top{position:sticky;top:0;z-index:20;background:rgba(250,248,244,.97);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.bar{max-width:1100px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:10px 14px;flex-wrap:wrap}
+.bar h1{font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:21px;margin:0;flex:1;min-width:200px;line-height:1.25}
+.bar h1 small{display:block;font-family:'IBM Plex Sans',sans-serif;font-size:12.5px;font-weight:500;color:var(--dim)}
+.bar a.home{font-weight:600;font-size:14px;text-decoration:none;color:var(--brand-ink)}
+.tabs{display:flex;background:var(--panel2);border-radius:10px;padding:3px;gap:2px}
+.tabs button{font:inherit;font-weight:600;font-size:14px;border:0;background:none;padding:7px 12px;border-radius:8px;cursor:pointer;color:var(--dim);white-space:nowrap}
+.tabs button[aria-selected=true]{background:var(--card);color:var(--brand-ink);box-shadow:0 1px 3px rgba(0,0,0,.1)}
+.picker{max-width:1100px;margin:0 auto;padding:0 16px 8px;display:flex;gap:8px;flex-wrap:wrap;align-items:center;font-size:14px;color:var(--dim)}
+.picker select{font:inherit;font-size:14px;padding:4px 8px;border:1px solid var(--line);border-radius:6px;background:#fff}
+main{max-width:1100px;margin:0 auto;padding:18px 16px 40px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:0 0 16px}
+h2.t{font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:26px;margin:0 0 4px;color:var(--brand-ink)}
+.sub{color:var(--dim);font-size:14px;margin:0 0 12px}
+.prompt{white-space:pre-line;font-size:16.5px;background:#fffdf8;border:1px solid var(--line);border-left:4px solid var(--brand);border-radius:6px;padding:12px 16px;margin:0 0 12px}
+.figure{display:block;max-width:100%;height:auto;margin:0 auto 6px;border-radius:4px}
+.wgrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:18px;align-items:start}
+.wgrid .left{position:sticky;top:120px;max-height:calc(100vh - 140px);overflow:auto}
+@media (max-width:900px){.wgrid{grid-template-columns:1fr}.wgrid .left{position:static;max-height:none}}
+textarea{width:100%;min-height:420px;font:inherit;font-size:16px;line-height:1.7;padding:12px 14px;border:1.5px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);resize:vertical}
+textarea:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px var(--brand-soft)}
+.wbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:8px 0}
+.wc{font-weight:700;font-variant-numeric:tabular-nums}
+.wc.ok{color:var(--ok)}.wc.low{color:var(--bad)}
+.clock{font-weight:700;font-variant-numeric:tabular-nums;color:var(--brand-ink);background:var(--brand-soft);border-radius:999px;padding:3px 12px}
+.clock.over{background:var(--bad-soft);color:var(--bad)}
+.btn{font:inherit;font-weight:600;font-size:14.5px;border:1.5px solid var(--brand);border-radius:6px;padding:8px 14px;cursor:pointer;background:var(--brand);color:#fff}
+.btn.alt{background:#fff;color:var(--brand-ink)}
+.btn.sm{font-size:13.5px;padding:5px 10px}
+.btn.rec{background:var(--bad);border-color:var(--bad)}
+.btn:disabled{opacity:.5;cursor:default}
+.saved{font-size:13px;color:var(--dim)}
+details.sample{border:1px solid var(--line);border-radius:8px;background:#fcfbf8;margin:12px 0 0}
+details.sample>summary{cursor:pointer;font-weight:600;color:var(--brand-ink);padding:8px 14px}
+details.sample .in{padding:2px 16px 12px;white-space:pre-line;font-size:15px}
+.band{display:inline-block;background:var(--ok);color:#fff;border-radius:999px;padding:0 10px;font-weight:700;font-size:13px;margin-left:6px}
+.comment{background:var(--panel2);border-radius:6px;padding:10px 12px;margin-top:10px;font-size:14.5px;white-space:pre-line}
+.tips{font-size:14.5px;margin:10px 0 0;padding-left:20px}
+.tips li{margin:4px 0}
+/* speaking */
+.topic{font-weight:700;color:var(--brand-ink);margin:14px 0 6px;font-size:15.5px}
+.topic:first-child{margin-top:0}
+.sq{display:flex;gap:8px;align-items:flex-start;padding:7px 0;border-top:1px dashed var(--line)}
+.sq:first-of-type{border-top:0}
+.sq .txt{flex:1}
+.sq .ctl{display:flex;gap:6px;flex-wrap:wrap;flex:none}
+.ic{font:inherit;font-size:13px;font-weight:600;border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:3px 10px;cursor:pointer;color:var(--brand-ink);white-space:nowrap}
+.ic:hover{border-color:var(--brand)}
+.ic.on{background:var(--bad);border-color:var(--bad);color:#fff}
+.sq audio{display:block;width:100%;max-width:360px;height:32px;margin-top:4px}
+.cue{border:2px solid var(--ink);border-radius:6px;padding:14px 18px;background:#fff;max-width:560px;font-size:16.5px}
+.cue b{display:block;font-size:17.5px;margin-bottom:6px}
+.cue ul{margin:4px 0 6px;padding-left:22px}
+.stage{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:14px 0 0}
+.big{font-family:'Fraunces',Georgia,serif;font-size:40px;font-weight:600;font-variant-numeric:tabular-nums;color:var(--brand-ink);min-width:110px}
+.stage .lbl{font-weight:700;color:var(--dim)}
+.notes{width:100%;min-height:110px;margin-top:10px}
+.nm{position:fixed;inset:0;background:rgba(20,24,30,.45);z-index:60;display:flex;align-items:flex-start;justify-content:center;padding:80px 12px}
+.nm-card{background:#fff;border-radius:12px;padding:16px 18px;max-width:420px;width:100%}
+.nm-card label{display:flex;flex-direction:column;font-size:13px;font-weight:600;color:var(--dim);margin:0 0 10px}
+.nm-card input{font:inherit;padding:8px 10px;border:1px solid var(--line);border-radius:6px;margin-top:3px}
+.toast{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);background:#1e232b;color:#fff;border-radius:10px;padding:10px 16px;font-size:14px;z-index:70}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="bar">
+    <h1 id="ttl">Writing &amp; Speaking<small id="sub">Cambridge IELTS</small></h1>
+    <div class="tabs" role="tablist">
+      <button type="button" role="tab" data-v="w1">✍️ Task 1</button>
+      <button type="button" role="tab" data-v="w2">✍️ Task 2</button>
+      <button type="button" role="tab" data-v="sp">🗣️ Speaking</button>
+    </div>
+    <a class="home" id="back" href="./">← Bộ đề</a>
+  </div>
+  <div class="picker">Đề:
+    <select id="selB" aria-label="Chọn sách"></select>
+    <select id="selT" aria-label="Chọn test"><option value="1">Test 1</option><option value="2">Test 2</option><option value="3">Test 3</option><option value="4">Test 4</option></select>
+  </div>
+</header>
+<main id="main"><p>Đang tải…</p></main>
+<div class="nm" id="nm" hidden role="dialog" aria-modal="true" aria-label="Nhập tên">
+  <div class="nm-card">
+    <h2 style="font-size:18px;margin:0 0 10px">Nhập tên để thầy nhận được bài</h2>
+    <label>Họ và tên<input id="nmName" autocomplete="name"></label>
+    <label>Lớp / nhóm<input id="nmLop" placeholder="(nếu có)"></label>
+    <div style="display:flex;gap:8px"><button class="btn" id="nmOk" type="button">Gửi bài</button><button class="btn alt" id="nmX" type="button">Huỷ</button></div>
+  </div>
+</div>
+<script src="c20/config.js"></script>
+<script>
+(function(){
+  'use strict';
+  var BOOKS=['c21','c20','c19','c18','c17'];
+  var Q=new URLSearchParams(location.search);
+  var B=BOOKS.indexOf(Q.get('b'))>=0?Q.get('b'):'c20', T=Math.max(1,Math.min(4,parseInt(Q.get('t'),10)||1)), V=Q.get('v')||'w1';
+  var N=B.slice(1), D=null;
+  function $(s,r){return (r||document).querySelector(s);} function $$(s,r){return [].slice.call((r||document).querySelectorAll(s));}
+  function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  function lsg(k){try{return localStorage.getItem(k);}catch(e){return null;}} function lss(k,v){try{localStorage.setItem(k,v);}catch(e){}}
+  function toast(m){var d=document.createElement('div');d.className='toast';d.textContent=m;document.body.appendChild(d);setTimeout(function(){d.remove();},2600);}
+  document.title='Writing & Speaking · Cam '+N+' Test '+T;
+  $('#ttl').firstChild.nodeValue='Cam '+N+' · Test '+T+' ';
+  $('#sub').textContent='Writing & Speaking · Cambridge IELTS '+N;
+  $('#back').href=B+'/'; $('#back').textContent='← Cam '+N;
+  $('#selB').innerHTML=BOOKS.map(function(b){return '<option value="'+b+'"'+(b===B?' selected':'')+'>Cambridge '+b.slice(1)+'</option>';}).join('');
+  $('#selT').value=String(T);
+  $('#selB').onchange=$('#selT').onchange=function(){location.search='?b='+$('#selB').value+'&t='+$('#selT').value+'&v='+V;};
+  $$('.tabs button').forEach(function(b){b.onclick=function(){V=b.dataset.v;history.replaceState(null,'','?b='+B+'&t='+T+'&v='+V);render();};});
+  var s=document.createElement('script'); s.src=B+'/ws.js';
+  s.onload=function(){D=window.CAMWS&&window.CAMWS[T]; if(!D){$('#main').innerHTML='<p>Chưa có dữ liệu.</p>';return;} render();};
+  s.onerror=function(){$('#main').innerHTML='<div class="card">Bộ này chưa có phần Writing &amp; Speaking. <a href="'+B+'/">← Quay lại</a></div>';};
+  document.head.appendChild(s);
+
+  var clockId=null;
+  function render(){
+    clearInterval(clockId); stopRec(); speechSynthesis&&speechSynthesis.cancel();
+    $$('.tabs button').forEach(function(b){b.setAttribute('aria-selected',String(b.dataset.v===V));});
+    if(V==='sp') return speaking();
+    writing(V);
+  }
+
+  // ---------- writing ----------
+  function wc(t){var m=t.trim().match(/[A-Za-z0-9À-ɏ'’-]+/g);return m?m.length:0;}
+  function writing(k){
+    var w=D[k], K='camws.'+B+'.t'+T+'.'+k, need=k==='w1'?150:250, mins=k==='w1'?20:40;
+    var h='<div class="wgrid"><div class="left card"><h2 class="t">Writing Task '+(k==='w1'?1:2)+'</h2><p class="sub">Nên dành khoảng '+mins+' phút · tối thiểu '+need+' từ</p>'+
+      '<div class="prompt">'+esc(w.prompt)+'</div>'+(w.img?'<img class="figure" src="'+B+'/img-ws/'+esc(w.img)+'" alt="Biểu đồ / hình của Task 1">':'')+
+      (k==='w1'?'<ul class="tips"><li>Mở bài: viết lại đề bằng từ của mình (paraphrase).</li><li>Overview: 2 đặc điểm nổi bật nhất — không có overview thì khó qua band 5.</li><li>2 đoạn thân bài: số liệu cụ thể + so sánh. Không nêu ý kiến cá nhân.</li></ul>'
+        :'<ul class="tips"><li>Đọc kỹ dạng đề: discuss both views / agree–disagree / advantages–disadvantages / problem–solution.</li><li>Mở bài nêu rõ quan điểm; mỗi đoạn thân bài một ý chính + giải thích + ví dụ.</li><li>Kết bài tóm tắt lại quan điểm, không thêm ý mới.</li></ul>')+
+      (w.sample?'<details class="sample"><summary>📄 Xem bài mẫu'+(w.sample.band?'<span class="band">'+(w.sample.band==='Model'?'Bài mẫu giám khảo':'Band '+esc(w.sample.band))+'</span>':'')+'</summary><div class="in">'+esc(w.sample.text)+(w.sample.comment?'<div class="comment"><b>Nhận xét của giám khảo:</b>\n'+esc(w.sample.comment)+'</div>':'')+'</div></details>':'<p class="sub" style="margin-top:12px">Sách không có bài mẫu cho task này.</p>')+
+      '</div><div class="card"><div class="wbar"><span class="clock" id="clk">'+mins+':00</span><button class="btn sm alt" id="clkBtn" type="button">▶ Bấm giờ '+mins+' phút</button><span class="wc" id="wc">0 từ</span><span class="saved" id="sv"></span></div>'+
+      '<textarea id="essay" spellcheck="false" placeholder="Viết bài ở đây… (bài tự lưu trên máy này)"></textarea>'+
+      '<div class="wbar"><button class="btn" id="sendBtn" type="button">📨 Gửi bài cho thầy</button><button class="btn alt sm" id="clrBtn" type="button">Xoá bài, viết lại</button></div>'+
+      '<p class="sub">Viết xong bấm <b>Gửi bài cho thầy</b> để thầy chấm. Tắt kiểm tra chính tả để luyện như thi thật.</p></div></div>';
+    $('#main').innerHTML=h;
+    var ta=$('#essay'); ta.value=lsg(K)||'';
+    function upd(){var n=wc(ta.value),el=$('#wc');el.textContent=n+' từ';el.className='wc '+(n>=need?'ok':(n>0?'low':''));}
+    var st; ta.oninput=function(){upd();clearTimeout(st);st=setTimeout(function(){lss(K,ta.value);$('#sv').textContent='Đã lưu ✓';},500);};
+    upd();
+    var end=parseInt(lsg(K+'.end'),10)||0;
+    function tick(){var left=Math.round((end-Date.now())/1000),c=$('#clk');if(!c)return;var a=Math.abs(left);c.textContent=(left<0?'+':'')+Math.floor(a/60)+':'+('0'+a%60).slice(-2);c.classList.toggle('over',left<0);}
+    function startClock(){clearInterval(clockId);tick();clockId=setInterval(tick,1000);$('#clkBtn').textContent='⟲ Bấm giờ lại';}
+    if(end) startClock();
+    $('#clkBtn').onclick=function(){end=Date.now()+mins*60000;lss(K+'.end',String(end));startClock();ta.focus();};
+    $('#clrBtn').onclick=function(){if(ta.value&&!confirm('Xoá bài đang viết?'))return;ta.value='';lss(K,'');lss(K+'.end','');end=0;clearInterval(clockId);$('#clk').textContent=mins+':00';$('#clk').classList.remove('over');$('#clkBtn').textContent='▶ Bấm giờ '+mins+' phút';upd();};
+    $('#sendBtn').onclick=function(){
+      var n=wc(ta.value); if(n<20){toast('Bài còn ngắn quá, viết thêm nhé.');return;}
+      if(n<need&&!confirm('Bài mới có '+n+' từ (yêu cầu '+need+'). Vẫn gửi?'))return;
+      withName(function(){
+        var url=window.C20CFG&&window.C20CFG.SCRIPT_URL; if(!url)return;
+        var used=end?Math.max(0,Math.round((Date.now()-(end-mins*60000))/60000)):'';
+        var body={kind:'cam20',name:lsg('cam20.name')||'',lop:lsg('cam20.lop')||'',test:'Cam '+N+' · Test '+T,part:'Writing Task '+(k==='w1'?1:2),mode:'Writing',got:n,total:need,band:'',minutes:used,wrong:ta.value,auto:false,submittedAt:new Date().toISOString(),userAgent:navigator.userAgent.slice(0,120)};
+        try{fetch(url,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(body)});}catch(e){}
+        toast('Đã gửi bài cho thầy ✓');
+      });
+    };
+  }
+  function withName(cb){
+    if(lsg('cam20.name')) return cb();
+    var nm=$('#nm'); nm.hidden=false;
+    $('#nmOk').onclick=function(){var v=$('#nmName').value.trim();if(!v){$('#nmName').focus();return;}lss('cam20.name',v);lss('cam20.lop',$('#nmLop').value.trim());nm.hidden=true;cb();};
+    $('#nmX').onclick=function(){nm.hidden=true;};
+  }
+
+  // ---------- speaking ----------
+  var REC=null, recBtn=null, chunks=[];
+  function say(t){if(!window.speechSynthesis)return;speechSynthesis.cancel();var u=new SpeechSynthesisUtterance(t);u.lang='en-GB';u.rate=.95;
+    var vs=speechSynthesis.getVoices().filter(function(v){return /^en(-|_)GB/i.test(v.lang);});if(vs[0])u.voice=vs[0];speechSynthesis.speak(u);}
+  function stopRec(){ if(REC&&REC.state==='recording') REC.stop(); }
+  function rec(btn,box,onStop){
+    if(REC&&REC.state==='recording'){ REC.stop(); return; }
+    if(!navigator.mediaDevices||!window.MediaRecorder){toast('Trình duyệt này không ghi âm được.');return;}
+    navigator.mediaDevices.getUserMedia({audio:true}).then(function(stream){
+      chunks=[]; REC=new MediaRecorder(stream); recBtn=btn;
+      REC.ondataavailable=function(e){if(e.data.size)chunks.push(e.data);};
+      REC.onstop=function(){stream.getTracks().forEach(function(t){t.stop();});btn.classList.remove('on');btn.textContent='🎙 Ghi lại';
+        var url=URL.createObjectURL(new Blob(chunks,{type:REC.mimeType||'audio/webm'}));box.innerHTML='<audio controls src="'+url+'"></audio>';if(onStop)onStop();};
+      REC.start(); btn.classList.add('on'); btn.textContent='■ Dừng';
+    }).catch(function(){toast('Cần cho phép dùng micro để ghi âm.');});
+  }
+  function qrow(q,i){return '<div class="sq"><div class="txt">'+esc(q)+'<div class="rb" id="rb'+i+'"></div></div><div class="ctl"><button class="ic" data-say="'+i+'" type="button">🔊 Nghe</button><button class="ic" data-rec="'+i+'" type="button">🎙 Ghi âm</button></div></div>';}
+  function speaking(){
+    var s=D.s, Qs=[], h='';
+    h+='<div class="card"><h2 class="t">Speaking Part 1</h2><p class="sub">Giới thiệu & chủ đề quen thuộc · 4–5 phút. Trả lời 2–3 câu cho mỗi câu hỏi, có lý do / ví dụ.</p>';
+    s.p1.forEach(function(tp){h+='<div class="topic">'+esc(tp.topic)+'</div>';tp.qs.forEach(function(q){h+=qrow(q,Qs.length);Qs.push(q);});});
+    h+='</div><div class="card"><h2 class="t">Speaking Part 2</h2><p class="sub">1 phút chuẩn bị (được ghi chú) · nói 1–2 phút liên tục.</p>'+
+      '<div class="cue"><b>'+esc(s.p2.card)+'</b>You should say:<ul>'+s.p2.points.map(function(p){return '<li>'+esc(p)+'</li>';}).join('')+'</ul>'+esc(s.p2.end||'')+'</div>'+
+      '<div class="stage"><span class="big" id="p2c">1:00</span><span class="lbl" id="p2l">Sẵn sàng</span><button class="btn" id="p2go" type="button">▶ Bắt đầu chuẩn bị 1 phút</button><button class="ic" id="p2say" type="button">🔊 Nghe đề</button></div>'+
+      '<textarea class="notes" id="p2n" placeholder="Ghi chú nhanh trong 1 phút chuẩn bị…"></textarea><div id="p2rb"></div>'+
+      (s.p2.follow&&s.p2.follow.length?'<div class="topic">Câu hỏi thêm</div>'+s.p2.follow.map(function(q){var r=qrow(q,Qs.length);Qs.push(q);return r;}).join(''):'')+'</div>';
+    h+='<div class="card"><h2 class="t">Speaking Part 3</h2><p class="sub">Thảo luận sâu hơn · 4–5 phút. Nêu quan điểm, giải thích, so sánh, đưa ví dụ xã hội.</p>';
+    s.p3.forEach(function(tp){h+='<div class="topic">'+esc(tp.topic)+'</div>';tp.qs.forEach(function(q){h+=qrow(q,Qs.length);Qs.push(q);});});
+    h+='<p class="sub" style="margin-top:12px">🎙 Bản ghi chỉ nằm trên máy của bạn để tự nghe lại, không gửi đi đâu.</p></div>';
+    $('#main').innerHTML=h;
+    $$('[data-say]').forEach(function(b){b.onclick=function(){say(Qs[+b.dataset.say]);};});
+    $$('[data-rec]').forEach(function(b){b.onclick=function(){rec(b,$('#rb'+b.dataset.rec));};});
+    $('#p2say').onclick=function(){say(s.p2.card+'. You should say: '+s.p2.points.join('. ')+'. '+(s.p2.end||''));};
+    var stage=0;
+    $('#p2go').onclick=function(){
+      var btn=this;
+      if(stage===0){stage=1;btn.textContent='Bỏ qua, nói luôn';count(60,'Chuẩn bị',function(){startTalk();});$('#p2n').focus();}
+      else if(stage===1){startTalk();}
+      else if(stage===2){stopRec();}
+      function startTalk(){stage=2;btn.textContent='■ Dừng nói';count(120,'Đang nói… (đang ghi âm)',function(){stopRec();});
+        rec(document.createElement('button'),$('#p2rb'),function(){stage=0;clearInterval(clockId);btn.textContent='▶ Làm lại Part 2';$('#p2l').textContent='Xong — nghe lại bài nói bên dưới';});}
+    };
+  }
+  function count(sec,label,done){
+    clearInterval(clockId); var end=Date.now()+sec*1000;
+    function t(){var l=Math.max(0,Math.round((end-Date.now())/1000));var c=$('#p2c');if(!c){clearInterval(clockId);return;}c.textContent=Math.floor(l/60)+':'+('0'+l%60).slice(-2);$('#p2l').textContent=label;if(l<=0){clearInterval(clockId);done();}}
+    t(); clockId=setInterval(t,250);
+  }
+})();
+</script>
+</body>
+</html>
