@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
+<link rel="manifest" href="../manifest.webmanifest">
+<meta name="theme-color" content="#a8691a">
+<link rel="apple-touch-icon" href="../icons/apple-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="light only">
@@ -45,6 +50,7 @@ td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
 .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
 .btn{font:inherit;font-weight:600;font-size:14px;border:1px solid var(--amber);border-radius:4px;padding:8px 14px;cursor:pointer;background:#fff;color:var(--amber-ink);text-decoration:none}
 footer{padding:30px 0 50px;color:var(--dim);font-size:13px}
+@media (max-width:700px){table.matrix{display:block;overflow-x:auto;max-width:100%}}
 </style>
 </head>
 <body>
@@ -148,5 +154,6 @@ footer{padding:30px 0 50px;color:var(--dim);font-size:13px}
   document.getElementById('clear').onclick=function(){ if(confirm('Xoá toàn bộ lịch sử làm bài trên máy này? (Bài đang làm dở không bị xoá)')){ try{ localStorage.removeItem('cam18.hist'); }catch(e){} location.reload(); } };
 })();
 </script>
+<script>if('serviceWorker' in navigator)window.addEventListener('load',function(){navigator.serviceWorker.register('../sw.js',{scope:'../'}).catch(function(){});});</script>
 </body>
 </html>
