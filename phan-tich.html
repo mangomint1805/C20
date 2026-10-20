@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
+<script>try{if(localStorage.getItem('mt.theme')==='dark')document.documentElement.setAttribute('data-theme','dark')}catch(e){}</script>
+
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#a8691a">
 <link rel="apple-touch-icon" href="icons/apple-180.png">
@@ -68,8 +70,9 @@ footer{padding:30px 0 50px;color:var(--dim);font-size:13px}
 .psub{color:#666e7a;font-size:13.5px;margin:0 0 8px}
 .plg{display:flex;gap:14px;font-size:13px;color:#666e7a}.plg i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:5px;vertical-align:-1px}
 </style>
+<link rel="icon" type="image/png" href="icons/fav-64.png">
 </head>
-<body>
+<body data-nav="stats">
 <div class="wrap">
   <header>
     <a class="back" href="./">← Tất cả bộ đề</a>
@@ -196,5 +199,6 @@ footer{padding:30px 0 50px;color:var(--dim);font-size:13px}
 })();
 </script>
 <script>if('serviceWorker' in navigator)window.addEventListener('load',function(){navigator.serviceWorker.register('sw.js',{scope:'./'}).catch(function(){});});</script>
+<script src="shared/ui.js"></script>
 </body>
 </html>
