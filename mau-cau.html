@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<script>try{var d=document.documentElement,k=JSON.parse(localStorage.getItem('mt.skin')||'""');if(k==='scifi')d.setAttribute('data-theme','dark');if(k)d.setAttribute('data-skin',k)}catch(e){}</script>
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#a8691a">
+<link rel="apple-touch-icon" href="icons/apple-180.png?v=3">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="icon" type="image/png" href="icons/fav-64.png?v=3">
+<meta property="og:site_name" content="Minto English">
+<meta property="og:title" content="Minto English · Kho mẫu câu IELTS">
+<meta property="og:image" content="https://mangomint1805.github.io/cam/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<title>Kho mẫu câu · IELTS</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--paper:#faf8f4;--card:#fff;--line:#ddd7c9;--ink:#1e232b;--dim:#666e7a;--panel2:#f2efe8;--brand:#a8691a;--brand-soft:#f2e2c4;--brand-ink:#6b4410;--ok:#1f8f6c;--ok-soft:#e1f4ec}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--paper);color:var(--ink);font-family:'IBM Plex Sans',system-ui,sans-serif;line-height:1.55}
+.wrap{max-width:860px;margin:0 auto;padding:0 16px 50px}
+header{padding:26px 0 6px}
+.mback{font-size:14px;font-weight:700;color:var(--brand-ink);text-decoration:none}
+h1{font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:clamp(28px,6vw,40px);margin:10px 0 4px;line-height:1.1}
+header p{margin:0;color:var(--dim)}
+.gtabs{display:flex;gap:6px;overflow-x:auto;margin:16px -16px 0;padding:0 16px 4px;scrollbar-width:none}.gtabs::-webkit-scrollbar{display:none}
+.gtabs button{flex:none;font:inherit;font-weight:700;font-size:14.5px;border:1.5px solid var(--line);background:var(--card);color:var(--dim);border-radius:12px;padding:9px 14px;cursor:pointer}
+.gtabs button[aria-selected=true]{background:var(--brand);border-color:var(--brand);color:#fff}
+.tools{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:12px 0}
+.tools input{flex:1 1 220px;font:inherit;padding:10px 12px;border:1.5px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink)}
+.tg{font:inherit;font-size:13.5px;font-weight:600;border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:7px 12px;cursor:pointer}
+.tg[aria-pressed=true]{background:var(--brand-soft);border-color:var(--brand);color:var(--brand-ink)}
+.topics{display:flex;gap:6px;flex-wrap:wrap;margin:4px 0 12px}
+.topics button{font:inherit;font-size:13.5px;font-weight:600;border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:6px 12px;cursor:pointer}
+.topics button small{color:var(--dim);font-weight:500}
+.topics button[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:#fff}.topics button[aria-pressed=true] small{color:#ccc}
+html[data-theme=dark] .topics button[aria-pressed=true]{background:var(--brand);border-color:var(--brand)}
+.th{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin:6px 0 8px}
+.th h2{font:600 24px/1.2 Fraunces,Georgia,serif;margin:0}.th span{color:var(--dim)}
+.th .btn{margin-left:auto}
+.qs{background:var(--brand-soft);border-radius:14px;padding:12px 14px 12px 34px;margin:0 0 12px;font-size:14.5px;color:var(--brand-ink)}
+.qs li{margin:2px 0}
+.it{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin:8px 0;position:relative}
+.it .k{display:inline-block;margin-right:76px;font:600 12.5px/1.2 'IBM Plex Sans';color:var(--brand-ink);background:var(--brand-soft);border-radius:6px;padding:3px 7px;margin-bottom:6px}
+.it .k em{font-style:normal;font-weight:500;color:var(--dim)}
+.it .en{font-size:16.5px;margin:0 70px 2px 0}.it .en b{color:var(--brand-ink);background:linear-gradient(transparent 62%,#ffe2a3 62%)}
+html[data-theme=dark] .it .en b{background:linear-gradient(transparent 62%,rgba(211,154,74,.35) 62%)}
+.it .vi{font-size:14.5px;color:var(--dim);margin:0}
+.it .nt{font-size:12.5px;color:var(--dim);margin:4px 0 0;font-style:italic}
+.it .acts{position:absolute;top:10px;right:10px;display:flex;gap:4px}
+.it .acts button{border:1.5px solid var(--line);background:var(--card);border-radius:999px;height:30px;min-width:32px;padding:0 8px;cursor:pointer;font-size:13px;color:var(--brand-ink);font-weight:700}
+.it .acts button.on{background:var(--brand);border-color:var(--brand);color:#fff}
+.hideVi .it .vi,.hideVi .it .nt{filter:blur(5px);cursor:pointer;user-select:none}
+.hideEn .it .en{filter:blur(6px);cursor:pointer;user-select:none}
+.it .shown{filter:none!important}
+.btn{font:inherit;font-weight:700;font-size:14px;border:0;background:var(--brand);color:#fff;border-radius:10px;padding:9px 14px;cursor:pointer}
+.hint{font-size:13px;color:var(--dim)}
+.grp{font:700 12.5px/1 'IBM Plex Sans';text-transform:uppercase;letter-spacing:.06em;color:var(--dim);margin:16px 0 4px}
+.empty{text-align:center;color:var(--dim);padding:30px}
+</style>
+</head>
+<body data-nav="phrases">
+<div class="wrap">
+  <header>
+    <a class="mback" href="./">← Trang chủ</a>
+    <h1>Kho mẫu câu</h1>
+    <p>Câu mẫu Speaking & Writing theo chủ đề, soạn từ bài giảng trên lớp — có nghĩa tiếng Việt, bấm 🔊 để nghe, ☆ để lưu vào flashcard.</p>
+  </header>
+  <div class="gtabs" id="gtabs" role="tablist"></div>
+  <div class="tools">
+    <input id="q" type="search" placeholder="Tìm câu, cụm từ hoặc nghĩa tiếng Việt…" aria-label="Tìm">
+    <button class="tg" id="hv" aria-pressed="false">🙈 Che nghĩa Việt</button>
+    <button class="tg" id="he" aria-pressed="false">🙈 Che câu Anh</button>
+  </div>
+  <div class="topics" id="topics"></div>
+  <div id="main"></div>
+</div>
+<script src="shared/phrases.js?v=1"></script>
+<script>
+(function(){
+  var B=window.PHRASES||{groups:[]}, G=B.groups, main=document.getElementById('main');
+  function get(k,d){ try{ var v=JSON.parse(localStorage.getItem(k)); return v==null?d:v; }catch(e){ return d; } }
+  function put(k,v){ try{ localStorage.setItem(k,JSON.stringify(v)); }catch(e){} }
+  function esc(t){ return String(t==null?'':t).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
+  function say(t){ try{ speechSynthesis.cancel(); var u=new SpeechSynthesisUtterance(t); u.lang='en-GB'; u.rate=.92; speechSynthesis.speak(u); }catch(e){} }
+  var st=get('mt.phr',{}), gi=Math.min(G.length-1,Math.max(0,st.g||0)), ti=st.t||{}, qy='';
+  function hl(en,k){
+    var e=esc(en), kk=String(k||'').replace(/…|\.\.\./g,' ').split(/\s*[\/]\s*|\s{2,}/)[0].trim();
+    if(kk.length<3) return e;
+    var words=kk.split(/\s+/).filter(function(w){ return w.length>2 && !/^(sb|sth|something|someone|somebody|one's|x|y|s|v|n)$/i.test(w); });
+    var re; try{ re=new RegExp('('+esc(kk).replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','i'); }catch(x){ return e; }
+    if(re.test(e)) return e.replace(re,'<b>$1</b>');
+    words.forEach(function(w){ try{ var r=new RegExp('\\b('+w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&').replace(/e$/,'e?')+'\\w*)','i'); e=e.replace(r,'<b>$1</b>'); }catch(x){} });
+    return e;
+  }
+  function cards(){ return get('vocab.cards',{}); }
+  function cardKey(it){ return String(it.k||'').trim(); }
+  function itemHTML(it,src,C){
+    var key=cardKey(it), on=!!C[key];
+    return '<div class="it" data-k="'+esc(key)+'"><div class="acts"><button type="button" class="sy" aria-label="Nghe">🔊</button><button type="button" class="sv'+(on?' on':'')+'" aria-label="Lưu flashcard">'+(on?'★':'☆')+'</button></div>'+
+      '<span class="k">'+esc(it.k)+(it.kv?' <em>· '+esc(it.kv)+'</em>':'')+'</span><p class="en">'+hl(it.en,it.k)+'</p><p class="vi">'+esc(it.vi)+'</p>'+(it.note?'<p class="nt">'+esc(it.note)+'</p>':'')+'</div>';
+  }
+  var IDX={};
+  function bind(list){
+    [].forEach.call(main.querySelectorAll('.it'),function(el,i){
+      var it=list[i].it, src=list[i].src;
+      el.querySelector('.sy').onclick=function(){ say(it.en); };
+      el.querySelector('.sv').onclick=function(){ var C=cards(), k=cardKey(it), b=this; if(C[k]) delete C[k]; else C[k]={w:k,ipa:'',m:it.kv||it.vi,ex:it.en,src:'Kho mẫu câu · '+src,at:Date.now(),box:0}; put('vocab.cards',C); b.classList.toggle('on',!!C[k]); b.textContent=C[k]?'★':'☆'; };
+      [].forEach.call(el.querySelectorAll('.en,.vi,.nt'),function(p){ p.onclick=function(){ p.classList.toggle('shown'); }; });
+    });
+  }
+  function render(){
+    document.getElementById('gtabs').innerHTML=G.map(function(g,i){ return '<button role="tab" data-g="'+i+'" aria-selected="'+(i===gi&&!qy)+'">'+esc(g.name)+'</button>'; }).join('');
+    [].forEach.call(document.querySelectorAll('[data-g]'),function(b){ b.onclick=function(){ gi=+b.dataset.g; qy=''; document.getElementById('q').value=''; save(); render(); window.scrollTo({top:0}); }; });
+    var C=cards(), list=[], h='';
+    var tEl=document.getElementById('topics');
+    if(qy){
+      tEl.innerHTML='';
+      var q=qy.toLowerCase();
+      G.forEach(function(g){ g.topics.forEach(function(t){ t.items.forEach(function(it){ if((it.en+' '+it.vi+' '+it.k+' '+(it.kv||'')).toLowerCase().indexOf(q)>=0) list.push({it:it,src:g.name+' · '+t.t,g:g,t:t}); }); }); });
+      h='<div class="th"><h2>Kết quả</h2><span>'+list.length+' câu có “'+esc(qy)+'”</span></div>';
+      var last='';
+      list.slice(0,120).forEach(function(x){ if(x.src!==last){ h+='<div class="grp">'+esc(x.src)+'</div>'; last=x.src; } h+=itemHTML(x.it,x.src,C); });
+      if(!list.length) h+='<div class="empty">Không tìm thấy — thử từ khác nhé.</div>';
+      list=list.slice(0,120);
+    } else {
+      var g=G[gi]; if(!g){ main.innerHTML='<div class="empty">Chưa có dữ liệu.</div>'; return; }
+      var k=Math.min(g.topics.length-1,ti[g.id]||0), t=g.topics[k];
+      tEl.innerHTML=g.topics.map(function(t,i){ return '<button data-t="'+i+'" aria-pressed="'+(i===k)+'">'+esc(t.vi||t.t)+' <small>'+t.items.length+'</small></button>'; }).join('');
+      [].forEach.call(tEl.querySelectorAll('[data-t]'),function(b){ b.onclick=function(){ ti[g.id]=+b.dataset.t; save(); render(); }; });
+      var src=g.name+' · '+t.t;
+      h='<div class="th"><h2>'+esc(t.t)+'</h2><span>'+esc(t.vi||'')+' · '+t.items.length+' câu</span><button class="btn" id="all">☆ Lưu cả chủ đề</button></div>';
+      if(t.q&&t.q.length) h+='<ol class="qs">'+t.q.map(function(x){ return '<li>'+esc(x)+'</li>'; }).join('')+'</ol>';
+      t.items.forEach(function(it){ list.push({it:it,src:src}); h+=itemHTML(it,src,C); });
+    }
+    main.innerHTML=h; bind(list);
+    var all=document.getElementById('all');
+    if(all) all.onclick=function(){ var C2=cards(); list.forEach(function(x){ var k=cardKey(x.it); if(k&&!C2[k]) C2[k]={w:k,ipa:'',m:x.it.kv||x.it.vi,ex:x.it.en,src:'Kho mẫu câu · '+x.src,at:Date.now(),box:0}; }); put('vocab.cards',C2); [].forEach.call(main.querySelectorAll('.sv'),function(b){ b.classList.add('on'); b.textContent='★'; }); all.textContent='★ Đã lưu — ôn ở Flashcard'; };
+  }
+  function save(){ put('mt.phr',{g:gi,t:ti}); }
+  var tmr; document.getElementById('q').oninput=function(){ var v=this.value.trim(); clearTimeout(tmr); tmr=setTimeout(function(){ qy=v.length>=2?v:''; render(); },200); };
+  function tog(id,cls){ var b=document.getElementById(id); b.onclick=function(){ var on=b.getAttribute('aria-pressed')!=='true'; b.setAttribute('aria-pressed',on); main.classList.toggle(cls,on); [].forEach.call(main.querySelectorAll('.shown'),function(x){ x.classList.remove('shown'); }); }; }
+  tog('hv','hideVi'); tog('he','hideEn');
+  render();
+})();
+</script>
+<script src="shared/ui.js?v=3"></script>
+<script>if('serviceWorker' in navigator)window.addEventListener('load',function(){navigator.serviceWorker.register('sw.js',{scope:'./'}).catch(function(){});});</script>
+</body>
+</html>
