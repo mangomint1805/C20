@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<script>try{var d=document.documentElement,k=JSON.parse(localStorage.getItem('mt.skin')||'""');if(k==='scifi')d.setAttribute('data-theme','dark');if(k)d.setAttribute('data-skin',k)}catch(e){}</script>
+
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#a8691a">
+<link rel="apple-touch-icon" href="icons/apple-180.png?v=3">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta property="og:site_name" content="Minto English">
+<meta property="og:title" content="Minto English · Kiểm tra xếp lớp 15 phút">
+<meta property="og:image" content="https://mangomint1805.github.io/cam/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="icons/fav-64.png?v=3">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<title>Kiểm tra xếp lớp · IELTS</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--paper:#faf8f4;--card:#fff;--line:#ddd7c9;--ink:#1e232b;--dim:#666e7a;--panel2:#f2efe8;--brand:#a8691a;--brand-soft:#f2e2c4;--brand-ink:#6b4410;--ok:#1f8f6c;--ok-soft:#e1f4ec;--bad:#c14636;--bad-soft:#fbe6e2}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--paper);color:var(--ink);font-family:'IBM Plex Sans',system-ui,sans-serif;line-height:1.55}
+.wrap{max-width:680px;margin:0 auto;padding:0 16px 60px}
+header{padding:28px 0 8px}
+.mback{font-size:14px;font-weight:700;color:var(--brand-ink);text-decoration:none}
+h1{font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:clamp(28px,6vw,40px);margin:12px 0 4px;line-height:1.1}
+header p{margin:0;color:var(--dim)}
+.streak{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}
+.streak div{flex:1 1 120px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 12px}
+.streak b{display:block;font-family:'Fraunces',Georgia,serif;font-size:26px;color:var(--brand-ink);line-height:1.1}
+.streak span{font-size:12.5px;color:var(--dim)}
+.week{display:flex;gap:6px;margin:4px 0 14px}
+.week i{flex:1;height:30px;border-radius:7px;background:var(--panel2);display:flex;align-items:center;justify-content:center;font:600 11.5px/1 'IBM Plex Sans';color:var(--dim);font-style:normal}
+.week i.on{background:var(--ok);color:#fff}
+.big{display:block;width:100%;text-align:left;font:inherit;background:var(--brand);color:#fff;border:0;border-radius:14px;padding:16px 18px;cursor:pointer;margin:0 0 10px}
+.big b{display:block;font-size:18px}.big span{font-size:13.5px;opacity:.9}
+.big.alt{background:var(--card);color:var(--ink);border:1.5px solid var(--line)}.big.alt span{color:var(--dim);opacity:1}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:12px 0}
+.top{display:flex;justify-content:space-between;align-items:center;font-size:13.5px;color:var(--dim);margin:0 0 8px}
+.pbar{height:6px;background:var(--panel2);border-radius:3px;overflow:hidden;margin:0 0 12px}.pbar s{display:block;height:100%;background:var(--brand)}
+.tag{font-weight:700;color:var(--brand-ink);background:var(--brand-soft);border-radius:999px;padding:2px 10px;font-size:12.5px}
+.q{font-size:17px;font-weight:500;margin:6px 0 12px}
+img.ph{display:block;width:100%;max-height:300px;object-fit:contain;border-radius:8px;border:1px solid var(--line);margin:0 0 10px;background:#fff}
+.aud{display:flex;gap:8px;align-items:center;margin:0 0 10px}
+.aud button{font:inherit;font-weight:700;font-size:14px;border:1.5px solid var(--brand);background:var(--brand);color:#fff;border-radius:999px;padding:8px 14px;cursor:pointer}
+.aud button.ghost{background:#fff;color:var(--brand-ink)}
+.opts{display:grid;gap:8px}
+.opt{display:flex;gap:10px;align-items:flex-start;text-align:left;font:inherit;font-size:15.5px;background:var(--panel2);border:1.5px solid var(--line);border-radius:10px;padding:11px 12px;cursor:pointer;color:var(--ink)}
+.opt .L{flex:none;width:26px;height:26px;border-radius:50%;border:1.5px solid #b9b09c;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;background:#fff}
+.opt.right{border-color:var(--ok);background:var(--ok-soft)}.opt.right .L{background:var(--ok);border-color:var(--ok);color:#fff}
+.opt.wrong{border-color:var(--bad);background:var(--bad-soft)}.opt.wrong .L{background:var(--bad);border-color:var(--bad);color:#fff}
+.opt:disabled{cursor:default;color:var(--ink)}
+.opt small{display:block;color:var(--dim);font-size:13px}
+.fb{margin:12px 0 0;padding:10px 12px;border-radius:10px;font-size:14.5px;white-space:pre-line}
+.fb.ok{background:var(--ok-soft)}.fb.bad{background:var(--bad-soft)}
+.nav{display:flex;justify-content:flex-end;margin-top:12px}
+.btn{font:inherit;font-weight:700;font-size:15px;border:0;background:var(--brand);color:#fff;border-radius:10px;padding:11px 18px;cursor:pointer}
+.res{text-align:center}.res .sc{font-family:'Fraunces',Georgia,serif;font-size:54px;color:var(--brand-ink);line-height:1}
+.hint{font-size:13px;color:var(--dim)}
+@media (max-width:420px){.grid2{grid-template-columns:1fr}}
+
+.tm{font-weight:700;color:var(--brand-ink);font-variant-numeric:tabular-nums}
+.tm.low{color:var(--bad)}
+.intro li{margin:4px 0}
+.fld{display:grid;gap:8px;margin:12px 0}.fld input{font:inherit;padding:10px 12px;border:1.5px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink)}
+.lvl{display:inline-block;font:600 15px/1 'IBM Plex Sans';background:var(--brand);color:#fff;border-radius:999px;padding:7px 14px;margin:6px 0}
+.sk{display:grid;grid-template-columns:150px 1fr 48px;gap:8px;align-items:center;font-size:14px;margin:6px 0}
+.sk i{display:block;height:10px;border-radius:5px;background:var(--panel2);overflow:hidden}.sk i s{display:block;height:100%;background:var(--ok)}
+.sk i s.mid{background:#d9a63c}.sk i s.low{background:var(--bad)}
+.path{counter-reset:st;list-style:none;padding:0;margin:8px 0 0;text-align:left}
+.path li{counter-increment:st;position:relative;padding:10px 12px 10px 48px;background:var(--panel2);border-radius:12px;margin:8px 0;font-size:14.5px}
+.path li::before{content:counter(st);position:absolute;left:12px;top:10px;width:26px;height:26px;border-radius:50%;background:var(--brand);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:13px}
+.path a{color:var(--brand-ink);font-weight:700}
+.rv{margin:6px 0;padding:8px 10px;border-radius:10px;font-size:14px;background:var(--panel2)}.rv.ok{background:var(--ok-soft)}.rv.bad{background:var(--bad-soft)}
+@media (max-width:480px){.sk{grid-template-columns:110px 1fr 40px;font-size:13px}}
+.psg{background:var(--panel2);border-radius:12px;padding:12px 14px;font-size:15px;max-height:46vh;overflow:auto;margin:0 0 12px}.psg h4{margin:0 0 6px;font-family:Fraunces,Georgia,serif;font-size:18px}.psg p{margin:0 0 8px}
+</style>
+</head>
+<body data-nav="place">
+<div class="wrap">
+  <header>
+    <a class="mback" href="./">← Trang chủ</a>
+    <h1>Kiểm tra xếp lớp IELTS</h1>
+    <p>15 phút · 30 câu ngữ pháp, từ vựng học thuật và đọc hiểu. Làm xong biết band ước tính, phần nào yếu và nên học gì trước.</p>
+  </header>
+  <div id="main"></div>
+</div>
+<script src="shared/place-data.js?v=1"></script>
+<script>
+(function(){
+  var D=window.IPLACE, main=document.getElementById('main'), KEY='mt.place.ielts', MINS=15;
+  function get(k,d){ try{ var v=JSON.parse(localStorage.getItem(k)); return v==null?d:v; }catch(e){ return d; } }
+  function put(k,v){ try{ localStorage.setItem(k,JSON.stringify(v)); }catch(e){} }
+  function esc(t){ return String(t==null?'':t).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
+  var SET=[];
+  D.sections.forEach(function(s){ (s.items||[]).forEach(function(it){ SET.push({s:s.id,sn:s.name,it:it}); }); (s.passages||[]).forEach(function(p,pi){ p.items.forEach(function(it){ SET.push({s:s.id,sn:s.name,it:it,p:p,pi:pi}); }); }); });
+  var ans=[], i=0, t0=0, tick=0;
+  function intro(){
+    var last=get(KEY,null);
+    main.innerHTML='<div class="card intro"><h3 style="margin-top:0">Trước khi bắt đầu</h3><ul><li><b>'+SET.length+' câu</b>: 10 ngữ pháp, 10 từ vựng học thuật, 2 bài đọc ngắn (10 câu).</li><li>Thời gian <b>'+MINS+' phút</b>, hết giờ tự nộp. Câu khó dần từ band 4 tới band 7+.</li><li>Không biết thì chọn đáp án gần đúng nhất — <b>đừng tra từ</b> để kết quả chính xác.</li></ul>'+
+      '<div class="fld"><input id="nm" placeholder="Họ và tên (để thầy nhận kết quả)" autocomplete="name" value="'+esc(localStorage.getItem('cam20.name')||'')+'"><input id="lp" placeholder="Lớp / nhóm (nếu có)" value="'+esc(localStorage.getItem('cam20.lop')||'')+'"></div><button class="btn" id="go">▶ Bắt đầu làm bài</button>'+
+      (last?'<p class="hint">Lần trước ('+new Date(last.at).toLocaleDateString('vi-VN')+'): '+last.got+'/'+last.total+' câu · band ước tính '+esc(last.band)+' · <a href="#" id="seeLast">xem lại</a></p>':'')+'</div>';
+    document.getElementById('go').onclick=function(){ try{ localStorage.setItem('cam20.name',document.getElementById('nm').value.trim()); localStorage.setItem('cam20.lop',document.getElementById('lp').value.trim()); }catch(e){} ans=[]; i=0; t0=Date.now(); tick=setInterval(clock,500); q(); };
+    var sl=document.getElementById('seeLast'); if(sl) sl.onclick=function(e){ e.preventDefault(); ans=last.ans||[]; result(true); };
+  }
+  function clock(){ var left=MINS*60-Math.floor((Date.now()-t0)/1000), el=document.getElementById('tm'); if(left<=0){ clearInterval(tick); return result(false,true); } if(el){ el.textContent=Math.floor(left/60)+':'+('0'+left%60).slice(-2); el.classList.toggle('low',left<120); } }
+  function q(){
+    var x=SET[i], L=['A','B','C','D'];
+    var h='<div class="card"><div class="top"><span class="tag">Câu '+(i+1)+'/'+SET.length+' · '+esc(x.sn)+'</span><span>⏱ <span class="tm" id="tm"></span></span></div><div class="pbar"><s style="width:'+Math.round(i/SET.length*100)+'%"></s></div>';
+    if(x.p) h+='<div class="psg"><h4>'+esc(x.p.title)+'</h4>'+x.p.text.split(/\n\n+/).map(function(t){ return '<p>'+esc(t)+'</p>'; }).join('')+'</div>';
+    h+='<div class="q">'+esc(x.it.q)+'</div><div class="opts">'+x.it.o.map(function(o,k){ return '<button class="opt" data-k="'+k+'"><span class="L">'+L[k]+'</span><span>'+esc(o)+'</span></button>'; }).join('')+'</div>';
+    h+='<div class="nav" style="justify-content:space-between"><span class="hint">Chọn xong là sang câu tiếp</span>'+(i?'<button class="btn" style="background:var(--panel2);color:var(--ink)" id="bk">← Câu trước</button>':'')+'</div></div>';
+    main.innerHTML=h; clock();
+    [].forEach.call(main.querySelectorAll('.opt'),function(b){ if(ans[i]===+b.dataset.k) b.style.borderColor='var(--brand)'; b.onclick=function(){ ans[i]=+b.dataset.k; i++; if(i>=SET.length) result(false); else q(); }; });
+    var bk=document.getElementById('bk'); if(bk) bk.onclick=function(){ i--; q(); };
+  }
+  function band(n){ return n<=9?{k:1,b:'4.0 trở xuống',goal:'5.0'}:n<=15?{k:2,b:'4.5 – 5.0',goal:'5.5'}:n<=21?{k:3,b:'5.5 – 6.0',goal:'6.5'}:n<=26?{k:4,b:'6.5 – 7.0',goal:'7.5'}:{k:5,b:'7.5+',goal:'8.0'}; }
+  function result(review,auto){
+    clearInterval(tick);
+    var S={}, got=0, LV={1:[0,0],2:[0,0],3:[0,0],4:[0,0]};
+    SET.forEach(function(x,k){ S[x.s]=S[x.s]||{n:0,ok:0,name:x.sn}; S[x.s].n++; LV[x.it.lv][1]++; if(ans[k]===x.it.a){ S[x.s].ok++; got++; LV[x.it.lv][0]++; } });
+    var B=band(got);
+    if(!review){
+      put(KEY,{at:Date.now(),got:got,total:SET.length,band:B.b,ans:ans.slice()});
+      var url=window.ETSCFG&&window.ETSCFG.SCRIPT_URL||'https://script.google.com/macros/s/AKfycby3_45o2Zn3FMEMrVAg9nBCiQEIUvU9HgQxI2ZZtwJ4oUQ_bqXxj1vN0kL6cvhbDQCx/exec';
+      try{ fetch(url,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({kind:'cam20',name:localStorage.getItem('cam20.name')||'',lop:localStorage.getItem('cam20.lop')||'',test:'IELTS · Kiểm tra xếp lớp',part:'Grammar·Vocab·Reading',mode:'Xếp lớp',got:got,total:SET.length,band:'IELTS ~'+B.b,minutes:Math.round((Date.now()-t0)/60000),wrong:SET.map(function(x,k){ return ans[k]===x.it.a?null:k+1; }).filter(Boolean).join(', '),auto:!!auto,submittedAt:new Date().toISOString(),userAgent:navigator.userAgent.slice(0,120)})}).catch(function(){}); }catch(e){}
+      if(window.MCONFETTI&&got>=16) try{ window.MCONFETTI(); }catch(e){}
+    }
+    var f=function(id){ return S[id]?S[id].ok/S[id].n:1; }, steps=[];
+    if(B.k<=2){ steps.push('Bắt đầu với <a href="nen.html#ielts-tong-quan">Làm quen IELTS Academic</a>, rồi học <a href="nen.html#ielts-loi-ngu-phap-nguoi-viet">Lỗi ngữ pháp người Việt hay mắc</a> và <a href="nen.html#ielts-cau-phuc-band-6">Câu phức</a>.'); steps.push('Mỗi ngày lưu 10 từ ở <a href="mau-cau.html">Kho mẫu câu</a> rồi ôn bằng <a href="flashcards.html">Flashcard</a> và <a href="go-tu.html">Gõ từ rơi</a>.'); }
+    if(f('grammar')<.6) steps.push('Ngữ pháp còn yếu ('+S.grammar.ok+'/'+S.grammar.n+'): học <a href="nen.html#ielts-cau-phuc-band-6">Câu phức cho band 6+</a> và <a href="nen.html#ielts-loi-ngu-phap-nguoi-viet">Lỗi ngữ pháp hay gặp</a>.');
+    if(f('vocab')<.6) steps.push('Từ vựng học thuật cần bổ sung ('+S.vocab.ok+'/'+S.vocab.n+'): học <a href="nen.html#ielts-tu-noi-paraphrase">Từ nối và paraphrase</a>, lưu cụm từ ở <a href="mau-cau.html">Kho mẫu câu</a>.');
+    if(f('reading')<.6) steps.push('Đọc hiểu cần luyện ('+S.reading.ok+'/'+S.reading.n+'): học <a href="nen.html#ielts-reading-skim-scan">Skimming & scanning</a>, <a href="nen.html#ielts-reading-tfng-ynng">TRUE/FALSE/NOT GIVEN</a>, rồi làm <a href="c21/test-1.html?part=R1">Cam 21 · Test 1 · Passage 1</a>.');
+    steps.push('Kiểm tra thêm kỹ năng nghe: làm <a href="c21/test-1.html?part=L1">Cam 21 · Test 1 · Listening Part 1</a> (10 câu, ~6 phút).');
+    if(B.k>=3) steps.push('Luyện Writing theo dạng ở <a href="dang-writing.html">Các dạng Writing</a> và Speaking với <a href="forecast.html">Forecast quý này</a> (bốc thăm Part 2).');
+    if(B.k>=4) steps.push('Mỗi tuần làm trọn một đề Listening + Reading có giờ, rồi xem <a href="phan-tich.html">Điểm yếu & tiến bộ</a>.');
+    var h='<div class="card res"><div class="sc">'+got+'/'+SET.length+'</div><div class="lvl">Band ước tính '+B.b+'</div><p>Mục tiêu gần: <b>band '+B.goal+'</b>'+(auto?'<br><small class="hint">Hết giờ — bài đã tự nộp.</small>':'')+'</p><p class="hint">Bài kiểm tra ngắn chỉ đo ngữ pháp, từ vựng và đọc hiểu nên band chỉ để tham khảo khi chọn lộ trình.</p></div>'+
+      '<div class="card"><h3 style="margin-top:0">Điểm theo phần</h3>'+Object.keys(S).map(function(k){ var r=S[k].ok/S[k].n; return '<div class="sk"><span>'+esc(S[k].name)+'</span><i><s class="'+(r>=.7?'':r>=.4?'mid':'low')+'" style="width:'+Math.round(r*100)+'%"></s></i><b>'+S[k].ok+'/'+S[k].n+'</b></div>'; }).join('')+
+      '<h3>Theo độ khó</h3>'+[1,2,3,4].map(function(l){ var r=LV[l][1]?LV[l][0]/LV[l][1]:0; return '<div class="sk"><span>Câu band '+['','4–4.5','5–5.5','6–6.5','7+'][l]+'</span><i><s class="'+(r>=.7?'':r>=.4?'mid':'low')+'" style="width:'+Math.round(r*100)+'%"></s></i><b>'+LV[l][0]+'/'+LV[l][1]+'</b></div>'; }).join('')+'</div>'+
+      '<div class="card"><h3 style="margin-top:0">🧭 Lộ trình gợi ý cho bạn</h3><ol class="path">'+steps.map(function(s){ return '<li>'+s+'</li>'; }).join('')+'</ol></div>'+
+      '<details class="card"><summary style="cursor:pointer;font-weight:700">Xem lại từng câu</summary>'+SET.map(function(x,k){ var ok=ans[k]===x.it.a; return '<div class="rv '+(ok?'ok':'bad')+'"><b>'+(k+1)+'.</b> '+esc(x.it.q)+'<br>'+(ok?'✓':'✗ Bạn chọn '+(ans[k]!=null?esc(x.it.o[ans[k]]):'—')+' ·')+' Đáp án: <b>'+esc(x.it.o[x.it.a])+'</b><br><small class="hint">'+esc(x.it.xp)+'</small></div>'; }).join('')+'</details>'+
+      '<p style="text-align:center"><button class="btn" id="again">Làm lại bài kiểm tra</button></p>';
+    main.innerHTML=h; window.scrollTo(0,0); document.getElementById('again').onclick=intro;
+  }
+  intro();
+})();
+</script>
+<script src="shared/ui.js?v=3"></script>
+<script>if('serviceWorker' in navigator)window.addEventListener('load',function(){navigator.serviceWorker.register('sw.js',{scope:'./'}).catch(function(){});});</script>
+</body>
+</html>
