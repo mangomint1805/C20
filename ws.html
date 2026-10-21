@@ -83,6 +83,7 @@ details.sample .in{padding:2px 16px 12px;white-space:pre-line;font-size:15px}
 .nm-card label{display:flex;flex-direction:column;font-size:13px;font-weight:600;color:var(--dim);margin:0 0 10px}
 .nm-card input{font:inherit;padding:8px 10px;border:1px solid var(--line);border-radius:6px;margin-top:3px}
 .toast{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);background:#1e232b;color:#fff;border-radius:10px;padding:10px 16px;font-size:14px;z-index:70}
+.sendrec{margin-top:6px;font-size:13.5px}.sendrec .sub{color:#666e7a}
 </style>
 <link rel="icon" type="image/png" href="icons/fav-64.png?v=3">
 </head>
@@ -227,12 +228,34 @@ details.sample .in{padding:2px 16px 12px;white-space:pre-line;font-size:15px}
     if(REC&&REC.state==='recording'){ REC.stop(); return; }
     if(!navigator.mediaDevices||!window.MediaRecorder){toast('Trình duyệt này không ghi âm được.');return;}
     navigator.mediaDevices.getUserMedia({audio:true}).then(function(stream){
-      chunks=[]; REC=new MediaRecorder(stream); recBtn=btn;
+      chunks=[]; try{ REC=new MediaRecorder(stream,{audioBitsPerSecond:24000}); }catch(e){ REC=new MediaRecorder(stream); } recBtn=btn; var t0=Date.now();
       REC.ondataavailable=function(e){if(e.data.size)chunks.push(e.data);};
       REC.onstop=function(){stream.getTracks().forEach(function(t){t.stop();});btn.classList.remove('on');btn.textContent='🎙 Ghi lại';
-        var url=URL.createObjectURL(new Blob(chunks,{type:REC.mimeType||'audio/webm'}));box.innerHTML='<audio controls src="'+url+'"></audio>';if(onStop)onStop();};
+        var blob=new Blob(chunks,{type:REC.mimeType||'audio/webm'}), url=URL.createObjectURL(blob);box.innerHTML='<audio controls src="'+url+'"></audio>';box._blob=blob;box._dur=Math.round((Date.now()-t0)/1000);addSend(box);if(onStop)onStop();};
       REC.start(); btn.classList.add('on'); btn.textContent='■ Dừng';
     }).catch(function(){toast('Cần cho phép dùng micro để ghi âm.');});
+  }
+  // gửi bài nói cho thầy (Firestore: rec = thông tin, recdata = âm thanh), cần đăng nhập Google
+  function addSend(box){
+    var q=box._q||'', b=document.createElement('div'); b.className='sendrec';
+    b.innerHTML='<button class="ic" type="button">📤 Gửi cho thầy nghe</button><span class="sub"></span>'; box.appendChild(b);
+    var btn=b.firstChild, st=b.lastChild;
+    btn.onclick=function(){
+      var acc=null; try{acc=JSON.parse(lsg('mt.acc')||'null');}catch(e){}
+      if(!acc){ st.textContent=' Cần đăng nhập Google trước (nút G trên thanh menu) để thầy biết bài của ai.'; if(window.MACC) window.MACC.quick(); return; }
+      if(box._blob.size>700000){ st.textContent=' Bản ghi dài quá (tối đa khoảng 3 phút), ghi ngắn lại nhé.'; return; }
+      btn.disabled=true; st.textContent=' Đang gửi…';
+      var rd=new FileReader(); rd.onload=function(){
+        var data=String(rd.result).split(',')[1];
+        window.MACC.fs().then(function(x){
+          if(!x.user) throw {code:'chưa đăng nhập'};
+          var F=x.F, ref=F.doc(F.collection(x.db,'rec'));
+          var meta={uid:x.user.uid,email:x.user.email||'',name:(lsg('cam20.name')||x.user.displayName||'').trim(),lop:(lsg('cam20.lop')||'').trim(),test:'Cam '+N+' · Test '+T,part:box._part||'Speaking',q:q,mime:box._blob.type||'audio/webm',dur:box._dur||0,size:box._blob.size,at:F.serverTimestamp(),fb:'',band:''};
+          return F.setDoc(F.doc(x.db,'recdata',ref.id),{uid:x.user.uid,data:data}).then(function(){ return F.setDoc(ref,meta); });
+        }).then(function(){ st.textContent=' ✓ Đã gửi — thầy nhận xét xong sẽ hiện trong Hồ sơ của bạn.'; btn.textContent='✓ Đã gửi'; })
+          .catch(function(e){ btn.disabled=false; st.textContent=' Chưa gửi được ('+((e&&e.code)||'lỗi')+'), thử lại nhé.'; });
+      }; rd.readAsDataURL(box._blob);
+    };
   }
   function qrow(q,i){return '<div class="sq"><div class="txt">'+esc(q)+'<div class="rb" id="rb'+i+'"></div></div><div class="ctl"><button class="ic" data-say="'+i+'" type="button">🔊 Nghe</button><button class="ic" data-rec="'+i+'" type="button">🎙 Ghi âm</button></div></div>';}
   function speaking(){
@@ -246,10 +269,10 @@ details.sample .in{padding:2px 16px 12px;white-space:pre-line;font-size:15px}
       (s.p2.follow&&s.p2.follow.length?'<div class="topic">Câu hỏi thêm</div>'+s.p2.follow.map(function(q){var r=qrow(q,Qs.length);Qs.push(q);return r;}).join(''):'')+'</div>';
     h+='<div class="card"><h2 class="t">Speaking Part 3</h2><p class="dtype">Chủ đề: <b>'+esc(s.p3.map(function(x){return x.topic;}).join(', '))+'</b></p><p class="sub">Thảo luận sâu hơn · 4–5 phút. Nêu quan điểm, giải thích, so sánh, đưa ví dụ xã hội.</p>';
     s.p3.forEach(function(tp){h+='<div class="topic">'+esc(tp.topic)+'</div>';tp.qs.forEach(function(q){h+=qrow(q,Qs.length);Qs.push(q);});});
-    h+='<p class="sub" style="margin-top:12px">🎙 Bản ghi chỉ nằm trên máy của bạn để tự nghe lại, không gửi đi đâu.</p></div>';
+    h+='<p class="sub" style="margin-top:12px">🎙 Bản ghi nằm trên máy của bạn để tự nghe lại. Muốn thầy nghe và nhận xét thì bấm <b>📤 Gửi cho thầy nghe</b> dưới bản ghi (cần đăng nhập Google).</p></div>';
     $('#main').innerHTML=h;
     $$('[data-say]').forEach(function(b){b.onclick=function(){say(Qs[+b.dataset.say]);};});
-    $$('[data-rec]').forEach(function(b){b.onclick=function(){rec(b,$('#rb'+b.dataset.rec));};});
+    $$('[data-rec]').forEach(function(b){b.onclick=function(){var bx=$('#rb'+b.dataset.rec); bx._q=Qs[+b.dataset.rec]; bx._part=(b.closest('.card')&&(b.closest('.card').querySelector('h2')||{}).textContent)||'Speaking'; rec(b,bx);};});
     $('#p2say').onclick=function(){say(s.p2.card+'. You should say: '+s.p2.points.join('. ')+'. '+(s.p2.end||''));};
     var stage=0;
     $('#p2go').onclick=function(){
@@ -258,7 +281,7 @@ details.sample .in{padding:2px 16px 12px;white-space:pre-line;font-size:15px}
       else if(stage===1){startTalk();}
       else if(stage===2){stopRec();}
       function startTalk(){stage=2;btn.textContent='■ Dừng nói';count(120,'Đang nói… (đang ghi âm)',function(){stopRec();});
-        rec(document.createElement('button'),$('#p2rb'),function(){stage=0;clearInterval(clockId);btn.textContent='▶ Làm lại Part 2';$('#p2l').textContent='Xong — nghe lại bài nói bên dưới';});}
+        var p2b=$('#p2rb'); p2b._q=s.p2.card; p2b._part='Speaking Part 2'; rec(document.createElement('button'),p2b,function(){stage=0;clearInterval(clockId);btn.textContent='▶ Làm lại Part 2';$('#p2l').textContent='Xong — nghe lại bài nói bên dưới';});}
     };
   }
   function count(sec,label,done){
