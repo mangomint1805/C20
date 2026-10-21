@@ -60,7 +60,7 @@ function doGet(e) {
     const last = sh.getLastRow(), from = Math.max(2, last - max + 1);
     return sh.getRange(from, 1, last - from + 1, sh.getLastColumn()).getValues().map(r => r.map(v => v instanceof Date ? v.toISOString() : v));
   };
-  const data = { ok: true, results: read(SHEET_NAME, 5000), feedback: read(FB_NAME, 300), writing: read(WS_NAME, 500).map(r => r.slice(0, 8).concat([r[9] || ''])) };
+  const data = { ok: true, results: read(SHEET_NAME, 5000), feedback: read(FB_NAME, 300), writing: read(WS_NAME, 300) };
   const cb = String(e.parameter.callback || '');
   if (/^[A-Za-z_$][\w$]*$/.test(cb)) return ContentService.createTextOutput(cb + '(' + JSON.stringify(data) + ')').setMimeType(ContentService.MimeType.JAVASCRIPT);
   return out_(data);
