@@ -971,7 +971,7 @@ function mshareIelts(s){ var d=state.done[s]; if(!d) return; var h=[]; try{ h=JS
   window.MSHARE({kicker:'PHIẾU KẾT QUẢ LUYỆN TẬP IELTS', name:w.name||'Học viên', line:'Cambridge IELTS 21 · Test '+N+' · '+(s==='L'?'Listening':'Reading')+' · '+new Date().toLocaleDateString('vi-VN'),
     bigLabel:'BAND ƯỚC TÍNH', big:typeof bv==='number'?(bv%1?bv.toFixed(1):bv+'.0'):'<2.5', bigOf:(s==='L'?'Listening':'Reading')+' · '+d.got+'/40 câu', pct:bd/9, sub:'', tiles:[{k:'Câu đúng',v:d.got+'/40'},{k:'Tỉ lệ đúng',v:Math.round(pc*100)+'%'},{k:'Thời gian',v:Math.round((state.time[s]||0)/60)+' phút'}],
     bars:[], parts:Object.keys(bp).sort().map(function(k){ var a=bp[k]; return {label:(k[0]==='L'?'Part ':'Passage ')+k.slice(1), txt:a[0]+'/'+a[1], pct:a[1]?a[0]/a[1]:0}; }),
-    mood:pc>=.8?'cheer':'happy', msg:pc>=.8?'Band đẹp quá! Ai luyện IELTS cùng mình không?':pc>=.55?'Tiến bộ từng ngày, cố lên nào!':'Mới bắt đầu thôi, lần sau sẽ cao hơn!',
+    mood:pc>=.9?'love':pc>=.8?'party':pc>=.65?'cool':'happy', msg:pc>=.8?'Band đẹp quá! Ai luyện IELTS cùng mình không?':pc>=.55?'Tiến bộ từng ngày, cố lên nào!':'Mới bắt đầu thôi, lần sau sẽ cao hơn!',
     url:'mangomint1805.github.io/cam', file:'minto-ielts-cam21-test'+N+'-'+s}); }
 window.mshareIelts=mshareIelts;
 function showScore(s){ var d=state.done[s], el=$('.panel[data-s="'+s+'"] .score'); if(!el) return; if(!d){el.innerHTML='';return;}
