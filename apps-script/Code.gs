@@ -14,11 +14,11 @@
  */
 const SHEET_NAME = 'Kết quả Cam 20';
 const HEAD = ['Thời gian', 'Họ tên', 'Lớp / nhóm', 'Test', 'Phần', 'Chế độ', 'Đúng', 'Tổng', '% đúng', 'Band (ước tính)',
-              'Số phút', 'Câu sai', 'Hết giờ tự nộp', 'Thiết bị'];
+              'Số phút', 'Câu sai', 'Hết giờ tự nộp', 'Thiết bị', 'Email'];
 const FB_NAME = 'Góp ý';
-const FB_HEAD = ['Thời gian', 'Họ tên', 'Lớp / nhóm', 'Loại', 'Nội dung', 'Trang', 'Thiết bị'];
+const FB_HEAD = ['Thời gian', 'Họ tên', 'Lớp / nhóm', 'Loại', 'Nội dung', 'Trang', 'Thiết bị', 'Email'];
 const WS_NAME = 'Bài viết';
-const WS_HEAD = ['Thời gian', 'Họ tên', 'Lớp / nhóm', 'Đề', 'Task', 'Số từ', 'Yêu cầu', 'Số phút', 'Bài viết'];
+const WS_HEAD = ['Thời gian', 'Họ tên', 'Lớp / nhóm', 'Đề', 'Task', 'Số từ', 'Yêu cầu', 'Số phút', 'Bài viết', 'Email'];
 
 function doPost(e) {
   const lock = LockService.getScriptLock();
@@ -26,21 +26,21 @@ function doPost(e) {
   try {
     const d = JSON.parse(e.postData.contents);
     if (d.kind !== 'cam20') return out_({ ok: false, error: 'sai loại dữ liệu' });
-    const when = new Date(d.submittedAt || Date.now()), name = d.name || '(chưa nhập tên)', lop = d.lop || '';
+    const when = new Date(d.submittedAt || Date.now()), name = d.name || '(chưa nhập tên)', lop = d.lop || '', email = String(d.email || '').slice(0, 120);
     const part = String(d.part || '');
     if (part.indexOf('Góp ý') === 0 || d.mode === 'Góp ý') {
       const msg = String(d.wrong || ''), i = msg.lastIndexOf('\n— Trang: ');
-      tab_(FB_NAME, FB_HEAD).appendRow([when, name, lop, part.replace(/^Góp ý · /, ''), i >= 0 ? msg.slice(0, i) : msg, i >= 0 ? msg.slice(i + 10) : '', d.userAgent || '']);
+      tab_(FB_NAME, FB_HEAD).appendRow([when, name, lop, part.replace(/^Góp ý · /, ''), i >= 0 ? msg.slice(0, i) : msg, i >= 0 ? msg.slice(i + 10) : '', d.userAgent || '', email]);
       return out_({ ok: true });
     }
     if (d.mode === 'Writing') {
-      tab_(WS_NAME, WS_HEAD).appendRow([when, name, lop, d.test || '', part, Number(d.got) || '', Number(d.total) || '', d.minutes || '', d.wrong || '']);
+      tab_(WS_NAME, WS_HEAD).appendRow([when, name, lop, d.test || '', part, Number(d.got) || '', Number(d.total) || '', d.minutes || '', d.wrong || '', email]);
       return out_({ ok: true });
     }
     const sh = tab_(SHEET_NAME, HEAD);
     const total = Number(d.total) || 0, got = Number(d.got) || 0;
     const pct = total ? Math.round(got / total * 1000) / 10 : '';
-    sh.appendRow([when, name, lop, d.test || '', part, d.mode || '', got, total, pct, d.band || '', d.minutes || '', d.wrong || '', d.auto ? 'Có' : '', d.userAgent || '']);
+    sh.appendRow([when, name, lop, d.test || '', part, d.mode || '', got, total, pct, d.band || '', d.minutes || '', d.wrong || '', d.auto ? 'Có' : '', d.userAgent || '', email]);
     const r = sh.getLastRow();
     if (pct !== '') sh.getRange(r, 7, 1, 4).setBackground(pct >= 70 ? '#e1f4ec' : pct >= 50 ? '#fdf3dc' : '#fbe6e2');
     return out_({ ok: true });
@@ -60,7 +60,7 @@ function doGet(e) {
     const last = sh.getLastRow(), from = Math.max(2, last - max + 1);
     return sh.getRange(from, 1, last - from + 1, sh.getLastColumn()).getValues().map(r => r.map(v => v instanceof Date ? v.toISOString() : v));
   };
-  const data = { ok: true, results: read(SHEET_NAME, 5000), feedback: read(FB_NAME, 300), writing: read(WS_NAME, 500).map(r => r.slice(0, 8)) };
+  const data = { ok: true, results: read(SHEET_NAME, 5000), feedback: read(FB_NAME, 300), writing: read(WS_NAME, 500).map(r => r.slice(0, 8).concat([r[9] || ''])) };
   const cb = String(e.parameter.callback || '');
   if (/^[A-Za-z_$][\w$]*$/.test(cb)) return ContentService.createTextOutput(cb + '(' + JSON.stringify(data) + ')').setMimeType(ContentService.MimeType.JAVASCRIPT);
   return out_(data);
@@ -80,6 +80,9 @@ function tab_(name, head) {
   const ss = SpreadsheetApp.getActiveSpreadsheet();
   let sh = ss.getSheetByName(name);
   if (!sh) sh = ss.insertSheet(name);
+  if (sh.getLastRow() > 0 && sh.getLastColumn() < head.length) {
+    sh.getRange(1, sh.getLastColumn() + 1, 1, head.length - sh.getLastColumn()).setValues([head.slice(sh.getLastColumn())]).setFontWeight('bold').setBackground('#f2e2c4');
+  }
   if (sh.getLastRow() === 0) {
     sh.appendRow(head);
     sh.getRange(1, 1, 1, head.length).setFontWeight('bold').setBackground('#f2e2c4');
