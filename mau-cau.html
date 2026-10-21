@@ -86,6 +86,7 @@ html[data-theme=dark] .it .en b{background:linear-gradient(transparent 62%,rgba(
   function esc(t){ return String(t==null?'':t).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
   function say(t){ try{ speechSynthesis.cancel(); var u=new SpeechSynthesisUtterance(t); u.lang='en-GB'; u.rate=.92; speechSynthesis.speak(u); }catch(e){} }
   var st=get('mt.phr',{}), gi=Math.min(G.length-1,Math.max(0,st.g||0)), ti=st.t||{}, qy='';
+  (function(){ var h=decodeURIComponent(location.hash.slice(1)); if(!h) return; G.forEach(function(g,a){ g.topics.forEach(function(t,b){ if(t.id===h){ gi=a; ti[g.id]=b; } }); }); })();
   function hl(en,k){
     var e=esc(en), kk=String(k||'').replace(/…|\.\.\./g,' ').split(/\s*[\/]\s*|\s{2,}/)[0].trim();
     if(kk.length<3) return e;
