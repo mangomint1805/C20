@@ -97,7 +97,7 @@ footer{padding:30px 0 50px;color:var(--dim);font-size:13px}
 
   function loadBook(b,cb){
     if(DATA[b]) return cb();
-    var s=document.createElement('script'); s.src=b+'/dict.js?v=1';
+    var s=document.createElement('script'); s.src=b+'/dict.js?v=2';
     s.onload=function(){ DATA[b]=window.CAMDICT||{}; window.CAMDICT=null; cb(); };
     s.onerror=function(){ DATA[b]={}; cb(); };
     document.head.appendChild(s);
@@ -151,7 +151,7 @@ footer{padding:30px 0 50px;color:var(--dim);font-size:13px}
   function play(){
     var x=list[cur]; if(!x) return;
     clearInterval(timer); au.playbackRate=slow?0.75:1;
-    var go=function(){ try{ au.currentTime=Math.max(0,x.s-0.15); }catch(e){} stopAt=x.e+0.2; var p=au.play(); if(p&&p.catch) p.catch(function(){});
+    var go=function(){ try{ au.currentTime=Math.max(0,x.s); }catch(e){} stopAt=x.e; var p=au.play(); if(p&&p.catch) p.catch(function(){});
       timer=setInterval(function(){ if(au.currentTime>=stopAt){ au.pause(); clearInterval(timer); } },40); };
     if(au.readyState>=1) go(); else { au.addEventListener('loadedmetadata',function h(){ au.removeEventListener('loadedmetadata',h); go(); }); au.load(); }
   }
