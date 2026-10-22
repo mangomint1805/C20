@@ -53,3 +53,12 @@ apps-script/        mã Google Apps Script ghi kết quả vào Sheet
 ```
 
 GitHub Pages: Settings → Pages → Branch `main`, folder `/ (root)`.
+
+## Lịch sử cập nhật
+
+Xem đầy đủ: [Có gì mới](https://mangomint1805.github.io/cam/cap-nhat.html) (`cap-nhat.html`, dữ liệu trong `cap-nhat.js`).
+
+- **22/10/2026** — Tô sáng + ghi chú cả Listening, trên máy tính và điện thoại; giao diện Băng hoại dễ đọc hơn.
+- **21/10/2026** — Chép chính tả: căn lại mốc thời gian từng câu C17–C21. Đăng nhập Google và đồng bộ tiến độ, xem lại bài, gửi bài nói và xem nhận xét Writing/Speaking của thầy; Forecast Speaking quý 3/2026, Các dạng bài Writing, Kho mẫu câu; đánh dấu ☆ + ghi chú, kiểm tra xếp lớp, Gõ từ rơi; linh vật bé Xoài và 3 phong cách giao diện.
+- **20/10/2026** — Writing & Speaking cho cả 5 bộ, nhãn dạng câu hỏi, flashcard dùng chung, cài như app.
+- **19/10/2026** — Ra mắt Cambridge IELTS 20, rồi thêm 17, 18, 19, 21; giải thích tiếng Việt, lời thoại, tra từ, phân tích điểm yếu, chép chính tả.
