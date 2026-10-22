@@ -2,8 +2,8 @@
 (function () {
   'use strict';
   var KEY = 'mt.marks.ielts';
-  var m = /\/(c\d+)\/test-(\d+)\.html$/.exec(location.pathname); if (!m) return;
-  var BOOK = m[1], T = +m[2], NAME = 'Cambridge IELTS ' + BOOK.slice(1) + ' · Test ' + T, PATH = BOOK + '/test-' + T + '.html';
+  var m = /\/((?:c|v)\d+)\/test-(\d+)\.html$/.exec(location.pathname); if (!m) return;
+  var BOOK = m[1], T = +m[2], NAME = (BOOK[0] === 'v' ? 'Original Exams VOL ' : 'Cambridge IELTS ') + BOOK.slice(1) + ' · Test ' + T, PATH = BOOK + '/test-' + T + '.html';
   function load() { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } }
   function save(o) { try { localStorage.setItem(KEY, JSON.stringify(o)); } catch (e) {} }
   var css = document.createElement('style');
