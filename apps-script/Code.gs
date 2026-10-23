@@ -14,7 +14,7 @@
  */
 const SHEET_NAME = 'Kết quả Cam 20';
 const HEAD = ['Thời gian', 'Họ tên', 'Lớp / nhóm', 'Test', 'Phần', 'Chế độ', 'Đúng', 'Tổng', '% đúng', 'Band (ước tính)',
-              'Số phút', 'Câu sai', 'Hết giờ tự nộp', 'Thiết bị', 'Email'];
+              'Số phút', 'Câu sai', 'Hết giờ tự nộp', 'Thiết bị', 'Email', 'Bài làm'];
 const FB_NAME = 'Góp ý';
 const FB_HEAD = ['Thời gian', 'Họ tên', 'Lớp / nhóm', 'Loại', 'Nội dung', 'Trang', 'Thiết bị', 'Email'];
 const WS_NAME = 'Bài viết';
@@ -40,7 +40,7 @@ function doPost(e) {
     const sh = tab_(SHEET_NAME, HEAD);
     const total = Number(d.total) || 0, got = Number(d.got) || 0;
     const pct = total ? Math.round(got / total * 1000) / 10 : '';
-    sh.appendRow([when, name, lop, d.test || '', part, d.mode || '', got, total, pct, d.band || '', d.minutes || '', d.wrong || '', d.auto ? 'Có' : '', d.userAgent || '', email]);
+    sh.appendRow([when, name, lop, d.test || '', part, d.mode || '', got, total, pct, d.band || '', d.minutes || '', d.wrong || '', d.auto ? 'Có' : '', d.userAgent || '', email, String(d.answers || '').slice(0, 49000)]);
     const r = sh.getLastRow();
     if (pct !== '') sh.getRange(r, 7, 1, 4).setBackground(pct >= 70 ? '#e1f4ec' : pct >= 50 ? '#fdf3dc' : '#fbe6e2');
     return out_({ ok: true });

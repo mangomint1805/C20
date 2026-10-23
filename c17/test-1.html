@@ -1089,7 +1089,7 @@ function logResult(s,res,auto){
   var w=who(), body={kind:'cam20', name:w.name, lop:w.lop, test:'Cam 17 · Test '+N,
     part:(s==='L'?'Listening':'Reading')+(MODE.length===2?(s==='L'?' Part ':' Passage ')+MODE.slice(1):''),
     mode:EXAM?'Thi thử':'Luyện tập', got:d.got, total:d.total, band:rec.band, minutes:Math.round((state.time[s]||0)/6)/10,
-    wrong:wrong.join(', '), auto:!!auto, submittedAt:new Date().toISOString(), userAgent:navigator.userAgent};
+    wrong:wrong.join(', '), auto:!!auto, submittedAt:new Date(rec.t).toISOString(), answers:JSON.stringify({v:1,site:'I',b:(location.pathname.match(/\/((?:c|v)\d+)\/test-/)||[])[1]||'',t:+N,s:s,p:rec.part,at:rec.t,a:rec.ans,w:wrong}), userAgent:navigator.userAgent};
   try{ fetch(url,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(body)}); }catch(e){}
 }
 function askName(cb){
