@@ -983,9 +983,14 @@ function mshareIelts(s){ var d=state.done[s]; if(!d) return; var h=[]; try{ h=JS
     mood:pc>=.9?'love':pc>=.8?'party':pc>=.65?'cool':'happy', msg:pc>=.8?'Band đẹp quá! Ai luyện IELTS cùng mình không?':pc>=.55?'Tiến bộ từng ngày, cố lên nào!':'Mới bắt đầu thôi, lần sau sẽ cao hơn!',
     url:'mangomint1805.github.io/cam', file:'minto-ielts-cam19-test'+N+'-'+s}); }
 window.mshareIelts=mshareIelts;
+function camKq(s){ var h=[]; try{ h=JSON.parse(lsGet('cam19.hist'))||[]; }catch(e){} var rec=null; for(var i=h.length-1;i>=0;i--){ if(h[i].test===+N&&h[i].sec===s&&h[i].ans){ rec=h[i]; break; } } if(!rec) return; var w=who();
+  var K={self:true,data:{v:1,site:'I',b:(location.pathname.match(/\/((?:c|v)\d+)\/test-/)||[])[1]||'',t:+N,s:s,p:rec.part,at:rec.t,a:rec.ans,w:rec.wrong},name:w.name,lop:w.lop,test:document.title.replace(/\s*·\s*Test.*$/,'')+' · Test '+N,part:(s==='L'?'Listening':'Reading')+(String(rec.part).length===2?(s==='L'?' Part ':' Passage ')+String(rec.part).slice(1):''),mode:rec.exam?'Thi thử':'Luyện tập',when:rec.t,got:rec.got,total:rec.total,minutes:rec.secs?Math.round(rec.secs/6)/10:'',score:rec.band?String(rec.band):''};
+  try{ sessionStorage.setItem('mt.kq',JSON.stringify(K)); }catch(e){} window.open('/ket-qua.html','_blank'); }
+window.camKq=camKq;
+
 function showScore(s){ var d=state.done[s], el=$('.panel[data-s="'+s+'"] .score'); if(!el) return; if(!d){el.innerHTML='';return;}
   el.innerHTML='Đúng '+d.got+'/'+d.total+(d.total===40?' <span class="band">Band ≈ '+band(s,d.got)+'</span>':'')+
-    (d.total===40&&window.MSHARE?' <button type="button" class="btn alt sm" onclick="mshareIelts(\''+s+'\')">📸 Lưu ảnh khoe story</button>':'')+'<span class="after">Bấm 📍 cạnh mỗi câu để xem chỗ có đáp án'+(s==='L'?' trong lời thoại':' trong bài đọc')+', bấm 💡 để đọc giải thích tiếng Việt.</span>'; }
+    ' <button type="button" class="btn alt sm" onclick="camKq(\''+s+'\')">📊 Phân tích chi tiết</button>'+(d.total===40&&window.MSHARE?' <button type="button" class="btn alt sm" onclick="mshareIelts(\''+s+'\')">📸 Lưu ảnh khoe story</button>':'')+'<span class="after">Bấm 📍 cạnh mỗi câu để xem chỗ có đáp án'+(s==='L'?' trong lời thoại':' trong bài đọc')+', bấm 💡 để đọc giải thích tiếng Việt.</span>'; }
 
 // ================= 1. lời thoại & vị trí đáp án =================
 function addLocs(s){
